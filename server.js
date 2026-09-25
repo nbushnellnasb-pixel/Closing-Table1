@@ -17,7 +17,6 @@ const crypto = require('crypto');
 const PORT = +process.env.PORT || 3000;
 const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, 'data');
 const DB_FILE = path.join(DATA_DIR, 'db.json');
-const PUBLIC_DIR = path.join(__dirname, 'public');
 const COOKIE = 'ct';
 const SESSION_DAYS = 30;
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
@@ -379,12 +378,15 @@ const server = http.createServer(async (req, res) => {
     }
     if (req.method !== 'GET' && req.method !== 'HEAD') return send(res, 405, { error: 'Method not allowed.' });
     if (pathname === '/favicon.ico') { res.writeHead(204); return res.end(); }
-    const rel = pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, '');
-    const file = path.join(PUBLIC_DIR, rel);
-    if (!file.startsWith(PUBLIC_DIR)) return send(res, 403, { error: 'Forbidden.' });
-    fs.readFile(file, (err, data) => {
+    /* Only these two files are ever served as static pages. Everything else in this folder
+       (puzzles.json, server.js, and so on) is deliberately not reachable by URL, so the
+       repo can be a single flat folder with no subfolders required. */
+    const STATIC = { '/': ['index.html', '.html'], '/index.html': ['index.html', '.html'], '/embed.js': ['embed.js', '.js'] };
+    const hit = STATIC[pathname];
+    if (!hit) return send(res, 404, { error: 'Not found.' });
+    fs.readFile(path.join(__dirname, hit[0]), (err, data) => {
       if (err) return send(res, 404, { error: 'Not found.' });
-      res.writeHead(200, { 'Content-Type': MIME[path.extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-cache' });
+      res.writeHead(200, { 'Content-Type': MIME[hit[1]], 'Cache-Control': 'no-cache' });
       res.end(data);
     });
   } catch (e) {
