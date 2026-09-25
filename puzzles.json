@@ -1,0 +1,3121 @@
+[
+ {
+  "max": 100,
+  "n": 1,
+  "title": "The Fixed-Income Couple",
+  "cat": "Building the case",
+  "format": "angle",
+  "file": [
+   [
+    "Clients",
+    "Robert, 65 (retired) and Linda, 63"
+   ],
+   [
+    "Income",
+    "Robert: Social Security plus a small pension. Linda: part-time work"
+   ],
+   [
+    "Existing coverage",
+    "Linda has a $50,000 group policy through her employer"
+   ],
+   [
+    "Savings",
+    "None set aside for final expenses"
+   ],
+   [
+    "Home",
+    "Paid off"
+   ],
+   [
+    "Family",
+    "Two grown children, three grandchildren out of state"
+   ],
+   [
+    "Health",
+    "Robert takes medication for blood pressure. Linda is healthy"
+   ]
+  ],
+  "story": "Robert retired last year. Linda still works a few days a week and expects to stop at 65, like Robert. When you ask about coverage, Linda says, \"I have my policy through work, so we are covered.\" Robert adds, \"We do not have any savings put aside, and we do not want the kids stuck paying for our funerals.\"",
+  "prompt": "Build your angle. Choose the strongest logical reasons, the strongest emotional reasons, and the best response to the objection.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts from their situation that make the strongest case on paper.",
+    "options": [
+     {
+      "t": "They have no savings set aside, so the funeral and final bills would come out of their children's pockets.",
+      "pts": 20,
+      "why": "This is the actual problem they named. A policy sized to the bill is a direct answer to it."
+     },
+     {
+      "t": "Linda's work policy will usually end when she retires, so the $50,000 goes away just as her paycheck does.",
+      "pts": 20,
+      "why": "The coverage they are counting on is tied to her job. It is temporary, and it disappears at the moment they most need a plan."
+     },
+     {
+      "t": "Final costs keep rising, so a level monthly payment now beats a one-time bill later.",
+      "pts": 10,
+      "why": "A reasonable point, but general. It is not tied to what this couple told you."
+     },
+     {
+      "t": "They should invest the premium in the stock market instead.",
+      "pts": -10,
+      "why": "Not a fit. It ignores that they have no savings and need a bill covered, and it steers away from your product without an honest comparison."
+     },
+     {
+      "t": "The kids' college costs need to be covered.",
+      "pts": -5,
+      "why": "Their children are grown. This shows you were not listening."
+     },
+     {
+      "t": "Robert's blood pressure could affect his rates or approval later, so it is better to apply now while he qualifies.",
+      "pts": 12,
+      "why": "True and relevant, but secondary to the two main gaps."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reasons",
+    "pick": 2,
+    "hint": "Pick the two that connect to what they actually want and worry about, without pressure or fear tactics.",
+    "options": [
+     {
+      "t": "Point out how sad it would be for the grandchildren to see their grandparents leave nothing behind.",
+      "pts": -10,
+      "why": "Manipulative, fear-based, and not grounded in anything they said."
+     },
+     {
+      "t": "They will likely want a policy at least as large as the $50,000 Linda has now, so the peace of mind she feels today does not shrink.",
+      "pts": 20,
+      "why": "Anchors the recommendation to a number and a feeling they already know."
+     },
+     {
+      "t": "Robert said he does not want the kids stuck with the bill. This plan lets their kids remember them, not the invoice.",
+      "pts": 15,
+      "why": "Strong and in his own words, but the top two connect to their specific timing and situation."
+     },
+     {
+      "t": "Suggest that good spouses always buy insurance.",
+      "pts": -10,
+      "why": "A guilt trip. It puts pressure on their relationship instead of on their situation."
+     },
+     {
+      "t": "Bring up the trip to visit the grandchildren that they can finally afford.",
+      "pts": -5,
+      "why": "Not connected to the need and drifts away from the problem."
+     },
+     {
+      "t": "Linda will likely retire at 65 like Robert, and the safety net she has today disappears when the paycheck does.",
+      "pts": 20,
+      "why": "Ties the timing of her retirement to a moment they can picture, without pushing fear."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "They say: \"We are on a fixed income. We cannot afford anything new.\"",
+    "options": [
+     {
+      "t": "\"You cannot afford not to. What will your kids do?\"",
+      "pts": -5,
+      "why": "Pressure and guilt. It hardens the objection."
+     },
+     {
+      "t": "\"Okay, call me if things change.\"",
+      "pts": 0,
+      "why": "Gives up on the sale and on the couple."
+     },
+     {
+      "t": "\"Fixed income is exactly why this matters. A small, level payment now replaces a large bill later. Let us find an amount that fits your monthly budget.\"",
+      "pts": 20,
+      "why": "Agrees with the concern, turns it into the reason, and offers a way to make it fit."
+     },
+     {
+      "t": "\"It is only about a couple of dollars a day, that is nothing.\"",
+      "pts": 5,
+      "why": "Dismisses a real budget limit and skips the reason they need it."
+     }
+    ]
+   }
+  ],
+  "id": "p01"
+ },
+ {
+  "max": 100,
+  "n": 2,
+  "title": "Run the Appointment",
+  "cat": "Process",
+  "format": "order",
+  "file": [
+   [
+    "Situation",
+    "First in-home appointment with a senior prospect"
+   ],
+   [
+    "Time slot",
+    "45 minutes"
+   ],
+   [
+    "Goal",
+    "Leave with an application or a firm next step"
+   ]
+  ],
+  "story": "Top final expense agents run the appointment in the same shape every time. These five steps are out of order.",
+  "prompt": "Put the steps in the order you would run them. Use the arrows to move a step up or down.",
+  "steps": [
+   {
+    "id": "s3",
+    "t": "Estimate what final costs might be and what is already covered, to show the gap",
+    "pos": 3,
+    "why": "A number the client agrees with is what makes the recommendation feel earned."
+   },
+   {
+    "id": "s5",
+    "t": "Present the plans they qualify for, with price and how each pays out, and complete the application",
+    "pos": 5,
+    "why": "You can only present the right plan once you know what they qualify for."
+   },
+   {
+    "id": "s1",
+    "t": "Greet them warmly, set the agenda and confirm what they would like to leave with",
+    "pos": 1,
+    "why": "A shared agenda lowers resistance to the questions that follow."
+   },
+   {
+    "id": "s4",
+    "t": "Ask the health questions to see which type of plan they qualify for",
+    "pos": 4,
+    "why": "Health answers decide between a level benefit from day one and a graded benefit."
+   },
+   {
+    "id": "s2",
+    "t": "Ask about their wishes, who will handle arrangements, and any coverage or prepaid plan they have",
+    "pos": 2,
+    "why": "Discovery comes before any numbers."
+   }
+  ],
+  "id": "p02"
+ },
+ {
+  "max": 100,
+  "n": 3,
+  "title": "Questions That Find the Need",
+  "cat": "Discovery",
+  "format": "multi",
+  "file": [
+   [
+    "Clients",
+    "Ed and Marge, both 71"
+   ],
+   [
+    "Family",
+    "Two adult children, one out of state"
+   ],
+   [
+    "Home",
+    "Own it"
+   ],
+   [
+    "Stage",
+    "Fact-finding at their kitchen table"
+   ]
+  ],
+  "story": "You are ten minutes in with a couple who are friendly but have not yet said what they want. You want questions that help them see the need for themselves.",
+  "prompt": "Select every question worth asking. Questions that lead, pressure or anchor on price cost points.",
+  "options": [
+   {
+    "t": "You do not want to leave your kids stuck with the bill, do you?",
+    "pts": -15,
+    "why": "A leading, guilt-heavy question."
+   },
+   {
+    "t": "Who would you want to receive this money, and what would you like it to do for them?",
+    "pts": 20,
+    "why": "Turns the plan into something they want."
+   },
+   {
+    "t": "If something happened to one of you, who would take care of the arrangements and the bills?",
+    "pts": 20,
+    "why": "Shows where the burden would land."
+   },
+   {
+    "t": "What money could be used right away, and would your family have to wait to reach it?",
+    "pts": 20,
+    "why": "Uncovers the timing problem: bills come due before accounts open."
+   },
+   {
+    "t": "Have you thought about what you would want for your arrangements, burial or cremation, and whether you would want a service?",
+    "pts": 20,
+    "why": "Opens the topic in their words and starts the cost conversation."
+   },
+   {
+    "t": "Would you rather I just show you the cheapest thing I have?",
+    "pts": -15,
+    "why": "Invites a price-only decision."
+   },
+   {
+    "t": "Do you have any life insurance or a prepaid funeral plan already? What does it pay for?",
+    "pts": 20,
+    "why": "You cannot size a gap without knowing what is in place."
+   },
+   {
+    "t": "What is your monthly budget? Give me a number and I will work backward.",
+    "pts": -15,
+    "why": "Budget-first anchors on price before the need is clear."
+   }
+  ],
+  "id": "p03"
+ },
+ {
+  "max": 100,
+  "n": 4,
+  "title": "The Cremation Wish",
+  "cat": "Building the case",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Lorraine, 74, widowed six years"
+   ],
+   [
+    "Family",
+    "Two adult children, one 30 minutes away"
+   ],
+   [
+    "Income",
+    "$1,650 a month, Social Security"
+   ],
+   [
+    "Savings",
+    "$4,200 in checking"
+   ],
+   [
+    "Wishes",
+    "Cremation, no service"
+   ],
+   [
+    "Existing coverage",
+    "None"
+   ],
+   [
+    "Health",
+    "Well-managed high blood pressure"
+   ],
+   [
+    "In her words",
+    "\"I do not want anyone fussing over me.\""
+   ]
+  ],
+  "story": "Lorraine says, \"I just want to be cremated. No service, no fuss. That costs almost nothing, so I do not need any insurance.\" You know cremation still has real costs.",
+  "prompt": "Build your angle. Choose the strongest logical reasons, the strongest emotional reasons, and the best response to the objection.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts from their situation that make the strongest case.",
+    "options": [
+     {
+      "t": "Her no-service wish is easier to carry out when the money is set aside and someone knows the plan.",
+      "pts": 12,
+      "why": "Real, and it links to her own wishes."
+     },
+     {
+      "t": "Every funeral home charges the same for cremation, so she does not need to check.",
+      "pts": -5,
+      "why": "Not true. Prices vary."
+     },
+     {
+      "t": "She should buy a large policy so her children receive an inheritance.",
+      "pts": -10,
+      "why": "She has not asked for that, and it does not fit her income."
+     },
+     {
+      "t": "Her family would have to pay first and wait, or draw down her $4,200 checking account, which is her living cushion.",
+      "pts": 20,
+      "why": "Shows where the money would come from without a plan."
+     },
+     {
+      "t": "Even a simple cremation has costs: the provider's fee, transport, permits, death certificates and a container. A written quote from a funeral home shows the real number.",
+      "pts": 20,
+      "why": "Turns \"almost nothing\" into a specific figure she can see."
+     },
+     {
+      "t": "Many plans have a level premium that does not rise, so the price at her age is set from the start.",
+      "pts": 10,
+      "why": "True, but generic."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reasons",
+    "pick": 2,
+    "hint": "Pick the two that connect to what they actually want and worry about, without pressure or fear.",
+    "options": [
+     {
+      "t": "She said \"no fuss.\" A small plan is how she gets it: nobody has to guess, argue or find the money.",
+      "pts": 20,
+      "why": "Uses her own words and offers the result she wants."
+     },
+     {
+      "t": "Say she is being selfish by not planning.",
+      "pts": -10,
+      "why": "Judgmental and it ends the conversation."
+     },
+     {
+      "t": "She sounds independent. A plan lets her keep making the decisions.",
+      "pts": 12,
+      "why": "A real point, but secondary."
+     },
+     {
+      "t": "Her children can grieve without a bill or a phone call to the funeral home. She gives them that ease.",
+      "pts": 20,
+      "why": "Ties the plan to a gift for her kids."
+     },
+     {
+      "t": "Tell her that no service would break her children's hearts.",
+      "pts": -10,
+      "why": "Guilt about a wish she is entitled to."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "She says: \"It costs almost nothing. I do not need insurance.\"",
+    "options": [
+     {
+      "t": "\"It does cost less than a traditional funeral, and there are still real costs. Let us get a written quote from the funeral home and see what the number looks like.\"",
+      "pts": 20,
+      "why": "Agrees with the true part and offers a way to check."
+     },
+     {
+      "t": "\"You will regret not planning.\"",
+      "pts": -5,
+      "why": "A scare tactic."
+     },
+     {
+      "t": "\"Trust me, it costs more than you think.\"",
+      "pts": 8,
+      "why": "Right but unsupported."
+     },
+     {
+      "t": "\"Cremation is not free.\"",
+      "pts": 0,
+      "why": "Correct but blunt."
+     }
+    ]
+   }
+  ],
+  "id": "p04"
+ },
+ {
+  "max": 100,
+  "n": 5,
+  "title": "Which Benefit Fits?",
+  "cat": "Product knowledge",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Roy, 63, retired mechanic"
+   ],
+   [
+    "Health",
+    "Well-controlled blood pressure. No heart, cancer or stroke history"
+   ],
+   [
+    "Wants",
+    "$10,000 for final expenses"
+   ],
+   [
+    "Budget",
+    "About $60 a month"
+   ],
+   [
+    "Options on the table",
+    "Simplified issue with a level benefit from day one. Guaranteed issue with a graded benefit. Term to age 80"
+   ]
+  ],
+  "story": "Roy is nervous about answering health questions. He asks, \"Is there something where I do not have to answer any questions?\"",
+  "prompt": "Which recommendation fits Roy best?",
+  "options": [
+   {
+    "t": "Guaranteed issue with a graded benefit, so he does not have to answer any health questions.",
+    "pts": 40,
+    "why": "It would work, but it costs more for less in the first two years. It is a fallback, not the first choice."
+   },
+   {
+    "t": "Whichever plan pays the highest commission.",
+    "pts": 0,
+    "why": "A recommendation must be based on the client's needs."
+   },
+   {
+    "t": "A term policy to age 80 sized to the final expense.",
+    "pts": 15,
+    "why": "Term expires. Final costs come at the end of life, and he could outlive the term with nothing."
+   },
+   {
+    "t": "Simplified issue whole life with a level benefit from day one, after going through the health questions with him to confirm he qualifies.",
+    "pts": 100,
+    "why": "His health is good. He likely qualifies for full coverage from day one at a lower price than guaranteed issue. Explain that the questions are the way to get there."
+   }
+  ],
+  "id": "p05"
+ },
+ {
+  "max": 100,
+  "n": 6,
+  "title": "The Widower",
+  "cat": "Building the case",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Walter, 71, widowed three years"
+   ],
+   [
+    "Family",
+    "Two adult children (Karen, 44 and David, 41), four grandchildren"
+   ],
+   [
+    "Income",
+    "Social Security plus a $1,400 monthly pension"
+   ],
+   [
+    "Home",
+    "Owns it"
+   ],
+   [
+    "Savings",
+    "About $9,000"
+   ],
+   [
+    "Health",
+    "Type 2 diabetes managed with medication, non-smoker"
+   ],
+   [
+    "Existing coverage",
+    "None"
+   ],
+   [
+    "Concern",
+    "\"I do not want to be a burden.\""
+   ]
+  ],
+  "story": "Walter paid for his wife's funeral out of pocket and remembers how hard it was. He says, \"I do not want my kids to go through what I did.\" Then he adds, \"With my diabetes, nobody will insure me anyway.\"",
+  "prompt": "Build your angle. Choose the strongest logical reasons, the strongest emotional reasons, and the best response to the objection.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts from their situation that make the strongest case on paper.",
+    "options": [
+     {
+      "t": "Final expense plans are built for his age, and depending on the plan, health questions are simple or not required.",
+      "pts": 20,
+      "why": "Answers his belief that he cannot get covered, without promising an outcome."
+     },
+     {
+      "t": "Explain how a graded death benefit works in the first couple of years, so nothing is a surprise later.",
+      "pts": 12,
+      "why": "An honest disclosure. It builds trust and prevents a claim-time surprise."
+     },
+     {
+      "t": "His diabetes will not matter at all and he will be approved automatically.",
+      "pts": -10,
+      "why": "Misleading. Approval and terms depend on the plan and its underwriting."
+     },
+     {
+      "t": "Price goes up as he ages, so a policy now costs less than the same policy later.",
+      "pts": 10,
+      "why": "True, but generic."
+     },
+     {
+      "t": "Recommend $250,000 so his kids receive a real inheritance.",
+      "pts": -5,
+      "why": "The need is final expenses. The amount does not fit his income or his request."
+     },
+     {
+      "t": "His $9,000 in savings is his cushion for living expenses. A right-sized policy keeps that money his and still covers the bill.",
+      "pts": 20,
+      "why": "Shows him what the policy protects: his own security."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reasons",
+    "pick": 2,
+    "hint": "Pick the two that connect to what they actually want and worry about, without pressure or fear tactics.",
+    "options": [
+     {
+      "t": "He can leave a small gift for each grandchild.",
+      "pts": 10,
+      "why": "A nice touch, but not what he is worried about."
+     },
+     {
+      "t": "Remind him that he is getting older and time is running out.",
+      "pts": -5,
+      "why": "Fear-based."
+     },
+     {
+      "t": "The dignity of leaving things in order: he chooses the arrangements and his children can simply grieve together.",
+      "pts": 20,
+      "why": "Speaks to who he wants to be for his family."
+     },
+     {
+      "t": "His kids will resent him if he does not buy this.",
+      "pts": -10,
+      "why": "Invented and manipulative."
+     },
+     {
+      "t": "Say his late wife would have wanted him to buy it.",
+      "pts": -10,
+      "why": "Invoking a deceased spouse to pressure him crosses a line."
+     },
+     {
+      "t": "He already lived this with his wife's funeral. Give him the chance to make it easier for Karen and David: no scramble, no decisions, no bill.",
+      "pts": 20,
+      "why": "Uses his own experience and offers relief."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "He says: \"My kids can handle it. They are doing fine.\"",
+    "options": [
+     {
+      "t": "\"Are you sure you want them to struggle?\"",
+      "pts": -5,
+      "why": "Guilt."
+     },
+     {
+      "t": "\"Okay. Let me know if that changes.\"",
+      "pts": 0,
+      "why": "Drops the topic and the client."
+     },
+     {
+      "t": "\"Kids always say that and then cannot pay.\"",
+      "pts": 5,
+      "why": "A guess about his children, and dismissive."
+     },
+     {
+      "t": "\"I am sure they would do it gladly. That is the point of a small plan: they can do it without the cost or the stress, and you keep your savings.\"",
+      "pts": 20,
+      "why": "Respects his kids and reframes the plan as a gift to them."
+     }
+    ]
+   }
+  ],
+  "id": "p06"
+ },
+ {
+  "max": 100,
+  "n": 7,
+  "title": "Declined Elsewhere",
+  "cat": "Building the case",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Carlos, 57, part-time delivery driver"
+   ],
+   [
+    "Family",
+    "Wife Maria, 55. One grown daughter"
+   ],
+   [
+    "Income",
+    "$2,300 a month"
+   ],
+   [
+    "Savings",
+    "None"
+   ],
+   [
+    "Health",
+    "COPD on an inhaler and Type 2 diabetes. Declined for a policy by another company last month"
+   ],
+   [
+    "Concern",
+    "\"I do not want Maria to lose the house paying for my funeral.\""
+   ]
+  ],
+  "story": "Carlos is discouraged. He says, \"I got turned down last month. I guess nobody will insure me.\" You know that some plans are guaranteed issue: no health questions, with a graded benefit.",
+  "prompt": "Build your angle. Choose the strongest logical reasons, the strongest emotional reasons, and the best response to the objection.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts from their situation that make the strongest case.",
+    "options": [
+     {
+      "t": "A guaranteed issue plan asks no health questions, so his COPD and diabetes do not stop him from qualifying.",
+      "pts": 20,
+      "why": "Answers the belief that nobody will insure him."
+     },
+     {
+      "t": "He should know the graded benefit up front: if he dies of natural causes in the first two years, beneficiaries typically get premiums paid plus interest. Accidental death is usually paid in full.",
+      "pts": 20,
+      "why": "Honest disclosure of the tradeoff. It builds trust and avoids a claim-time surprise."
+     },
+     {
+      "t": "The price is based on age, so applying at 57 costs less than waiting.",
+      "pts": 10,
+      "why": "True, but secondary."
+     },
+     {
+      "t": "A smaller amount sized to a funeral estimate keeps the premium affordable on $2,300 a month.",
+      "pts": 12,
+      "why": "Fits the plan to his budget."
+     },
+     {
+      "t": "The graded period does not matter, because most people live more than two years.",
+      "pts": -10,
+      "why": "Minimizing a disclosure is not acceptable."
+     },
+     {
+      "t": "Because he was declined once, no company will ever cover him again.",
+      "pts": -10,
+      "why": "False. It closes a door that is open."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reasons",
+    "pick": 2,
+    "hint": "Pick the two that connect to what they actually want and worry about, without pressure or fear.",
+    "options": [
+     {
+      "t": "Say Maria could end up homeless.",
+      "pts": -10,
+      "why": "A scare tactic."
+     },
+     {
+      "t": "His daughter will not have to take on the bills.",
+      "pts": 12,
+      "why": "Relevant, but Maria is his main concern."
+     },
+     {
+      "t": "He said he does not want Maria to lose the house paying for his funeral. A plan means she never has to choose.",
+      "pts": 20,
+      "why": "Uses his own concern and offers relief."
+     },
+     {
+      "t": "Tell him time is running out, given his lungs.",
+      "pts": -10,
+      "why": "Fear about his health."
+     },
+     {
+      "t": "Being turned down probably left him feeling shut out. Show him there is a way to say yes.",
+      "pts": 20,
+      "why": "Speaks to the discouragement he just showed you."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "He says: \"If I die in the first two years, they do not pay? That sounds like a scam.\"",
+    "options": [
+     {
+      "t": "\"It is not a scam. These plans are regulated.\"",
+      "pts": 8,
+      "why": "True but not enough."
+     },
+     {
+      "t": "\"That is a fair reaction. It is called a graded benefit. In the first two years the plan typically returns what you paid plus interest, and after that it pays the full amount. Accidents are paid in full from day one. It is how they can accept everyone. Let us read it together in the policy.\"",
+      "pts": 20,
+      "why": "Takes the concern seriously, explains it plainly and points to the document."
+     },
+     {
+      "t": "\"Every plan for people like you works this way.\"",
+      "pts": -10,
+      "why": "Not accurate, and it dismisses his reaction."
+     },
+     {
+      "t": "\"You will not die in two years.\"",
+      "pts": 0,
+      "why": "You cannot know that."
+     }
+    ]
+   }
+  ],
+  "id": "p07"
+ },
+ {
+  "max": 100,
+  "n": 8,
+  "title": "The Caregiver",
+  "cat": "Building the case",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Denise, 54, home health aide"
+   ],
+   [
+    "Family",
+    "Son, 27, has a disability and lives with her. He receives SSI and Medicaid. No other children nearby"
+   ],
+   [
+    "Income",
+    "$2,800 a month"
+   ],
+   [
+    "Savings",
+    "$1,800"
+   ],
+   [
+    "Existing coverage",
+    "$10,000 through her employer, which ends if she leaves"
+   ],
+   [
+    "Health",
+    "High blood pressure on medication"
+   ],
+   [
+    "In her words",
+    "\"If I go first, who takes care of everything for him?\""
+   ]
+  ],
+  "story": "Denise cares for her son every day. She says, \"I do not want him to be the one who has to deal with any of this.\" You know that SSI and Medicaid are means-tested. In most states a person on SSI can hold only $2,000 in countable assets, and money left directly to him could put those benefits at risk. You are not an attorney, so you cannot advise on the legal fix, but you can raise the issue and point her to one.",
+  "prompt": "Build your angle. Choose the strongest logical reasons, the strongest emotional reasons, and the best response to the objection.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts from their situation that make the strongest case.",
+    "options": [
+     {
+      "t": "Her work policy ends if she leaves the job, while a personal plan is hers to keep.",
+      "pts": 12,
+      "why": "True and relevant, but secondary."
+     },
+     {
+      "t": "Arrangements and final bills would fall to someone, and without money set aside that could be her son or other relatives.",
+      "pts": 20,
+      "why": "Names the real burden she fears."
+     },
+     {
+      "t": "She does not need to plan, because her son's benefits will pay for her funeral.",
+      "pts": -10,
+      "why": "False. His benefits are a small monthly amount for living costs. They do not pay for a funeral, and they end when the benefits do."
+     },
+     {
+      "t": "At 54, the price is lower than it will be later.",
+      "pts": 10,
+      "why": "True, but generic."
+     },
+     {
+      "t": "Who she names as beneficiary matters. SSI and Medicaid limit him to about $2,000 in assets, so a $10,000 payout left straight to him would put him roughly $8,000 over the limit. He could lose his monthly check and his health coverage until the money is spent down. An attorney can set up a special needs trust to receive the money instead.",
+      "pts": 20,
+      "why": "The strongest angle in the file. It shows you understand the $2,000 asset limit, why a lump sum can cost him more than it gives, and that the fix (a special needs trust) belongs with an attorney, not you."
+     },
+     {
+      "t": "Just name her son directly as beneficiary. It is the simplest way.",
+      "pts": -10,
+      "why": "This is the mistake the whole puzzle is about. A lump sum paid to him counts against the $2,000 asset limit, can suspend SSI and Medicaid, and skips advice she needs. The money meant to protect him could end up costing him his benefits."
+     },
+     {
+      "t": "The benefit limit is high enough that a $10,000 payout will not matter to his benefits.",
+      "pts": -10,
+      "why": "False. The SSI asset limit is about $2,000 for one person, so $10,000 is far over it."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reasons",
+    "pick": 2,
+    "hint": "Pick the two that connect to what they actually want and worry about, without pressure or fear.",
+    "options": [
+     {
+      "t": "She can stop lying awake over it.",
+      "pts": 12,
+      "why": "Comforting, but less specific."
+     },
+     {
+      "t": "Warn her that she is running out of time.",
+      "pts": -5,
+      "why": "A fear tactic."
+     },
+     {
+      "t": "She has given years of care. This is one last piece of care that she can put in place now.",
+      "pts": 20,
+      "why": "Recognizes what she has done."
+     },
+     {
+      "t": "Remind her that her son would be helpless without her.",
+      "pts": -10,
+      "why": "Cruel and untrue. He is capable of much, and this is about setting things up so the money helps him instead of hurting his benefits."
+     },
+     {
+      "t": "Her worry is who takes care of everything for her son. A plan lines up both the money and the right person, and set up correctly it helps him instead of putting his benefits at risk.",
+      "pts": 20,
+      "why": "Speaks to what she said and turns the asset-limit issue into reassurance rather than fear."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "She says: \"I can barely make ends meet. I cannot add another bill.\"",
+    "options": [
+     {
+      "t": "\"Then I will call you when things improve.\"",
+      "pts": 0,
+      "why": "Drops the need."
+     },
+     {
+      "t": "\"It is only a few dollars a day.\"",
+      "pts": 8,
+      "why": "Minimizes a real limit."
+     },
+     {
+      "t": "\"Then let us work backward from what fits. A smaller plan can still cover the basics, and we can choose an amount you can keep without strain. I do not want you to lapse.\"",
+      "pts": 20,
+      "why": "Takes the budget seriously and protects her from a lapse."
+     },
+     {
+      "t": "\"You cannot afford not to.\"",
+      "pts": -5,
+      "why": "Pressure."
+     }
+    ]
+   }
+  ],
+  "id": "p08"
+ },
+ {
+  "max": 100,
+  "n": 9,
+  "title": "Let Me Think About It",
+  "cat": "Objections",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Nadine, 69, retired cafeteria worker"
+   ],
+   [
+    "Family",
+    "Widowed, one son who lives nearby"
+   ],
+   [
+    "Income",
+    "$1,750 a month"
+   ],
+   [
+    "Recommendation",
+    "$10,000 whole life, level from day one, $64 a month"
+   ]
+  ],
+  "story": "You presented the plan. Nadine nods along and says, \"This all makes sense. I just need to think about it.\"",
+  "prompt": "What do you say?",
+  "options": [
+   {
+    "t": "Say she is getting older and the price will go up, so she should decide today.",
+    "pts": 30,
+    "why": "Age does affect price, but urgency in place of explanation feels like pressure."
+   },
+   {
+    "t": "Say: \"No problem, I will call you next month.\"",
+    "pts": 15,
+    "why": "A month is long enough for the urgency to fade, and you never learn her concern."
+   },
+   {
+    "t": "Say: \"Of course. What would you like to think through: the amount, the monthly cost, or something else?\"",
+    "pts": 100,
+    "why": "\"Think about it\" usually hides a specific concern. A gentle, specific question brings it out so you can address it now."
+   },
+   {
+    "t": "Say: \"Sure. Can we hold 15 minutes Thursday to go over anything that comes up? I will send the summary tonight.\"",
+    "pts": 70,
+    "why": "Keeps momentum with a next step, but you still do not know the concern."
+   }
+  ],
+  "id": "p09"
+ },
+ {
+  "max": 100,
+  "n": 10,
+  "title": "Let Me Talk to My Kids",
+  "cat": "Objections",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Gloria, 74, widowed"
+   ],
+   [
+    "Family",
+    "Three adult children. Daughter Renee helps with her bills"
+   ],
+   [
+    "Income",
+    "$1,900 a month, Social Security"
+   ],
+   [
+    "Recommendation",
+    "$12,000 whole life, level from day one, $79 a month"
+   ],
+   [
+    "Stage",
+    "She likes the plan"
+   ]
+  ],
+  "story": "Gloria has been nodding through the whole presentation. Then she says, \"I want to run this by Renee first. She helps me with my money.\"",
+  "prompt": "How do you respond?",
+  "options": [
+   {
+    "t": "Hand her your card and say to call when she decides.",
+    "pts": 10,
+    "why": "You give away the follow-up and the sale."
+   },
+   {
+    "t": "Offer to email the quote to Renee and follow up in a week.",
+    "pts": 55,
+    "why": "Gets the plan in front of both, but a week is long and nobody is there to answer questions."
+   },
+   {
+    "t": "Say: \"That makes sense. Renee is part of this. Could she join us on a 15-minute call tomorrow evening? I will send a one-page summary you can both keep.\"",
+    "pts": 100,
+    "why": "Respects who she trusts, brings Renee in quickly, and books a specific next step. Gloria still makes the decision."
+   },
+   {
+    "t": "Tell her the kids will just talk her out of it, so she should finish today.",
+    "pts": 10,
+    "why": "Undermines her family and pressures her. It also raises questions about your motives."
+   }
+  ],
+  "id": "p10"
+ },
+ {
+  "max": 100,
+  "title": "I Can Get It Cheaper Elsewhere",
+  "cat": "Objections",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Vernon, 68"
+   ],
+   [
+    "Your quote",
+    "$10,000 whole life, level from day one, $74 a month"
+   ],
+   [
+    "His mailer",
+    "\"$10,000 for $39 a month\""
+   ],
+   [
+    "What the mailer does not say",
+    "Guaranteed issue with a graded benefit for the first two years"
+   ]
+  ],
+  "story": "Vernon pulls a mailer from his pocket. He says, \"I can get the same $10,000 for $39 a month. Why would I pay you $74?\"",
+  "prompt": "What do you say?",
+  "options": [
+   {
+    "t": "Offer to drop the coverage to $5,000 to match the price.",
+    "pts": 25,
+    "why": "Matching a number without checking what the mailer offers cuts his coverage for no good reason."
+   },
+   {
+    "t": "Say: \"Good to compare. May I see it? Let us check that they match: whether the benefit is graded or full from day one, whether the premium is level, and the carrier. If theirs is the better fit for you, take it.\"",
+    "pts": 100,
+    "why": "Invites the comparison, points to the real differences and stays honest. He trusts you more for it."
+   },
+   {
+    "t": "Say quality costs more and that you will be around to help with claims.",
+    "pts": 45,
+    "why": "Service matters, but it does not address the price gap with facts."
+   },
+   {
+    "t": "Tell him mailers are scams.",
+    "pts": 5,
+    "why": "Untrue as a blanket claim, and it insults his judgment."
+   }
+  ],
+  "n": 11,
+  "id": "p11"
+ },
+ {
+  "max": 100,
+  "title": "I Am Too Old",
+  "cat": "Objections",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Alma, 82"
+   ],
+   [
+    "Family",
+    "Widowed, one daughter nearby"
+   ],
+   [
+    "Health",
+    "Type 2 diabetes, high blood pressure"
+   ],
+   [
+    "Income",
+    "$1,600 a month"
+   ],
+   [
+    "Wants",
+    "To help her daughter with final costs"
+   ]
+  ],
+  "story": "Alma tells you, \"I am too old for insurance. Nobody will sell it to me at my age.\"",
+  "prompt": "What do you say?",
+  "options": [
+   {
+    "t": "Say: \"At your age, everyone gets approved for the full amount.\"",
+    "pts": 10,
+    "why": "False. Older applicants often have a graded benefit."
+   },
+   {
+    "t": "Say: \"I can check, but do not expect much.\"",
+    "pts": 25,
+    "why": "Honest but discouraging, and it does not help her understand her options."
+   },
+   {
+    "t": "Say: \"You may have more choices than you think. Many plans accept people into their 80s without health questions. Let me show you how they work, including the reduced benefit in the first two years, so you can decide.\"",
+    "pts": 100,
+    "why": "Corrects the belief, includes the honest tradeoff, and leaves the decision to her."
+   },
+   {
+    "t": "Say: \"You are right. It is probably too late.\"",
+    "pts": 0,
+    "why": "Gives up on a client who may qualify."
+   }
+  ],
+  "n": 12,
+  "id": "p12"
+ },
+ {
+  "max": 100,
+  "title": "I Do Not Trust Insurance Companies",
+  "cat": "Objections",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Earl, 73, retired machinist"
+   ],
+   [
+    "Family",
+    "Married. Two sons"
+   ],
+   [
+    "Income",
+    "$2,700 a month"
+   ],
+   [
+    "Background",
+    "His brother's claim was denied years ago after months of delays"
+   ]
+  ],
+  "story": "Earl folds his arms. \"Insurance companies take your money and never pay. My brother went through it.\"",
+  "prompt": "What do you say?",
+  "options": [
+   {
+    "t": "Say: \"Everyone has a bad story, but most claims are paid.\"",
+    "pts": 25,
+    "why": "Dismisses his experience with a generalization."
+   },
+   {
+    "t": "Say: \"That would never happen with my company.\"",
+    "pts": 5,
+    "why": "A promise you cannot make."
+   },
+   {
+    "t": "Say: \"I am sorry that happened. Can you tell me what the reason was? Let me show you how this policy pays, the company's rating and what could cause a claim to be denied, so nothing is a surprise.\"",
+    "pts": 100,
+    "why": "Listens first, treats the story as real, and answers with specifics and transparency."
+   },
+   {
+    "t": "Say: \"That is not true.\"",
+    "pts": 5,
+    "why": "Argues with a story about his own family."
+   }
+  ],
+  "n": 13,
+  "id": "p13"
+ },
+ {
+  "max": 100,
+  "title": "I Have Savings in the Bank",
+  "cat": "Objections",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Mavis, 77, widowed"
+   ],
+   [
+    "Family",
+    "Two adult children"
+   ],
+   [
+    "Savings",
+    "$18,000 in a savings account in her name alone"
+   ],
+   [
+    "Income",
+    "$1,850 a month"
+   ],
+   [
+    "Wishes",
+    "Traditional funeral and burial"
+   ]
+  ],
+  "story": "Mavis says, \"I have money put away. I do not need any insurance.\"",
+  "prompt": "What do you say?",
+  "options": [
+   {
+    "t": "Say: \"Then you do not need me.\"",
+    "pts": 5,
+    "why": "Gives up without exploring the need."
+   },
+   {
+    "t": "Say savings are risky and can run out.",
+    "pts": 20,
+    "why": "Vague, and it dismisses what she has done."
+   },
+   {
+    "t": "Say that accounts in her name alone may be tied up until the estate is settled, which could delay paying bills.",
+    "pts": 60,
+    "why": "A useful point, but it is a statement and not a question, and it is only part of the picture."
+   },
+   {
+    "t": "Ask: \"That is smart. What is that money for: your everyday safety net, or the funeral? And how would your children reach it quickly? If a policy pays the bill, your savings stay yours.\"",
+    "pts": 100,
+    "why": "Respects her savings, opens up their purpose and the access question, and frames the plan as protecting her money."
+   }
+  ],
+  "n": 14,
+  "id": "p14"
+ },
+ {
+  "max": 100,
+  "n": 15,
+  "title": "The Price Stall",
+  "cat": "Objections",
+  "format": "text",
+  "minWords": 12,
+  "file": [
+   [
+    "Clients",
+    "A couple, 58 and 55"
+   ],
+   [
+    "Agreed need",
+    "$10,000 of final expense coverage each"
+   ],
+   [
+    "Quote",
+    "$74 a month for both"
+   ],
+   [
+    "Family",
+    "Two grown children, one grandchild"
+   ],
+   [
+    "Income",
+    "Both work, $3,900 a month combined"
+   ]
+  ],
+  "story": "Both spouses agreed they want to cover their final costs. Then the husband looks at the quote and says, \"That is more than I expected.\"",
+  "prompt": "Write what you would say next in 2 to 5 sentences. Aim to earn agreement, not to push.",
+  "rubric": [
+   {
+    "label": "Acknowledges the concern",
+    "keys": [
+     "understand",
+     "hear you",
+     "makes sense",
+     "fair",
+     "appreciate",
+     "i get it",
+     "reasonable",
+     "valid",
+     "thank you for"
+    ],
+    "pts": 20,
+    "tip": "Start by showing you heard him. People stop pushing back once they feel understood."
+   },
+   {
+    "label": "Ties the cost to what is protected",
+    "keys": [
+     "family",
+     "kids",
+     "children",
+     "funeral",
+     "burial",
+     "burden",
+     "bill",
+     "protect",
+     "wife",
+     "husband",
+     "spouse",
+     "grandchild"
+    ],
+    "pts": 20,
+    "tip": "Bring it back to the reason they wanted coverage: the people they would spare from the bill."
+   },
+   {
+    "label": "Puts the price in perspective",
+    "keys": [
+     "a day",
+     "per day",
+     "daily",
+     "coffee",
+     "cents",
+     "less than",
+     "worth",
+     "compared"
+    ],
+    "pts": 20,
+    "tip": "Reframe $74 a month as a small daily cost next to a large one-time bill."
+   },
+   {
+    "label": "Offers a way to fit the budget",
+    "keys": [
+     "adjust",
+     "lower",
+     "smaller",
+     "reduce",
+     "start with",
+     "option",
+     "fit your budget",
+     "fit the budget",
+     "different amount",
+     "scale",
+     "trim"
+    ],
+    "pts": 20,
+    "tip": "Give them a choice, such as a lower amount, so \"too much\" has a solution."
+   },
+   {
+    "label": "Asks for a decision or next step",
+    "keys": [
+     "get started",
+     "move forward",
+     "application",
+     "apply",
+     "next step",
+     "shall we",
+     "ready to",
+     "let's",
+     "sign",
+     "today",
+     "want to"
+    ],
+    "pts": 20,
+    "tip": "Finish with a clear ask. Without it the conversation drifts."
+   }
+  ],
+  "sample": "I understand, and I want this to fit your budget. For about $2.50 a day, your children never have to pay for a funeral out of their own pockets. If that still feels like too much, we can lower the amount a little and adjust later. Which would you like to try so we can get your application started today?",
+  "id": "p15"
+ },
+ {
+  "max": 100,
+  "n": 16,
+  "title": "The Truck Payment",
+  "cat": "Replacement",
+  "format": "angle",
+  "file": [
+   [
+    "Clients",
+    "Dennis, 68 and Carol, 66"
+   ],
+   [
+    "Existing policy",
+    "Whole life, $15,000 face, bought in 1989. Premium $68 a month"
+   ],
+   [
+    "Cash value",
+    "About $6,200. No surrender charge"
+   ],
+   [
+    "Premiums paid over the years",
+    "About $15,500"
+   ],
+   [
+    "Truck loan",
+    "$5,400 left. $312 a month, 18 payments to go"
+   ],
+   [
+    "Income",
+    "$3,600 a month, Social Security and pension"
+   ],
+   [
+    "Health",
+    "Dennis takes blood pressure and cholesterol medication. Carol is healthy"
+   ],
+   [
+    "New quote",
+    "$20,000 whole life, level from day one, $88 a month"
+   ]
+  ],
+  "story": "Dennis grumbles about the truck payment. He says, \"That old policy has to be worth something. The truck is eating us alive every month.\" Carol adds, \"We never really looked at what it does.\"",
+  "prompt": "Decide how you would present a replacement. Build your angle, and choose the steps that keep you compliant.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts that should drive your recommendation for this client.",
+    "options": [
+     {
+      "t": "The new plan is $88 against $68 now. About $20 more a month buys $20,000 of coverage instead of $15,000.",
+      "pts": 20,
+      "why": "A small price increase and a larger benefit, stated plainly."
+     },
+     {
+      "t": "The cash value in an old policy is not worth anything to them.",
+      "pts": -10,
+      "why": "False. It is the source of the cash."
+     },
+     {
+      "t": "Their kids will need the old policy's face amount as an inheritance.",
+      "pts": -5,
+      "why": "Nobody said that was a goal."
+     },
+     {
+      "t": "Surrendering the cash value pays off the $5,400 truck loan and frees $312 a month. That is far more than the added cost of the new coverage.",
+      "pts": 20,
+      "why": "The core benefit, in their own numbers."
+     },
+     {
+      "t": "About $800 would be left after the loan is paid, which could go to savings.",
+      "pts": 12,
+      "why": "True and useful, but supporting."
+     },
+     {
+      "t": "Paying the loan off early saves the remaining interest.",
+      "pts": 10,
+      "why": "True, but the amount is small."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reason",
+    "pick": 1,
+    "hint": "Pick the one that connects to what they want and worry about, without pressure or fear.",
+    "options": [
+     {
+      "t": "Say the truck is what keeps them from ever relaxing in retirement.",
+      "pts": -5,
+      "why": "An exaggeration."
+     },
+     {
+      "t": "Reassure them that 30 years of coverage did exactly what it was meant to do.",
+      "pts": 8,
+      "why": "Respectful, but it does not give a reason to act."
+     },
+     {
+      "t": "Tell him that keeping the old policy is throwing money away.",
+      "pts": -10,
+      "why": "Disparaging and pushy."
+     },
+     {
+      "t": "Dennis wants relief from the truck payment. He gets $312 a month back and a bigger safety net for Carol in the same move.",
+      "pts": 15,
+      "why": "Speaks to the pain he named and adds protection."
+     }
+    ]
+   },
+   {
+    "key": "checks",
+    "label": "Before you recommend it",
+    "pick": 2,
+    "hint": "Pick the two steps or disclosures that matter most before anyone surrenders or replaces anything.",
+    "options": [
+     {
+      "t": "Skip questions on the application because he looks healthy.",
+      "pts": -10,
+      "why": "Incomplete answers can void the policy at claim time."
+     },
+     {
+      "t": "Confirm the new plan pays in full from day one, with no graded benefit, and compare it with the old policy's payout.",
+      "pts": 15,
+      "why": "If the new plan has a graded period, they could be worse off in the first two years than they are today."
+     },
+     {
+      "t": "Give a written side-by-side comparison and complete the state replacement forms, including notice to the existing insurer.",
+      "pts": 12,
+      "why": "Required in most states and the clearest way to show both options."
+     },
+     {
+      "t": "Have him surrender now so the truck is paid off sooner, then apply for the new coverage.",
+      "pts": -10,
+      "why": "If he is declined or rated, he has lost his coverage."
+     },
+     {
+      "t": "Get the new policy approved and in force before surrendering or lapsing the old one.",
+      "pts": 15,
+      "why": "Never give up coverage before the replacement is in place. Health answers can change the offer."
+     },
+     {
+      "t": "Confirm the cash value and surrender terms with the insurer. Premiums paid exceed the cash value, but suggest a tax professional confirm the tax treatment.",
+      "pts": 10,
+      "why": "They should not be surprised by a tax bill or a lower check."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "Dennis says: \"I have paid into that for 30 years. It feels like a waste to cash it in.\"",
+    "options": [
+     {
+      "t": "\"You are wasting money every month you keep it.\"",
+      "pts": 0,
+      "why": "Pushy."
+     },
+     {
+      "t": "\"Keep it if you want. It is your choice.\"",
+      "pts": 5,
+      "why": "Respectful, but no help in deciding."
+     },
+     {
+      "t": "\"Those years bought you coverage, and it did its job. Let us compare what each option does from here forward, and you decide.\"",
+      "pts": 15,
+      "why": "Answers the sunk-cost feeling and keeps him in charge."
+     },
+     {
+      "t": "\"Everyone I know who did this is happy.\"",
+      "pts": -5,
+      "why": "Vague social proof."
+     }
+    ]
+   }
+  ],
+  "id": "p16"
+ },
+ {
+  "max": 100,
+  "n": 17,
+  "title": "The Furnace Bill",
+  "cat": "Replacement",
+  "format": "angle",
+  "file": [
+   [
+    "Clients",
+    "Harold, 71 and Betty, 69"
+   ],
+   [
+    "Existing policy",
+    "Whole life, $12,000 face. Premium $58 a month"
+   ],
+   [
+    "Cash value",
+    "About $7,300. No surrender charge"
+   ],
+   [
+    "Pressing bill",
+    "New furnace, $5,800, needed within ten days"
+   ],
+   [
+    "Card option",
+    "Credit card at 25%"
+   ],
+   [
+    "Savings",
+    "$600"
+   ],
+   [
+    "Income",
+    "$3,100 a month"
+   ],
+   [
+    "Health",
+    "Harold has Type 2 diabetes controlled with pills. Betty is healthy"
+   ],
+   [
+    "New quote",
+    "$15,000 whole life, level from day one, $69 a month"
+   ]
+  ],
+  "story": "The furnace has died and the weather is turning. Harold says, \"We would have to put it on the credit card at 25%. My neighbor said the cash in my policy could help.\" Betty asks, \"Is it smart to cash out something we have paid on for 30 years?\"",
+  "prompt": "Decide how you would present the options. Build your angle, and choose the steps that keep you compliant.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts that should drive your recommendation for this client.",
+    "options": [
+     {
+      "t": "Interest at 25% on $5,800 would cost more over time than the small premium increase.",
+      "pts": 10,
+      "why": "Puts the credit card cost in context."
+     },
+     {
+      "t": "If he is declined for the new plan, he can simply get the old policy back.",
+      "pts": -10,
+      "why": "False. A surrendered policy is gone."
+     },
+     {
+      "t": "The new plan is $69 against $58 now. About $11 more a month buys $3,000 more coverage.",
+      "pts": 20,
+      "why": "A small price increase for a larger benefit."
+     },
+     {
+      "t": "Harold's diabetes is controlled and the plan is level from day one, so there is no waiting period if he qualifies.",
+      "pts": 10,
+      "why": "A helpful detail, but it depends on underwriting."
+     },
+     {
+      "t": "They can wait until spring to replace the furnace.",
+      "pts": -10,
+      "why": "Unsafe advice outside your role."
+     },
+     {
+      "t": "The $7,300 cash value covers the $5,800 furnace with no 25% credit card, and leaves about $1,500.",
+      "pts": 20,
+      "why": "Solves the immediate problem with no borrowing cost."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reason",
+    "pick": 1,
+    "hint": "Pick the one that connects to what they want and worry about, without pressure or fear.",
+    "options": [
+     {
+      "t": "Suggest Harold let the family down by not planning for emergencies.",
+      "pts": -10,
+      "why": "Blame."
+     },
+     {
+      "t": "The heat is back on with no debt, and Betty is covered for a higher amount, all in one visit.",
+      "pts": 15,
+      "why": "Ties the immediate need to the protection they keep."
+     },
+     {
+      "t": "They can stop worrying about money going forward.",
+      "pts": 8,
+      "why": "Too general."
+     },
+     {
+      "t": "Warn that the cold could make them sick.",
+      "pts": -10,
+      "why": "A fear tactic."
+     }
+    ]
+   },
+   {
+    "key": "checks",
+    "label": "Before you recommend it",
+    "pick": 2,
+    "hint": "Pick the two steps or disclosures that matter most before anyone surrenders or replaces anything.",
+    "options": [
+     {
+      "t": "Have Harold be approved for the new policy, with it in force, before he surrenders the old one.",
+      "pts": 15,
+      "why": "Do not remove coverage until the new coverage is in place."
+     },
+     {
+      "t": "Explain the new contestability period, and that approval depends on Harold answering the health questions accurately.",
+      "pts": 10,
+      "why": "Sets honest expectations."
+     },
+     {
+      "t": "Provide a written side-by-side comparison and the state replacement notice.",
+      "pts": 12,
+      "why": "Required in most states."
+     },
+     {
+      "t": "Have him surrender now because the furnace cannot wait, then apply afterward.",
+      "pts": -10,
+      "why": "If he is declined, they have neither the coverage nor the cash."
+     },
+     {
+      "t": "Tell Harold his diabetes will not matter and approval is certain.",
+      "pts": -10,
+      "why": "You do not know the underwriting decision."
+     },
+     {
+      "t": "Compare all options, including a policy loan, a partial withdrawal and a reduced paid-up amount, and explain each tradeoff.",
+      "pts": 15,
+      "why": "A full surrender is not the only way to reach cash. A loan avoids giving up the policy, though unpaid loans reduce the death benefit."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "Betty says: \"Is it smart to cash out something we have paid on for 30 years?\"",
+    "options": [
+     {
+      "t": "\"Yes, it is smart. The furnace cannot wait.\"",
+      "pts": 0,
+      "why": "Dismisses her concern."
+     },
+     {
+      "t": "\"If you wait, you will pay 25% on the card.\"",
+      "pts": -5,
+      "why": "Urgency in place of explanation."
+     },
+     {
+      "t": "\"Do not worry about it. I have done this many times.\"",
+      "pts": 3,
+      "why": "Reassurance without information."
+     },
+     {
+      "t": "\"That is a fair question. I will show you the loan, the withdrawal and the surrender side by side so you can decide knowing the tradeoffs.\"",
+      "pts": 15,
+      "why": "Takes the concern seriously and gives the full picture."
+     }
+    ]
+   }
+  ],
+  "id": "p17"
+ },
+ {
+  "max": 100,
+  "n": 18,
+  "title": "The Loan on the Policy",
+  "cat": "Replacement",
+  "format": "angle",
+  "file": [
+   [
+    "Clients",
+    "Bill, 67 and Pam, 65"
+   ],
+   [
+    "Existing policy",
+    "Whole life, $20,000 face. Premium $96 a month"
+   ],
+   [
+    "Cash value",
+    "About $9,500"
+   ],
+   [
+    "Outstanding policy loan",
+    "About $4,800"
+   ],
+   [
+    "Net check if surrendered",
+    "About $4,700"
+   ],
+   [
+    "Premiums paid over the years",
+    "About $6,000"
+   ],
+   [
+    "Pressing bills",
+    "Medical bill $2,900, credit card $1,800 at 26%"
+   ],
+   [
+    "Health",
+    "Bill takes blood pressure medication, otherwise well"
+   ],
+   [
+    "New quote",
+    "$20,000 whole life, level from day one, $92 a month"
+   ]
+  ],
+  "story": "Bill says, \"I have $9,500 in that policy. Let us cash it out and pay the medical bill and the credit card.\" He believes he will receive the full $9,500. Pam says, \"I thought we borrowed some of that already.\"",
+  "prompt": "Decide how you would guide them. Build your angle, and choose the steps that keep you compliant.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts that should drive your recommendation for this client.",
+    "options": [
+     {
+      "t": "Paying off the 26% credit card removes a large ongoing interest cost.",
+      "pts": 10,
+      "why": "True, but secondary."
+     },
+     {
+      "t": "Because it is a loan, no taxes will apply.",
+      "pts": -10,
+      "why": "Misleading."
+     },
+     {
+      "t": "The new plan costs $4 a month less than the current premium for the same $20,000.",
+      "pts": 12,
+      "why": "A real advantage."
+     },
+     {
+      "t": "Bill will receive the full $9,500.",
+      "pts": -10,
+      "why": "False. The loan is repaid first."
+     },
+     {
+      "t": "The $4,800 loan comes out of the $9,500, so the check would be about $4,700. That still covers the $2,900 bill and the $1,800 card.",
+      "pts": 20,
+      "why": "Corrects the biggest misunderstanding and shows the plan still works."
+     },
+     {
+      "t": "Cash value minus what they paid in is about $3,500 and could be taxable even though part of it repays the loan. A tax professional should confirm.",
+      "pts": 20,
+      "why": "A surrender with a loan can create a tax bill larger than the check suggests."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reason",
+    "pick": 1,
+    "hint": "Pick the one that connects to what they want and worry about, without pressure or fear.",
+    "options": [
+     {
+      "t": "Suggest a good husband would not let a medical bill sit unpaid.",
+      "pts": -10,
+      "why": "Guilt and pressure."
+     },
+     {
+      "t": "The medical bill and the card are causing stress. A clear plan clears them and keeps Pam protected.",
+      "pts": 15,
+      "why": "Speaks to the relief they want."
+     },
+     {
+      "t": "Tell Pam the surrender will do more for their future than the policy ever could.",
+      "pts": -10,
+      "why": "An unsupported promise."
+     },
+     {
+      "t": "They can stop worrying about the bills.",
+      "pts": 5,
+      "why": "Too general."
+     }
+    ]
+   },
+   {
+    "key": "checks",
+    "label": "Before you recommend it",
+    "pick": 2,
+    "hint": "Pick the two steps or disclosures that matter most before anyone surrenders or replaces anything.",
+    "options": [
+     {
+      "t": "Compare alternatives: repaying part of the loan, a partial withdrawal or a reduced paid-up option.",
+      "pts": 12,
+      "why": "Other choices might meet the need with less tax and less lost coverage."
+     },
+     {
+      "t": "Provide a written side-by-side comparison and the state replacement notice.",
+      "pts": 12,
+      "why": "Required in most states."
+     },
+     {
+      "t": "Tell him blood pressure medication is nothing and approval is guaranteed.",
+      "pts": -10,
+      "why": "You cannot know the underwriting decision."
+     },
+     {
+      "t": "Have him sign the surrender form now so the funds arrive before the bill is due.",
+      "pts": -10,
+      "why": "Rushing removes his chance to see the tax and approval risks."
+     },
+     {
+      "t": "Show the actual net check and the estimated taxable gain in writing before he decides anything.",
+      "pts": 15,
+      "why": "He needs the real numbers, not the $9,500 headline."
+     },
+     {
+      "t": "Do not surrender until the new policy is approved and in force.",
+      "pts": 15,
+      "why": "His blood pressure could affect the offer."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "Bill says: \"The tax thing sounds like a trick. It is my money.\"",
+    "options": [
+     {
+      "t": "\"That is how it works. There is nothing I can do.\"",
+      "pts": 3,
+      "why": "Correct but unhelpful."
+     },
+     {
+      "t": "\"It is your money, which is why I want you to see the number before you sign. The gain counts as income for the year even though you receive only $4,700. A tax professional can confirm your exact figure.\"",
+      "pts": 15,
+      "why": "Respects him, explains it plainly and points to a real resource."
+     },
+     {
+      "t": "\"You are right. Let us skip that part.\"",
+      "pts": -10,
+      "why": "Ignores a material fact."
+     },
+     {
+      "t": "\"Do not worry about that. We will sort it out later.\"",
+      "pts": -5,
+      "why": "Postpones an issue he should understand now."
+     }
+    ]
+   }
+  ],
+  "id": "p18"
+ },
+ {
+  "max": 100,
+  "n": 19,
+  "title": "Keep the Policy",
+  "cat": "Replacement",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Joan, 76, widowed"
+   ],
+   [
+    "Existing policy",
+    "Whole life, $12,000 face, bought at 40. Paid up, no premium due"
+   ],
+   [
+    "Cash value",
+    "About $5,900"
+   ],
+   [
+    "Premiums paid over the years",
+    "About $8,400"
+   ],
+   [
+    "Health",
+    "Stroke 18 months ago"
+   ],
+   [
+    "Request",
+    "Wants $3,800 for dentures and hearing aids"
+   ],
+   [
+    "Tip from a friend",
+    "\"Cash it out and buy one of those cheaper plans\""
+   ],
+   [
+    "Alternative shown",
+    "$10,000 guaranteed issue, graded benefit, $92 a month"
+   ]
+  ],
+  "story": "Joan says, \"My friend told me to cash this out and buy one of those plans on TV. I need dentures and hearing aids.\" She has kept this policy for 36 years, and her son is the beneficiary.",
+  "prompt": "Decide what you would recommend. Build your angle, and choose the steps that keep you honest and compliant.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts that should drive your recommendation for this client.",
+    "options": [
+     {
+      "t": "A loan or partial withdrawal from the cash value could cover the $3,800 and keep the policy in force, though it lowers the death benefit until repaid.",
+      "pts": 12,
+      "why": "A way to meet her need without replacing anything."
+     },
+     {
+      "t": "A new plan at 76 would be priced on her current age.",
+      "pts": 10,
+      "why": "True and supports keeping the old policy."
+     },
+     {
+      "t": "Because of her stroke, a new plan would likely be guaranteed issue with a graded benefit: for natural causes in the first two years it typically returns premiums plus interest, and it would cost $92 a month.",
+      "pts": 20,
+      "why": "She would give up full coverage and start paying monthly."
+     },
+     {
+      "t": "Her current policy is paid up and pays the full $12,000 from day one, with nothing to pay each month.",
+      "pts": 20,
+      "why": "What she has is already better than what she is being pitched."
+     },
+     {
+      "t": "Surrendering has no downside.",
+      "pts": -10,
+      "why": "False. She would lose full coverage and her health changes what she can buy."
+     },
+     {
+      "t": "The new plan is cheaper, so she comes out ahead.",
+      "pts": -10,
+      "why": "False. She pays nothing now and would pay $92 a month."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reason",
+    "pick": 1,
+    "hint": "Pick the one that connects to what they want and worry about, without pressure or fear.",
+    "options": [
+     {
+      "t": "Her policy is paid for and done. She can keep that peace of mind and still get her hearing aids and dentures through a smaller step.",
+      "pts": 15,
+      "why": "Respects what she has and solves what she wants."
+     },
+     {
+      "t": "Tell her the policy was mis-sold by whoever sold it.",
+      "pts": -10,
+      "why": "Disparaging a previous agent and pushing replacement."
+     },
+     {
+      "t": "Remind her she is not getting any younger.",
+      "pts": -5,
+      "why": "A fear tactic."
+     },
+     {
+      "t": "She has earned the chance to treat herself with the money.",
+      "pts": 3,
+      "why": "Nudges her toward surrender without a reason."
+     }
+    ]
+   },
+   {
+    "key": "checks",
+    "label": "Before you recommend it",
+    "pick": 2,
+    "hint": "Pick the two steps or disclosures that matter most before anyone surrenders or replaces anything.",
+    "options": [
+     {
+      "t": "Recommend she replace it anyway and leave the stroke off the application.",
+      "pts": -10,
+      "why": "Misrepresentation, and grounds to void the policy."
+     },
+     {
+      "t": "Tell her honestly that keeping the policy is the better recommendation, even though it means no new sale.",
+      "pts": 15,
+      "why": "Suitability comes before commission. That is how referrals come."
+     },
+     {
+      "t": "Tell her the graded period is just a formality.",
+      "pts": -10,
+      "why": "It affects what her son would receive."
+     },
+     {
+      "t": "Get the cash value, basis and terms from the insurer in writing, and suggest a tax professional review any gain.",
+      "pts": 12,
+      "why": "She needs accurate numbers before making a choice."
+     },
+     {
+      "t": "Show what a loan, a withdrawal or a reduced paid-up option would do to her death benefit.",
+      "pts": 15,
+      "why": "Lets her weigh the alternatives with real figures."
+     },
+     {
+      "t": "If she still wants a new plan, explain the graded benefit and how it differs from what she has today.",
+      "pts": 10,
+      "why": "Clear disclosure of what she would give up."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "She says: \"My friend says those new plans are cheaper.\"",
+    "options": [
+     {
+      "t": "\"Some plans do have lower prices. Yours is paid up, so you pay nothing monthly, and it pays in full from day one. Let us put the two side by side.\"",
+      "pts": 15,
+      "why": "Acknowledges the friend and returns to her situation."
+     },
+     {
+      "t": "\"Let us not worry about that.\"",
+      "pts": 0,
+      "why": "Ignores the concern."
+     },
+     {
+      "t": "\"Your friend does not know your situation.\"",
+      "pts": 3,
+      "why": "Correct, but dismissive."
+     },
+     {
+      "t": "\"You are right. Let us switch you.\"",
+      "pts": -5,
+      "why": "Agrees without checking what she would give up."
+     }
+    ]
+   }
+  ],
+  "id": "p19"
+ },
+ {
+  "max": 100,
+  "title": "Out of the Waiting Period",
+  "cat": "Replacement",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Rosa, 66, retired seamstress"
+   ],
+   [
+    "Existing policy",
+    "Guaranteed issue whole life, $10,000, bought 14 months ago. Premium $71 a month"
+   ],
+   [
+    "Graded terms",
+    "Natural death in the first 2 years pays premiums plus interest. Full benefit after"
+   ],
+   [
+    "Time left in graded period",
+    "About 10 months"
+   ],
+   [
+    "Health",
+    "Breast cancer treated 4 years ago, in remission. Blood pressure controlled"
+   ],
+   [
+    "Family",
+    "Two adult children. Daughter Lucy helps with her bills"
+   ],
+   [
+    "Income",
+    "$1,850 a month"
+   ],
+   [
+    "Possible new plan",
+    "$10,000 whole life, level from day one, $69 a month. One carrier now accepts people 3 or more years past treatment"
+   ]
+  ],
+  "story": "Rosa bought her guaranteed issue plan last year, after two carriers turned her down. Looking at her file, you see that one carrier now accepts applicants three years past treatment. She says, \"I feel fine. I have not had any trouble in years.\"",
+  "prompt": "Decide how you would present the replacement. Build your angle, and choose the steps that keep you compliant.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts that make the strongest honest case for the change.",
+    "options": [
+     {
+      "t": "If she died of natural causes in the next 10 months, her current plan would pay only premiums plus interest. The new plan pays the full $10,000 from day one.",
+      "pts": 20,
+      "why": "The clearest reason to move. It shows a concrete difference in what her family would receive."
+     },
+     {
+      "t": "The new plan is $69 a month against $71 now, so she would pay $2 less and have full coverage from the first day.",
+      "pts": 20,
+      "why": "A better benefit for a lower price, stated plainly."
+     },
+     {
+      "t": "Only 10 months remain, so switching gains her very little.",
+      "pts": 5,
+      "why": "A fair counterpoint, but the gap in those months is the point."
+     },
+     {
+      "t": "The new plan has the same graded period, just from a different company.",
+      "pts": -10,
+      "why": "False. The new plan would be level from day one."
+     },
+     {
+      "t": "Each month she waits keeps her in the reduced-benefit period.",
+      "pts": 10,
+      "why": "True, but it works better as part of the first point."
+     },
+     {
+      "t": "The graded period does not matter, because most people live more than two years.",
+      "pts": -10,
+      "why": "Minimizing a real difference in the benefit."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reason",
+    "pick": 1,
+    "hint": "Pick the one that connects to what they want and worry about, without pressure or fear.",
+    "options": [
+     {
+      "t": "She would have no surprises for her children.",
+      "pts": 8,
+      "why": "Too general."
+     },
+     {
+      "t": "Point out that she could pass away in the next ten months.",
+      "pts": -10,
+      "why": "A scare tactic."
+     },
+     {
+      "t": "Rosa has looked after her health for years. Now Lucy would receive the full amount whenever it is needed, from the first day the policy is in force.",
+      "pts": 15,
+      "why": "Ties the change to the person she wants to protect."
+     },
+     {
+      "t": "Tell her the current plan is a trap she should get out of.",
+      "pts": -10,
+      "why": "It is a legitimate plan, and this frames it unfairly."
+     }
+    ]
+   },
+   {
+    "key": "checks",
+    "label": "Before you recommend it",
+    "pick": 2,
+    "hint": "Pick the two steps or disclosures that matter most before anyone cancels or replaces anything.",
+    "options": [
+     {
+      "t": "Leave the cancer history off so she qualifies.",
+      "pts": -10,
+      "why": "Misrepresentation that could void the policy."
+     },
+     {
+      "t": "Explain that eligibility is decided by the carrier, not by you, and what happens if she is declined.",
+      "pts": 10,
+      "why": "Sets honest expectations."
+     },
+     {
+      "t": "Give a written side-by-side comparison and the state replacement notice, and show exactly how many months remain in the graded period.",
+      "pts": 12,
+      "why": "Required in most states and makes the difference visible."
+     },
+     {
+      "t": "Complete the health questions accurately with her, including her cancer history, and explain that a new policy has its own contestability period.",
+      "pts": 15,
+      "why": "Inaccurate answers can void a new policy at claim time."
+     },
+     {
+      "t": "Cancel the old plan first so she does not pay two premiums.",
+      "pts": -10,
+      "why": "If the new plan is declined she is left with no coverage."
+     },
+     {
+      "t": "Have the new policy approved and in force before cancelling the old one.",
+      "pts": 15,
+      "why": "She should never be without coverage. If she is declined, she keeps her current plan."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "Rosa says: \"I have been paying for over a year. I do not want to start over.\"",
+    "options": [
+     {
+      "t": "\"That is a fair concern. What you paid bought coverage, but for the next 10 months a natural death pays back only your premiums plus interest. If the new plan is approved, it pays in full from day one. Let us compare them side by side.\"",
+      "pts": 15,
+      "why": "Respects the concern, states the facts and offers a comparison."
+     },
+     {
+      "t": "\"You are not starting over. It is basically the same thing.\"",
+      "pts": 3,
+      "why": "Glosses over a real difference."
+     },
+     {
+      "t": "\"You will regret staying in it if something happens.\"",
+      "pts": -5,
+      "why": "A scare tactic."
+     },
+     {
+      "t": "\"Your old plan is worthless.\"",
+      "pts": 0,
+      "why": "False and unhelpful."
+     }
+    ]
+   }
+  ],
+  "n": 20,
+  "id": "p20"
+ },
+ {
+  "max": 100,
+  "title": "The Smoker Rate",
+  "cat": "Replacement",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Walt, 62, retired trucker"
+   ],
+   [
+    "Family",
+    "Wife Diane, 64. One adult son"
+   ],
+   [
+    "Existing policy",
+    "Whole life, $10,000, bought 3 years ago at tobacco rates. Premium $118 a month"
+   ],
+   [
+    "Tobacco",
+    "Quit about 26 months ago"
+   ],
+   [
+    "Health",
+    "Blood pressure controlled"
+   ],
+   [
+    "Income",
+    "$2,600 a month"
+   ],
+   [
+    "Possible quotes (non-tobacco)",
+    "$10,000 for $79 a month, or $15,000 for $118 a month, subject to the carrier's tobacco test"
+   ]
+  ],
+  "story": "Walt says, \"Ever since I quit, I have been paying the smoker price. Diane says I should ask if there is anything to be done.\"",
+  "prompt": "Decide how you would present the change. Build your angle, and choose the steps that keep you compliant.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts that make the strongest honest case for the change.",
+    "options": [
+     {
+      "t": "He will definitely get the non-tobacco price.",
+      "pts": -10,
+      "why": "The carrier decides after underwriting and testing."
+     },
+     {
+      "t": "For the same $118 a month, he could have $15,000 instead of $10,000: 50 percent more coverage.",
+      "pts": 20,
+      "why": "A second way to use the same savings."
+     },
+     {
+      "t": "Every company gives the non-tobacco price after one month.",
+      "pts": -10,
+      "why": "False. Rules vary by carrier."
+     },
+     {
+      "t": "At non-tobacco rates, the same $10,000 would cost about $39 a month less than he pays now.",
+      "pts": 20,
+      "why": "A clear, honest saving."
+     },
+     {
+      "t": "He is only three years older than when he bought, so the price difference is mostly the tobacco status.",
+      "pts": 10,
+      "why": "Useful context."
+     },
+     {
+      "t": "Many carriers offer non-tobacco rates after about a year, and he is now past two years.",
+      "pts": 12,
+      "why": "True in general, but each carrier sets its own rules and tests."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reason",
+    "pick": 1,
+    "hint": "Pick the one that connects to what they want and worry about, without pressure or fear.",
+    "options": [
+     {
+      "t": "Say the current company is cheating him.",
+      "pts": -10,
+      "why": "False and disparaging."
+     },
+     {
+      "t": "Tell him he wasted three years by not asking sooner.",
+      "pts": -10,
+      "why": "Blame."
+     },
+     {
+      "t": "Quitting was hard. He deserves to be paid back for it, and Diane's suggestion shows she wants him to get the credit.",
+      "pts": 15,
+      "why": "Recognizes what he did and involves his wife."
+     },
+     {
+      "t": "He can stop overpaying every month.",
+      "pts": 8,
+      "why": "True but flat."
+     }
+    ]
+   },
+   {
+    "key": "checks",
+    "label": "Before you recommend it",
+    "pick": 2,
+    "hint": "Pick the two steps or disclosures that matter most before anyone cancels or replaces anything.",
+    "options": [
+     {
+      "t": "Ask his current insurer whether it will reclassify him to non-tobacco rates, before replacing anything.",
+      "pts": 12,
+      "why": "A change of class inside his current policy avoids replacement entirely. It is the honest first step."
+     },
+     {
+      "t": "Have the new policy approved and in force before cancelling the old one.",
+      "pts": 15,
+      "why": "He keeps his coverage if the new application does not go through."
+     },
+     {
+      "t": "Give a written side-by-side comparison and the state replacement notice.",
+      "pts": 12,
+      "why": "Required in most states."
+     },
+     {
+      "t": "Answer the tobacco questions truthfully and tell him the carrier may test. A misstatement can void the policy.",
+      "pts": 15,
+      "why": "Tobacco status is a common reason for claim problems."
+     },
+     {
+      "t": "Cancel the old policy first to stop paying the higher rate.",
+      "pts": -10,
+      "why": "If the new application is declined he has no coverage."
+     },
+     {
+      "t": "Tell him to say he quit five years ago.",
+      "pts": -10,
+      "why": "Misrepresentation."
+     },
+     {
+      "t": "Explain that a new policy starts a new contestability period, while his current policy is already past it.",
+      "pts": 10,
+      "why": "A real tradeoff he should know."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "Walt says: \"I do not want to go through all that again. What if they turn me down?\"",
+    "options": [
+     {
+      "t": "\"You keep your current policy. We do not cancel anything until the new one is approved and in force. If they say no, nothing changes for you.\"",
+      "pts": 15,
+      "why": "Removes the fear with the actual process."
+     },
+     {
+      "t": "\"It only takes a few minutes.\"",
+      "pts": 5,
+      "why": "Reassuring, but it does not answer the question."
+     },
+     {
+      "t": "\"Then you are stuck at the smoker price.\"",
+      "pts": -5,
+      "why": "Negative and misleading. He may have other options."
+     },
+     {
+      "t": "\"They will not turn you down.\"",
+      "pts": 0,
+      "why": "You cannot promise that."
+     }
+    ]
+   }
+  ],
+  "n": 21,
+  "id": "p21"
+ },
+ {
+  "max": 100,
+  "title": "The Missing Riders",
+  "cat": "Replacement",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Helen, 70, retired nurse"
+   ],
+   [
+    "Family",
+    "One daughter"
+   ],
+   [
+    "Existing policy",
+    "Whole life, $10,000, bought 8 years ago. Premium $59 a month. Pays only at death, no riders"
+   ],
+   [
+    "Health",
+    "Early arthritis, otherwise well"
+   ],
+   [
+    "Possible new plan",
+    "$10,000 whole life, level from day one, with an accelerated benefit for terminal illness included. Optional chronic illness rider. $67 a month with the rider"
+   ]
+  ],
+  "story": "Helen helped her mother through a long illness. She says, \"I do not want to be in a bed for two years and have my whole policy be no use until I am gone.\" You know accelerated benefits reduce what the beneficiary receives and are not long-term care insurance.",
+  "prompt": "Decide how you would present the change. Build your angle, and choose the steps that keep you honest and compliant.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts that make the strongest honest case for the change.",
+    "options": [
+     {
+      "t": "The rider is long-term care insurance and will pay for her care in full.",
+      "pts": -10,
+      "why": "False. It is not long-term care insurance and the benefit is limited."
+     },
+     {
+      "t": "The chronic illness rider adds about $8 a month ($67 against $59), a small price for options her current policy lacks.",
+      "pts": 20,
+      "why": "A modest price increase for a real feature."
+     },
+     {
+      "t": "Using the rider costs nothing. The death benefit stays at $10,000.",
+      "pts": -10,
+      "why": "False. Accelerated benefits reduce the death benefit."
+     },
+     {
+      "t": "Riders are often available only when the policy is issued.",
+      "pts": 10,
+      "why": "Often true, but it may be possible to add one to her current policy, so check first."
+     },
+     {
+      "t": "She keeps $10,000 of coverage with level premiums and a full benefit from day one.",
+      "pts": 12,
+      "why": "True, and it shows the base coverage is not weakened."
+     },
+     {
+      "t": "Her current policy pays only at death. The new one adds an accelerated benefit, so she could access part of it if terminally ill, or if she meets the chronic illness rider's conditions.",
+      "pts": 20,
+      "why": "The gap between what she has and what she says she fears."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reason",
+    "pick": 1,
+    "hint": "Pick the one that connects to what they want and worry about, without pressure or fear.",
+    "options": [
+     {
+      "t": "Suggest her daughter would resent her without the rider.",
+      "pts": -5,
+      "why": "A guilt trip."
+     },
+     {
+      "t": "She can have more peace of mind about the future.",
+      "pts": 8,
+      "why": "Too general."
+     },
+     {
+      "t": "Describe how painful a long illness could be.",
+      "pts": -10,
+      "why": "A fear tactic."
+     },
+     {
+      "t": "Helen saw how long an illness can last. Give her more choices if that happens to her, so she and her daughter are not stuck.",
+      "pts": 15,
+      "why": "Ties directly to what she said."
+     }
+    ]
+   },
+   {
+    "key": "checks",
+    "label": "Before you recommend it",
+    "pick": 2,
+    "hint": "Pick the two steps or disclosures that matter most before anyone cancels or replaces anything.",
+    "options": [
+     {
+      "t": "Provide a written side-by-side comparison and the state replacement notice, including what the old policy has and lacks.",
+      "pts": 12,
+      "why": "Required in most states."
+     },
+     {
+      "t": "Explain that using the accelerated benefit reduces what her daughter receives at death, and that the conditions to qualify are in the rider.",
+      "pts": 15,
+      "why": "She should understand the tradeoff before she pays."
+     },
+     {
+      "t": "Call the rider long-term care insurance so she understands its value.",
+      "pts": -10,
+      "why": "Mislabeling a product is a serious compliance problem."
+     },
+     {
+      "t": "Tell her the rider is free and has no conditions.",
+      "pts": -10,
+      "why": "False."
+     },
+     {
+      "t": "Do not cancel the current policy until the new one is approved and in force.",
+      "pts": 15,
+      "why": "She keeps her coverage if the new application does not go through."
+     },
+     {
+      "t": "Ask her current insurer whether an accelerated benefit or similar rider can be added to the existing policy.",
+      "pts": 12,
+      "why": "It could give her what she wants without replacing anything."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "Helen says: \"Riders are just gimmicks to get me to pay more.\"",
+    "options": [
+     {
+      "t": "\"You will regret it if you get sick.\"",
+      "pts": -5,
+      "why": "A scare tactic."
+     },
+     {
+      "t": "\"It is only $8 a month.\"",
+      "pts": 5,
+      "why": "Minimizes the concern."
+     },
+     {
+      "t": "\"Everyone takes it.\"",
+      "pts": 3,
+      "why": "Vague social proof."
+     },
+     {
+      "t": "\"I understand the skepticism. Here is exactly what it pays, what it costs and when it applies. If it does not fit you, we can leave it off.\"",
+      "pts": 15,
+      "why": "Respects the doubt and offers the facts and a way out."
+     }
+    ]
+   }
+  ],
+  "n": 22,
+  "id": "p22"
+ },
+ {
+  "max": 100,
+  "title": "The Overpriced Policy",
+  "cat": "Replacement",
+  "format": "angle",
+  "file": [
+   [
+    "Clients",
+    "Gene, 70 and Loretta, 68"
+   ],
+   [
+    "Existing policy",
+    "Whole life on Gene, $8,000, level from day one, bought 4 years ago through a mailer. Premium $96 a month"
+   ],
+   [
+    "Carrier",
+    "Low financial strength rating"
+   ],
+   [
+    "Health",
+    "Gene has controlled cholesterol, otherwise well"
+   ],
+   [
+    "Income",
+    "$3,300 a month"
+   ],
+   [
+    "Possible new plan",
+    "$12,000 whole life, level from day one, $84 a month, from a carrier with a stronger rating"
+   ]
+  ],
+  "story": "Gene bought through a mailer and never compared other carriers. Loretta asks, \"Are we paying too much for what we have?\" You ran the numbers.",
+  "prompt": "Decide how you would present the change. Build your angle, and choose the steps that keep you compliant.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts that make the strongest honest case for the change.",
+    "options": [
+     {
+      "t": "It also increases the coverage from $8,000 to $12,000: 50 percent more for less money.",
+      "pts": 20,
+      "why": "Better price and more coverage together."
+     },
+     {
+      "t": "Any other carrier will be cheaper.",
+      "pts": -10,
+      "why": "Not true. Rates vary by age, health and carrier."
+     },
+     {
+      "t": "The new carrier has a stronger financial strength rating, which matters because the promise is paid years from now.",
+      "pts": 12,
+      "why": "A relevant quality point."
+     },
+     {
+      "t": "Their existing policy has no value.",
+      "pts": -10,
+      "why": "False. It provides coverage and may have cash value."
+     },
+     {
+      "t": "They bought through a mailer without comparing carriers, so a comparison is due.",
+      "pts": 10,
+      "why": "True, but it is not a reason on its own."
+     },
+     {
+      "t": "The new plan is $84 against $96, which is $12 a month less, or $144 a year.",
+      "pts": 20,
+      "why": "A clear saving in dollars."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reason",
+    "pick": 1,
+    "hint": "Pick the one that connects to what they want and worry about, without pressure or fear.",
+    "options": [
+     {
+      "t": "Tell them they were ripped off by the mailer company.",
+      "pts": -10,
+      "why": "Disparaging and you do not know it."
+     },
+     {
+      "t": "They can stop wondering whether they got a fair deal.",
+      "pts": 8,
+      "why": "A gentle point, but it lacks a reason."
+     },
+     {
+      "t": "They have paid more than they needed for four years. Now they can put that right and get more protection at the same time.",
+      "pts": 15,
+      "why": "Speaks to the value they want."
+     },
+     {
+      "t": "Say only fools keep an overpriced policy.",
+      "pts": -5,
+      "why": "Insulting."
+     }
+    ]
+   },
+   {
+    "key": "checks",
+    "label": "Before you recommend it",
+    "pick": 2,
+    "hint": "Pick the two steps or disclosures that matter most before anyone cancels or replaces anything.",
+    "options": [
+     {
+      "t": "Cancel the old plan first to save the $96.",
+      "pts": -10,
+      "why": "If the new plan is declined he has no coverage."
+     },
+     {
+      "t": "Give a written side-by-side comparison and the state replacement notice.",
+      "pts": 12,
+      "why": "Required in most states."
+     },
+     {
+      "t": "Do not mention the new contestability period, so they do not hesitate.",
+      "pts": -10,
+      "why": "Withholding a material fact."
+     },
+     {
+      "t": "Explain that the new policy starts a new contestability period, and check what the current policy has already satisfied.",
+      "pts": 15,
+      "why": "A real tradeoff, and honest disclosure."
+     },
+     {
+      "t": "Have the new policy approved and in force before cancelling the old one.",
+      "pts": 15,
+      "why": "Gene keeps his coverage if the new application does not go through."
+     },
+     {
+      "t": "Compare the carriers' ratings, benefit types and guaranteed premiums in writing.",
+      "pts": 10,
+      "why": "Ensures the two plans are compared like for like."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "Loretta says: \"We already own this. Why switch to save twelve dollars?\"",
+    "options": [
+     {
+      "t": "\"Fair question. The twelve dollars is the smaller part. You would also get $4,000 more coverage and a stronger company, if approved. If the numbers do not clearly win, keep what you have.\"",
+      "pts": 15,
+      "why": "Gives the full picture and offers an honest out."
+     },
+     {
+      "t": "\"You will regret keeping it.\"",
+      "pts": -5,
+      "why": "A scare tactic."
+     },
+     {
+      "t": "\"You should always switch when there is a better deal.\"",
+      "pts": 0,
+      "why": "A blanket rule, and it is not helpful."
+     },
+     {
+      "t": "\"It adds up to $144 a year.\"",
+      "pts": 5,
+      "why": "True but only part of the story."
+     }
+    ]
+   }
+  ],
+  "n": 23,
+  "id": "p23"
+ },
+ {
+  "max": 100,
+  "n": 24,
+  "title": "Say This, Not That",
+  "cat": "Compliance",
+  "format": "multi",
+  "file": [
+   [
+    "Setting",
+    "Presenting a final expense plan at the kitchen table"
+   ],
+   [
+    "Rule of the room",
+    "Nothing you say can be misleading"
+   ]
+  ],
+  "story": "A client asks you a string of questions while you go over the plan. Your license and their trust ride on how you answer.",
+  "prompt": "Select every statement that is safe to say. Misleading claims cost points.",
+  "options": [
+   {
+    "t": "Approval depends on your answers to the health questions, so I cannot promise which plan you will get until we go through them.",
+    "pts": 25,
+    "why": "Honest about what is not yet known."
+   },
+   {
+    "t": "You will definitely be approved, no matter what your health is.",
+    "pts": -25,
+    "why": "Only guaranteed issue plans promise acceptance, and they carry a graded benefit."
+   },
+   {
+    "t": "This is an investment that will pay you back more than you put in.",
+    "pts": -25,
+    "why": "Final expense insurance is protection, not an investment."
+   },
+   {
+    "t": "This price is only good until midnight tonight.",
+    "pts": -15,
+    "why": "False urgency is a pressure tactic."
+   },
+   {
+    "t": "The premium is level and will not go up as you get older, as shown on the application.",
+    "pts": 25,
+    "why": "Accurate and matches the paperwork."
+   },
+   {
+    "t": "Cancel your old policy today. This one is better.",
+    "pts": -20,
+    "why": "Replacement without a full comparison can leave the client worse off and is a compliance risk."
+   },
+   {
+    "t": "I can show you quotes from two carriers so you can compare price and benefits.",
+    "pts": 25,
+    "why": "Comparison helps the client choose with confidence."
+   },
+   {
+    "t": "On this plan, if death is from natural causes in the first two years, the benefit is the premiums paid plus interest. Accidental death is paid in full.",
+    "pts": 25,
+    "why": "A plain explanation of a graded benefit."
+   }
+  ],
+  "id": "p24"
+ },
+ {
+  "max": 100,
+  "n": 25,
+  "title": "The Final Close",
+  "cat": "Closing",
+  "format": "text",
+  "minWords": 25,
+  "file": [
+   [
+    "Client",
+    "Frances, 70, widowed"
+   ],
+   [
+    "Income",
+    "$1,900 a month"
+   ],
+   [
+    "Family",
+    "Two adult children"
+   ],
+   [
+    "Funeral home quote",
+    "$9,800 for the service she wants"
+   ],
+   [
+    "Savings",
+    "About $2,000"
+   ],
+   [
+    "Health",
+    "Blood pressure controlled with medication. Qualifies for a level benefit from day one"
+   ],
+   [
+    "Quote",
+    "$12,000 whole life, level from day one, $84 a month"
+   ]
+  ],
+  "story": "Frances has told you she wants her children spared from paying for her funeral. She says, \"So what would you recommend?\"",
+  "prompt": "Write your closing statement in 3 to 6 sentences: recap what you heard, make your recommendation, set honest expectations, and ask for the application.",
+  "rubric": [
+   {
+    "label": "Recaps her situation",
+    "keys": [
+     "funeral",
+     "quote",
+     "9,800",
+     "children",
+     "kids",
+     "burden",
+     "savings",
+     "arrangements",
+     "spare"
+    ],
+    "pts": 20,
+    "tip": "Mirror back what she told you so she hears her own reasons."
+   },
+   {
+    "label": "Makes a clear recommendation",
+    "keys": [
+     "recommend",
+     "suggest",
+     "propose",
+     "best fit",
+     "my plan",
+     "would put",
+     "i'd put"
+    ],
+    "pts": 20,
+    "tip": "She asked what you recommend. Say it in one confident sentence."
+   },
+   {
+    "label": "Connects it to what she wants",
+    "keys": [
+     "protect",
+     "spare",
+     "ease",
+     "peace of mind",
+     "take care",
+     "looked after",
+     "no burden",
+     "easier",
+     "not have to"
+    ],
+    "pts": 20,
+    "tip": "Link the plan to her goal: her children never have to pay."
+   },
+   {
+    "label": "Sets honest expectations",
+    "keys": [
+     "health questions",
+     "approval",
+     "approved",
+     "review",
+     "underwriting",
+     "answer",
+     "questions",
+     "level",
+     "from day one"
+    ],
+    "pts": 20,
+    "tip": "Tell her what happens next, such as the health questions and the review, without promising an outcome."
+   },
+   {
+    "label": "Asks for the application",
+    "keys": [
+     "application",
+     "apply",
+     "get started",
+     "move forward",
+     "sign",
+     "fill out",
+     "start today",
+     "next step",
+     "ready"
+    ],
+    "pts": 20,
+    "tip": "End with a direct ask so the conversation turns into action."
+   }
+  ],
+  "sample": "Frances, you told me you want your children spared from paying for your funeral, and the home's quote is $9,800 with only about $2,000 in savings. I recommend the $12,000 plan at $84 a month, which is level and pays in full from day one, if you qualify. We will go through a few health questions and the company will review your answers, and I will walk you through each step so there are no surprises. Are you ready to get the application started today?",
+  "id": "p25"
+ },
+ {
+  "max": 100,
+  "n": 26,
+  "title": "The Lapsed Policy",
+  "cat": "Compliance",
+  "format": "angle",
+  "file": [
+   [
+    "Prospect",
+    "Rita B., 78, female"
+   ],
+   [
+    "Current plan",
+    "Oxford life policy, $1,700. She knows it is not enough for the funeral she wants"
+   ],
+   [
+    "Health",
+    "COPD, on oxygen. Cancer a year ago. Stroke 6 months ago. Diabetes"
+   ],
+   [
+    "Recent purchase",
+    "An AmAm policy bought a few months ago from another agent, because she wanted more coverage"
+   ],
+   [
+    "What you find",
+    "You call the carrier to confirm the details. They tell you the policy lapsed the month after it was written"
+   ],
+   [
+    "The application",
+    "Her health questions were answered incorrectly. The policy would not have paid a claim"
+   ],
+   [
+    "In her words",
+    "\"I thought I was covered.\""
+   ]
+  ],
+  "story": "Rita believed she had two policies. She did not know that the second one lapsed, or that the health answers on the application were wrong. You are the second agent she has talked to about this. Agents who write a policy with false health answers just to get an approval are a common problem in this business, and the person who pays for it is the client. A policy with incorrect answers can be refused at claim time, no matter how long she paid.",
+  "prompt": "Decide how you handle this appointment. Build your angle, and choose the steps that protect Rita and keep you honest.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts that should drive your recommendation.",
+    "options": [
+     {
+      "t": "The AmAm policy lapsed, so she has no more coverage than she had before she bought it.",
+      "pts": 10,
+      "why": "True and urgent, but on its own it does not explain why the policy was never going to pay."
+     },
+     {
+      "t": "A plan bought now costs less than one bought next year.",
+      "pts": 5,
+      "why": "True, but generic. It is not why she needs this."
+     },
+     {
+      "t": "The health answers on that application were wrong. A carrier can refuse to pay a claim over incorrect answers, so her family could have paid premiums and still received nothing.",
+      "pts": 15,
+      "why": "The core lesson. A policy is only worth what it will actually pay, and it pays only when it is underwritten on true answers."
+     },
+     {
+      "t": "No carrier will cover someone with her health, so there is nothing more she can do.",
+      "pts": -10,
+      "why": "False. Guaranteed issue plans accept applicants regardless of health, with a waiting period before the full benefit."
+     },
+     {
+      "t": "The $1,700 from her Oxford policy covers only a small part of the funeral she wants, and the rest would fall on her family.",
+      "pts": 15,
+      "why": "The real need, and the reason she called in the first place."
+     },
+     {
+      "t": "She can reapply with the same answers. Carriers rarely check.",
+      "pts": -10,
+      "why": "Falsifying an application is misrepresentation. It can void the policy and put your license at risk."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reason",
+    "pick": 1,
+    "hint": "Pick the one that connects to what she wants and worries about, without pressure or fear.",
+    "options": [
+     {
+      "t": "Remind her that at 78 with her health, she may not be here much longer.",
+      "pts": -10,
+      "why": "A fear tactic, and cruel."
+     },
+     {
+      "t": "She wants her family to have the funeral she planned without scrambling for money. A plan that is real, and that she can count on, does that.",
+      "pts": 15,
+      "why": "Speaks to what she wants, and to the fact that she has already been let down once."
+     },
+     {
+      "t": "She will sleep better once it is off her mind.",
+      "pts": 3,
+      "why": "Comforting, but generic."
+     },
+     {
+      "t": "Tell her the last agent was dishonest and that you are the only one who will look out for her.",
+      "pts": -5,
+      "why": "Blame and pressure. Let the facts and your honesty speak for you."
+     },
+     {
+      "t": "She has had a hard year. She deserves someone who tells her the truth about where she stands.",
+      "pts": 8,
+      "why": "Warm and true, but it does not connect to her funeral wishes."
+     }
+    ]
+   },
+   {
+    "key": "checks",
+    "label": "Before you recommend it",
+    "pick": 2,
+    "hint": "Pick the two steps that matter most before you write anything.",
+    "options": [
+     {
+      "t": "Do not mention the lapsed policy. She has enough to worry about.",
+      "pts": -10,
+      "why": "She has a right to know what she does and does not have. Silence leaves her exposed."
+     },
+     {
+      "t": "Tell her plainly that the AmAm policy lapsed and that the health answers on it were wrong, so it would not have paid. Then help her see her options.",
+      "pts": 20,
+      "why": "Honesty first. She cannot make a good decision without knowing where she stands."
+     },
+     {
+      "t": "Write a new application and answer \"no\" to the health questions that would cause a decline.",
+      "pts": -10,
+      "why": "This is exactly what went wrong the first time. The policy will not pay, and you carry the risk."
+     },
+     {
+      "t": "Keep the Oxford policy in force. It is the only coverage she has today, and it should not lapse while a new one is set up.",
+      "pts": 12,
+      "why": "Right and easy to forget, but secondary to being honest with her and writing the new plan truthfully."
+     },
+     {
+      "t": "Answer every question truthfully. Given her health, that points to a guaranteed issue plan with no health questions. Explain the waiting period (graded benefit) clearly and confirm the carrier will issue it.",
+      "pts": 20,
+      "why": "A properly underwritten policy is the only kind that pays. It also matches what she is actually eligible for."
+     },
+     {
+      "t": "Write down what you found and report the earlier application to your agency compliance contact and the carrier.",
+      "pts": 10,
+      "why": "The right thing to do, and it protects the next client. It comes after Rita is taken care of."
+     },
+     {
+      "t": "Tell her a guaranteed issue plan pays the full benefit from day one.",
+      "pts": -10,
+      "why": "False. It has a graded benefit, and she needs to hear that before she buys."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "She says: \"I thought I was covered, and I was not. Why should I trust you?\"",
+    "options": [
+     {
+      "t": "Tell her it is the only option she has, so she should take it.",
+      "pts": -5,
+      "why": "Pressure, and it repeats the very thing that hurt her."
+     },
+     {
+      "t": "\"You have every right to ask. Let me show you in writing exactly what this plan pays and when, including the waiting period. I would rather you know it now than find out later. And I will help you find out what happened with the old policy.\"",
+      "pts": 15,
+      "why": "Answers the trust question with transparency and proof rather than a promise."
+     },
+     {
+      "t": "Offer to see whether a lower premium fits her budget.",
+      "pts": 5,
+      "why": "Helpful, but it does not address trust."
+     },
+     {
+      "t": "\"I am different from the last agent. Just trust me.\"",
+      "pts": 0,
+      "why": "Asks for trust without giving her a reason."
+     }
+    ]
+   }
+  ],
+  "id": "p26"
+ }
+]

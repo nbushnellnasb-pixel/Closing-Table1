@@ -1,0 +1,10 @@
+{
+  "name": "closing-table",
+  "version": "1.0.0",
+  "description": "Final expense sales league: every agent signs in with a personal code, plays the same puzzles, and is scored on a live leaderboard.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "license": "UNLICENSED",
+  "private": true
+}
