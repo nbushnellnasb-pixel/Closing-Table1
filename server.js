@@ -31,7 +31,7 @@ if (!db) {
   db = {
     secret: crypto.randomBytes(32).toString('hex'),
     adminPassword: null,
-    teams: TEAM_NAMES.map((name, i) => ({ id: 't' + (i + 1), name, leader: 'Leader ' + (i + 1), order: i + 1 })),
+    teams: TEAM_NAMES.map((name, i) => ({ id: 't' + (i + 1), name, leader: 'Leader ' + (i + 1), order: i + 1, joinCode: null })),
     puzzleState: {},
     agents: {},
     results: {}
@@ -73,14 +73,18 @@ process.on('SIGINT', () => { saveNow(); process.exit(0); });
 /* ---------- helpers ---------- */
 const sha = s => crypto.createHash('sha256').update(s).digest();
 const safeEq = (a, b) => crypto.timingSafeEqual(sha(String(a)), sha(String(b)));
-function newCode() {
-  const used = new Set(Object.values(db.agents).map(a => a.code));
+function randomCode(used) {
   for (;;) {
     const b = crypto.randomBytes(6); let c = '';
     for (let i = 0; i < 6; i++) c += CODE_ALPHABET[b[i] % CODE_ALPHABET.length];
     if (!used.has(c)) return c;
   }
 }
+function newCode() { return randomCode(new Set(Object.values(db.agents).map(a => a.code))); }
+function newTeamCode() { return randomCode(new Set(db.teams.map(t => t.joinCode).filter(Boolean))); }
+/* older saves may not have a join code per team, or may be missing it after an import; backfill on load */
+db.teams.forEach(t => { if (!t.joinCode) t.joinCode = newTeamCode(); });
+function nextTeamOrder() { return db.teams.reduce((m, t) => Math.max(m, t.order || 0), 0) + 1; }
 function sign(payload) {
   const body = Buffer.from(JSON.stringify(payload)).toString('base64url');
   const mac = crypto.createHmac('sha256', db.secret).update(body).digest('base64url');
@@ -200,7 +204,7 @@ function board() {
     s.points += r.points; s.done++; s.last = Math.max(s.last, r.at || 0); s.per[r.puzzleId] = r.points;
   });
   return {
-    teams: db.teams,
+    teams: db.teams.map(t => ({ id: t.id, name: t.name, leader: t.leader, order: t.order })),
     puzzles: PUZZLES.map(p => ({ id: p.id, n: p.n, title: p.title, cat: p.cat, format: p.format, max: maxOf(p), open: db.puzzleState[p.id].open })),
     agents: Object.values(db.agents).map(a => Object.assign({ id: a.id, name: a.name, teamId: a.teamId, points: 0, done: 0, last: 0, per: {} }, per[a.id] || {}))
   };
@@ -221,14 +225,39 @@ route('GET', '/api/state', (req, res) => {
   send(res, 200, body, { ETag: etag });
 });
 
+const normCode = s => String(s || '').trim().toUpperCase().replace(/[\s-]/g, '');
+
 route('POST', '/api/login', async (req, res) => {
   const ip = clientIp(req);
   if (tooMany(ip)) return send(res, 429, { error: 'Too many attempts. Wait a few minutes and try again.' });
   const b = await readBody(req);
-  const code = String(b.code || '').trim().toUpperCase().replace(/[\s-]/g, '');
+  const code = normCode(b.code);
   const agent = code && Object.values(db.agents).find(a => a.code === code);
   if (!agent) { noteFail(ip); return send(res, 401, { error: 'That code was not found. Check it with your team leader.' }); }
   noteOk(ip);
+  const token = setCookie(req, res, { t: 'a', id: agent.id });
+  send(res, 200, { agent: me(agent), token });
+});
+
+/* team code + name: no individually issued code needed. Joining a second time under
+   the same name on the same team signs back into the same agent, so a refreshed page
+   or a different device does not start a new score. */
+route('POST', '/api/join', async (req, res) => {
+  const ip = clientIp(req);
+  if (tooMany(ip)) return send(res, 429, { error: 'Too many attempts. Wait a few minutes and try again.' });
+  const b = await readBody(req);
+  const code = normCode(b.teamCode);
+  const team = code && db.teams.find(t => t.joinCode === code);
+  if (!team) { noteFail(ip); return send(res, 401, { error: 'That team code was not found. Check it with your host.' }); }
+  const name = String(b.name || '').trim().slice(0, 60);
+  if (!name) { noteFail(ip); return send(res, 400, { error: 'Enter your name.' }); }
+  noteOk(ip);
+  let agent = Object.values(db.agents).find(a => a.teamId === team.id && a.name.toLowerCase() === name.toLowerCase());
+  if (!agent) {
+    const id = 'a' + crypto.randomBytes(5).toString('hex');
+    agent = db.agents[id] = { id, name, teamId: team.id, code: newCode() };
+    save();
+  }
   const token = setCookie(req, res, { t: 'a', id: agent.id });
   send(res, 200, { agent: me(agent), token });
 });
@@ -278,6 +307,7 @@ const admin = (method, pattern, fn) => route(method, pattern, async (req, res, p
 });
 
 const agentRow = a => ({ id: a.id, name: a.name, teamId: a.teamId, code: a.code });
+admin('GET', '/api/admin/teams', (req, res) => send(res, 200, { teams: db.teams }));
 admin('GET', '/api/admin/agents', (req, res) => send(res, 200, { agents: Object.values(db.agents).sort((x, y) => x.name.localeCompare(y.name)).map(agentRow) }));
 
 function findTeam(text) {
@@ -322,7 +352,23 @@ admin('PATCH', '/api/admin/teams/:id', async (req, res, p) => {
   const b = await readBody(req);
   if (typeof b.name === 'string' && b.name.trim()) t.name = b.name.trim().slice(0, 40);
   if (typeof b.leader === 'string') t.leader = b.leader.trim().slice(0, 40);
+  if (b.newJoinCode) t.joinCode = newTeamCode();
   save(); send(res, 200, { team: t });
+});
+admin('POST', '/api/admin/teams', async (req, res) => {
+  const b = await readBody(req);
+  const name = String(b.name || '').trim().slice(0, 40) || ('Team ' + (db.teams.length + 1));
+  const order = nextTeamOrder();
+  const t = { id: 't' + order, name, leader: String(b.leader || '').trim().slice(0, 40), order, joinCode: newTeamCode() };
+  db.teams.push(t);
+  save(); send(res, 200, { team: t });
+});
+admin('DELETE', '/api/admin/teams/:id', (req, res, p) => {
+  const t = db.teams.find(x => x.id === p.id); if (!t) return send(res, 404, { error: 'No such team.' });
+  if (db.teams.length <= 1) return send(res, 400, { error: 'At least one team has to stay.' });
+  if (Object.values(db.agents).some(a => a.teamId === p.id)) return send(res, 400, { error: 'Move or remove that team\'s agents first.' });
+  db.teams = db.teams.filter(x => x.id !== p.id);
+  save(); send(res, 200, { ok: true });
 });
 admin('POST', '/api/admin/puzzles/open', async (req, res) => {
   const b = await readBody(req);
