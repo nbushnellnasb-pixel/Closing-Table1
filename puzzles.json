@@ -3416,7 +3416,11 @@
      "just a few",
      "brief",
      "one question",
-     "short"
+     "short",
+     "couple of minutes",
+     "a few minutes",
+     "a minute",
+     "few minutes"
     ],
     "pts": 20,
     "tip": "Ask for something small first; a big ask right after 'is this a scam' rarely lands."
@@ -3543,7 +3547,12 @@
      "text me",
      "reach me",
      "my number",
-     "give me a call"
+     "give me a call",
+     "call or text",
+     "text whenever",
+     "call whenever",
+     "reach out",
+     "call back"
     ],
     "pts": 20,
     "tip": "Make the next step as easy as possible for them."
@@ -4079,7 +4088,11 @@
      "graded",
      "first two years",
      "first few years",
-     "reduced"
+     "reduced",
+     "partial benefit",
+     "first two or three years",
+     "first couple of years",
+     "partial"
     ],
     "pts": 20,
     "tip": "This is the detail clients are most often surprised by later if it's skipped."
@@ -4102,7 +4115,11 @@
      "which one fits",
      "best for your",
      "given your health",
-     "in your case"
+     "in your case",
+     "your health",
+     "better fit",
+     "for your situation",
+     "you qualify"
     ],
     "pts": 20,
     "tip": "End by applying it to her, not just the categories in general."
@@ -6533,5 +6550,1765 @@
    }
   ],
   "sample": "That is a fair question, and I understand it feels personal. Your medications help me match you with the right company, so you get the best plan and price you qualify for. They also make sure your answers are exact, which is what protects the claim for your family. It stays private and is only used for your application. Would it be okay if we went through them together?"
+ },
+ {
+  "id": "p80",
+  "n": 80,
+  "max": 100,
+  "series": "hendersons",
+  "seriesTitle": "The Hendersons: Walt and Margie",
+  "parts": 4,
+  "part": 1,
+  "title": "The Hendersons, Part 1: At the Door",
+  "cat": "Full Sit Walkthroughs",
+  "format": "choice",
+  "file": [
+   [
+    "Lead",
+    "Reply card mailed back by Margie Henderson, 69"
+   ],
+   [
+    "At home",
+    "Her husband Walt, 71, calls out from the living room: \"We don't want any!\""
+   ],
+   [
+    "Time",
+    "Tuesday, 4:30 p.m."
+   ]
+  ],
+  "story": "Margie opens the door halfway and glances back toward the living room. \"I did send that card,\" she says quietly, \"but my husband isn't much for salesmen.\"",
+  "prompt": "What do you say?",
+  "options": [
+   {
+    "t": "Leave a brochure with Margie and tell her to call you once she has talked Walt into it, so nobody's time gets wasted with an unwilling husband at the table.",
+    "pts": 10,
+    "why": "Hands her the hardest conversation and most likely loses the lead."
+   },
+   {
+    "t": "Say loudly enough for Walt to hear that you are not a salesman, you are only delivering the information they asked for, and step inside the doorway.",
+    "pts": 20,
+    "why": "Stepping in uninvited while saying you are not selling is exactly what makes people distrust agents."
+   },
+   {
+    "t": "Remind her she asked for the information, then say: \"This works best when you both hear it. Could Walt join us for 15 minutes now, or is another evening better?\"",
+    "pts": 100,
+    "why": "Respects Walt, includes both spouses from the start, and makes a small, clear ask. Handling his resistance now keeps it from becoming \"we need to talk it over\" at the close."
+   },
+   {
+    "t": "Ask Margie if you can go over it with just her on the porch right now, since she is the one who mailed the card back, seems interested, and can fill Walt in later.",
+    "pts": 40,
+    "why": "Gets you talking, but leaves Walt out. A decision made without him usually unravels at the close or right after."
+   }
+  ]
+ },
+ {
+  "id": "p81",
+  "n": 81,
+  "max": 100,
+  "series": "hendersons",
+  "seriesTitle": "The Hendersons: Walt and Margie",
+  "parts": 4,
+  "part": 2,
+  "title": "The Hendersons, Part 2: Around the Kitchen Table",
+  "cat": "Full Sit Walkthroughs",
+  "format": "multi",
+  "file": [
+   [
+    "From part 1",
+    "Walt came to the table after you invited him by name"
+   ],
+   [
+    "Why Margie sent the card",
+    "Her brother Don died last spring with no insurance"
+   ],
+   [
+    "Walt",
+    "Says little, arms crossed"
+   ],
+   [
+    "What you notice",
+    "An inhaler on the counter and a church bulletin on the fridge"
+   ]
+  ],
+  "story": "Margie tells you Don's funeral cost $9,400, and she and her sister split it from their savings. Walt says, \"We've got some money put away. We'll be fine.\"",
+  "prompt": "Select every discovery move that sets up the rest of this sit. Moves that pressure them or skip past what they said cost points.",
+  "options": [
+   {
+    "t": "Ask about the inhaler: what it is for, what it is called, and how long he has used it.",
+    "pts": 25,
+    "why": "You will need this for underwriting. Asking now, casually, avoids a surprise later."
+   },
+   {
+    "t": "Ask Walt what the money they have put away is meant for, and whether it would stretch to cover two funerals.",
+    "pts": 25,
+    "why": "Respects his point instead of arguing with it, and lets him see the gap for himself."
+   },
+   {
+    "t": "Tell Walt that most people who say they will be fine end up leaving their kids with the bill.",
+    "pts": -20,
+    "why": "A scare line aimed at the skeptic in the room. It hardens him."
+   },
+   {
+    "t": "Skip the health questions for now so the mood stays positive.",
+    "pts": -15,
+    "why": "Health decides which carrier fits. Putting it off sets up a surprise."
+   },
+   {
+    "t": "Focus on Margie, since she is the one who is interested.",
+    "pts": -10,
+    "why": "Walt is half the decision. Leaving him out now costs you at the close."
+   },
+   {
+    "t": "Ask Margie how it felt covering Don's funeral, and what she would want to be different for their own kids.",
+    "pts": 25,
+    "why": "Her experience is why she sent the card. Hearing it in her words sets up everything that follows."
+   },
+   {
+    "t": "Agree on a monthly amount that would feel comfortable before any prices come up.",
+    "pts": 25,
+    "why": "Settles the budget early, so it does not become the objection at the close."
+   }
+  ]
+ },
+ {
+  "id": "p82",
+  "n": 82,
+  "max": 100,
+  "series": "hendersons",
+  "seriesTitle": "The Hendersons: Walt and Margie",
+  "parts": 4,
+  "part": 3,
+  "title": "The Hendersons, Part 3: Finding the Right Fit",
+  "cat": "Full Sit Walkthroughs",
+  "format": "choice",
+  "file": [
+   [
+    "From part 2: Walt, 71",
+    "COPD for 5 years. Uses Symbicort, a steroid inhaler, every day. Quit smoking 3 years ago. No hospital stays"
+   ],
+   [
+    "Margie, 69",
+    "High blood pressure, one pill, controlled"
+   ],
+   [
+    "Budget they chose",
+    "About $120 a month for both"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Walt watches closely as you look over his answers. \"So what, they'll turn me down?\"",
+  "prompt": "Per our guide, where do you look first for Walt?",
+  "options": [
+   {
+    "t": "Guaranteed issue for Walt, since COPD with a daily inhaler rules out every plan with health questions on our guide.",
+    "pts": 10,
+    "why": "Not per our guide. Several carriers accept COPD."
+   },
+   {
+    "t": "Royal Neighbors. It accepts COPD and only grades it with tobacco use, and Walt quit three years ago. It also accepts Margie's controlled blood pressure.",
+    "pts": 100,
+    "why": "Correct. Walt can likely have a full benefit, and both of them can be on the same carrier."
+   },
+   {
+    "t": "Americo, because it accepts both COPD and high blood pressure on our guide, so Walt and Margie could apply together with one company.",
+    "pts": 20,
+    "why": "Americo accepts COPD only without a steroid inhaler. Symbicort is a steroid inhaler."
+   },
+   {
+    "t": "Mutual of Omaha Living Promise for both of them, with a full benefit from day one, since Walt has had no hospital stays for his COPD and Margie's blood pressure is controlled.",
+    "pts": 25,
+    "why": "Living Promise grades COPD, so Walt would have a waiting period."
+   }
+  ]
+ },
+ {
+  "id": "p83",
+  "n": 83,
+  "max": 100,
+  "series": "hendersons",
+  "seriesTitle": "The Hendersons: Walt and Margie",
+  "parts": 4,
+  "part": 4,
+  "title": "The Hendersons, Part 4: Tying It Together at the Close",
+  "cat": "Full Sit Walkthroughs",
+  "format": "text",
+  "minWords": 20,
+  "file": [
+   [
+    "From parts 1 to 3",
+    "Margie paid half of Don's $9,400 funeral from savings. Walt said \"We'll be fine\""
+   ],
+   [
+    "Budget they chose",
+    "About $120 a month"
+   ],
+   [
+    "The plan",
+    "Both with Royal Neighbors, full benefit from day one, $114 a month together"
+   ]
+  ],
+  "story": "You show the numbers. Walt taps the page. \"$114 a month. That's a lot of money.\"",
+  "prompt": "Write your response in 2 to 5 sentences. Tie it back to what they told you earlier, respect his concern, and ask for a decision without pressure.",
+  "rubric": [
+   {
+    "label": "Acknowledges his concern",
+    "keys": [
+     "fair",
+     "understand",
+     "a lot",
+     "makes sense",
+     "good point",
+     "i hear you",
+     "real money"
+    ],
+    "pts": 20,
+    "tip": "Agree with what is true before you explain."
+   },
+   {
+    "label": "Reminds them of the budget they chose",
+    "keys": [
+     "120",
+     "budget",
+     "you said",
+     "you mentioned",
+     "comfortable",
+     "you told me"
+    ],
+    "pts": 20,
+    "tip": "Their own number is more persuasive than yours."
+   },
+   {
+    "label": "Connects to what they shared earlier",
+    "keys": [
+     "brother",
+     "for don",
+     "don's",
+     "9,400",
+     "savings",
+     "your kids",
+     "your children"
+    ],
+    "pts": 20,
+    "tip": "Bring back Don and Margie's experience, gently."
+   },
+   {
+    "label": "Offers a way to adjust if needed",
+    "keys": [
+     "adjust",
+     "lower",
+     "smaller",
+     "less coverage",
+     "bring it down",
+     "change the amount",
+     "options"
+    ],
+    "pts": 20,
+    "tip": "Show there is room to make it fit, so the answer is not all or nothing."
+   },
+   {
+    "label": "Asks for the decision",
+    "keys": [
+     "?",
+     "shall we",
+     "should we",
+     "ready to",
+     "go ahead",
+     "get it started",
+     "move forward"
+    ],
+    "pts": 20,
+    "tip": "End with a clear, simple question."
+   }
+  ],
+  "sample": "That's a fair point, it is real money. You told me about $120 a month felt comfortable, and this comes in under that for both of you. It also means your savings stay yours, and your kids won't have to do what Margie and her sister did for Don. If you'd like it lower, we can adjust the amount. Would you like to go ahead and get you both covered today?"
+ },
+ {
+  "id": "p84",
+  "n": 84,
+  "max": 100,
+  "series": "alvarez",
+  "seriesTitle": "Hector Alvarez: From the Phone Call to the Application",
+  "parts": 4,
+  "part": 1,
+  "title": "Hector Alvarez, Part 1: The Setting Call",
+  "cat": "Full Sit Walkthroughs",
+  "format": "choice",
+  "file": [
+   [
+    "Lead",
+    "Hector Alvarez, 66, mailed back a final expense reply card"
+   ],
+   [
+    "Household",
+    "Lives with his daughter Lucia and her family"
+   ],
+   [
+    "Your goal on this call",
+    "Set a time to sit down together"
+   ]
+  ],
+  "story": "Hector answers on the fourth ring. When you say why you are calling, he says, \"Oh, right. Can you just mail me the information?\"",
+  "prompt": "What do you say?",
+  "options": [
+   {
+    "t": "Quote him a rough monthly price over the phone right away based on his age alone, so he has a number to think about until he is ready to meet.",
+    "pts": 10,
+    "why": "Without health answers any price is a guess, and a wrong number becomes the objection later."
+   },
+   {
+    "t": "Tell him that mailed information is usually outdated and a waste of paper, so it would be better if you came by instead, and ask him when works.",
+    "pts": 20,
+    "why": "Talks down his request instead of explaining why a visit helps him."
+   },
+   {
+    "t": "Agree to mail him a brochure today, and put a reminder on your calendar to call him back in two weeks to see whether he has had a chance to read through it and whether he has any questions about the plans.",
+    "pts": 35,
+    "why": "Polite, but a brochure cannot quote him, and two weeks is long enough for his interest to fade."
+   },
+   {
+    "t": "Say: \"I can, but prices depend on your age and health, so a mailer can't show your real options. It takes 20 minutes. Would Thursday at 6 or Saturday at 10 work, with Lucia there too?\"",
+    "pts": 100,
+    "why": "Honors his request, explains why a visit helps him, offers two specific times, and brings Lucia in from the start."
+   }
+  ]
+ },
+ {
+  "id": "p85",
+  "n": 85,
+  "max": 100,
+  "series": "alvarez",
+  "seriesTitle": "Hector Alvarez: From the Phone Call to the Application",
+  "parts": 4,
+  "part": 2,
+  "title": "Hector Alvarez, Part 2: Hector's Story",
+  "cat": "Full Sit Walkthroughs",
+  "format": "angle",
+  "file": [
+   [
+    "From part 1",
+    "Thursday, 6 p.m. Lucia is at the table too"
+   ],
+   [
+    "Hector",
+    "Widowed three years"
+   ],
+   [
+    "What he mentions",
+    "His wife's funeral cost $11,000, and Lucia put it on her credit card"
+   ],
+   [
+    "On the counter",
+    "An insulin pen, metformin and gabapentin"
+   ],
+   [
+    "Banking",
+    "Social Security goes to an online-only bank account"
+   ]
+  ],
+  "story": "Hector is warm but keeps glancing at Lucia. \"I don't want her paying for me like she did for her mother,\" he says. Lucia squeezes his hand.",
+  "prompt": "Plan this part of the sit. Choose what to acknowledge, what to find out, and the objection you are heading off.",
+  "groups": [
+   {
+    "key": "acknowledge",
+    "label": "Acknowledge",
+    "pick": 2,
+    "hint": "Pick the two that meet them where they are.",
+    "options": [
+     {
+      "t": "Ask Lucia, gently, what it was like handling her mother's funeral, and let her answer.",
+      "pts": 20,
+      "why": "Her experience is the reason for the plan. It belongs in the room."
+     },
+     {
+      "t": "Make a note of the $11,000 as a coverage target for later.",
+      "pts": 10,
+      "why": "Useful, but it is a number, not an acknowledgment."
+     },
+     {
+      "t": "Move past the story quickly, since it is clearly upsetting Lucia.",
+      "pts": -10,
+      "why": "Rushing past it leaves it unresolved."
+     },
+     {
+      "t": "Tell Hector not to worry, you will make sure Lucia never pays a dime.",
+      "pts": -10,
+      "why": "A promise you cannot make before underwriting."
+     },
+     {
+      "t": "Compliment the family photos to keep the mood light.",
+      "pts": 0,
+      "why": "Friendly, but it sidesteps what they just shared."
+     },
+     {
+      "t": "Thank Lucia for being there, and tell Hector it says a lot that his first thought is protecting her.",
+      "pts": 20,
+      "why": "Honors both of them and what he just said."
+     }
+    ]
+   },
+   {
+    "key": "findout",
+    "label": "Find out",
+    "pick": 2,
+    "hint": "Pick the two details that will decide which carrier works.",
+    "options": [
+     {
+      "t": "How his Social Security is deposited, and which account a premium could come from.",
+      "pts": 15,
+      "why": "Some carriers will not draft from online-only banks."
+     },
+     {
+      "t": "Whether he would rather skip the health questions to keep things simple.",
+      "pts": -10,
+      "why": "Invites a guaranteed issue plan he may not need."
+     },
+     {
+      "t": "What the gabapentin is for, and when he was diagnosed with diabetes.",
+      "pts": 15,
+      "why": "Gabapentin with diabetes usually means nerve pain, which changes carriers."
+     },
+     {
+      "t": "How much Lucia earns, in case she can help with premiums.",
+      "pts": -5,
+      "why": "Intrusive, and not your business at this point."
+     },
+     {
+      "t": "Which funeral home the family used last time.",
+      "pts": 8,
+      "why": "Nice context, but it does not decide the carrier."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "The objection you are heading off",
+    "pick": 1,
+    "hint": "By including Lucia from the start, which objection are you most likely preventing?",
+    "options": [
+     {
+      "t": "\"I already have coverage.\"",
+      "pts": 0,
+      "why": "He does not."
+     },
+     {
+      "t": "\"I don't trust insurance companies.\"",
+      "pts": 5,
+      "why": "Nothing he said points to distrust."
+     },
+     {
+      "t": "\"Lucia and I need to talk about it first.\"",
+      "pts": 30,
+      "why": "Right. She is part of the decision, so she is at the table."
+     },
+     {
+      "t": "\"It costs too much.\"",
+      "pts": 8,
+      "why": "Possible later, but not what including Lucia prevents."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "p86",
+  "n": 86,
+  "max": 100,
+  "series": "alvarez",
+  "seriesTitle": "Hector Alvarez: From the Phone Call to the Application",
+  "parts": 4,
+  "part": 3,
+  "title": "Hector Alvarez, Part 3: The Carrier That Actually Works",
+  "cat": "Full Sit Walkthroughs",
+  "format": "choice",
+  "file": [
+   [
+    "From part 2",
+    "Diabetes diagnosed at 58, on insulin for 4 years"
+   ],
+   [
+    "Gabapentin",
+    "For tingling in his feet (diabetic neuropathy)"
+   ],
+   [
+    "Hospital stays",
+    "None"
+   ],
+   [
+    "Banking",
+    "Social Security goes to an online-only bank"
+   ],
+   [
+    "Wants",
+    "About $12,000"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Lucia asks, \"Is his diabetes going to be a problem?\"",
+  "prompt": "Per our guide, which carrier fits both his health and how he pays?",
+  "options": [
+   {
+    "t": "Transamerica Immediate Solution. It lists insulin-treated diabetes as Standard, accepts diabetic neuropathy, and takes all payment types, including online banks.",
+    "pts": 100,
+    "why": "Correct. It fits his health and his banking, which is the part agents often miss."
+   },
+   {
+    "t": "Americo, because it accepts both diabetes and diabetic neuropathy on our guide without grading either one, so he would get a full benefit from day one at a good price.",
+    "pts": 30,
+    "why": "True for his health, but Americo will not draft from online-only banks, so the premium could never be collected."
+   },
+   {
+    "t": "Mutual of Omaha Living Promise, since it accepts insulin for diabetes diagnosed after age 45, and Hector was diagnosed at 58.",
+    "pts": 20,
+    "why": "Living Promise grades diabetes complications and declines gabapentin with diabetes. It also does not take cards."
+   },
+   {
+    "t": "Royal Neighbors, since it accepts insulin for diabetes as long as there are no complications that show up on the application.",
+    "pts": 10,
+    "why": "His neuropathy is a complication, and Royal grades diabetic neuropathy with insulin."
+   }
+  ]
+ },
+ {
+  "id": "p87",
+  "n": 87,
+  "max": 100,
+  "series": "alvarez",
+  "seriesTitle": "Hector Alvarez: From the Phone Call to the Application",
+  "parts": 4,
+  "part": 4,
+  "title": "Hector Alvarez, Part 4: Beneficiary and Wrap-Up",
+  "cat": "Full Sit Walkthroughs",
+  "format": "multi",
+  "file": [
+   [
+    "From part 3",
+    "Qualifies with Transamerica Immediate Solution for $12,000"
+   ],
+   [
+    "Beneficiary wish",
+    "Lucia"
+   ],
+   [
+    "He adds",
+    "His grandson Mateo, 12, \"should get something someday\""
+   ]
+  ],
+  "story": "Hector is relieved. As you set up the beneficiary, he says, \"Put my grandson Mateo on there too. He's twelve.\"",
+  "prompt": "Select every step that finishes this sale the right way.",
+  "options": [
+   {
+    "t": "List Mateo as an equal primary beneficiary, since that is what Hector asked for.",
+    "pts": -20,
+    "why": "Paying a minor usually needs a court-appointed guardian, which delays the funeral money."
+   },
+   {
+    "t": "Name Lucia as primary beneficiary with her full legal name and relationship, since she will handle the funeral.",
+    "pts": 25,
+    "why": "The person paying the funeral home should receive the money."
+   },
+   {
+    "t": "Set the draft date for the day his Social Security arrives in the online account.",
+    "pts": 20,
+    "why": "Prevents a failed first draft."
+   },
+   {
+    "t": "Explain that an insurer usually cannot pay a 12-year-old directly, so naming Mateo could tie the money up in court. Suggest an attorney for the best way to leave him something.",
+    "pts": 20,
+    "why": "Honest and protective, without giving legal advice."
+   },
+   {
+    "t": "Tell him when to expect the policy in the mail, and schedule a quick call after the first draft.",
+    "pts": 15,
+    "why": "Follow-up keeps policies on the books."
+   },
+   {
+    "t": "Add a contingent beneficiary in case Lucia passes first.",
+    "pts": 20,
+    "why": "Keeps the money from going to his estate."
+   },
+   {
+    "t": "Skip the contingent beneficiary to keep the paperwork short.",
+    "pts": -15,
+    "why": "A missing contingent can send the money through probate."
+   }
+  ]
+ },
+ {
+  "id": "p88",
+  "n": 88,
+  "max": 100,
+  "series": "kim",
+  "seriesTitle": "Dorothy Kim: The Honest Path",
+  "parts": 4,
+  "part": 1,
+  "title": "Dorothy Kim, Part 1: A Neighbor's Referral",
+  "cat": "Full Sit Walkthroughs",
+  "format": "choice",
+  "file": [
+   [
+    "Referred by",
+    "Her neighbor Bea, a client of yours"
+   ],
+   [
+    "Dorothy",
+    "78, widowed last year"
+   ],
+   [
+    "What Bea told you",
+    "\"She's worried about her funeral but doesn't trust salespeople.\""
+   ]
+  ],
+  "story": "Dorothy opens the door with the chain still on. \"Bea said you might stop by. I'm not buying anything today.\"",
+  "prompt": "What do you say?",
+  "options": [
+   {
+    "t": "Tell her that Bea just bought a policy from you last month and was thrilled with how easy it was, so she can feel just as safe working with you as Bea did and let you in.",
+    "pts": 30,
+    "why": "Sharing Bea's business breaks a confidence, and it pressures Dorothy to follow her lead."
+   },
+   {
+    "t": "Say, \"No problem at all,\" hand her a business card through the gap, and move on to the next house on your list for the afternoon.",
+    "pts": 15,
+    "why": "Respectful, but it wastes a warm referral without offering a next step."
+   },
+   {
+    "t": "Say: \"That's fine. Nobody should buy on a first visit. Bea said you've been thinking about funeral plans. Could I leave some information and come back when it suits you?\"",
+    "pts": 100,
+    "why": "Agrees with her boundary, uses the referral lightly, and asks only for a next visit. That is how you earn trust with someone wary."
+   },
+   {
+    "t": "Ask her to take the chain off so you can explain properly, since it is hard to have a real conversation through a gap in the door.",
+    "pts": 20,
+    "why": "Pushes past a boundary she set on purpose."
+   }
+  ]
+ },
+ {
+  "id": "p89",
+  "n": 89,
+  "max": 100,
+  "series": "kim",
+  "seriesTitle": "Dorothy Kim: The Honest Path",
+  "parts": 4,
+  "part": 2,
+  "title": "Dorothy Kim, Part 2: What the Pill Bottles Say",
+  "cat": "Full Sit Walkthroughs",
+  "format": "multi",
+  "file": [
+   [
+    "From part 1",
+    "Friday, 2 p.m. Her son James joins on speakerphone from Ohio"
+   ],
+   [
+    "What she mentions",
+    "\"My heart's a little weak\""
+   ],
+   [
+    "Hospital",
+    "Three nights in June, about three months ago"
+   ],
+   [
+    "On the table",
+    "Furosemide, carvedilol and lisinopril"
+   ],
+   [
+    "Daily life",
+    "Walks with a cane and does everything for herself"
+   ]
+  ],
+  "story": "Dorothy says, \"The doctor calls it heart failure, but I feel fine now.\" James says, \"Mom, just tell him everything.\"",
+  "prompt": "Select every move worth making right now. Moves that shade the facts or skip past them cost points.",
+  "options": [
+   {
+    "t": "Tell her heart failure means no company will take her.",
+    "pts": -15,
+    "why": "False. There is still a path."
+   },
+   {
+    "t": "Write down the exact hospital dates and what the stay was for.",
+    "pts": 25,
+    "why": "Many carriers look back 12 months. The dates decide what is open."
+   },
+   {
+    "t": "Suggest she call it \"a weak heart\" instead of heart failure on the application.",
+    "pts": -25,
+    "why": "Misrepresentation. It can void the policy."
+   },
+   {
+    "t": "Ask James to hang up so Dorothy can focus.",
+    "pts": -10,
+    "why": "Cuts out the family member helping her decide."
+   },
+   {
+    "t": "Confirm she handles her own daily care, like bathing and dressing, without help.",
+    "pts": 25,
+    "why": "Needing help with daily living would change her options again."
+   },
+   {
+    "t": "Explain that her answers decide which company fits, and that honest answers are what make the claim pay.",
+    "pts": 25,
+    "why": "Sets up the honest recommendation that comes next."
+   },
+   {
+    "t": "Thank James for joining and for encouraging his mother to be complete.",
+    "pts": 25,
+    "why": "He is an ally for honest answers and part of her decision."
+   }
+  ]
+ },
+ {
+  "id": "p90",
+  "n": 90,
+  "max": 100,
+  "series": "kim",
+  "seriesTitle": "Dorothy Kim: The Honest Path",
+  "parts": 4,
+  "part": 3,
+  "title": "Dorothy Kim, Part 3: The Honest Path",
+  "cat": "Full Sit Walkthroughs",
+  "format": "choice",
+  "file": [
+   [
+    "From part 2",
+    "Congestive heart failure. Hospitalized 3 nights about 3 months ago"
+   ],
+   [
+    "Daily care",
+    "Does everything for herself"
+   ],
+   [
+    "Wants",
+    "$8,000 for a simple funeral"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "James asks over the speaker, \"So what are her real options?\"",
+  "prompt": "What does our guide point to, and how do you present it?",
+  "options": [
+   {
+    "t": "Wait until her June hospital stay is a full year behind her, and then apply for a plan with a full benefit from day one somewhere else.",
+    "pts": 10,
+    "why": "Most carriers decline heart failure no matter the timing, so she would go uncovered for little gain."
+   },
+   {
+    "t": "Transamerica FE Express, since our guide lists congestive heart failure as Select there instead of declining it outright like most other carriers do, so she could avoid a waiting period and get the full amount sooner.",
+    "pts": 25,
+    "why": "True for the condition, but FE Express declines two or more nights in the hospital within 12 months. Her June stay rules it out."
+   },
+   {
+    "t": "Transamerica Immediate Solution at its graded level, since our guide grades heart failure there rather than declining it the way most other companies do.",
+    "pts": 20,
+    "why": "Immediate Solution grades heart failure, but it declines a hospital stay within the past year."
+   },
+   {
+    "t": "Royal Neighbors, which lists heart failure under guaranteed issue. Most carriers on our guide decline it, and her recent stay rules out more. Explain the waiting period with James listening.",
+    "pts": 100,
+    "why": "Correct, and honest. She gets real coverage, and she and James understand exactly how it pays."
+   }
+  ]
+ },
+ {
+  "id": "p91",
+  "n": 91,
+  "max": 100,
+  "series": "kim",
+  "seriesTitle": "Dorothy Kim: The Honest Path",
+  "parts": 4,
+  "part": 4,
+  "title": "Dorothy Kim, Part 4: Three Weeks Later",
+  "cat": "Full Sit Walkthroughs",
+  "format": "angle",
+  "file": [
+   [
+    "From part 3",
+    "Royal Neighbors guaranteed issue, $8,000, drafted on the 3rd"
+   ],
+   [
+    "What happened",
+    "Three weeks after the first draft, Dorothy calls you"
+   ],
+   [
+    "Her words",
+    "\"James thinks I'm wasting money since it won't pay the full amount for two years. Maybe I should cancel.\""
+   ]
+  ],
+  "story": "Dorothy sounds unsure rather than upset. She says she liked the plan when she bought it, but James has been reading about waiting periods online.",
+  "prompt": "Handle the call. Choose your first response, what to go over with her, and what to do if she still wants to cancel.",
+  "groups": [
+   {
+    "key": "first",
+    "label": "First response",
+    "pick": 1,
+    "hint": "Pick how you open.",
+    "options": [
+     {
+      "t": "\"James doesn't really understand how these plans work.\"",
+      "pts": -10,
+      "why": "Puts her between you and her son."
+     },
+     {
+      "t": "\"Let me email you a summary of the plan so you can read it again.\"",
+      "pts": 15,
+      "why": "Helpful, but it avoids the conversation she called to have."
+     },
+     {
+      "t": "\"I'm glad you called. That's a fair question. Would it help to get James on the line so we can go through it together?\"",
+      "pts": 30,
+      "why": "Welcomes the question and brings in the person with the concern."
+     },
+     {
+      "t": "\"Please don't cancel. You'll regret it if something happens.\"",
+      "pts": -10,
+      "why": "Fear instead of facts."
+     }
+    ]
+   },
+   {
+    "key": "review",
+    "label": "Go over together",
+    "pick": 2,
+    "hint": "Pick the two points that answer James's concern honestly.",
+    "options": [
+     {
+      "t": "The monthly price, and whether a smaller amount would feel better.",
+      "pts": 10,
+      "why": "Worth offering, but it is not his question."
+     },
+     {
+      "t": "That she will never find anything cheaper, so she should keep it.",
+      "pts": -10,
+      "why": "Pressure instead of explanation."
+     },
+     {
+      "t": "Exactly how the waiting period works: what it pays in the first two years, and that the full $8,000 is there after that.",
+      "pts": 20,
+      "why": "The honest details are the best answer to his worry."
+     },
+     {
+      "t": "Why she chose it: most companies decline heart failure, and this was the plan that would accept her.",
+      "pts": 20,
+      "why": "The context James is missing."
+     },
+     {
+      "t": "That she signed a contract and cannot cancel now.",
+      "pts": -10,
+      "why": "False. She can cancel any time."
+     }
+    ]
+   },
+   {
+    "key": "cancel",
+    "label": "If she still wants to cancel",
+    "pick": 1,
+    "hint": "Pick what you do.",
+    "options": [
+     {
+      "t": "Ask her to wait 30 days before cancelling so she can think it over.",
+      "pts": 10,
+      "why": "Reasonable to offer once, but not if she has decided."
+     },
+     {
+      "t": "Respect it: explain how to cancel with the carrier and what she gives up, and thank her for calling.",
+      "pts": 30,
+      "why": "Her decision, handled with respect. That is how referrals keep coming."
+     },
+     {
+      "t": "Say you will look into it, then not follow up and hope she forgets.",
+      "pts": -10,
+      "why": "Dishonest, and it will come back on you."
+     },
+     {
+      "t": "Tell her to just stop the payments and let it lapse.",
+      "pts": 5,
+      "why": "Leaves loose ends. A clear cancellation is better for her."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "p92",
+  "n": 92,
+  "max": 100,
+  "title": "The First Draft Bounced",
+  "cat": "Keeping Policies",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Ernest, 70, approved two weeks ago"
+   ],
+   [
+    "Carrier notice",
+    "First premium returned for insufficient funds"
+   ],
+   [
+    "His Social Security",
+    "Arrives on the 3rd. The draft was set for the 1st"
+   ]
+  ],
+  "story": "The notice lands in your inbox Monday morning. Ernest does not know yet.",
+  "prompt": "What do you do?",
+  "options": [
+   {
+    "t": "Email Ernest a copy of the notice so he has it in writing, and let him contact the carrier himself to set up a new draft date that works better with his Social Security schedule.",
+    "pts": 30,
+    "why": "Puts the fix on him, and many seniors will not act on an email in time."
+   },
+   {
+    "t": "Call Ernest today, explain it without blame, move the draft to the 3rd when his check arrives, and confirm the fix with the carrier before the grace period ends.",
+    "pts": 100,
+    "why": "Fast, kind and fixes the actual cause. Most first-draft lapses are a date problem, not a money problem."
+   },
+   {
+    "t": "Tell Ernest to put this month's premium on a credit card so the policy stays active while you sort out the draft date with the carrier.",
+    "pts": 10,
+    "why": "Many carriers on our guide do not accept cards, and it does not fix the date."
+   },
+   {
+    "t": "Wait to see whether the carrier retries the draft next month, since the money will probably be in his account by then anyway.",
+    "pts": 20,
+    "why": "The date problem repeats every month. Waiting risks a lapse."
+   }
+  ]
+ },
+ {
+  "id": "p93",
+  "n": 93,
+  "max": 100,
+  "title": "Built to Stick",
+  "cat": "Keeping Policies",
+  "format": "multi",
+  "file": [
+   [
+    "Moment",
+    "Finishing the application"
+   ],
+   [
+    "Client",
+    "Nora, 74, lives alone"
+   ],
+   [
+    "Social Security",
+    "Arrives on the second Wednesday of the month"
+   ]
+  ],
+  "story": "Nora qualifies and is ready to sign. Most lapses are decided by what happens in the next ten minutes, not the next ten months.",
+  "prompt": "Select every step that makes the policy more likely to stay in force. Shortcuts that invite a lapse cost points.",
+  "options": [
+   {
+    "t": "Tell her what the policy paperwork will look like when it arrives, so she recognizes it.",
+    "pts": 15,
+    "why": "Clients who do not recognize the policy sometimes think it is junk mail or a scam."
+   },
+   {
+    "t": "Confirm the carrier accepts her type of bank account before you submit.",
+    "pts": 20,
+    "why": "Some carriers will not draft from cards or online-only banks."
+   },
+   {
+    "t": "Where the carrier allows it, add a trusted family member to be notified if a payment is ever missed.",
+    "pts": 20,
+    "why": "A second set of eyes catches a missed payment before it becomes a lapse."
+   },
+   {
+    "t": "Skip the follow-up call so she does not have second thoughts.",
+    "pts": -20,
+    "why": "Avoiding the client is how problems turn into lapses."
+   },
+   {
+    "t": "Put a call on your calendar for right after the first draft clears.",
+    "pts": 20,
+    "why": "Catches problems early and reassures her."
+   },
+   {
+    "t": "Set every client's draft for the 1st of the month so your records stay consistent.",
+    "pts": -15,
+    "why": "Convenient for you, but it ignores when her money arrives."
+   },
+   {
+    "t": "Match the draft date to the day her Social Security actually arrives.",
+    "pts": 25,
+    "why": "The single biggest cause of early lapses is a draft date that comes before the money."
+   }
+  ]
+ },
+ {
+  "id": "p94",
+  "n": 94,
+  "max": 100,
+  "title": "I Want to Cancel",
+  "cat": "Keeping Policies",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Leon, 67. Policy in force for 4 months, $10,000, $61 a month"
+   ],
+   [
+    "Why he called",
+    "His car needed a $1,400 repair"
+   ],
+   [
+    "His words",
+    "\"I can't swing the insurance right now. Just cancel it.\""
+   ]
+  ],
+  "story": "Leon sounds stressed and a little embarrassed. He says he liked the plan, but the car comes first because he needs it to get to his doctor.",
+  "prompt": "Handle the call. Choose your first response, what to explore, and what to do if he still wants to cancel.",
+  "groups": [
+   {
+    "key": "first",
+    "label": "First response",
+    "pick": 1,
+    "hint": "Pick how you open.",
+    "options": [
+     {
+      "t": "\"You really can't afford not to have this.\"",
+      "pts": -10,
+      "why": "Pressure on someone who is already stressed."
+     },
+     {
+      "t": "\"Okay, I'll send you the cancellation form today.\"",
+      "pts": 15,
+      "why": "Respectful, but it skips options he may prefer."
+     },
+     {
+      "t": "\"If you cancel now, all the money you paid is wasted.\"",
+      "pts": -10,
+      "why": "Guilt instead of help."
+     },
+     {
+      "t": "\"I'm sorry about the car. Can we look at this together before you decide, so you keep as much protection as you can?\"",
+      "pts": 30,
+      "why": "Empathy first, then an invitation to solve it together."
+     }
+    ]
+   },
+   {
+    "key": "explore",
+    "label": "Options to explore",
+    "pick": 2,
+    "hint": "Pick the two most helpful options.",
+    "options": [
+     {
+      "t": "Moving him to a new policy with another carrier.",
+      "pts": -5,
+      "why": "He would restart at an older age, with a new contestable period."
+     },
+     {
+      "t": "Skipping a payment and hoping the grace period covers it.",
+      "pts": -10,
+      "why": "Hoping is not a plan. It often ends in a lapse."
+     },
+     {
+      "t": "Moving the draft date to later in the month, after his check arrives.",
+      "pts": 20,
+      "why": "Sometimes the problem is timing, not the amount."
+     },
+     {
+      "t": "Asking whether a family member might help with premiums for a few months.",
+      "pts": 10,
+      "why": "Can work, but it depends on his family and his comfort with asking."
+     },
+     {
+      "t": "Lowering the coverage amount, where the carrier allows it, so the premium fits his budget now.",
+      "pts": 20,
+      "why": "Keeps some protection in place at a price he can manage."
+     }
+    ]
+   },
+   {
+    "key": "cancel",
+    "label": "If he still wants to cancel",
+    "pick": 1,
+    "hint": "Pick what you do.",
+    "options": [
+     {
+      "t": "Tell him you will call back next week to see if he has changed his mind.",
+      "pts": 5,
+      "why": "Delays what he asked for."
+     },
+     {
+      "t": "Process it promptly and respectfully, make sure he understands the coverage ends, and invite him to call when things settle.",
+      "pts": 30,
+      "why": "His decision, handled with respect. He may come back, and he will tell others how you treated him."
+     },
+     {
+      "t": "Ask your team leader to call and talk him out of it.",
+      "pts": 0,
+      "why": "More pressure after he has decided."
+     },
+     {
+      "t": "Do not process it, and let the policy lapse on its own.",
+      "pts": -10,
+      "why": "Ignoring his request leaves loose ends and damages trust."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "p95",
+  "n": 95,
+  "max": 100,
+  "title": "The Right Moment to Ask",
+  "cat": "Referrals",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Gail, 68. Application just completed"
+   ],
+   [
+    "Her mood",
+    "Relieved and chatty"
+   ],
+   [
+    "Earlier she said",
+    "Her sister and two friends from church \"have been meaning to do this\""
+   ]
+  ],
+  "story": "Gail thanks you and says she feels like a weight has been lifted.",
+  "prompt": "When and how do you ask for referrals?",
+  "options": [
+   {
+    "t": "Now, while she is relieved: \"You mentioned your sister and your friends from church. Who would want this same peace of mind? Would it be okay if I mention your name?\"",
+    "pts": 100,
+    "why": "The best moment is when the value is fresh, and she already named people. Asking for permission to use her name makes the follow-up warm."
+   },
+   {
+    "t": "Skip it this time, since asking right after the sale might make her feel like she was just a transaction to you.",
+    "pts": 10,
+    "why": "Asked warmly, a referral request tells her you would treat her friends the same way."
+   },
+   {
+    "t": "Leave a stack of your business cards and ask her to hand them out to anyone at her church who might be interested in coverage.",
+    "pts": 20,
+    "why": "Passive. Cards rarely get handed out, and you lose the names she already has in mind."
+   },
+   {
+    "t": "Wait until the policy is issued and ask on the delivery call, once she knows for certain that everything went through smoothly and she is covered, and she is in an even better mood.",
+    "pts": 35,
+    "why": "Not bad, but the moment of relief is now, and she already named people."
+   }
+  ]
+ },
+ {
+  "id": "p96",
+  "n": 96,
+  "max": 100,
+  "title": "A Good Referral Ask",
+  "cat": "Referrals",
+  "format": "multi",
+  "file": [
+   [
+    "Client",
+    "Harold, 71, just approved"
+   ],
+   [
+    "He mentioned",
+    "His brother and two neighbors \"should look into this\""
+   ]
+  ],
+  "story": "Harold is happy with his plan and open to helping you, but he does not want his family or neighbors to feel pushed.",
+  "prompt": "Select every part of a strong referral ask. Moves that pressure people or cross a line cost points.",
+  "options": [
+   {
+    "t": "Offer to let him give them a heads-up call first.",
+    "pts": 25,
+    "why": "People are much more open when a friend has already mentioned you."
+   },
+   {
+    "t": "Offer him cash for every name that buys a policy.",
+    "pts": -20,
+    "why": "Many states restrict payments or gifts for referrals. Check your compliance rules before offering anything."
+   },
+   {
+    "t": "Ask to scroll through his phone contacts together.",
+    "pts": -15,
+    "why": "Intrusive, and it feels like a sales tactic."
+   },
+   {
+    "t": "Refer back to the people he already mentioned by name.",
+    "pts": 25,
+    "why": "Specific people are far easier to think of than \"anyone you know.\""
+   },
+   {
+    "t": "Tell his neighbors he recommended you before he agrees to it.",
+    "pts": -10,
+    "why": "Using his name without permission breaks his trust."
+   },
+   {
+    "t": "Explain what you will do: offer information, no pressure, and accept a no.",
+    "pts": 25,
+    "why": "Takes away his worry about putting people on the spot."
+   },
+   {
+    "t": "Ask permission to use his name when you reach out.",
+    "pts": 25,
+    "why": "A name he approved turns a cold contact into a warm one."
+   }
+  ]
+ },
+ {
+  "id": "p97",
+  "n": 97,
+  "max": 100,
+  "title": "Asking in Your Own Words",
+  "cat": "Referrals",
+  "format": "text",
+  "minWords": 20,
+  "file": [
+   [
+    "Client",
+    "Walter, 72. Just finished his application"
+   ],
+   [
+    "He mentioned",
+    "His brother Lou and his VFW buddies \"all need this\""
+   ]
+  ],
+  "story": "Walter shakes your hand and says, \"You did right by me.\"",
+  "prompt": "Write your referral ask in 2 to 4 sentences.",
+  "rubric": [
+   {
+    "label": "Thanks him",
+    "keys": [
+     "thank",
+     "appreciate",
+     "glad",
+     "grateful"
+    ],
+    "pts": 20,
+    "tip": "Start with gratitude."
+   },
+   {
+    "label": "Names the people he mentioned",
+    "keys": [
+     "lou",
+     "brother",
+     "vfw",
+     "buddies",
+     "friends"
+    ],
+    "pts": 20,
+    "tip": "Use the names he gave you."
+   },
+   {
+    "label": "Keeps it low pressure",
+    "keys": [
+     "no pressure",
+     "only if",
+     "no obligation",
+     "just offer",
+     "your call",
+     "if they want",
+     "if they're interested"
+    ],
+    "pts": 20,
+    "tip": "Tell him you will not push anyone."
+   },
+   {
+    "label": "Asks permission to use his name",
+    "keys": [
+     "your name",
+     "mention you",
+     "say you sent",
+     "mention that you"
+    ],
+    "pts": 20,
+    "tip": "His permission is what makes the call warm."
+   },
+   {
+    "label": "Asks a question",
+    "keys": [
+     "?"
+    ],
+    "pts": 20,
+    "tip": "End with a question he can say yes to."
+   }
+  ],
+  "sample": "Thank you for trusting me with this, Walter. You mentioned Lou and your VFW buddies. Would it be okay if I mentioned your name when I reach out? No pressure on them at all, I would just offer the same information you got."
+ },
+ {
+  "id": "p98",
+  "n": 98,
+  "max": 100,
+  "title": "The Grandson Is Twelve",
+  "cat": "Beneficiary Planning",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Rita, 71"
+   ],
+   [
+    "She wants",
+    "$10,000, with her grandson Ty, 12, as beneficiary"
+   ],
+   [
+    "Ty's mother",
+    "Rita's daughter Dana, who lives nearby"
+   ]
+  ],
+  "story": "Rita smiles. \"Ty's my world. I want it to go to him.\"",
+  "prompt": "What is the best guidance?",
+  "options": [
+   {
+    "t": "Name Ty as primary beneficiary, and add Dana as the contingent beneficiary just in case anything were to happen to Ty first.",
+    "pts": 20,
+    "why": "The contingent pays only if Ty dies first. It does not solve paying a minor."
+   },
+   {
+    "t": "Name Ty as the beneficiary exactly as she asked, and let her know that Dana, as his mother, can sort out any of the paperwork with the carrier on his behalf when the time comes.",
+    "pts": 30,
+    "why": "Paying a minor usually requires a court-appointed guardian or custodian, which delays the funeral money."
+   },
+   {
+    "t": "Explain that an insurer usually can't pay a 12-year-old directly, so it could be tied up in court. Suggest naming Dana for the funeral, and an attorney for leaving Ty something.",
+    "pts": 100,
+    "why": "Honest about the problem, practical about the funeral, and it points her to the right help for Ty."
+   },
+   {
+    "t": "Tell her grandchildren cannot be named as beneficiaries on final expense policies, so she will need to pick an adult child instead.",
+    "pts": 10,
+    "why": "Not true. The issue is paying a minor, not naming a grandchild."
+   }
+  ]
+ },
+ {
+  "id": "p99",
+  "n": 99,
+  "max": 100,
+  "title": "The Blended Family",
+  "cat": "Beneficiary Planning",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Frank, 70, remarried 8 years ago to Carol"
+   ],
+   [
+    "Children",
+    "Two sons from his first marriage"
+   ],
+   [
+    "His will",
+    "Leaves everything to his sons"
+   ],
+   [
+    "He wants",
+    "Carol to handle his funeral"
+   ]
+  ],
+  "story": "Frank says, \"My will takes care of the boys. Put Carol on the policy for the funeral.\"",
+  "prompt": "What is the best way to handle it?",
+  "options": [
+   {
+    "t": "Name Carol, and tell him that his will is what decides who ultimately keeps the money, so his sons and Carol can sort it out between themselves after the funeral is paid for.",
+    "pts": 20,
+    "why": "Wrong. The beneficiary designation usually controls, separate from the will."
+   },
+   {
+    "t": "Name his two sons as the beneficiaries instead, since his will already leaves everything to them and it keeps all of his paperwork consistent.",
+    "pts": 30,
+    "why": "Goes against what he asked, and Carol could be left paying for the funeral."
+   },
+   {
+    "t": "Suggest splitting it 50/50 between Carol and his sons so that nobody in the family feels left out, even though it is his decision to make.",
+    "pts": 10,
+    "why": "Not what he wants, and half may not cover the funeral."
+   },
+   {
+    "t": "Name Carol as he asked, explain that the beneficiary designation generally controls this money regardless of the will, and suggest he tell his sons so nothing surprises them.",
+    "pts": 100,
+    "why": "Does what he wants, explains how it really works, and heads off a family conflict later."
+   }
+  ]
+ },
+ {
+  "id": "p100",
+  "n": 100,
+  "max": 100,
+  "title": "Beneficiary Checklist",
+  "cat": "Beneficiary Planning",
+  "format": "multi",
+  "file": [
+   [
+    "Moment",
+    "Completing the beneficiary section"
+   ],
+   [
+    "Client",
+    "Joan, 73, naming her two adult children"
+   ]
+  ],
+  "story": "Joan says, \"Just put my kids down.\" You want this section to hold up when her family actually needs it.",
+  "prompt": "Select everything to confirm before you submit. Shortcuts cost points.",
+  "options": [
+   {
+    "t": "Each beneficiary's full legal name and relationship.",
+    "pts": 20,
+    "why": "Vague names slow down claims."
+   },
+   {
+    "t": "Writing \"my children\" instead of names to keep it simple.",
+    "pts": -15,
+    "why": "Unclear designations delay payment."
+   },
+   {
+    "t": "Percentages that add up to 100%.",
+    "pts": 20,
+    "why": "Mistakes here can hold up a claim."
+   },
+   {
+    "t": "A contingent beneficiary, in case a primary passes first.",
+    "pts": 20,
+    "why": "Keeps the money out of probate."
+   },
+   {
+    "t": "Whether a beneficiary receives SSI or Medicaid, since a lump sum could affect their benefits.",
+    "pts": 20,
+    "why": "A payout can push someone over benefit limits."
+   },
+   {
+    "t": "Leaving the contingent blank if she is not sure.",
+    "pts": -15,
+    "why": "Better to decide now than leave it to probate."
+   },
+   {
+    "t": "That the beneficiaries know the policy exists and where the paperwork is kept.",
+    "pts": 20,
+    "why": "A policy nobody knows about may never be claimed."
+   }
+  ]
+ },
+ {
+  "id": "p101",
+  "n": 101,
+  "max": 100,
+  "title": "The Setting Call",
+  "cat": "Setting Appointments",
+  "format": "order",
+  "file": [
+   [
+    "Lead",
+    "A reply card mailed back last week"
+   ],
+   [
+    "Goal",
+    "A kept appointment with everyone who needs to be there"
+   ]
+  ],
+  "story": "A good setting call is short, friendly and specific. The order matters.",
+  "prompt": "Put these steps in the order you would use them.",
+  "steps": [
+   {
+    "id": "s6",
+    "t": "Tell them what to have ready: medication list and banking information",
+    "pos": 6,
+    "why": "Saves time and sets up a complete application."
+   },
+   {
+    "id": "s4",
+    "t": "Offer two specific appointment times",
+    "pos": 4,
+    "why": "A choice between two times is easier than an open question."
+   },
+   {
+    "id": "s5",
+    "t": "Confirm the address and ask that everyone involved be there",
+    "pos": 5,
+    "why": "Prevents the \"my husband wasn't home\" stall."
+   },
+   {
+    "id": "s3",
+    "t": "Confirm who would be covered and their ages",
+    "pos": 3,
+    "why": "Tells you who needs to be at the table."
+   },
+   {
+    "id": "s1",
+    "t": "Introduce yourself and mention the card they sent back",
+    "pos": 1,
+    "why": "Reminds them they asked, so it is not a cold call."
+   },
+   {
+    "id": "s2",
+    "t": "Ask whether now is a good time for two minutes",
+    "pos": 2,
+    "why": "Respect earns attention."
+   }
+  ]
+ },
+ {
+  "id": "p102",
+  "n": 102,
+  "max": 100,
+  "title": "Keeping the Appointment",
+  "cat": "Setting Appointments",
+  "format": "multi",
+  "file": [
+   [
+    "Problem",
+    "Too many appointments where nobody answers the door"
+   ],
+   [
+    "Your goal",
+    "More kept appointments"
+   ]
+  ],
+  "story": "Your team leader notices that about a third of your appointments are no-shows.",
+  "prompt": "Select every habit that cuts down on no-shows. Tactics that mislead or backfire cost points.",
+  "options": [
+   {
+    "t": "Set appointments within the next two or three days.",
+    "pts": 25,
+    "why": "Interest fades fast."
+   },
+   {
+    "t": "Send a reminder text the day before with your name and photo.",
+    "pts": 25,
+    "why": "A face makes you a person, not a stranger at the door."
+   },
+   {
+    "t": "Call or text on the day to say you are on your way.",
+    "pts": 25,
+    "why": "A heads-up makes it much more likely someone opens the door."
+   },
+   {
+    "t": "Skip the reminder so they do not have a chance to back out.",
+    "pts": -10,
+    "why": "They will back out anyway, by not answering."
+   },
+   {
+    "t": "Ask that the spouse or anyone who helps with money be there.",
+    "pts": 25,
+    "why": "Fewer reschedules, and fewer stalls later."
+   },
+   {
+    "t": "Avoid saying the visit is about insurance so they do not cancel.",
+    "pts": -25,
+    "why": "Misleading, and it guarantees a bad start at the door."
+   },
+   {
+    "t": "Book a week or more out to give them time to prepare.",
+    "pts": -10,
+    "why": "Long gaps kill interest."
+   }
+  ]
+ },
+ {
+  "id": "p103",
+  "n": 103,
+  "max": 100,
+  "title": "The Spouse Isn't Home",
+  "cat": "Setting Appointments",
+  "format": "choice",
+  "file": [
+   [
+    "On the phone",
+    "Linda, 66, wants coverage for herself and her husband"
+   ],
+   [
+    "Her husband",
+    "Works until 7 p.m."
+   ],
+   [
+    "She says",
+    "\"I make these decisions anyway. Just come Thursday at 2.\""
+   ]
+  ],
+  "story": "Linda is eager and wants to get it done.",
+  "prompt": "What do you say?",
+  "options": [
+   {
+    "t": "Book it with her at 2, and tell her not to worry about her husband being there, since she is the one who makes the decisions anyway.",
+    "pts": 20,
+    "why": "If the coverage is for both, he needs to be part of it. Leaving him out invites a stall."
+   },
+   {
+    "t": "Say: \"I love that you handle this. Since it covers both of you and needs his health answers too, would Thursday at 7:30 work so he can join us?\"",
+    "pts": 100,
+    "why": "Respects her role and explains why he needs to be there. It prevents a stall and a second trip."
+   },
+   {
+    "t": "Book Thursday at 2 like she asked, and plan to call her husband afterward to get his health answers and his signature, so that nobody has to change their schedule.",
+    "pts": 35,
+    "why": "His answers and signature are needed, and he would be hearing it all secondhand."
+   },
+   {
+    "t": "Tell her you only ever meet with couples together, so she will need to call back and reschedule once her husband is available.",
+    "pts": 10,
+    "why": "Rigid, and it loses the appointment."
+   }
+  ]
+ },
+ {
+  "id": "p104",
+  "n": 104,
+  "max": 100,
+  "title": "Reading Your Week",
+  "cat": "Managing Your Numbers",
+  "format": "choice",
+  "file": [
+   [
+    "Doors knocked",
+    "60"
+   ],
+   [
+    "Appointments set",
+    "9"
+   ],
+   [
+    "Sits",
+    "7"
+   ],
+   [
+    "Sits closed",
+    "1"
+   ],
+   [
+    "Team average",
+    "About 1 close in every 3 sits"
+   ]
+  ],
+  "story": "You are reviewing your tracker with your team leader on Friday.",
+  "prompt": "Where is the biggest opportunity?",
+  "options": [
+   {
+    "t": "Setting appointments. Book more appointments from each door you knock on so your conversion numbers look better at the end of the month.",
+    "pts": 20,
+    "why": "Nine appointments from 60 doors is solid. Setting is not the gap."
+   },
+   {
+    "t": "Nothing. One close in a week is normal for anyone, and next week the numbers will probably even out on their own without changes.",
+    "pts": 10,
+    "why": "One in seven against a team average of one in three is a pattern worth fixing."
+   },
+   {
+    "t": "Closing. You get plenty of sits but close 1 of 7. Review your presentation and close with your team leader, and role-play the objections you heard this week.",
+    "pts": 100,
+    "why": "Your doors and sits are healthy. The gap is at the table."
+   },
+   {
+    "t": "Door knocking. You need to knock on a lot more doors next week, since more doors eventually turn into more sits, more closed sales and a stronger month overall.",
+    "pts": 30,
+    "why": "Your doors and sits are fine. More sits at a 1 in 7 close rate wastes leads."
+   }
+  ]
+ },
+ {
+  "id": "p105",
+  "n": 105,
+  "max": 100,
+  "title": "Written Versus Placed",
+  "cat": "Managing Your Numbers",
+  "format": "choice",
+  "file": [
+   [
+    "Applications written last month",
+    "12"
+   ],
+   [
+    "Issued and paid",
+    "7"
+   ],
+   [
+    "Why the other 5 did not place",
+    "2 declined in underwriting, 2 first drafts failed, 1 cancelled during the free look"
+   ]
+  ],
+  "story": "You wrote a lot of business last month, but your placed number is lower than you expected.",
+  "prompt": "What should you work on first?",
+  "options": [
+   {
+    "t": "The health interview, carrier choice and draft setup. Four of the five were declines and failed drafts, which better underwriting and draft dates can prevent.",
+    "pts": 100,
+    "why": "Fix the causes you control. Placed business is what gets paid."
+   },
+   {
+    "t": "Nothing. Some business always falls off, and seven out of twelve is close enough to what most agents end up placing anyway.",
+    "pts": 10,
+    "why": "Four of the five were preventable."
+   },
+   {
+    "t": "Writing more applications next month, since more written business will naturally make up for the ones that do not end up placing, and your written number will look strong.",
+    "pts": 30,
+    "why": "Writing more at a 58% placement rate repeats the same problems."
+   },
+   {
+    "t": "The free-look cancellation, since that is the one case that shows a client actually changed their mind about working with you.",
+    "pts": 20,
+    "why": "Worth reviewing, but it is one of five. Declines and failed drafts are four."
+   }
+  ]
+ },
+ {
+  "id": "p106",
+  "n": 106,
+  "max": 100,
+  "title": "Planning the Week",
+  "cat": "Managing Your Numbers",
+  "format": "multi",
+  "file": [
+   [
+    "Tracker columns",
+    "Doors knocked, leads burned, sits, appointments, sits closed"
+   ],
+   [
+    "Goal",
+    "Steady, placed business every week"
+   ]
+  ],
+  "story": "You are setting up your week on Sunday night.",
+  "prompt": "Select every habit that builds steady, placed business. Habits that distort your numbers cost points.",
+  "options": [
+   {
+    "t": "Skip follow-up calls to knock more doors.",
+    "pts": -15,
+    "why": "Lapses erase the gain."
+   },
+   {
+    "t": "Only track your numbers when you have had a good week.",
+    "pts": -10,
+    "why": "Bad weeks are where the lessons are."
+   },
+   {
+    "t": "Block set times for door knocking and keep them.",
+    "pts": 25,
+    "why": "Consistency beats bursts."
+   },
+   {
+    "t": "Count applications written as your main number, since placed business takes too long to show up.",
+    "pts": -20,
+    "why": "Written is not paid. Placed is the number that matters."
+   },
+   {
+    "t": "Review your numbers with your team leader each week and pick one thing to improve.",
+    "pts": 25,
+    "why": "One focused change a week adds up."
+   },
+   {
+    "t": "Schedule follow-up calls after every first draft and policy delivery.",
+    "pts": 25,
+    "why": "Protects placement and brings referrals."
+   },
+   {
+    "t": "Track doors, appointments, sits and closes every day, not just at month end.",
+    "pts": 25,
+    "why": "You can only fix what you see in time."
+   }
+  ]
  }
 ]

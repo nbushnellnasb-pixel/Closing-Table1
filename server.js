@@ -8,6 +8,7 @@
  *   DATA_DIR        folder for db.json (default ./data). Point this at a persistent disk.
  *   ADMIN_PASSWORD  host password. If unset, one is generated on first start and printed in the log.
  *   SESSION_SECRET  optional secret for login cookies. Generated and stored if unset.
+ *   LEADER_PASSWORD optional team leader password. Can also be set from the host panel.
  */
 const http = require('http');
 const fs = require('fs');
@@ -132,10 +133,11 @@ function send(res, status, body, headers) {
   res.writeHead(status, Object.assign({ 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' }, headers || {}));
   res.end(data);
 }
-function readBody(req) {
+function readBody(req, limit) {
+  const max = limit || 200000;
   return new Promise((resolve, reject) => {
     let n = 0; const chunks = [];
-    req.on('data', c => { n += c.length; if (n > 200000) { reject(new Error('too large')); req.destroy(); } else chunks.push(c); });
+    req.on('data', c => { n += c.length; if (n > max) { reject(new Error('too large')); req.destroy(); } else chunks.push(c); });
     req.on('end', () => { try { resolve(chunks.length ? JSON.parse(Buffer.concat(chunks).toString('utf8')) : {}); } catch (e) { reject(new Error('bad json')); } });
     req.on('error', reject);
   });
@@ -196,6 +198,14 @@ function scoreAnswer(p, a) {
   return null;
 }
 
+/* walkthrough puzzles come in parts that build on each other: part N opens once part N-1 is answered */
+function lockedFor(agentId, p) {
+  if (!p.series || !(p.part > 1)) return null;
+  const prev = PUZZLES.find(x => x.series === p.series && x.part === p.part - 1);
+  if (!prev || db.results[agentId + '_' + prev.id]) return null;
+  return 'Finish part ' + prev.part + ' of this walkthrough first.';
+}
+
 /* ---------- public scoreboard ---------- */
 function board() {
   const per = {};
@@ -207,7 +217,11 @@ function board() {
   });
   return {
     teams: db.teams.map(t => ({ id: t.id, name: t.name, leader: t.leader, order: t.order })),
-    puzzles: PUZZLES.map(p => ({ id: p.id, n: p.n, title: p.title, cat: p.cat, format: p.format, max: maxOf(p), open: db.puzzleState[p.id].open, gameNight: GAME_NIGHT_IDS.has(p.id) })),
+    puzzles: PUZZLES.map(p => {
+      const o = { id: p.id, n: p.n, title: p.title, cat: p.cat, format: p.format, max: maxOf(p), open: db.puzzleState[p.id].open, gameNight: GAME_NIGHT_IDS.has(p.id) };
+      if (p.series) { o.series = p.series; o.seriesTitle = p.seriesTitle; o.part = p.part; o.parts = p.parts; }
+      return o;
+    }),
     agents: Object.values(db.agents).map(a => Object.assign({ id: a.id, name: a.name, teamId: a.teamId, points: 0, done: 0, last: 0, per: {} }, per[a.id] || {}))
   };
 }
@@ -218,6 +232,9 @@ const route = (method, pattern, fn) => { (api[method] = api[method] || []).push(
 
 const agentOf = req => { const s = session(req); return s && s.t === 'a' && db.agents[s.id] ? db.agents[s.id] : null; };
 const isAdmin = req => { const s = session(req); return !!(s && s.t === 'admin'); };
+/* team leaders get a read-only view of the skills report. Hosts can see it too. */
+const isLeader = req => { const s = session(req); return !!(s && (s.t === 'leader' || s.t === 'admin')); };
+const leaderPassword = () => process.env.LEADER_PASSWORD || db.leaderPassword || '';
 const me = a => ({ id: a.id, name: a.name, teamId: a.teamId });
 
 route('GET', '/api/state', (req, res) => {
@@ -278,7 +295,8 @@ route('POST', '/api/join', async (req, res) => {
 route('POST', '/api/logout', (req, res) => { setCookie(req, res, null); send(res, 200, { ok: true }); });
 route('GET', '/api/me', (req, res) => {
   const a = agentOf(req);
-  send(res, 200, { agent: a ? me(a) : null, admin: isAdmin(req) });
+  const s = session(req);
+  send(res, 200, { agent: a ? me(a) : null, admin: isAdmin(req), leader: !!(s && s.t === 'leader'), leaderAccess: !!leaderPassword() });
 });
 
 route('GET', '/api/puzzles/:id', (req, res, p) => {
@@ -287,6 +305,7 @@ route('GET', '/api/puzzles/:id', (req, res, p) => {
   const r = db.results[a.id + '_' + pz.id];
   if (r) return send(res, 200, { puzzle: pz, result: { points: r.points, max: r.max, answer: r.answer } });
   if (!db.puzzleState[pz.id].open) return send(res, 403, { error: 'This puzzle is not open yet.' });
+  const lock = lockedFor(a.id, pz); if (lock) return send(res, 403, { error: lock });
   send(res, 200, { puzzle: publicPuzzle(pz) });
 });
 route('POST', '/api/puzzles/:id/answer', async (req, res, p) => {
@@ -295,6 +314,7 @@ route('POST', '/api/puzzles/:id/answer', async (req, res, p) => {
   const key = a.id + '_' + pz.id;
   if (!db.results[key]) {
     if (!db.puzzleState[pz.id].open) return send(res, 403, { error: 'This puzzle is not open yet.' });
+    const lock = lockedFor(a.id, pz); if (lock) return send(res, 403, { error: lock });
     const b = await readBody(req);
     const scored = scoreAnswer(pz, b.answer);
     if (!scored) return send(res, 400, { error: 'That answer is incomplete. Check every section and try again.' });
@@ -357,6 +377,7 @@ admin('PATCH', '/api/admin/agents/:id', async (req, res, p) => {
 });
 admin('DELETE', '/api/admin/agents/:id', (req, res, p) => {
   if (!db.agents[p.id]) return send(res, 404, { error: 'No such agent.' });
+  snapshot('before-remove');
   delete db.agents[p.id];
   Object.keys(db.results).forEach(k => { if (db.results[k].agentId === p.id) delete db.results[k]; });
   save(); send(res, 200, { ok: true });
@@ -397,6 +418,7 @@ admin('PATCH', '/api/admin/puzzles/:id', async (req, res, p) => {
 });
 admin('POST', '/api/admin/reset', async (req, res) => {
   const b = await readBody(req);
+  snapshot('before-clear');
   let n = 0;
   Object.keys(db.results).forEach(k => { if (!b.agentId || db.results[k].agentId === b.agentId) { delete db.results[k]; n++; } });
   save(); send(res, 200, { cleared: n });
@@ -407,6 +429,150 @@ admin('GET', '/api/admin/export.csv', (req, res) => {
   const rows = [['Agent', 'Team', 'Total points', 'Puzzles done'].concat(b.puzzles.map(p => 'P' + p.n + ' ' + p.title))];
   b.agents.sort((x, y) => y.points - x.points).forEach(a => rows.push([a.name, teamName(a.teamId), a.points, a.done].concat(b.puzzles.map(p => a.per[p.id] === undefined ? '' : a.per[p.id]))));
   send(res, 200, rows.map(r => r.map(q).join(',')).join('\n'), { 'Content-Type': 'text/csv; charset=utf-8', 'Content-Disposition': 'attachment; filename="closing-table-scores.csv"' });
+});
+
+/* ---------- team leader access ---------- */
+route('POST', '/api/leader/login', async (req, res) => {
+  const ip = clientIp(req);
+  if (tooMany(ip)) return send(res, 429, { error: 'Too many attempts. Wait a few minutes and try again.' });
+  const b = await readBody(req);
+  if (!leaderPassword()) return send(res, 403, { error: 'Team leader access is not turned on yet. Ask your host to set a leader password.' });
+  if (!safeEq(String(b.password || ''), leaderPassword())) { noteFail(ip); return send(res, 401, { error: 'That password is not right.' }); }
+  noteOk(ip);
+  const token = setCookie(req, res, { t: 'leader' });
+  send(res, 200, { ok: true, token });
+});
+admin('GET', '/api/admin/leader-access', (req, res) => send(res, 200, { enabled: !!leaderPassword(), fromEnv: !!process.env.LEADER_PASSWORD }));
+admin('POST', '/api/admin/leader-access', async (req, res) => {
+  const b = await readBody(req);
+  const pw = String(b.password || '').trim();
+  if (pw && pw.length < 6) return send(res, 400, { error: 'Use at least 6 characters.' });
+  db.leaderPassword = pw || null;
+  save(); send(res, 200, { enabled: !!leaderPassword() });
+});
+
+/* ---------- skills report: strengths and weaknesses by category ---------- */
+const RATE_MIN = 2;      /* answers needed in a category before it is called a strength or weakness */
+const STRONG = 80;       /* average % at or above this is a strength */
+const WEAK = 65;         /* average % below this needs work */
+function report() {
+  const cats = [];
+  PUZZLES.forEach(p => { if (!cats.some(c => c.cat === p.cat)) cats.push({ cat: p.cat, count: 0 }); cats.find(c => c.cat === p.cat).count++; });
+  const agg = {};         /* agentId -> cat -> { pts, max, n } */
+  Object.values(db.results).forEach(r => {
+    const p = puzzleById(r.puzzleId); if (!p || !db.agents[r.agentId]) return;
+    const a = agg[r.agentId] || (agg[r.agentId] = {});
+    const c = a[p.cat] || (a[p.cat] = { pts: 0, max: 0, n: 0 });
+    c.pts += Math.max(0, r.points); c.max += r.max || maxOf(p); c.n++;
+  });
+  const pct = c => c && c.max ? Math.round(c.pts / c.max * 100) : null;
+  const agents = Object.values(db.agents).map(a => {
+    const m = agg[a.id] || {};
+    const byCat = {}; let pts = 0, max = 0, done = 0;
+    cats.forEach(({ cat }) => { const c = m[cat]; if (c) { byCat[cat] = { done: c.n, pct: pct(c) }; pts += c.pts; max += c.max; done += c.n; } });
+    const rated = Object.keys(byCat).filter(k => byCat[k].done >= RATE_MIN);
+    const strengths = rated.filter(k => byCat[k].pct >= STRONG).sort((x, y) => byCat[y].pct - byCat[x].pct).slice(0, 3);
+    const weaknesses = rated.filter(k => byCat[k].pct < WEAK).sort((x, y) => byCat[x].pct - byCat[y].pct).slice(0, 3);
+    const untried = cats.map(c => c.cat).filter(k => !byCat[k]);
+    return { id: a.id, name: a.name, teamId: a.teamId, done, overall: max ? Math.round(pts / max * 100) : null, byCat, strengths, weaknesses, untried };
+  });
+  const teams = db.teams.map(t => {
+    const byCat = {};
+    cats.forEach(({ cat }) => {
+      let pts = 0, max = 0, n = 0;
+      Object.values(db.agents).filter(a => a.teamId === t.id).forEach(a => { const c = (agg[a.id] || {})[cat]; if (c) { pts += c.pts; max += c.max; n += c.n; } });
+      if (n) byCat[cat] = { done: n, pct: Math.round(pts / max * 100) };
+    });
+    return { id: t.id, name: t.name, leader: t.leader, order: t.order, byCat };
+  });
+  return { generatedAt: Date.now(), rules: { rateMin: RATE_MIN, strong: STRONG, weak: WEAK }, categories: cats, agents, teams };
+}
+/* friendly skill names for the spreadsheet (the app uses the same names on screen) */
+const CAT_LABELS = { 'Objections': 'Objection Control', 'Process': 'Proper Process', 'Building the case': 'Building The Case', 'Discovery': 'Discovery Questions',
+  'Product knowledge': 'Product Knowledge', 'Replacement': 'Replacement Scenarios', 'Compliance': 'Compliance & Ethics', 'Closing': 'Closing Techniques',
+  'Underwriting': 'Underwriting Scenarios', 'Keeping Policies': 'Keeping Policies on the Books' };
+const catName = c => CAT_LABELS[c] || c;
+const csvCell = v => '"' + String(v === null || v === undefined ? '' : v).replace(/"/g, '""') + '"';
+const csvOut = (res, rows, file) => send(res, 200, '﻿' + rows.map(r => r.map(csvCell).join(',')).join('\r\n'),
+  { 'Content-Type': 'text/csv; charset=utf-8', 'Content-Disposition': 'attachment; filename="' + file + '"' });
+const stamp = () => new Date().toISOString().slice(0, 10);
+route('GET', '/api/report', (req, res) => { if (!isLeader(req)) return send(res, 401, { error: 'Leader or host sign-in required.' }); send(res, 200, report()); });
+route('GET', '/api/report.csv', (req, res) => {
+  if (!isLeader(req)) return send(res, 401, { error: 'Leader or host sign-in required.' });
+  const r = report(), teamName = id => (db.teams.find(t => t.id === id) || {}).name || '';
+  const rows = [['Agent', 'Team', 'Puzzles done', 'Overall %', 'Strengths', 'Needs work', 'Practice next', 'Not tried yet'].concat(r.categories.map(c => catName(c.cat) + ' %'), r.categories.map(c => catName(c.cat) + ' answered'))];
+  r.agents.sort((x, y) => teamName(x.teamId).localeCompare(teamName(y.teamId)) || x.name.localeCompare(y.name)).forEach(a => rows.push(
+    [a.name, teamName(a.teamId), a.done, a.overall, a.strengths.map(catName).join('; '), a.weaknesses.map(catName).join('; '), catName(a.weaknesses[0] || a.untried[0] || ''), a.untried.map(catName).join('; ')]
+      .concat(r.categories.map(c => a.byCat[c.cat] ? a.byCat[c.cat].pct : ''), r.categories.map(c => a.byCat[c.cat] ? a.byCat[c.cat].done : 0))));
+  csvOut(res, rows, 'closing-table-skills-report-' + stamp() + '.csv');
+});
+admin('GET', '/api/admin/answers.csv', (req, res) => {
+  const teamName = id => (db.teams.find(t => t.id === id) || {}).name || '';
+  const rows = [['Date', 'Agent', 'Team', 'Puzzle #', 'Puzzle', 'Category', 'Format', 'Points', 'Out of', 'Game Night']];
+  Object.values(db.results).sort((x, y) => (x.at || 0) - (y.at || 0)).forEach(r => {
+    const a = db.agents[r.agentId], p = puzzleById(r.puzzleId); if (!a || !p) return;
+    rows.push([r.at ? new Date(r.at).toISOString().replace('T', ' ').slice(0, 16) : '', a.name, teamName(a.teamId), p.n, p.title, p.cat, p.format, r.points, r.max, GAME_NIGHT_IDS.has(p.id) ? 'yes' : '']);
+  });
+  csvOut(res, rows, 'closing-table-all-answers-' + stamp() + '.csv');
+});
+
+/* ---------- backups: automatic snapshots on the data disk, plus download and restore ---------- */
+const BACKUP_DIR = path.join(DATA_DIR, 'backups');
+const KEEP_BACKUPS = 30;
+fs.mkdirSync(BACKUP_DIR, { recursive: true });
+const backupData = () => ({ app: 'closing-table', version: 1, exportedAt: new Date().toISOString(), teams: db.teams, agents: db.agents, results: db.results, puzzleState: db.puzzleState });
+function snapshot(reason) {
+  try {
+    const name = 'backup-' + new Date().toISOString().replace(/[:T]/g, '-').slice(0, 16) + (reason ? '-' + reason : '') + '.json';
+    fs.writeFileSync(path.join(BACKUP_DIR, name), JSON.stringify(backupData()));
+    const files = fs.readdirSync(BACKUP_DIR).filter(f => /^backup-.*\.json$/.test(f)).sort();
+    files.slice(0, Math.max(0, files.length - KEEP_BACKUPS)).forEach(f => { try { fs.unlinkSync(path.join(BACKUP_DIR, f)); } catch (e) {} });
+    return name;
+  } catch (e) { console.error('backup failed', e); return null; }
+}
+function dailySnapshot() {
+  const today = 'backup-' + stamp();
+  const has = fs.readdirSync(BACKUP_DIR).some(f => f.startsWith(today) && f.endsWith('-daily.json'));
+  if (!has && Object.keys(db.results).length + Object.keys(db.agents).length > 0) snapshot('daily');
+}
+dailySnapshot();
+setInterval(dailySnapshot, 60 * 60 * 1000);
+function listBackups() {
+  return fs.readdirSync(BACKUP_DIR).filter(f => /^backup-.*\.json$/.test(f)).sort().reverse().map(f => {
+    const st = fs.statSync(path.join(BACKUP_DIR, f));
+    return { name: f, size: st.size, at: st.mtimeMs };
+  });
+}
+admin('GET', '/api/admin/backups', (req, res) => send(res, 200, { backups: listBackups() }));
+admin('POST', '/api/admin/backups', (req, res) => { const name = snapshot('manual'); if (!name) return send(res, 500, { error: 'The backup could not be saved.' }); send(res, 200, { name, backups: listBackups() }); });
+admin('GET', '/api/admin/backup.json', (req, res) => send(res, 200, JSON.stringify(backupData()),
+  { 'Content-Disposition': 'attachment; filename="closing-table-backup-' + stamp() + '.json"' }));
+admin('GET', '/api/admin/backups/:name', (req, res, p) => {
+  if (!/^backup-[\w-]+\.json$/.test(p.name)) return send(res, 400, { error: 'Bad name.' });
+  fs.readFile(path.join(BACKUP_DIR, p.name), 'utf8', (err, data) => {
+    if (err) return send(res, 404, { error: 'That backup was not found.' });
+    send(res, 200, data, { 'Content-Disposition': 'attachment; filename="closing-table-' + p.name + '"' });
+  });
+});
+function restoreFrom(data) {
+  if (!data || data.app !== 'closing-table' || !Array.isArray(data.teams) || !data.teams.length || typeof data.agents !== 'object' || typeof data.results !== 'object') return 'That file is not a Closing Table backup.';
+  snapshot('before-restore');
+  db.teams = data.teams; db.agents = data.agents || {}; db.results = data.results || {};
+  db.puzzleState = Object.assign({}, db.puzzleState, data.puzzleState || {});
+  PUZZLES.forEach(p => { if (!db.puzzleState[p.id]) db.puzzleState[p.id] = { open: true }; });
+  db.teams.forEach(t => { if (!t.joinCode) t.joinCode = newTeamCode(); });
+  save();
+  return null;
+}
+admin('POST', '/api/admin/restore', async (req, res) => {
+  const b = await readBody(req, 50 * 1024 * 1024);
+  let data = b.data;
+  if (b.name) {
+    if (!/^backup-[\w-]+\.json$/.test(b.name)) return send(res, 400, { error: 'Bad name.' });
+    try { data = JSON.parse(fs.readFileSync(path.join(BACKUP_DIR, b.name), 'utf8')); } catch (e) { return send(res, 404, { error: 'That backup was not found.' }); }
+  }
+  const err = restoreFrom(data); if (err) return send(res, 400, { error: err });
+  send(res, 200, { ok: true, agents: Object.keys(db.agents).length, answers: Object.keys(db.results).length });
 });
 
 /* ---------- server ---------- */
