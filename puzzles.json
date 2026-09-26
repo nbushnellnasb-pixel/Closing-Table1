@@ -448,17 +448,17 @@
   "prompt": "Which recommendation fits Roy best?",
   "options": [
    {
-    "t": "Guaranteed issue with a graded benefit, so he does not have to answer any health questions.",
+    "t": "Guaranteed issue whole life with a graded benefit. It skips the health questions he is nervous about and still covers the full $10,000 he wants.",
     "pts": 40,
     "why": "It would work, but it costs more for less in the first two years. It is a fallback, not the first choice."
    },
    {
-    "t": "Whichever plan pays the highest commission.",
+    "t": "Whichever of the three plans pays the highest commission, since all three would cover the $10,000 he wants within his budget.",
     "pts": 0,
     "why": "A recommendation must be based on the client's needs."
    },
    {
-    "t": "A term policy to age 80 sized to the final expense.",
+    "t": "A term policy to age 80 sized to the $10,000 final expense, since term has the lowest monthly premium of the three options.",
     "pts": 15,
     "why": "Term expires. Final costs come at the end of life, and he could outlive the term with nothing."
    },
@@ -990,12 +990,12 @@
   "prompt": "How do you respond?",
   "options": [
    {
-    "t": "Hand her your card and say to call when she decides.",
+    "t": "Hand her your card, tell her there is no rush at all, and ask her to call you once she and Renee have had a chance to talk it over.",
     "pts": 10,
     "why": "You give away the follow-up and the sale."
    },
    {
-    "t": "Offer to email the quote to Renee and follow up in a week.",
+    "t": "Offer to email the full quote to Renee tonight so she can look it over on her own time, then call both of them next week to answer any questions and finish up.",
     "pts": 55,
     "why": "Gets the plan in front of both, but a week is long and nobody is there to answer questions."
    },
@@ -1005,7 +1005,7 @@
     "why": "Respects who she trusts, brings Renee in quickly, and books a specific next step. Gloria still makes the decision."
    },
    {
-    "t": "Tell her the kids will just talk her out of it, so she should finish today.",
+    "t": "Tell her grown children often talk parents out of good decisions, so it is better to finish the application today while you are here.",
     "pts": 10,
     "why": "Undermines her family and pressures her. It also raises questions about your motives."
    }
@@ -1039,22 +1039,22 @@
   "prompt": "What do you say?",
   "options": [
    {
-    "t": "Offer to drop the coverage to $5,000 to match the price.",
+    "t": "Offer to lower his coverage from $10,000 to $5,000 so your monthly price comes in closer to the mailer, and keep everything else the same.",
     "pts": 25,
     "why": "Matching a number without checking what the mailer offers cuts his coverage for no good reason."
    },
    {
-    "t": "Say: \"Good to compare. May I see it? Let us check that they match: whether the benefit is graded or full from day one, whether the premium is level, and the carrier. If theirs is the better fit for you, take it.\"",
+    "t": "Say: \"Good to compare. May I see it? Let us check that they match: graded or full from day one, a level premium, and the carrier. If theirs is the better fit for you, take it.\"",
     "pts": 100,
     "why": "Invites the comparison, points to the real differences and stays honest. He trusts you more for it."
    },
    {
-    "t": "Say quality costs more and that you will be around to help with claims.",
+    "t": "Say that quality costs a little more, and that unlike a company that sends mailers, you will be personally around to help his family through every step when it is time to file a claim.",
     "pts": 45,
     "why": "Service matters, but it does not address the price gap with facts."
    },
    {
-    "t": "Tell him mailers are scams.",
+    "t": "Tell him those mailers are usually scams run by companies that never pay, so he should throw it away and stick with a real agent.",
     "pts": 5,
     "why": "Untrue as a blanket claim, and it insults his judgment."
    }
@@ -1093,22 +1093,22 @@
   "prompt": "What do you say?",
   "options": [
    {
-    "t": "Say: \"At your age, everyone gets approved for the full amount.\"",
+    "t": "Say: \"Good news. At your age, everyone gets approved for the full amount right away, so there is really nothing to worry about.\"",
     "pts": 10,
     "why": "False. Older applicants often have a graded benefit."
    },
    {
-    "t": "Say: \"I can check, but do not expect much.\"",
+    "t": "Say: \"I can certainly check that for you, but at 82 with diabetes and high blood pressure, I would not expect much. Let us see what comes back before you get your hopes up.\"",
     "pts": 25,
     "why": "Honest but discouraging, and it does not help her understand her options."
    },
    {
-    "t": "Say: \"You may have more choices than you think. Many plans accept people into their 80s without health questions. Let me show you how they work, including the reduced benefit in the first two years, so you can decide.\"",
+    "t": "Say: \"You may have more choices than you think. Many plans accept people into their 80s. Let me show you how they work, including any waiting period, so you can decide.\"",
     "pts": 100,
     "why": "Corrects the belief, includes the honest tradeoff, and leaves the decision to her."
    },
    {
-    "t": "Say: \"You are right. It is probably too late.\"",
+    "t": "Say: \"You are probably right. Most companies stop at 80, so it is likely too late, but thank you for being honest with me.\"",
     "pts": 0,
     "why": "Gives up on a client who may qualify."
    }
@@ -1143,22 +1143,22 @@
   "prompt": "What do you say?",
   "options": [
    {
-    "t": "Say: \"Everyone has a bad story, but most claims are paid.\"",
+    "t": "Say: \"Everyone seems to have a bad story like that, but the truth is that the vast majority of claims get paid without any problem at all, so I would not let one bad experience stop you.\"",
     "pts": 25,
     "why": "Dismisses his experience with a generalization."
    },
    {
-    "t": "Say: \"That would never happen with my company.\"",
+    "t": "Say: \"I completely understand, and I promise you that would never happen with my company. We pay every single claim, every time.\"",
     "pts": 5,
     "why": "A promise you cannot make."
    },
    {
-    "t": "Say: \"I am sorry that happened. Can you tell me what the reason was? Let me show you how this policy pays, the company's rating and what could cause a claim to be denied, so nothing is a surprise.\"",
+    "t": "Say: \"I am sorry that happened. Can you tell me what the reason was? Let me show you how this policy pays and what could cause a claim to be denied, so nothing is a surprise.\"",
     "pts": 100,
     "why": "Listens first, treats the story as real, and answers with specifics and transparency."
    },
    {
-    "t": "Say: \"That is not true.\"",
+    "t": "Say: \"With respect, that is not true. Insurance companies are heavily regulated, and they cannot simply refuse to pay.\"",
     "pts": 5,
     "why": "Argues with a story about his own family."
    }
@@ -1197,17 +1197,17 @@
   "prompt": "What do you say?",
   "options": [
    {
-    "t": "Say: \"Then you do not need me.\"",
+    "t": "Say: \"It sounds like you are well prepared, so you probably do not need me. I will leave my card in case anything changes.\"",
     "pts": 5,
     "why": "Gives up without exploring the need."
    },
    {
-    "t": "Say savings are risky and can run out.",
+    "t": "Say that savings are risky, can run out faster than people expect, and that a policy is the only safe way to cover a funeral.",
     "pts": 20,
     "why": "Vague, and it dismisses what she has done."
    },
    {
-    "t": "Say that accounts in her name alone may be tied up until the estate is settled, which could delay paying bills.",
+    "t": "Say that an account in her name alone may be tied up until her estate is settled, which could delay paying the funeral home and other bills while her children wait for the paperwork to clear.",
     "pts": 60,
     "why": "A useful point, but it is a statement and not a question, and it is only part of the picture."
    },
@@ -1934,19 +1934,14 @@
     "hint": "Pick the two facts that should drive your recommendation for this client.",
     "options": [
      {
-      "t": "A loan or partial withdrawal from the cash value could cover the $3,800 and keep the policy in force, though it lowers the death benefit until repaid.",
-      "pts": 12,
-      "why": "A way to meet her need without replacing anything."
+      "t": "Because of her stroke, a new plan would likely be guaranteed issue with a graded benefit: for natural causes in the first two years it typically returns premiums plus interest, and it would cost $92 a month.",
+      "pts": 20,
+      "why": "She would give up full coverage and start paying monthly."
      },
      {
       "t": "A new plan at 76 would be priced on her current age.",
       "pts": 10,
       "why": "True and supports keeping the old policy."
-     },
-     {
-      "t": "Because of her stroke, a new plan would likely be guaranteed issue with a graded benefit: for natural causes in the first two years it typically returns premiums plus interest, and it would cost $92 a month.",
-      "pts": 20,
-      "why": "She would give up full coverage and start paying monthly."
      },
      {
       "t": "Her current policy is paid up and pays the full $12,000 from day one, with nothing to pay each month.",
@@ -1962,6 +1957,11 @@
       "t": "The new plan is cheaper, so she comes out ahead.",
       "pts": -10,
       "why": "False. She pays nothing now and would pay $92 a month."
+     },
+     {
+      "t": "A loan or partial withdrawal from the cash value could cover the $3,800 and keep the policy in force, though it lowers the death benefit until repaid.",
+      "pts": 12,
+      "why": "A way to meet her need without replacing anything."
      }
     ]
    },
@@ -1972,24 +1972,24 @@
     "hint": "Pick the one that connects to what they want and worry about, without pressure or fear.",
     "options": [
      {
-      "t": "Her policy is paid for and done. She can keep that peace of mind and still get her hearing aids and dentures through a smaller step.",
-      "pts": 15,
-      "why": "Respects what she has and solves what she wants."
-     },
-     {
       "t": "Tell her the policy was mis-sold by whoever sold it.",
       "pts": -10,
       "why": "Disparaging a previous agent and pushing replacement."
      },
      {
-      "t": "Remind her she is not getting any younger.",
-      "pts": -5,
-      "why": "A fear tactic."
+      "t": "Her policy is paid for and done. She can keep that peace of mind and still get her hearing aids and dentures through a smaller step.",
+      "pts": 15,
+      "why": "Respects what she has and solves what she wants."
      },
      {
       "t": "She has earned the chance to treat herself with the money.",
       "pts": 3,
       "why": "Nudges her toward surrender without a reason."
+     },
+     {
+      "t": "Remind her she is not getting any younger.",
+      "pts": -5,
+      "why": "A fear tactic."
      }
     ]
    },
@@ -1999,6 +1999,16 @@
     "pick": 2,
     "hint": "Pick the two steps or disclosures that matter most before anyone surrenders or replaces anything.",
     "options": [
+     {
+      "t": "Show what a loan, a withdrawal or a reduced paid-up option would do to her death benefit.",
+      "pts": 15,
+      "why": "Lets her weigh the alternatives with real figures."
+     },
+     {
+      "t": "Tell her the graded period is just a formality.",
+      "pts": -10,
+      "why": "It affects what her son would receive."
+     },
      {
       "t": "Recommend she replace it anyway and leave the stroke off the application.",
       "pts": -10,
@@ -2010,19 +2020,9 @@
       "why": "Suitability comes before commission. That is how referrals come."
      },
      {
-      "t": "Tell her the graded period is just a formality.",
-      "pts": -10,
-      "why": "It affects what her son would receive."
-     },
-     {
       "t": "Get the cash value, basis and terms from the insurer in writing, and suggest a tax professional review any gain.",
       "pts": 12,
       "why": "She needs accurate numbers before making a choice."
-     },
-     {
-      "t": "Show what a loan, a withdrawal or a reduced paid-up option would do to her death benefit.",
-      "pts": 15,
-      "why": "Lets her weigh the alternatives with real figures."
      },
      {
       "t": "If she still wants a new plan, explain the graded benefit and how it differs from what she has today.",
@@ -2038,24 +2038,24 @@
     "hint": "She says: \"My friend says those new plans are cheaper.\"",
     "options": [
      {
-      "t": "\"Some plans do have lower prices. Yours is paid up, so you pay nothing monthly, and it pays in full from day one. Let us put the two side by side.\"",
-      "pts": 15,
-      "why": "Acknowledges the friend and returns to her situation."
-     },
-     {
       "t": "\"Let us not worry about that.\"",
       "pts": 0,
       "why": "Ignores the concern."
      },
      {
-      "t": "\"Your friend does not know your situation.\"",
-      "pts": 3,
-      "why": "Correct, but dismissive."
-     },
-     {
       "t": "\"You are right. Let us switch you.\"",
       "pts": -5,
       "why": "Agrees without checking what she would give up."
+     },
+     {
+      "t": "\"Some plans do have lower prices. Yours is paid up, so you pay nothing monthly, and it pays in full from day one. Let us put the two side by side.\"",
+      "pts": 15,
+      "why": "Acknowledges the friend and returns to her situation."
+     },
+     {
+      "t": "\"Your friend does not know your situation.\"",
+      "pts": 3,
+      "why": "Correct, but dismissive."
      }
     ]
    }
@@ -2111,24 +2111,9 @@
     "hint": "Pick the two facts that make the strongest honest case for the change.",
     "options": [
      {
-      "t": "If she died of natural causes in the next 10 months, her current plan would pay only premiums plus interest. The new plan pays the full $10,000 from day one.",
-      "pts": 20,
-      "why": "The clearest reason to move. It shows a concrete difference in what her family would receive."
-     },
-     {
-      "t": "The new plan is $69 a month against $71 now, so she would pay $2 less and have full coverage from the first day.",
-      "pts": 20,
-      "why": "A better benefit for a lower price, stated plainly."
-     },
-     {
       "t": "Only 10 months remain, so switching gains her very little.",
       "pts": 5,
       "why": "A fair counterpoint, but the gap in those months is the point."
-     },
-     {
-      "t": "The new plan has the same graded period, just from a different company.",
-      "pts": -10,
-      "why": "False. The new plan would be level from day one."
      },
      {
       "t": "Each month she waits keeps her in the reduced-benefit period.",
@@ -2139,6 +2124,21 @@
       "t": "The graded period does not matter, because most people live more than two years.",
       "pts": -10,
       "why": "Minimizing a real difference in the benefit."
+     },
+     {
+      "t": "If she died of natural causes in the next 10 months, her current plan would pay only premiums plus interest. The new plan pays the full $10,000 from day one.",
+      "pts": 20,
+      "why": "The clearest reason to move. It shows a concrete difference in what her family would receive."
+     },
+     {
+      "t": "The new plan is $69 a month against $71 now, so she would pay $2 less and have full coverage from the first day.",
+      "pts": 20,
+      "why": "A better benefit for a lower price, stated plainly."
+     },
+     {
+      "t": "The new plan has the same graded period, just from a different company.",
+      "pts": -10,
+      "why": "False. The new plan would be level from day one."
      }
     ]
    },
@@ -2148,11 +2148,6 @@
     "pick": 1,
     "hint": "Pick the one that connects to what they want and worry about, without pressure or fear.",
     "options": [
-     {
-      "t": "She would have no surprises for her children.",
-      "pts": 8,
-      "why": "Too general."
-     },
      {
       "t": "Point out that she could pass away in the next ten months.",
       "pts": -10,
@@ -2167,6 +2162,11 @@
       "t": "Tell her the current plan is a trap she should get out of.",
       "pts": -10,
       "why": "It is a legitimate plan, and this frames it unfairly."
+     },
+     {
+      "t": "She would have no surprises for her children.",
+      "pts": 8,
+      "why": "Too general."
      }
     ]
    },
@@ -2177,19 +2177,9 @@
     "hint": "Pick the two steps or disclosures that matter most before anyone cancels or replaces anything.",
     "options": [
      {
-      "t": "Leave the cancer history off so she qualifies.",
-      "pts": -10,
-      "why": "Misrepresentation that could void the policy."
-     },
-     {
       "t": "Explain that eligibility is decided by the carrier, not by you, and what happens if she is declined.",
       "pts": 10,
       "why": "Sets honest expectations."
-     },
-     {
-      "t": "Give a written side-by-side comparison and the state replacement notice, and show exactly how many months remain in the graded period.",
-      "pts": 12,
-      "why": "Required in most states and makes the difference visible."
      },
      {
       "t": "Complete the health questions accurately with her, including her cancer history, and explain that a new policy has its own contestability period.",
@@ -2197,14 +2187,24 @@
       "why": "Inaccurate answers can void a new policy at claim time."
      },
      {
+      "t": "Have the new policy approved and in force before cancelling the old one.",
+      "pts": 15,
+      "why": "She should never be without coverage. If she is declined, she keeps her current plan."
+     },
+     {
       "t": "Cancel the old plan first so she does not pay two premiums.",
       "pts": -10,
       "why": "If the new plan is declined she is left with no coverage."
      },
      {
-      "t": "Have the new policy approved and in force before cancelling the old one.",
-      "pts": 15,
-      "why": "She should never be without coverage. If she is declined, she keeps her current plan."
+      "t": "Leave the cancer history off so she qualifies.",
+      "pts": -10,
+      "why": "Misrepresentation that could void the policy."
+     },
+     {
+      "t": "Give a written side-by-side comparison and the state replacement notice, and show exactly how many months remain in the graded period.",
+      "pts": 12,
+      "why": "Required in most states and makes the difference visible."
      }
     ]
    },
@@ -2215,24 +2215,24 @@
     "hint": "Rosa says: \"I have been paying for over a year. I do not want to start over.\"",
     "options": [
      {
-      "t": "\"That is a fair concern. What you paid bought coverage, but for the next 10 months a natural death pays back only your premiums plus interest. If the new plan is approved, it pays in full from day one. Let us compare them side by side.\"",
-      "pts": 15,
-      "why": "Respects the concern, states the facts and offers a comparison."
-     },
-     {
       "t": "\"You are not starting over. It is basically the same thing.\"",
       "pts": 3,
       "why": "Glosses over a real difference."
      },
      {
-      "t": "\"You will regret staying in it if something happens.\"",
-      "pts": -5,
-      "why": "A scare tactic."
-     },
-     {
       "t": "\"Your old plan is worthless.\"",
       "pts": 0,
       "why": "False and unhelpful."
+     },
+     {
+      "t": "\"That is a fair concern. What you paid bought coverage, but for the next 10 months a natural death pays back only your premiums plus interest. If the new plan is approved, it pays in full from day one. Let us compare them side by side.\"",
+      "pts": 15,
+      "why": "Respects the concern, states the facts and offers a comparison."
+     },
+     {
+      "t": "\"You will regret staying in it if something happens.\"",
+      "pts": -5,
+      "why": "A scare tactic."
      }
     ]
    }
@@ -2285,9 +2285,9 @@
     "hint": "Pick the two facts that make the strongest honest case for the change.",
     "options": [
      {
-      "t": "He will definitely get the non-tobacco price.",
-      "pts": -10,
-      "why": "The carrier decides after underwriting and testing."
+      "t": "He is only three years older than when he bought, so the price difference is mostly the tobacco status.",
+      "pts": 10,
+      "why": "Useful context."
      },
      {
       "t": "For the same $118 a month, he could have $15,000 instead of $10,000: 50 percent more coverage.",
@@ -2305,9 +2305,9 @@
       "why": "A clear, honest saving."
      },
      {
-      "t": "He is only three years older than when he bought, so the price difference is mostly the tobacco status.",
-      "pts": 10,
-      "why": "Useful context."
+      "t": "He will definitely get the non-tobacco price.",
+      "pts": -10,
+      "why": "The carrier decides after underwriting and testing."
      },
      {
       "t": "Many carriers offer non-tobacco rates after about a year, and he is now past two years.",
@@ -2323,24 +2323,24 @@
     "hint": "Pick the one that connects to what they want and worry about, without pressure or fear.",
     "options": [
      {
-      "t": "Say the current company is cheating him.",
-      "pts": -10,
-      "why": "False and disparaging."
-     },
-     {
       "t": "Tell him he wasted three years by not asking sooner.",
       "pts": -10,
       "why": "Blame."
      },
      {
-      "t": "Quitting was hard. He deserves to be paid back for it, and Diane's suggestion shows she wants him to get the credit.",
-      "pts": 15,
-      "why": "Recognizes what he did and involves his wife."
+      "t": "Say the current company is cheating him.",
+      "pts": -10,
+      "why": "False and disparaging."
      },
      {
       "t": "He can stop overpaying every month.",
       "pts": 8,
       "why": "True but flat."
+     },
+     {
+      "t": "Quitting was hard. He deserves to be paid back for it, and Diane's suggestion shows she wants him to get the credit.",
+      "pts": 15,
+      "why": "Recognizes what he did and involves his wife."
      }
     ]
    },
@@ -2351,29 +2351,14 @@
     "hint": "Pick the two steps or disclosures that matter most before anyone cancels or replaces anything.",
     "options": [
      {
-      "t": "Ask his current insurer whether it will reclassify him to non-tobacco rates, before replacing anything.",
-      "pts": 12,
-      "why": "A change of class inside his current policy avoids replacement entirely. It is the honest first step."
-     },
-     {
-      "t": "Have the new policy approved and in force before cancelling the old one.",
-      "pts": 15,
-      "why": "He keeps his coverage if the new application does not go through."
-     },
-     {
-      "t": "Give a written side-by-side comparison and the state replacement notice.",
-      "pts": 12,
-      "why": "Required in most states."
-     },
-     {
       "t": "Answer the tobacco questions truthfully and tell him the carrier may test. A misstatement can void the policy.",
       "pts": 15,
       "why": "Tobacco status is a common reason for claim problems."
      },
      {
-      "t": "Cancel the old policy first to stop paying the higher rate.",
-      "pts": -10,
-      "why": "If the new application is declined he has no coverage."
+      "t": "Ask his current insurer whether it will reclassify him to non-tobacco rates, before replacing anything.",
+      "pts": 12,
+      "why": "A change of class inside his current policy avoids replacement entirely. It is the honest first step."
      },
      {
       "t": "Tell him to say he quit five years ago.",
@@ -2384,6 +2369,21 @@
       "t": "Explain that a new policy starts a new contestability period, while his current policy is already past it.",
       "pts": 10,
       "why": "A real tradeoff he should know."
+     },
+     {
+      "t": "Have the new policy approved and in force before cancelling the old one.",
+      "pts": 15,
+      "why": "He keeps his coverage if the new application does not go through."
+     },
+     {
+      "t": "Cancel the old policy first to stop paying the higher rate.",
+      "pts": -10,
+      "why": "If the new application is declined he has no coverage."
+     },
+     {
+      "t": "Give a written side-by-side comparison and the state replacement notice.",
+      "pts": 12,
+      "why": "Required in most states."
      }
     ]
    },
@@ -2394,16 +2394,6 @@
     "hint": "Walt says: \"I do not want to go through all that again. What if they turn me down?\"",
     "options": [
      {
-      "t": "\"You keep your current policy. We do not cancel anything until the new one is approved and in force. If they say no, nothing changes for you.\"",
-      "pts": 15,
-      "why": "Removes the fear with the actual process."
-     },
-     {
-      "t": "\"It only takes a few minutes.\"",
-      "pts": 5,
-      "why": "Reassuring, but it does not answer the question."
-     },
-     {
       "t": "\"Then you are stuck at the smoker price.\"",
       "pts": -5,
       "why": "Negative and misleading. He may have other options."
@@ -2412,6 +2402,16 @@
       "t": "\"They will not turn you down.\"",
       "pts": 0,
       "why": "You cannot promise that."
+     },
+     {
+      "t": "\"You keep your current policy. We do not cancel anything until the new one is approved and in force. If they say no, nothing changes for you.\"",
+      "pts": 15,
+      "why": "Removes the fear with the actual process."
+     },
+     {
+      "t": "\"It only takes a few minutes.\"",
+      "pts": 5,
+      "why": "Reassuring, but it does not answer the question."
      }
     ]
    }
@@ -2626,19 +2626,19 @@
     "hint": "Pick the two facts that make the strongest honest case for the change.",
     "options": [
      {
-      "t": "It also increases the coverage from $8,000 to $12,000: 50 percent more for less money.",
+      "t": "The new carrier has a stronger financial strength rating, which matters because the promise is paid years from now.",
+      "pts": 12,
+      "why": "A relevant quality point."
+     },
+     {
+      "t": "The new plan is $84 against $96, which is $12 a month less, or $144 a year.",
       "pts": 20,
-      "why": "Better price and more coverage together."
+      "why": "A clear saving in dollars."
      },
      {
       "t": "Any other carrier will be cheaper.",
       "pts": -10,
       "why": "Not true. Rates vary by age, health and carrier."
-     },
-     {
-      "t": "The new carrier has a stronger financial strength rating, which matters because the promise is paid years from now.",
-      "pts": 12,
-      "why": "A relevant quality point."
      },
      {
       "t": "Their existing policy has no value.",
@@ -2651,9 +2651,9 @@
       "why": "True, but it is not a reason on its own."
      },
      {
-      "t": "The new plan is $84 against $96, which is $12 a month less, or $144 a year.",
+      "t": "It also increases the coverage from $8,000 to $12,000: 50 percent more for less money.",
       "pts": 20,
-      "why": "A clear saving in dollars."
+      "why": "Better price and more coverage together."
      }
     ]
    },
@@ -2664,24 +2664,24 @@
     "hint": "Pick the one that connects to what they want and worry about, without pressure or fear.",
     "options": [
      {
-      "t": "Tell them they were ripped off by the mailer company.",
-      "pts": -10,
-      "why": "Disparaging and you do not know it."
-     },
-     {
       "t": "They can stop wondering whether they got a fair deal.",
       "pts": 8,
       "why": "A gentle point, but it lacks a reason."
      },
      {
-      "t": "They have paid more than they needed for four years. Now they can put that right and get more protection at the same time.",
-      "pts": 15,
-      "why": "Speaks to the value they want."
+      "t": "Tell them they were ripped off by the mailer company.",
+      "pts": -10,
+      "why": "Disparaging and you do not know it."
      },
      {
       "t": "Say only fools keep an overpriced policy.",
       "pts": -5,
       "why": "Insulting."
+     },
+     {
+      "t": "They have paid more than they needed for four years. Now they can put that right and get more protection at the same time.",
+      "pts": 15,
+      "why": "Speaks to the value they want."
      }
     ]
    },
@@ -2692,6 +2692,26 @@
     "hint": "Pick the two steps or disclosures that matter most before anyone cancels or replaces anything.",
     "options": [
      {
+      "t": "Compare the carriers' ratings, benefit types and guaranteed premiums in writing.",
+      "pts": 10,
+      "why": "Ensures the two plans are compared like for like."
+     },
+     {
+      "t": "Have the new policy approved and in force before cancelling the old one.",
+      "pts": 15,
+      "why": "Gene keeps his coverage if the new application does not go through."
+     },
+     {
+      "t": "Explain that the new policy starts a new contestability period, and check what the current policy has already satisfied.",
+      "pts": 15,
+      "why": "A real tradeoff, and honest disclosure."
+     },
+     {
+      "t": "Do not mention the new contestability period, so they do not hesitate.",
+      "pts": -10,
+      "why": "Withholding a material fact."
+     },
+     {
       "t": "Cancel the old plan first to save the $96.",
       "pts": -10,
       "why": "If the new plan is declined he has no coverage."
@@ -2700,26 +2720,6 @@
       "t": "Give a written side-by-side comparison and the state replacement notice.",
       "pts": 12,
       "why": "Required in most states."
-     },
-     {
-      "t": "Do not mention the new contestability period, so they do not hesitate.",
-      "pts": -10,
-      "why": "Withholding a material fact."
-     },
-     {
-      "t": "Explain that the new policy starts a new contestability period, and check what the current policy has already satisfied.",
-      "pts": 15,
-      "why": "A real tradeoff, and honest disclosure."
-     },
-     {
-      "t": "Have the new policy approved and in force before cancelling the old one.",
-      "pts": 15,
-      "why": "Gene keeps his coverage if the new application does not go through."
-     },
-     {
-      "t": "Compare the carriers' ratings, benefit types and guaranteed premiums in writing.",
-      "pts": 10,
-      "why": "Ensures the two plans are compared like for like."
      }
     ]
    },
@@ -2730,24 +2730,24 @@
     "hint": "Loretta says: \"We already own this. Why switch to save twelve dollars?\"",
     "options": [
      {
-      "t": "\"Fair question. The twelve dollars is the smaller part. You would also get $4,000 more coverage and a stronger company, if approved. If the numbers do not clearly win, keep what you have.\"",
-      "pts": 15,
-      "why": "Gives the full picture and offers an honest out."
-     },
-     {
       "t": "\"You will regret keeping it.\"",
       "pts": -5,
       "why": "A scare tactic."
      },
      {
-      "t": "\"You should always switch when there is a better deal.\"",
-      "pts": 0,
-      "why": "A blanket rule, and it is not helpful."
+      "t": "\"Fair question. The twelve dollars is the smaller part. You would also get $4,000 more coverage and a stronger company, if approved. If the numbers do not clearly win, keep what you have.\"",
+      "pts": 15,
+      "why": "Gives the full picture and offers an honest out."
      },
      {
       "t": "\"It adds up to $144 a year.\"",
       "pts": 5,
       "why": "True but only part of the story."
+     },
+     {
+      "t": "\"You should always switch when there is a better deal.\"",
+      "pts": 0,
+      "why": "A blanket rule, and it is not helpful."
      }
     ]
    }
@@ -3148,34 +3148,9 @@
   "prompt": "Select every practice that earns a good first impression. Practices that pressure, block, or mislead cost points.",
   "options": [
    {
-    "t": "Stand slightly to the side of the door, not blocking the peephole or the stoop.",
-    "pts": 20,
-    "why": "Reduces how threatening the approach feels, before you've said a word."
-   },
-   {
-    "t": "Smile, make eye contact, and say your name and company before anything else.",
-    "pts": 20,
-    "why": "A clear, honest opener builds trust in the first few seconds."
-   },
-   {
-    "t": "State the reason for the visit in one short sentence before asking for their time.",
-    "pts": 20,
-    "why": "Respects their time and avoids the feeling of being ambushed."
-   },
-   {
-    "t": "Hold your ID or a flyer where they can see it as the door opens.",
-    "pts": 20,
-    "why": "Visible identification lowers suspicion immediately."
-   },
-   {
-    "t": "Ask a genuine, low-pressure question that invites a yes or no, like whether they have a moment.",
-    "pts": 20,
-    "why": "Gives them control over the interaction instead of assuming it."
-   },
-   {
-    "t": "Step inside if they hesitate at the door, since it is easier to talk that way.",
-    "pts": -20,
-    "why": "Pressuring your way past a hesitation damages trust immediately and can be inappropriate."
+    "t": "Keep talking past the point where they say they are not interested.",
+    "pts": -15,
+    "why": "Disrespects a clear no and burns the door for good."
    },
    {
     "t": "Say you are \"just doing a survey\" to get them talking, then pivot to the pitch.",
@@ -3183,9 +3158,34 @@
     "why": "A misleading opener. Honesty from the first sentence matters more than a clever hook."
    },
    {
-    "t": "Keep talking past the point where they say they are not interested.",
-    "pts": -15,
-    "why": "Disrespects a clear no and burns the door for good."
+    "t": "Smile, make eye contact, and say your name and company before anything else.",
+    "pts": 20,
+    "why": "A clear, honest opener builds trust in the first few seconds."
+   },
+   {
+    "t": "Hold your ID or a flyer where they can see it as the door opens.",
+    "pts": 20,
+    "why": "Visible identification lowers suspicion immediately."
+   },
+   {
+    "t": "State the reason for the visit in one short sentence before asking for their time.",
+    "pts": 20,
+    "why": "Respects their time and avoids the feeling of being ambushed."
+   },
+   {
+    "t": "Ask a genuine, low-pressure question that invites a yes or no, like whether they have a moment.",
+    "pts": 20,
+    "why": "Gives them control over the interaction instead of assuming it."
+   },
+   {
+    "t": "Stand slightly to the side of the door, not blocking the peephole or the stoop.",
+    "pts": 20,
+    "why": "Reduces how threatening the approach feels, before you've said a word."
+   },
+   {
+    "t": "Step inside if they hesitate at the door, since it is easier to talk that way.",
+    "pts": -20,
+    "why": "Pressuring your way past a hesitation damages trust immediately and can be inappropriate."
    }
   ]
  },
@@ -3214,12 +3214,12 @@
   "prompt": "What do you say in the two or three seconds you have left?",
   "options": [
    {
-    "t": "\"Wait, you haven't even heard what I'm offering yet!\"",
-    "pts": -10,
+    "t": "\"Wait, you haven't even heard what I'm offering yet. It'll only take a minute!\"",
+    "pts": 0,
     "why": "Pushes past a clear no, which usually feels like pressure rather than persistence."
    },
    {
-    "t": "\"Everyone says that at first, just give me two minutes.\"",
+    "t": "\"Everyone says that at first. Just give me two minutes and you'll see why.\"",
     "pts": 10,
     "why": "A step better than arguing, but it still resists the no instead of respecting it."
    },
@@ -3256,22 +3256,10 @@
   "prompt": "Put these five parts of a knocking session in the order you would run them.",
   "steps": [
    {
-    "id": "s1",
-    "t": "Review the route and whatever you know about each address before the first knock",
-    "pos": 1,
-    "why": "Preparing ahead avoids wasted time and awkward blank starts."
-   },
-   {
-    "id": "s2",
-    "t": "Knock, introduce yourself, and state your reason for the visit",
-    "pos": 2,
-    "why": "The actual contact — the reason for the whole route."
-   },
-   {
-    "id": "s3",
-    "t": "Log the outcome of every door, answered or not, right after you leave it",
-    "pos": 3,
-    "why": "Memory fades fast across twenty doors; a log is what makes follow-up possible."
+    "id": "s5",
+    "t": "Debrief with your team leader that evening on what worked and what did not",
+    "pos": 5,
+    "why": "Closes the loop and improves the next route."
    },
    {
     "id": "s4",
@@ -3280,10 +3268,22 @@
     "why": "Turns one good knock into the next lead."
    },
    {
-    "id": "s5",
-    "t": "Debrief with your team leader that evening on what worked and what did not",
-    "pos": 5,
-    "why": "Closes the loop and improves the next route."
+    "id": "s3",
+    "t": "Log the outcome of every door, answered or not, right after you leave it",
+    "pos": 3,
+    "why": "Memory fades fast across twenty doors; a log is what makes follow-up possible."
+   },
+   {
+    "id": "s2",
+    "t": "Knock, introduce yourself, and state your reason for the visit",
+    "pos": 2,
+    "why": "The actual contact — the reason for the whole route."
+   },
+   {
+    "id": "s1",
+    "t": "Review the route and whatever you know about each address before the first knock",
+    "pos": 1,
+    "why": "Preparing ahead avoids wasted time and awkward blank starts."
    }
   ]
  },
@@ -3308,8 +3308,8 @@
   "prompt": "What do you do?",
   "options": [
    {
-    "t": "Knock anyway — the mailer response means they want to talk.",
-    "pts": -10,
+    "t": "Knock anyway. The mailer response means they want to talk, and the sign is really meant for strangers selling door to door, not for someone they asked to hear from.",
+    "pts": 0,
     "why": "A posted sign generally means no door visits, even from someone who responded to a mailer through a different channel."
    },
    {
@@ -3318,12 +3318,12 @@
     "why": "Respects the posted sign while still honoring the interest they expressed through a channel they did not restrict."
    },
    {
-    "t": "Knock, reasoning that you were invited by the mailer, so it is not really soliciting.",
-    "pts": -10,
+    "t": "Knock, since the mailer counts as an invitation, so technically you are following up on a request and not really soliciting.",
+    "pts": 0,
     "why": "Rationalizing around a clearly posted rule."
    },
    {
-    "t": "Skip the address entirely and remove it from every list.",
+    "t": "Skip the address entirely and remove it from every list, since the sign tells you they do not want any contact at all.",
     "pts": 40,
     "why": "Safe, but a warm mailer response is a real lead going to waste when another respectful contact method is easy."
    }
@@ -3445,22 +3445,16 @@
   "prompt": "Put these five parts of the call in order.",
   "steps": [
    {
-    "id": "s1",
-    "t": "Introduce yourself and confirm you're speaking with the person who requested information",
-    "pos": 1,
-    "why": "Confirms you have the right person before anything else."
-   },
-   {
-    "id": "s2",
-    "t": "Remind them why they're hearing from you, tied to what they asked for",
-    "pos": 2,
-    "why": "Reduces the 'who is this' reaction and grounds the call."
-   },
-   {
     "id": "s3",
     "t": "Ask a couple of quick qualifying questions, like who else is involved in the decision",
     "pos": 3,
     "why": "Makes sure the right people will actually be at the table."
+   },
+   {
+    "id": "s1",
+    "t": "Introduce yourself and confirm you're speaking with the person who requested information",
+    "pos": 1,
+    "why": "Confirms you have the right person before anything else."
    },
    {
     "id": "s4",
@@ -3473,6 +3467,12 @@
     "t": "Confirm the address, what to have ready, and repeat the day and time before hanging up",
     "pos": 5,
     "why": "Cuts down on no-shows and confusion on the day of."
+   },
+   {
+    "id": "s2",
+    "t": "Remind them why they're hearing from you, tied to what they asked for",
+    "pos": 2,
+    "why": "Reduces the 'who is this' reaction and grounds the call."
    }
   ]
  },
@@ -3584,29 +3584,9 @@
   "prompt": "Select every practice that belongs in a compliant, professional appointment.",
   "options": [
    {
-    "t": "Get clear consent before recording any part of the conversation, if you record at all.",
-    "pts": 25,
-    "why": "Required in many states, and simply respectful regardless."
-   },
-   {
-    "t": "Leave a copy of the application and any illustration with the client, not just a verbal summary.",
-    "pts": 25,
-    "why": "Gives them a real record of exactly what they agreed to."
-   },
-   {
     "t": "Describe the benefit using only the terms that appear in the actual policy, not rounder or more generous language.",
     "pts": 25,
     "why": "Prevents a mismatch between what was said and what was sold."
-   },
-   {
-    "t": "Confirm the client understands the free-look period before they sign.",
-    "pts": 25,
-    "why": "They're entitled to know they can cancel without penalty in that window."
-   },
-   {
-    "t": "Tell them the rate is guaranteed never to change, even if the policy doesn't say that.",
-    "pts": -25,
-    "why": "Misrepresents the product, whatever the intention."
    },
    {
     "t": "Rush past the health questions if they seem uncomfortable, and fill in your best guess.",
@@ -3614,9 +3594,29 @@
     "why": "Inaccurate answers can void the policy later and hurt the client badly."
    },
    {
+    "t": "Get clear consent before recording any part of the conversation, if you record at all.",
+    "pts": 25,
+    "why": "Required in many states, and simply respectful regardless."
+   },
+   {
     "t": "Skip the free-look explanation since most people never use it anyway.",
     "pts": -20,
     "why": "Rarely used is not the same as not required — it's still a disclosure they're owed."
+   },
+   {
+    "t": "Tell them the rate is guaranteed never to change, even if the policy doesn't say that.",
+    "pts": -25,
+    "why": "Misrepresents the product, whatever the intention."
+   },
+   {
+    "t": "Confirm the client understands the free-look period before they sign.",
+    "pts": 25,
+    "why": "They're entitled to know they can cancel without penalty in that window."
+   },
+   {
+    "t": "Leave a copy of the application and any illustration with the client, not just a verbal summary.",
+    "pts": 25,
+    "why": "Gives them a real record of exactly what they agreed to."
    }
   ]
  },
@@ -3641,8 +3641,8 @@
   "prompt": "What's the best next move?",
   "options": [
    {
-    "t": "Keep presenting to the husband since he's clearly engaged.",
-    "pts": -10,
+    "t": "Keep presenting to the husband since he's clearly engaged and is likely the one who decides.",
+    "pts": 0,
     "why": "Ignoring a disengaged decision-maker risks losing the sale at the finish line."
    },
    {
@@ -3651,13 +3651,13 @@
     "why": "Re-engages the quieter decision-maker before momentum is lost, without calling her out."
    },
    {
-    "t": "Ask if now is a bad time and offer to reschedule entirely.",
+    "t": "Ask if now is a bad time and offer to reschedule the whole appointment for another day.",
     "pts": 30,
     "why": "A safe fallback, but often unnecessary if a small check-in would re-engage her instead."
    },
    {
-    "t": "Speed up to get to the close before she checks out completely.",
-    "pts": -15,
+    "t": "Speed up and get to the close quickly, before she checks out of the conversation completely.",
+    "pts": 0,
     "why": "Rushing past a disengaged spouse usually backfires right at signature time."
    }
   ]
@@ -3684,7 +3684,7 @@
   "options": [
    {
     "t": "\"What is it you're worried might happen if something happened to you?\"",
-    "pts": -5,
+    "pts": 0,
     "why": "Fear-first framing, before rapport is earned, tends to close a guarded person further."
    },
    {
@@ -3694,7 +3694,7 @@
    },
    {
     "t": "\"What's your budget for something like this?\"",
-    "pts": -15,
+    "pts": 0,
     "why": "Budget-first, before any need is established, and unlikely to loosen up someone already guarded."
    },
    {
@@ -3725,19 +3725,9 @@
   "prompt": "Select every question worth asking about beneficiaries and intent.",
   "options": [
    {
-    "t": "Who would you want to receive this, and are they able to handle the money responsibly?",
-    "pts": 25,
-    "why": "Gets at both intent and practicality in one question."
-   },
-   {
     "t": "Is there anyone you'd specifically want to leave out, and is there anything I should know about how we set that up?",
     "pts": 25,
     "why": "Surfaces a sensitive but important detail directly and respectfully."
-   },
-   {
-    "t": "Would you want this to go to one person to divide, or split by percentage between people?",
-    "pts": 25,
-    "why": "A concrete structural question that affects how the policy is written."
    },
    {
     "t": "Is there a charity or cause that matters enough to you to include?",
@@ -3745,9 +3735,19 @@
     "why": "Opens a real option many clients don't realize they have."
    },
    {
+    "t": "Would you want this to go to one person to divide, or split by percentage between people?",
+    "pts": 25,
+    "why": "A concrete structural question that affects how the policy is written."
+   },
+   {
     "t": "Wouldn't it just be easier to leave it all to whichever kid calls you the most?",
     "pts": -20,
     "why": "Flippant, and not a genuine discovery question."
+   },
+   {
+    "t": "Who would you want to receive this, and are they able to handle the money responsibly?",
+    "pts": 25,
+    "why": "Gets at both intent and practicality in one question."
    },
    {
     "t": "How much money do your kids make?",
@@ -3773,16 +3773,16 @@
   "prompt": "Put these five discovery topics in the order you would raise them.",
   "steps": [
    {
-    "id": "s1",
-    "t": "Build rapport and confirm what they're hoping to get out of the visit",
-    "pos": 1,
-    "why": "Sets the stage and lowers guard before anything sensitive comes up."
-   },
-   {
     "id": "s2",
     "t": "Ask about their wishes for arrangements and who would handle things",
     "pos": 2,
     "why": "Opens the real topic gently, before any numbers are on the table."
+   },
+   {
+    "id": "s5",
+    "t": "Ask about monthly budget, now that the need and the options are clear",
+    "pos": 5,
+    "why": "Budget lands better once they understand what it's actually buying."
    },
    {
     "id": "s3",
@@ -3791,16 +3791,16 @@
     "why": "You need the current picture before you can find the actual gap."
    },
    {
+    "id": "s1",
+    "t": "Build rapport and confirm what they're hoping to get out of the visit",
+    "pos": 1,
+    "why": "Sets the stage and lowers guard before anything sensitive comes up."
+   },
+   {
     "id": "s4",
     "t": "Ask the health questions that affect what they qualify for",
     "pos": 4,
     "why": "Needed before anything can be accurately priced."
-   },
-   {
-    "id": "s5",
-    "t": "Ask about monthly budget, now that the need and the options are clear",
-    "pos": 5,
-    "why": "Budget lands better once they understand what it's actually buying."
    }
   ]
  },
@@ -3908,14 +3908,14 @@
   "prompt": "Select every statement that is true about graded vs. level benefit plans.",
   "options": [
    {
+    "t": "After the graded period ends, the policy pays the full face amount for any covered cause of death, the same as a level plan.",
+    "pts": 25,
+    "why": "Correctly describes what happens once the graded period is over."
+   },
+   {
     "t": "A level benefit plan pays the full face amount from day one, assuming the application is approved.",
     "pts": 25,
     "why": "Correctly describes a level benefit plan."
-   },
-   {
-    "t": "A graded benefit plan typically pays a reduced amount (often a return of premium plus interest) if death occurs from non-accidental causes in the first two to three years.",
-    "pts": 25,
-    "why": "Correctly describes the standard graded structure."
    },
    {
     "t": "Graded benefit plans exist so people who might not qualify for a level plan due to health can still get coverage.",
@@ -3923,9 +3923,9 @@
     "why": "Correctly states the purpose of the graded option."
    },
    {
-    "t": "After the graded period ends, the policy pays the full face amount for any covered cause of death, the same as a level plan.",
-    "pts": 25,
-    "why": "Correctly describes what happens once the graded period is over."
+    "t": "Accidental death is excluded entirely during the graded period, with no benefit at all.",
+    "pts": -15,
+    "why": "Usually incorrect — accidental death is typically still paid in full even during the graded period."
    },
    {
     "t": "A graded benefit plan always costs less than a level plan for the same face amount.",
@@ -3933,9 +3933,9 @@
     "why": "Not reliably true — it's a health-based tradeoff, not simply a discount."
    },
    {
-    "t": "Accidental death is excluded entirely during the graded period, with no benefit at all.",
-    "pts": -15,
-    "why": "Usually incorrect — accidental death is typically still paid in full even during the graded period."
+    "t": "A graded benefit plan typically pays a reduced amount (often a return of premium plus interest) if death occurs from non-accidental causes in the first two to three years.",
+    "pts": 25,
+    "why": "Correctly describes the standard graded structure."
    }
   ]
  },
@@ -3965,12 +3965,12 @@
     "why": "Directly matches her stated concern about work-related driving risk."
    },
    {
-    "t": "A return of premium rider, which refunds premiums paid if she outlives the policy term.",
+    "t": "A return of premium rider, which refunds all the premiums she has paid if she outlives the policy term, so the money is never wasted.",
     "pts": 10,
     "why": "Doesn't address her stated concern about accidental death at all."
    },
    {
-    "t": "Raising the base face amount instead of adding a rider.",
+    "t": "Raising the base face amount instead of adding a rider, so every kind of death pays more.",
     "pts": 30,
     "why": "Would help generally, but doesn't specifically target the accidental scenario she described, and likely costs more for the same protection there."
    },
@@ -4006,7 +4006,7 @@
   "prompt": "Based only on what's known so far, which class does he most likely fit, pending formal underwriting?",
   "options": [
    {
-    "t": "Graded benefit, since diabetes appears on the health questions at all.",
+    "t": "Graded benefit, since any diabetes on the health questions usually means a waiting period before the full benefit pays.",
     "pts": 15,
     "why": "Jumps to the most restrictive option without weighing severity — well-controlled diabetes with no complications often still qualifies for a level plan."
    },
@@ -4016,12 +4016,12 @@
     "why": "Matches the typical underwriting pattern, where well-managed, uncomplicated diabetes often still qualifies for day-one coverage, possibly at a different rate class."
    },
    {
-    "t": "Level benefit at the best possible rate, no different from someone with no health conditions.",
+    "t": "Level benefit at the best possible rate, no different from someone with no health conditions at all, since his diabetes is controlled by diet alone.",
     "pts": 30,
     "why": "Optimistic — diabetes usually affects rate class even when well-controlled."
    },
    {
-    "t": "It's impossible to say anything without running the full application.",
+    "t": "It's impossible to say anything useful until the full application has been submitted and underwritten by the carrier.",
     "pts": 20,
     "why": "The final word always comes from underwriting, but agents are expected to set honest expectations based on typical patterns."
    }
@@ -4127,6 +4127,12 @@
   "prompt": "Put these five moves in the order you would make them.",
   "steps": [
    {
+    "id": "s5",
+    "t": "Confirm next steps after signing, like when the policy will arrive",
+    "pos": 5,
+    "why": "Closes the loop and reduces any buyer's remorse."
+   },
+   {
     "id": "s1",
     "t": "Summarize the plan they responded to best, in their own words",
     "pos": 1,
@@ -4149,12 +4155,6 @@
     "t": "Address any last hesitation as it comes up, calmly and specifically",
     "pos": 4,
     "why": "A late objection is normal and doesn't mean starting over."
-   },
-   {
-    "id": "s5",
-    "t": "Confirm next steps after signing, like when the policy will arrive",
-    "pos": 5,
-    "why": "Closes the loop and reduces any buyer's remorse."
    }
   ]
  },
@@ -4179,9 +4179,9 @@
   "prompt": "Select every practice that respects both decision-makers at the close.",
   "options": [
    {
-    "t": "Ask her directly, by name, how she's feeling about it before moving to paperwork.",
+    "t": "Address any concern she raises as seriously as his enthusiasm.",
     "pts": 25,
-    "why": "Gives the quieter decision-maker a real, direct opening."
+    "why": "Treats both perspectives as equally valid."
    },
    {
     "t": "Make sure both names are said and both are looking at the same numbers before asking for the decision.",
@@ -4189,14 +4189,14 @@
     "why": "Keeps both of them equally informed at the moment of decision."
    },
    {
-    "t": "Address any concern she raises as seriously as his enthusiasm.",
+    "t": "Ask her directly, by name, how she's feeling about it before moving to paperwork.",
     "pts": 25,
-    "why": "Treats both perspectives as equally valid."
+    "why": "Gives the quieter decision-maker a real, direct opening."
    },
    {
-    "t": "Confirm both of them, not just him, understand what happens next.",
-    "pts": 25,
-    "why": "Closes the loop for both decision-makers, not just the more vocal one."
+    "t": "Direct all your eye contact and questions to him since he's the one talking.",
+    "pts": -20,
+    "why": "Sidelines the quieter decision-maker at the exact moment she matters most."
    },
    {
     "t": "Move forward with the application since one spouse already said yes.",
@@ -4204,9 +4204,9 @@
     "why": "Risks a decision that doesn't hold, or a spouse who feels steamrolled."
    },
    {
-    "t": "Direct all your eye contact and questions to him since he's the one talking.",
-    "pts": -20,
-    "why": "Sidelines the quieter decision-maker at the exact moment she matters most."
+    "t": "Confirm both of them, not just him, understand what happens next.",
+    "pts": 25,
+    "why": "Closes the loop for both decision-makers, not just the more vocal one."
    }
   ]
  },
@@ -4236,17 +4236,17 @@
     "why": "Follows through as promised, opens with a real question rather than a pitch, and invites whatever is actually on her mind."
    },
    {
-    "t": "\"Hi, just calling to see if you're ready to sign now.\"",
-    "pts": -10,
+    "t": "\"Hi, just calling to see if you're ready to sign now. I can have the paperwork over today.\"",
+    "pts": 0,
     "why": "Skips past whatever she was actually thinking about and pushes straight to close."
    },
    {
-    "t": "\"Hi, I wanted to let you know the rates are going up soon, so now's the time.\"",
-    "pts": -15,
+    "t": "\"Hi, I wanted to give you a heads-up that rates are going up soon, so now's really the best time to lock in your price before they change.\"",
+    "pts": 0,
     "why": "Manufactured urgency instead of following up on her actual concern."
    },
    {
-    "t": "\"Hi, just checking in — no pressure, call me whenever.\"",
+    "t": "\"Hi, just checking in. No pressure at all, give me a call whenever you're ready to talk.\"",
     "pts": 20,
     "why": "Respectful, but passive — she asked for a specific callback and a real conversation, not just a soft touch."
    }
@@ -4283,11 +4283,6 @@
     "hint": "Pick the two facts that make the strongest case on paper.",
     "options": [
      {
-      "t": "\"Eventually\" has no guaranteed date, and health or price can change before then.",
-      "pts": 20,
-      "why": "Names the real risk in waiting, without pressure."
-     },
-     {
       "t": "She already agrees the plan fits — the only thing left to decide is timing, not whether.",
       "pts": 20,
       "why": "Names exactly where she stands, precisely."
@@ -4296,6 +4291,11 @@
       "t": "Most people who say 'eventually' mean 'never.'",
       "pts": -15,
       "why": "Presumptuous and vaguely insulting."
+     },
+     {
+      "t": "\"Eventually\" has no guaranteed date, and health or price can change before then.",
+      "pts": 20,
+      "why": "Names the real risk in waiting, without pressure."
      },
      {
       "t": "The industry could raise rates next year.",
@@ -4321,24 +4321,19 @@
     "hint": "Pick the two that connect to what she actually said she wants.",
     "options": [
      {
-      "t": "Getting this settled now means her sister never has to wonder or worry later.",
-      "pts": 20,
-      "why": "Ties directly to the person she cares about."
-     },
-     {
-      "t": "She said she doesn't want to be a burden — this plan is the difference between that fear and the reality.",
-      "pts": 20,
-      "why": "Reflects her own words back to her."
-     },
-     {
       "t": "Bring up that her late plans would disappoint someone if she waits.",
       "pts": -15,
       "why": "A guilt tactic with no basis in anything she said."
      },
      {
-      "t": "Point out how alone she must feel now.",
-      "pts": -10,
-      "why": "Not tied to the plan, and dwells on something she didn't raise."
+      "t": "Remind her this is exactly the situation she's worried about, still fresh in her mind.",
+      "pts": 10,
+      "why": "Reasonable, but less sharp than the top two and risks feeling repetitive."
+     },
+     {
+      "t": "Getting this settled now means her sister never has to wonder or worry later.",
+      "pts": 20,
+      "why": "Ties directly to the person she cares about."
      },
      {
       "t": "She'll feel relieved once it's handled.",
@@ -4346,9 +4341,14 @@
       "why": "True but generic, secondary to the two specific ones."
      },
      {
-      "t": "Remind her this is exactly the situation she's worried about, still fresh in her mind.",
-      "pts": 10,
-      "why": "Reasonable, but less sharp than the top two and risks feeling repetitive."
+      "t": "She said she doesn't want to be a burden — this plan is the difference between that fear and the reality.",
+      "pts": 20,
+      "why": "Reflects her own words back to her."
+     },
+     {
+      "t": "Point out how alone she must feel now.",
+      "pts": -10,
+      "why": "Not tied to the plan, and dwells on something she didn't raise."
      }
     ]
    },
@@ -4359,6 +4359,11 @@
     "hint": "She says: \"I'll probably get around to it eventually.\"",
     "options": [
      {
+      "t": "\"If you don't do it now, you might not qualify later.\"",
+      "pts": -10,
+      "why": "Fear-based pressure not tied to anything she's actually said."
+     },
+     {
       "t": "\"Of course, no rush — call me whenever you're ready.\"",
       "pts": 0,
       "why": "Fully yields to the stall."
@@ -4367,11 +4372,6 @@
       "t": "\"You said this fits and protects your sister — the only thing 'eventually' changes is whether that's true today or later. Why not make it true today?\"",
       "pts": 20,
       "why": "Reflects her own words back and asks a direct, respectful question."
-     },
-     {
-      "t": "\"If you don't do it now, you might not qualify later.\"",
-      "pts": -10,
-      "why": "Fear-based pressure not tied to anything she's actually said."
      },
      {
       "t": "\"Okay, I'll follow up in a month.\"",
@@ -4403,8 +4403,8 @@
   "prompt": "What's the most complete, honest answer?",
   "options": [
    {
-    "t": "\"Just that you're covered, that's really all that matters.\"",
-    "pts": -15,
+    "t": "\"Just that you're covered from the day it's approved. That's really all that matters for now.\"",
+    "pts": 0,
     "why": "Brushes past a direct question that deserves a real answer."
    },
    {
@@ -4413,12 +4413,12 @@
     "why": "Covers the key things a client is entitled to know before signing, honestly and completely."
    },
    {
-    "t": "\"Nothing you need to worry about, I've got it handled.\"",
-    "pts": -20,
+    "t": "\"Nothing you need to worry about. I've handled all the details, so you can just sign right here.\"",
+    "pts": 0,
     "why": "Dismisses a legitimate question and withholds information she's entitled to."
    },
    {
-    "t": "\"The free-look period, mainly.\"",
+    "t": "\"Mainly the free-look period, which gives you a window after the policy arrives to cancel for a full refund if you change your mind.\"",
     "pts": 40,
     "why": "Correct but incomplete — a few other things are worth naming too."
    }
@@ -4445,10 +4445,10 @@
   "prompt": "Put these five replacement steps in the order they belong.",
   "steps": [
    {
-    "id": "s1",
-    "t": "Confirm she understands this is a replacement, not an addition, and why",
-    "pos": 1,
-    "why": "She should clearly understand what's happening before anything else."
+    "id": "s5",
+    "t": "Confirm with her that the old policy is cancelled and she has the new policy in hand",
+    "pos": 5,
+    "why": "Closes the loop so nothing is left in a gray area."
    },
    {
     "id": "s2",
@@ -4457,22 +4457,22 @@
     "why": "The documented step that must happen before the old policy is touched."
    },
    {
-    "id": "s3",
-    "t": "Submit the new application along with the replacement paperwork",
-    "pos": 3,
-    "why": "The new coverage process, done properly and in the right order."
-   },
-   {
     "id": "s4",
     "t": "Wait for the new policy to be approved and in force before the old one is cancelled",
     "pos": 4,
     "why": "Prevents a gap where she would have no coverage at all."
    },
    {
-    "id": "s5",
-    "t": "Confirm with her that the old policy is cancelled and she has the new policy in hand",
-    "pos": 5,
-    "why": "Closes the loop so nothing is left in a gray area."
+    "id": "s1",
+    "t": "Confirm she understands this is a replacement, not an addition, and why",
+    "pos": 1,
+    "why": "She should clearly understand what's happening before anything else."
+   },
+   {
+    "id": "s3",
+    "t": "Submit the new application along with the replacement paperwork",
+    "pos": 3,
+    "why": "The new coverage process, done properly and in the right order."
    }
   ]
  },
@@ -4497,14 +4497,9 @@
   "prompt": "Select every sign here worth pausing on and raising with your team leader or compliance contact.",
   "options": [
    {
-    "t": "Someone outside her immediate family is directing the conversation and answering for her.",
-    "pts": 25,
-    "why": "A real pattern worth noting, regardless of the acquaintance's intentions."
-   },
-   {
-    "t": "The push is for a larger policy than she originally said she wanted.",
-    "pts": 25,
-    "why": "A shift in scope that didn't come from the client herself."
+    "t": "She lives alone.",
+    "pts": -10,
+    "why": "Also not itself a red flag; it's context, not a warning sign on its own."
    },
    {
     "t": "She seems to defer to this person rather than answering in her own words.",
@@ -4512,19 +4507,24 @@
     "why": "A sign her own voice may not be driving the decision."
    },
    {
+    "t": "Someone outside her immediate family is directing the conversation and answering for her.",
+    "pts": 25,
+    "why": "A real pattern worth noting, regardless of the acquaintance's intentions."
+   },
+   {
     "t": "The beneficiary designation is being suggested by the acquaintance, not by her.",
     "pts": 25,
     "why": "Directly affects who benefits, and should come from the client."
    },
    {
+    "t": "The push is for a larger policy than she originally said she wanted.",
+    "pts": 25,
+    "why": "A shift in scope that didn't come from the client herself."
+   },
+   {
     "t": "She is 82 years old.",
     "pts": -15,
     "why": "Age alone is not a red flag — the behavior around her is what matters."
-   },
-   {
-    "t": "She lives alone.",
-    "pts": -10,
-    "why": "Also not itself a red flag; it's context, not a warning sign on its own."
    }
   ]
  },
@@ -4568,16 +4568,6 @@
       "why": "Directly ties the recommendation to something she personally just went through."
      },
      {
-      "t": "Paying off a funeral on a credit card adds interest on top of the original cost — a plan avoids that entirely for whoever handles hers.",
-      "pts": 20,
-      "why": "A concrete financial fact tied to her exact situation."
-     },
-     {
-      "t": "Her sister is older too and lives far away, so she can't easily be the one to handle logistics.",
-      "pts": 10,
-      "why": "Relevant secondary point, true but not the sharpest of the set."
-     },
-     {
       "t": "She should have planned this years ago.",
       "pts": -15,
       "why": "Unhelpful hindsight, not persuasive in the moment."
@@ -4591,6 +4581,16 @@
       "t": "She has no children, so no one else will step up.",
       "pts": -10,
       "why": "Presumptuous, and not something she has said."
+     },
+     {
+      "t": "Paying off a funeral on a credit card adds interest on top of the original cost — a plan avoids that entirely for whoever handles hers.",
+      "pts": 20,
+      "why": "A concrete financial fact tied to her exact situation."
+     },
+     {
+      "t": "Her sister is older too and lives far away, so she can't easily be the one to handle logistics.",
+      "pts": 10,
+      "why": "Relevant secondary point, true but not the sharpest of the set."
      }
     ]
    },
@@ -4601,14 +4601,9 @@
     "hint": "Pick the two that connect to what she actually said.",
     "options": [
      {
-      "t": "She said she doesn't want to be a bill for anyone — this plan is the difference between that fear and the reality.",
-      "pts": 20,
-      "why": "Reflects her own words directly back to her."
-     },
-     {
-      "t": "Her sister, not a stranger, would be the one figuring this out — this spares the person she loves most from the same experience she just had.",
-      "pts": 20,
-      "why": "Names exactly who benefits and why it matters to her."
+      "t": "Point out how alone she must feel now.",
+      "pts": -10,
+      "why": "Not tied to the plan, and dwells on grief unnecessarily."
      },
      {
       "t": "Bring up that her late husband would be disappointed she hasn't handled this yet.",
@@ -4616,19 +4611,24 @@
       "why": "A guilt tactic that invokes her late spouse."
      },
      {
-      "t": "Point out how alone she must feel now.",
-      "pts": -10,
-      "why": "Not tied to the plan, and dwells on grief unnecessarily."
+      "t": "Her sister, not a stranger, would be the one figuring this out — this spares the person she loves most from the same experience she just had.",
+      "pts": 20,
+      "why": "Names exactly who benefits and why it matters to her."
      },
      {
-      "t": "She'll feel relieved once it's handled.",
-      "pts": 12,
-      "why": "True but generic, secondary to the two specific ones."
+      "t": "She said she doesn't want to be a bill for anyone — this plan is the difference between that fear and the reality.",
+      "pts": 20,
+      "why": "Reflects her own words directly back to her."
      },
      {
       "t": "Remind her this is exactly what just happened to her, still fresh.",
       "pts": 10,
       "why": "Reasonable, but risks feeling repetitive after the logical group already used this angle."
+     },
+     {
+      "t": "She'll feel relieved once it's handled.",
+      "pts": 12,
+      "why": "True but generic, secondary to the two specific ones."
      }
     ]
    },
@@ -4644,14 +4644,14 @@
       "why": "Fully yields to the stall."
      },
      {
-      "t": "\"I hear that, and it's exactly why a small monthly plan makes more sense than another bill all at once, like what just happened. What amount would feel manageable?\"",
-      "pts": 20,
-      "why": "Acknowledges the real constraint and reframes toward a workable number rather than a yes or no."
-     },
-     {
       "t": "\"This is cheaper than what you just went through, so it's really a no-brainer.\"",
       "pts": -10,
       "why": "Dismissive framing of a real budget concern."
+     },
+     {
+      "t": "\"I hear that, and it's exactly why a small monthly plan makes more sense than another bill all at once, like what just happened. What amount would feel manageable?\"",
+      "pts": 20,
+      "why": "Acknowledges the real constraint and reframes toward a workable number rather than a yes or no."
      },
      {
       "t": "\"I can come back next month once things settle.\"",
@@ -4702,24 +4702,24 @@
       "why": "Directly answers the question he actually asked."
      },
      {
-      "t": "Naming Dot directly avoids the delay and cost of probate that leaving it in a will might create.",
-      "pts": 20,
-      "why": "A concrete practical advantage of a named beneficiary over a will."
-     },
-     {
       "t": "His son, being far away, may not be positioned to handle arrangements quickly anyway.",
       "pts": 10,
       "why": "Relevant secondary point, true but less central than the top two."
      },
      {
-      "t": "He should leave everything to his son regardless, since that's traditional.",
-      "pts": -15,
-      "why": "Overrides his stated wish without any real basis."
+      "t": "Naming Dot directly avoids the delay and cost of probate that leaving it in a will might create.",
+      "pts": 20,
+      "why": "A concrete practical advantage of a named beneficiary over a will."
      },
      {
       "t": "A life insurance payout goes directly to the named beneficiary, outside the estate process.",
       "pts": 15,
       "why": "True and relevant, close behind the top two but more technical than personally persuasive."
+     },
+     {
+      "t": "He should leave everything to his son regardless, since that's traditional.",
+      "pts": -15,
+      "why": "Overrides his stated wish without any real basis."
      },
      {
       "t": "Dot is younger and more likely to outlive him than his son is to visit.",
@@ -4740,19 +4740,14 @@
       "why": "Directly reflects his own stated reasoning."
      },
      {
-      "t": "This removes any doubt about whether it's 'allowed' — it's entirely his choice to make.",
-      "pts": 20,
-      "why": "Addresses his exact hesitation."
-     },
-     {
       "t": "Point out his son should feel guilty for not visiting.",
       "pts": -15,
       "why": "Invites guilt and conflict that isn't his concern."
      },
      {
-      "t": "Dot deserves it more than his son does.",
+      "t": "This is his last chance to make it right.",
       "pts": -10,
-      "why": "Not his words, and puts you in the middle of a comparison he didn't ask for."
+      "why": "Unnecessarily dramatic and pressuring."
      },
      {
       "t": "He'll feel lighter knowing it's settled and reflects what he actually wants.",
@@ -4760,9 +4755,14 @@
       "why": "True but generic."
      },
      {
-      "t": "This is his last chance to make it right.",
+      "t": "This removes any doubt about whether it's 'allowed' — it's entirely his choice to make.",
+      "pts": 20,
+      "why": "Addresses his exact hesitation."
+     },
+     {
+      "t": "Dot deserves it more than his son does.",
       "pts": -10,
-      "why": "Unnecessarily dramatic and pressuring."
+      "why": "Not his words, and puts you in the middle of a comparison he didn't ask for."
      }
     ]
    },
@@ -4773,16 +4773,6 @@
     "hint": "He hesitates: \"I just don't want it to seem strange to people.\"",
     "options": [
      {
-      "t": "\"It's your decision to make, and it's a common one — plenty of people name someone who's shown up for them, not just family.\"",
-      "pts": 20,
-      "why": "Normalizes his choice and affirms it's his to make, without pressure."
-     },
-     {
-      "t": "\"Don't worry about what people think.\"",
-      "pts": 5,
-      "why": "Dismissive, and doesn't really address his specific worry."
-     },
-     {
       "t": "\"You're right, maybe stick with your son to keep it simple.\"",
       "pts": -15,
       "why": "Talks him out of his own stated wish."
@@ -4791,9 +4781,1757 @@
       "t": "\"I can't really weigh in on that, it's between you and your family.\"",
       "pts": 0,
       "why": "Unhelpfully neutral, avoiding support on a legitimate concern he raised with you directly."
+     },
+     {
+      "t": "\"It's your decision to make, and it's a common one — plenty of people name someone who's shown up for them, not just family.\"",
+      "pts": 20,
+      "why": "Normalizes his choice and affirms it's his to make, without pressure."
+     },
+     {
+      "t": "\"Don't worry about what people think.\"",
+      "pts": 5,
+      "why": "Dismissive, and doesn't really address his specific worry."
      }
     ]
    }
   ]
+ },
+ {
+  "id": "p53",
+  "n": 53,
+  "max": 100,
+  "title": "The Quiet Spouse",
+  "cat": "Avoiding Objections",
+  "format": "choice",
+  "file": [
+   [
+    "Clients",
+    "Harold, 72, and June, 70"
+   ],
+   [
+    "Family",
+    "Two grown sons. June's sister passed away four months ago"
+   ],
+   [
+    "Income",
+    "Social Security and a small pension"
+   ],
+   [
+    "Where you are",
+    "Early in the conversation, before any plans or prices"
+   ]
+  ],
+  "story": "When you mention that most families you meet are thinking about funeral costs, June goes quiet. She looks down at the table and starts folding her napkin. Harold keeps talking about his golf league.",
+  "prompt": "What do you do right now, before moving on?",
+  "options": [
+   {
+    "t": "Tell her kindly that everyone gets emotional about this topic and that it is completely normal, then gently move on to the next page so she does not feel put on the spot.",
+    "pts": 40,
+    "why": "Kind on the surface, but it tells her how to feel instead of asking. It closes the door you should be opening."
+   },
+   {
+    "t": "Turn to Harold and ask more about his golf league to lighten the mood, then come back to the funeral topic once June seems more comfortable.",
+    "pts": 20,
+    "why": "Friendly, but it walks away from the person who just signaled something important."
+   },
+   {
+    "t": "Pause and say gently, \"June, it looked like that brought something up for you. Has your family been through a funeral recently?\" Then listen before you go any further.",
+    "pts": 100,
+    "why": "Naming what you noticed, gently, lets her share the loss now. Her experience becomes a reason for the plan instead of an unspoken feeling that turns into \"we need to think about it\" at the close."
+   },
+   {
+    "t": "Keep going so you do not lose momentum, and make a note to check in with June at the close, once the numbers are in front of both of them.",
+    "pts": 10,
+    "why": "Momentum is not worth it. Whatever she is feeling does not go away. It usually comes back as hesitation right when you ask for the decision."
+   }
+  ]
+ },
+ {
+  "id": "p54",
+  "n": 54,
+  "max": 100,
+  "title": "Burned Before",
+  "cat": "Avoiding Objections",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Delores, 74, widowed, retired school cook"
+   ],
+   [
+    "Past experience",
+    "Bought a policy three years ago from another agent. She changed banks, the draft failed, the policy lapsed and no one called her"
+   ],
+   [
+    "Income",
+    "$1,650 a month Social Security, paid on the third Wednesday"
+   ],
+   [
+    "What she said at the door",
+    "\"I tried this once. I paid for a year and got nothing. I am not doing that again.\""
+   ]
+  ],
+  "story": "Delores lets you in, but she sits back with her purse on her lap. She says she only agreed to talk because her neighbor vouched for you.",
+  "prompt": "Plan how you will handle her past experience before you ever present a plan. Choose what to acknowledge, what to build into the sit, and the objection you are heading off.",
+  "groups": [
+   {
+    "key": "acknowledge",
+    "label": "Acknowledge it first",
+    "pick": 2,
+    "hint": "Pick the two things to do before you present anything.",
+    "options": [
+     {
+      "t": "Tell her the other agent was probably a crook.",
+      "pts": -10,
+      "why": "You do not know the full story, and bashing another agent makes you look like one more salesperson."
+     },
+     {
+      "t": "Let her know you will leave your direct number and check in after the policy is issued.",
+      "pts": 10,
+      "why": "Good follow-through, but it lands better once you know what went wrong."
+     },
+     {
+      "t": "Ask what happened with that policy, and let her tell the whole story before you present anything.",
+      "pts": 20,
+      "why": "The details tell you exactly which worry you need to answer. Here, it was a missed draft that nobody told her about."
+     },
+     {
+      "t": "Tell her you are sorry that happened, and that it is a fair reason to be careful.",
+      "pts": 20,
+      "why": "Validating her caution earns you the right to keep going."
+     },
+     {
+      "t": "Promise that nothing like that could ever happen with your company.",
+      "pts": -10,
+      "why": "A promise you cannot keep. Overpromising is how the next broken trust starts."
+     },
+     {
+      "t": "Skip it. Bringing up bad memories will only hurt the mood.",
+      "pts": -5,
+      "why": "The memory is already in the room. Ignoring it leaves it to surface at the close."
+     }
+    ]
+   },
+   {
+    "key": "build",
+    "label": "Build it into the sit",
+    "pick": 2,
+    "hint": "Pick the two steps that directly answer what went wrong last time.",
+    "options": [
+     {
+      "t": "Explain the grace period: what happens if a payment is missed and how she would be notified.",
+      "pts": 15,
+      "why": "Answers the exact thing that hurt her last time, before she has to ask."
+     },
+     {
+      "t": "Tell her not to worry about payments, since policies rarely lapse.",
+      "pts": -10,
+      "why": "Hers did. Dismissing it tells her you were not listening."
+     },
+     {
+      "t": "Where the carrier offers it, add a trusted family member to receive a notice if a payment is ever missed.",
+      "pts": 12,
+      "why": "A strong extra safeguard, but the first two fix the root cause."
+     },
+     {
+      "t": "Set the draft date to line up with the day her Social Security arrives.",
+      "pts": 15,
+      "why": "Many lapses start with a draft date that does not match when money comes in."
+     },
+     {
+      "t": "Move quickly through the application so she does not have time to worry.",
+      "pts": -10,
+      "why": "Rushing someone who has been burned confirms her fear."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "The objection you are heading off",
+    "pick": 1,
+    "hint": "If none of this came up until the close, what would she most likely say?",
+    "options": [
+     {
+      "t": "\"I do not need life insurance.\"",
+      "pts": 0,
+      "why": "She tried to buy a policy before. Need is not the issue."
+     },
+     {
+      "t": "\"I have been through this before. I am not signing anything today.\"",
+      "pts": 30,
+      "why": "Right. Her past experience, left unaddressed, is exactly what stops the close."
+     },
+     {
+      "t": "\"It is too expensive.\"",
+      "pts": 5,
+      "why": "Possible, but nothing she said points to price."
+     },
+     {
+      "t": "\"I need to talk to my kids first.\"",
+      "pts": 5,
+      "why": "Not what her story is signaling."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "p55",
+  "n": 55,
+  "max": 100,
+  "title": "Signs Around the Kitchen",
+  "cat": "Avoiding Objections",
+  "format": "multi",
+  "file": [
+   [
+    "Clients",
+    "Walt, 68, and Rosa, 66"
+   ],
+   [
+    "What you notice",
+    "Rosa mentions their pharmacy copays went up this year. Their son moved back in after losing his job"
+   ],
+   [
+    "Income",
+    "Two Social Security checks"
+   ],
+   [
+    "Where you are",
+    "Discovery, before any prices"
+   ]
+  ],
+  "story": "Walt says, \"Everything costs more than it used to.\" Rosa nods and adds that they have been \"juggling a few things\" since their son moved home.",
+  "prompt": "Select every move that deals with budget now, so it does not turn into \"we cannot afford it\" at the close. Moves that pressure or embarrass them cost points.",
+  "options": [
+   {
+    "t": "Point out the past-due notice you saw on the counter.",
+    "pts": -20,
+    "why": "Embarrassing. Let them share what they choose to share."
+   },
+   {
+    "t": "Size the coverage to the funeral and final bills they described, not to the largest plan available.",
+    "pts": 25,
+    "why": "A plan built around their stated need is easier to say yes to and to keep paying."
+   },
+   {
+    "t": "Show the biggest plan first so there is room to come down.",
+    "pts": -15,
+    "why": "After they told you money is tight, anchoring high feels like pressure."
+   },
+   {
+    "t": "Acknowledge what you heard: \"It sounds like this year has been tight, with the copays going up and your son at home.\"",
+    "pts": 25,
+    "why": "Showing you heard it makes it safe for them to be honest about money."
+   },
+   {
+    "t": "Let them know the coverage amount can be adjusted to fit the budget they give you.",
+    "pts": 25,
+    "why": "Takes away the fear that saying their real number means walking away with nothing."
+   },
+   {
+    "t": "Keep money out of the conversation until the very end so the mood stays positive.",
+    "pts": -15,
+    "why": "Waiting guarantees that the budget becomes the objection."
+   },
+   {
+    "t": "Before showing any numbers, ask: \"What would feel comfortable each month without taking from groceries or medicine?\"",
+    "pts": 25,
+    "why": "Agreeing on a budget first means the plan you show already fits."
+   }
+  ]
+ },
+ {
+  "id": "p56",
+  "n": 56,
+  "max": 100,
+  "title": "Who Else Decides?",
+  "cat": "Avoiding Objections",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Ruth, 79, widowed"
+   ],
+   [
+    "Family",
+    "Daughter Karen, 52, lives ten minutes away"
+   ],
+   [
+    "What Ruth said",
+    "\"Karen handles my checkbook these days.\""
+   ],
+   [
+    "Where you are",
+    "Early discovery"
+   ]
+  ],
+  "story": "Ruth is warm and engaged. She says she wants to make sure Karen is not stuck with the funeral bill, and mentions in passing that Karen handles her checkbook.",
+  "prompt": "What is the best move right now?",
+  "options": [
+   {
+    "t": "Suggest finishing the application today before Karen gets involved, so the decision stays simple and Ruth does not feel second-guessed.",
+    "pts": 0,
+    "why": "Steering a senior away from the family member who manages her money is a red flag. It also leads to cancellations once Karen finds out."
+   },
+   {
+    "t": "Ask Ruth whether she is still allowed to make her own financial decisions, or whether Karen needs to sign everything for her now.",
+    "pts": 10,
+    "why": "Condescending. It questions her dignity instead of including her family."
+   },
+   {
+    "t": "Note it on your sheet, keep going with discovery, and plan to handle Karen if Ruth brings her up again at the close, since Ruth is the one being insured.",
+    "pts": 20,
+    "why": "You already know who helps decide. Waiting almost guarantees the stall."
+   },
+   {
+    "t": "Ask now: \"Since Karen helps with your bills, would you like her to be part of this? We can call her now, or set a time when she can join us.\"",
+    "pts": 100,
+    "why": "Bringing the person who helps with money in early prevents \"I need to talk to my daughter\" at the close, and it protects Ruth by keeping her family informed."
+   }
+  ]
+ },
+ {
+  "id": "p57",
+  "n": 57,
+  "max": 100,
+  "title": "Set It Up Early",
+  "cat": "Avoiding Objections",
+  "format": "order",
+  "file": [
+   [
+    "Goal",
+    "Reach the close with no surprises left"
+   ],
+   [
+    "Common stalls",
+    "\"Let us think about it,\" \"I need to talk to my kids,\" \"It costs too much\""
+   ]
+  ],
+  "story": "Most objections at the close are things the client was already thinking in the first ten minutes. The order of your conversation decides whether they come out early, when you can address them, or late, when they stop the sale.",
+  "prompt": "Put these steps in the order that brings concerns out early and keeps the close free of surprises.",
+  "steps": [
+   {
+    "id": "s2",
+    "t": "Set expectations: explain what you will cover, and agree that at the end they can make a clear yes or no decision",
+    "pos": 2,
+    "why": "Agreeing up front that a decision is expected prevents \"we will think about it\" later."
+   },
+   {
+    "id": "s4",
+    "t": "Confirm who else should be part of the decision, and agree on a comfortable monthly budget",
+    "pos": 4,
+    "why": "Handles the two most common stalls, the absent family member and the price, before any numbers appear."
+   },
+   {
+    "id": "s3",
+    "t": "Ask about past experiences with insurance and funerals, and what worries them, and acknowledge each one",
+    "pos": 3,
+    "why": "This is where the future objections live. Acknowledged now, they become reasons instead of barriers."
+   },
+   {
+    "id": "s6",
+    "t": "Ask for the decision",
+    "pos": 6,
+    "why": "By now the usual objections have already been answered."
+   },
+   {
+    "id": "s1",
+    "t": "Build rapport and learn a little about their life and family",
+    "pos": 1,
+    "why": "People share concerns with someone they are comfortable with."
+   },
+   {
+    "id": "s5",
+    "t": "Present the plan that fits, tying each part back to what they told you",
+    "pos": 5,
+    "why": "When the plan is built from their words, there is little left to object to."
+   }
+  ]
+ },
+ {
+  "id": "p58",
+  "n": 58,
+  "max": 100,
+  "title": "The Skeptic's Tell",
+  "cat": "Avoiding Objections",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Vernon, 70, retired truck driver"
+   ],
+   [
+    "Body language",
+    "Arms crossed, sitting back from the table"
+   ],
+   [
+    "What he said",
+    "\"I have heard these companies always find a reason not to pay.\""
+   ],
+   [
+    "Where you are",
+    "The first few minutes of the sit"
+   ]
+  ],
+  "story": "Vernon says it half joking, but he is watching you closely to see how you react.",
+  "prompt": "How do you handle it?",
+  "options": [
+   {
+    "t": "Tell him that is a great question, and that you will cover exactly how claims work at the end of the presentation if he still has concerns.",
+    "pts": 20,
+    "why": "Postponing it guarantees it comes back as the objection."
+   },
+   {
+    "t": "Say, \"That is a fair concern, and I would rather cover it now than at the end.\" Then explain how claims are paid, the contestable period, and why honest health answers make a claim pay.",
+    "pts": 100,
+    "why": "Addresses the trust issue at the moment he raises it. The honest explanation is itself the reassurance, and it keeps the concern from resurfacing at the close."
+   },
+   {
+    "t": "Tell him with a smile that it is a common myth, that claims get paid every day, and move on to your presentation so the mood stays light.",
+    "pts": 10,
+    "why": "Dismissing it leaves his doubt in place for the whole sit."
+   },
+   {
+    "t": "Tell him your company has the best claims record in the industry, so he has nothing to worry about, and offer to show him the brochure with its ratings and testimonials from other families.",
+    "pts": 25,
+    "why": "An unverifiable claim sounds like a sales line, which is exactly what he expects."
+   }
+  ]
+ },
+ {
+  "id": "p59",
+  "n": 59,
+  "max": 100,
+  "title": "Coverage Mentioned in Passing",
+  "cat": "Avoiding Objections",
+  "format": "multi",
+  "file": [
+   [
+    "Client",
+    "Earl, 68, retiring from the pipefitters next year"
+   ],
+   [
+    "What he said",
+    "\"I think I have something through the union.\""
+   ],
+   [
+    "Where you are",
+    "Early discovery"
+   ]
+  ],
+  "story": "Earl mentions the union coverage while talking about something else and moves right on. He does not seem sure how much it is or how long it lasts.",
+  "prompt": "Select every question worth asking now, so \"I already have coverage\" does not come up at the close. Moves that dismiss or undermine his coverage cost points.",
+  "options": [
+   {
+    "t": "\"Does it stay with you after you retire, or does it end when you leave the union or reach a certain age?\"",
+    "pts": 25,
+    "why": "Group coverage often ends or shrinks at retirement. That is the gap that matters here."
+   },
+   {
+    "t": "Skip it, since talking about it will only lower the amount he needs.",
+    "pts": -20,
+    "why": "Ignoring it means it becomes the objection, and it puts the sale ahead of the client."
+   },
+   {
+    "t": "\"Who is listed as the beneficiary, and does your family know about it?\"",
+    "pts": 20,
+    "why": "Uncovers outdated beneficiaries and shows you care about the whole picture."
+   },
+   {
+    "t": "\"Would what it pays cover the funeral you would want, plus any final bills?\"",
+    "pts": 30,
+    "why": "Turns his existing coverage into a clear view of what is covered and what is not."
+   },
+   {
+    "t": "Tell him union policies are usually not worth much.",
+    "pts": -20,
+    "why": "You have not seen it, and running it down sounds self-serving."
+   },
+   {
+    "t": "\"Do you know how much it pays? Do you have the paperwork handy?\"",
+    "pts": 25,
+    "why": "You cannot plan around coverage you have not seen."
+   },
+   {
+    "t": "Suggest he cancel it so there is no confusion.",
+    "pts": -25,
+    "why": "Never suggest cancelling coverage, and never before new coverage is in force. It may be valuable."
+   }
+  ]
+ },
+ {
+  "id": "p60",
+  "n": 60,
+  "max": 100,
+  "title": "The Pause Before Answering",
+  "cat": "Avoiding Objections",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Marlene, 71"
+   ],
+   [
+    "What you notice",
+    "On the health questions, she hesitates at \"treated for COPD\" and glances at her husband"
+   ],
+   [
+    "Why it matters",
+    "A wrong answer can lead to a declined claim, and a surprise decline later destroys trust"
+   ]
+  ],
+  "story": "Marlene says, \"Well... I use an inhaler sometimes,\" then trails off and looks at you to see what happens next.",
+  "prompt": "What is the best response?",
+  "options": [
+   {
+    "t": "Say, \"Take your time. Honest answers are what make the claim pay. A diagnosis does not mean you cannot get covered. It just helps me find the right company for you.\"",
+    "pts": 100,
+    "why": "Many carriers accept COPD, depending on details like steroid inhalers and recent hospital stays. Reassuring her that honesty helps, not hurts, gets accurate answers and prevents a declined claim or a surprise decline later."
+   },
+   {
+    "t": "Warn her gently that COPD will probably disqualify her at most companies, so she is prepared if the application comes back declined and is not disappointed or embarrassed later.",
+    "pts": 10,
+    "why": "Not accurate. Several carriers accept COPD, and scaring her makes honest answers less likely."
+   },
+   {
+    "t": "Ask her husband to answer the rest of the health questions instead, since he may remember her medical history more clearly.",
+    "pts": 15,
+    "why": "She is the insured. Her answers need to be her own."
+   },
+   {
+    "t": "Mark \"no,\" since she only uses the inhaler sometimes and never actually said a doctor diagnosed or treated her for COPD.",
+    "pts": 0,
+    "why": "That is misrepresentation. It can void the policy at claim time, which is the worst outcome for her family."
+   }
+  ]
+ },
+ {
+  "id": "p61",
+  "n": 61,
+  "max": 100,
+  "title": "The Funeral She Already Paid For",
+  "cat": "Avoiding Objections",
+  "format": "text",
+  "minWords": 15,
+  "file": [
+   [
+    "Client",
+    "Gloria, 71, widowed two years"
+   ],
+   [
+    "Family",
+    "A son and a daughter, both with young kids"
+   ],
+   [
+    "What she said",
+    "\"When my husband died I had to put $9,000 on a credit card. I am still paying it off.\""
+   ]
+  ],
+  "story": "Gloria says it quietly, almost as an aside, then starts to change the subject.",
+  "prompt": "Write what you would say right after she tells you this, in 2 to 5 sentences. Acknowledge it and connect it to what she wants for her kids, without pressure.",
+  "rubric": [
+   {
+    "label": "Acknowledges what she went through",
+    "keys": [
+     "sorry",
+     "that must",
+     "sounds",
+     "hard",
+     "difficult",
+     "heavy",
+     "a lot to carry",
+     "thank you for sharing"
+    ],
+    "pts": 20,
+    "tip": "Start with the person, not the plan."
+   },
+   {
+    "label": "Reflects back her specific experience",
+    "keys": [
+     "credit card",
+     "9,000",
+     "9000",
+     "still paying",
+     "paying it off",
+     "paying off",
+     "debt"
+    ],
+    "pts": 20,
+    "tip": "Using her own details shows you listened."
+   },
+   {
+    "label": "Connects it to what she wants for her children",
+    "keys": [
+     "kids",
+     "children",
+     "son",
+     "daughter",
+     "your family",
+     "for them",
+     "they won't",
+     "they will not",
+     "go through"
+    ],
+    "pts": 20,
+    "tip": "Her experience is the reason. Tie it to the people she is protecting."
+   },
+   {
+    "label": "Links to the plan without pressure",
+    "keys": [
+     "plan",
+     "coverage",
+     "policy",
+     "make sure",
+     "in place",
+     "set aside",
+     "taken care of"
+    ],
+    "pts": 20,
+    "tip": "Show how it connects, but do not push."
+   },
+   {
+    "label": "Invites her to keep talking",
+    "keys": [
+     "?",
+     "can i ask",
+     "would you",
+     "tell me",
+     "how do you feel",
+     "what would"
+    ],
+    "pts": 20,
+    "tip": "A question keeps her talking and brings out anything else on her mind."
+   }
+  ],
+  "sample": "I am so sorry. That is a lot to carry, still paying off that credit card two years later. It sounds like you would not want your son and daughter to go through the same thing. Can I ask, would it mean a lot to you to have the funeral already taken care of, so they can focus on each other instead of the bill?"
+ },
+ {
+  "id": "p62",
+  "n": 62,
+  "max": 100,
+  "title": "Two Spouses, Two Worries",
+  "cat": "Avoiding Objections",
+  "format": "angle",
+  "file": [
+   [
+    "Clients",
+    "Frank, 69, and Linda, 67"
+   ],
+   [
+    "Frank",
+    "\"We are fine. We do not need anything.\""
+   ],
+   [
+    "Linda",
+    "Paid most of her mother's funeral last year. She is the one who called you"
+   ],
+   [
+    "Income",
+    "Social Security plus Frank's small pension"
+   ]
+  ],
+  "story": "Linda leans in when you talk about final expenses. Frank checks his phone and says they are fine. Linda goes quiet when he says it.",
+  "prompt": "Plan how you will bring both of them along before you present. Choose what to pick up on, how to acknowledge both of them, and the objection you are preventing.",
+  "groups": [
+   {
+    "key": "notice",
+    "label": "What to pick up on",
+    "pick": 2,
+    "hint": "Pick the two things that matter most for getting both of them on board.",
+    "options": [
+     {
+      "t": "Frank's \"we are fine\" may be about not wanting to feel he has not provided, rather than about need.",
+      "pts": 20,
+      "why": "Reading what is behind his words lets you respect him instead of arguing with him."
+     },
+     {
+      "t": "Frank is the decision-maker, so focus your attention on him.",
+      "pts": -10,
+      "why": "Ignoring Linda loses the person who already sees the need."
+     },
+     {
+      "t": "Linda seems emotional, so she will be easier to close.",
+      "pts": -10,
+      "why": "Treating her feelings as leverage is manipulation."
+     },
+     {
+      "t": "Linda's experience paying for her mother's funeral.",
+      "pts": 20,
+      "why": "Her firsthand experience is the real reason you are there."
+     },
+     {
+      "t": "They drive a newer car.",
+      "pts": 0,
+      "why": "Not relevant to what is happening at this table."
+     },
+     {
+      "t": "They live on a fixed income.",
+      "pts": 10,
+      "why": "Important for the budget, but secondary to getting them aligned."
+     }
+    ]
+   },
+   {
+    "key": "acknowledge",
+    "label": "How to acknowledge both",
+    "pick": 2,
+    "hint": "Pick the two moves that bring both spouses into the conversation.",
+    "options": [
+     {
+      "t": "Speak mostly to Linda, since she already sees the need.",
+      "pts": -5,
+      "why": "Frank will stall the decision if he feels left out."
+     },
+     {
+      "t": "Ask Frank what \"fine\" looks like if something happened tomorrow: who would handle the costs, and how?",
+      "pts": 15,
+      "why": "A respectful question lets him see the gap himself."
+     },
+     {
+      "t": "Show them a chart of average funeral costs.",
+      "pts": 8,
+      "why": "Useful context, but facts alone do not align two people."
+     },
+     {
+      "t": "Tell Frank he is not thinking about Linda.",
+      "pts": -10,
+      "why": "Blaming him guarantees he digs in."
+     },
+     {
+      "t": "Invite Linda to share what happened with her mother, then ask Frank how that time was for them as a couple.",
+      "pts": 15,
+      "why": "Brings Linda's experience into the open and lets Frank connect to it."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "The objection you are preventing",
+    "pick": 1,
+    "hint": "If they reach the close still split, what will you most likely hear?",
+    "options": [
+     {
+      "t": "\"We cannot qualify.\"",
+      "pts": 0,
+      "why": "Nothing points to a health concern."
+     },
+     {
+      "t": "\"Let us talk it over and get back to you.\"",
+      "pts": 30,
+      "why": "Right. Two spouses who are not aligned almost always stall to talk privately."
+     },
+     {
+      "t": "\"The monthly cost is too high.\"",
+      "pts": 8,
+      "why": "Possible later, but the split between them is the bigger risk."
+     },
+     {
+      "t": "\"We already have coverage.\"",
+      "pts": 5,
+      "why": "Nothing they said suggests existing coverage."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "p63",
+  "n": 63,
+  "max": 100,
+  "title": "The TV Ad",
+  "cat": "Avoiding Objections",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Bernice, 73"
+   ],
+   [
+    "What she said",
+    "\"I keep seeing that ad on TV. It is only $9.95 a month and no health questions.\""
+   ],
+   [
+    "Where you are",
+    "Early in the sit, before any plans"
+   ]
+  ],
+  "story": "Bernice brings it up while you are still getting to know her. She seems to think it is the obvious choice.",
+  "prompt": "What is the best way to handle it?",
+  "options": [
+   {
+    "t": "Tell her those TV ads are basically scams that never pay out, so she is much better off working with a licensed agent.",
+    "pts": 10,
+    "why": "They are real products. Calling them scams costs you credibility."
+   },
+   {
+    "t": "Say nothing about it for now. If you bring up the TV ad yourself, she will just start comparing prices instead of listening.",
+    "pts": 15,
+    "why": "She is already comparing. Staying quiet leaves the TV price as her benchmark."
+   },
+   {
+    "t": "Acknowledge it now: \"Those ads are everywhere. Can I show you what that $9.95 buys at your age and how it pays out, next to what we find for you, so you can compare?\"",
+    "pts": 100,
+    "why": "Those plans often buy a small amount of coverage that depends on age, usually with a waiting period before the full benefit pays. An honest side-by-side now keeps it from becoming \"I can get it cheaper on TV\" at the close."
+   },
+   {
+    "t": "Wait until she brings it up again at the close, then handle it with a side-by-side comparison of the two plans, so the TV price does not distract her during your presentation.",
+    "pts": 30,
+    "why": "You would handle it eventually, but at the close it arrives as an objection instead of a comparison."
+   }
+  ]
+ },
+ {
+  "id": "p64",
+  "n": 64,
+  "max": 100,
+  "title": "When They Share Something Hard",
+  "cat": "Avoiding Objections",
+  "format": "order",
+  "file": [
+   [
+    "Situation",
+    "Midway through discovery, a client tells you about a painful experience, such as a loss, a denied claim, or a bill that fell on family"
+   ],
+   [
+    "Why it matters",
+    "How you respond decides whether it becomes a reason to act or a reason to stall"
+   ]
+  ],
+  "story": "The moment a client shares something personal is one of the most important in the sit. Handled well, it builds trust and gives the plan its purpose. Rushed, it becomes a hidden objection.",
+  "prompt": "Put these steps in the order you would use them.",
+  "steps": [
+   {
+    "id": "s3",
+    "t": "Ask a follow-up question to understand what mattered most to them",
+    "pos": 3,
+    "why": "The details tell you what the plan needs to solve."
+   },
+   {
+    "id": "s5",
+    "t": "Later, when presenting, connect the plan back to that experience in their own words",
+    "pos": 5,
+    "why": "Their story becomes the reason for the plan, which leaves little to object to at the close."
+   },
+   {
+    "id": "s2",
+    "t": "Acknowledge the feeling in your own words",
+    "pos": 2,
+    "why": "Naming it tells them they were heard."
+   },
+   {
+    "id": "s1",
+    "t": "Stop what you are doing and give them your full attention",
+    "pos": 1,
+    "why": "Setting down the paperwork shows the story matters more than the sale."
+   },
+   {
+    "id": "s4",
+    "t": "Summarize what you heard, and check that you got it right",
+    "pos": 4,
+    "why": "Confirming prevents you from building the plan on a wrong assumption."
+   }
+  ]
+ },
+ {
+  "id": "p65",
+  "n": 65,
+  "max": 100,
+  "title": "The Insulin Question",
+  "cat": "Underwriting",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Dale, 62, non-smoker"
+   ],
+   [
+    "Health",
+    "Type 2 diabetes diagnosed at 58, now on insulin. No complications"
+   ],
+   [
+    "Last A1C",
+    "9.2"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Dale says, \"My last guy told me insulin means I can only get one of those no-questions plans.\"",
+  "prompt": "Based on our underwriting guide, which statement is accurate?",
+  "options": [
+   {
+    "t": "AIG SIWL would give him a level plan, because his diabetes has no complications and he was diagnosed well after age 45.",
+    "pts": 20,
+    "why": "AIG goes by A1C. An A1C of 8.7 to 9.9 is graded, and his is 9.2."
+   },
+   {
+    "t": "Mutual of Omaha Living Promise accepts insulin-treated diabetes diagnosed after 45, and Royal Neighbors accepts insulin with no complications. He has full-benefit options.",
+    "pts": 100,
+    "why": "Correct. Diagnosed at 58 on insulin with no complications, he fits both. Knowing this beats settling for a guaranteed issue plan."
+   },
+   {
+    "t": "His last agent was right. Any diabetes treated with insulin means a guaranteed issue plan with a two-year waiting period is his only option, no matter when he was diagnosed.",
+    "pts": 0,
+    "why": "Wrong, and it would cost him two years of reduced coverage he does not need."
+   },
+   {
+    "t": "Mutual of Omaha Term Life Express declines anyone on insulin, so his best level options are with other carriers.",
+    "pts": 25,
+    "why": "Not per our guide. Term Life Express approves insulin when diagnosed over 45. It declines diagnosis under 45."
+   }
+  ]
+ },
+ {
+  "id": "p66",
+  "n": 66,
+  "max": 100,
+  "title": "Oxygen in the Corner",
+  "cat": "Underwriting",
+  "format": "multi",
+  "file": [
+   [
+    "Client",
+    "Irene, 76, former smoker"
+   ],
+   [
+    "Health",
+    "COPD. Uses supplemental oxygen most afternoons"
+   ],
+   [
+    "What you notice",
+    "An oxygen concentrator next to her recliner"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Irene sees you glance at the concentrator and says, \"Oh, I only use that sometimes.\"",
+  "prompt": "Select every statement that is accurate per our guide. Wrong or dishonest moves cost points.",
+  "options": [
+   {
+    "t": "Royal Neighbors lists any oxygen use under guaranteed issue.",
+    "pts": 25,
+    "why": "Correct. That keeps a door open, with a waiting period she needs to understand."
+   },
+   {
+    "t": "Mutual of Omaha Living Promise, Americo and Foresters will not issue while she currently uses oxygen.",
+    "pts": 25,
+    "why": "Correct. All three list current oxygen use as a decline."
+   },
+   {
+    "t": "AIG SIWL accepts oxygen use for COPD.",
+    "pts": -15,
+    "why": "AIG declines oxygen use except for sleep apnea."
+   },
+   {
+    "t": "Ask when she last used it and why. Oxygen with a CPAP for sleep apnea is treated differently from oxygen for COPD.",
+    "pts": 25,
+    "why": "CVS and AIG both carve out CPAP for sleep apnea, so the reason matters."
+   },
+   {
+    "t": "Tell her no company will cover her.",
+    "pts": -20,
+    "why": "False. Our guide shows graded and guaranteed issue options."
+   },
+   {
+    "t": "Transamerica FE Express lists supplemental oxygen within the last 12 months as graded.",
+    "pts": 25,
+    "why": "Correct. Another real option to compare."
+   },
+   {
+    "t": "Leave the oxygen off, since she only uses it sometimes.",
+    "pts": -30,
+    "why": "Misrepresentation. It can void the policy at claim time."
+   }
+  ]
+ },
+ {
+  "id": "p67",
+  "n": 67,
+  "max": 100,
+  "title": "Fourteen Months After the Heart Attack",
+  "cat": "Underwriting",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Ray, 66, non-smoker"
+   ],
+   [
+    "Health",
+    "Heart attack 14 months ago. A stent was placed at the same time. Doing well since"
+   ],
+   [
+    "Wants",
+    "$15,000 for final expenses"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Ray assumes he will have to \"wait out\" the heart attack before anyone will give him a real policy.",
+  "prompt": "Which recommendation is the best fit per our guide?",
+  "options": [
+   {
+    "t": "AIG SIWL, which gives a non-smoker a level plan after a heart attack in the last 24 months, as long as it was more than 6 months ago, so he qualifies for their full benefit.",
+    "pts": 30,
+    "why": "True for the heart attack, but AIG grades a stent in the last 24 months. His stent makes it graded."
+   },
+   {
+    "t": "Mutual of Omaha Living Promise with a full benefit from day one, since his heart attack was more than a year ago.",
+    "pts": 20,
+    "why": "Living Promise grades a heart attack or stent within 2 years."
+   },
+   {
+    "t": "Wait until the two-year mark before applying anywhere, since every carrier treats a heart attack in the last 2 years as graded.",
+    "pts": 15,
+    "why": "He would go uncovered for 10 months for no reason. Level options exist today."
+   },
+   {
+    "t": "Americo, which accepts a heart attack after one year and accepts stents, or CVS, which lists a heart attack 1 to 2 years ago as a standard level plan. Both are level.",
+    "pts": 100,
+    "why": "Correct. At 14 months he is past Americo's one-year mark and in CVS's 1 to 2 year window, so he can have level coverage now."
+   }
+  ]
+ },
+ {
+  "id": "p68",
+  "n": 68,
+  "max": 100,
+  "title": "Paying From an Online Bank",
+  "cat": "Underwriting",
+  "format": "multi",
+  "file": [
+   [
+    "Client",
+    "Tanya, 59"
+   ],
+   [
+    "Banking",
+    "Social Security is deposited to an online-only bank account. She also has a prepaid debit card"
+   ],
+   [
+    "Health",
+    "Good. Qualifies for most plans"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Tanya is ready to go and asks, \"Can you just take it off my card?\"",
+  "prompt": "Select every statement that is accurate per our guide. Moves that risk a failed draft or a lapse cost points.",
+  "options": [
+   {
+    "t": "Mutual of Omaha can take her card.",
+    "pts": -20,
+    "why": "Our guide lists Mutual of Omaha as no cards."
+   },
+   {
+    "t": "Have her open a new bank account sometime after the policy is issued.",
+    "pts": -15,
+    "why": "If the first draft fails, the policy can lapse before she ever gets to it."
+   },
+   {
+    "t": "Americo, Foresters and LBL will not draft from cards or online-only banks.",
+    "pts": 30,
+    "why": "Correct, and it rules them out for her current setup."
+   },
+   {
+    "t": "Ask how and where she gets her Social Security before choosing a carrier, so the plan can actually be drafted.",
+    "pts": 40,
+    "why": "Failed drafts are one of the most common reasons policies lapse."
+   },
+   {
+    "t": "Transamerica and AIG SIWL accept all payment methods on our guide.",
+    "pts": 30,
+    "why": "Correct. They can work with how she actually gets paid."
+   },
+   {
+    "t": "Any carrier works as long as she has a routing number.",
+    "pts": -20,
+    "why": "Several carriers refuse online-only banks even with a routing number."
+   }
+  ]
+ },
+ {
+  "id": "p69",
+  "n": 69,
+  "max": 100,
+  "title": "Three Years Past Treatment",
+  "cat": "Underwriting",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Carol, 70, non-smoker"
+   ],
+   [
+    "Health",
+    "Breast cancer. Last treatment 3 years ago. No recurrence, did not spread"
+   ],
+   [
+    "Budget",
+    "About $70 a month"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Carol says, \"I figured cancer means I would be stuck with a waiting period.\"",
+  "prompt": "Which statement is accurate per our guide?",
+  "options": [
+   {
+    "t": "Americo accepts cancer more than 2 years out, and Transamerica Immediate Solution lists cancer over 2 years as Standard. She can have a full benefit now.",
+    "pts": 100,
+    "why": "Correct. Three years out with no recurrence or spread fits both."
+   },
+   {
+    "t": "AIG SIWL at a level benefit, since it only declines stage III or IV cancers and cancers that have come back.",
+    "pts": 20,
+    "why": "AIG grades cancer diagnosed or treated within the last 48 months."
+   },
+   {
+    "t": "She is right. Any cancer treated in the last 4 or 5 years means guaranteed issue with a two-year waiting period is her only option, even when it did not spread.",
+    "pts": 5,
+    "why": "Wrong. Settling for a waiting period she does not need costs her family."
+   },
+   {
+    "t": "Mutual of Omaha Living Promise with a full benefit from day one, since her cancer did not spread or come back.",
+    "pts": 25,
+    "why": "Living Promise grades cancer within 4 years."
+   }
+  ]
+ },
+ {
+  "id": "p70",
+  "n": 70,
+  "max": 100,
+  "title": "Stroke and Diabetes",
+  "cat": "Underwriting",
+  "format": "multi",
+  "file": [
+   [
+    "Client",
+    "Gordon, 72, non-smoker"
+   ],
+   [
+    "Health",
+    "One stroke 18 months ago, fully recovered. Type 2 diabetes, pills only"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Gordon mentions both conditions in the same breath and asks what that means for him.",
+  "prompt": "Select every statement that is accurate per our guide.",
+  "options": [
+   {
+    "t": "Americo accepts a single stroke that was not in the last year, and accepts diabetes.",
+    "pts": 25,
+    "why": "Correct. At 18 months, one stroke, he fits."
+   },
+   {
+    "t": "Foresters would decline him for the stroke.",
+    "pts": -20,
+    "why": "Foresters lists a stroke within 2 years as its Standard Death Benefit, not a decline."
+   },
+   {
+    "t": "Mutual of Omaha Living Promise would be graded, since the stroke was within 2 years.",
+    "pts": 25,
+    "why": "Correct. Good to know when comparing."
+   },
+   {
+    "t": "AIG SIWL is out. It declines anyone who has had a stroke and also has diabetes.",
+    "pts": 25,
+    "why": "Correct. The combination is a decline at AIG, regardless of timing."
+   },
+   {
+    "t": "Mutual of Omaha Term Life Express is a good fit.",
+    "pts": -20,
+    "why": "Term Life Express declines stroke."
+   },
+   {
+    "t": "Royal Neighbors accepts a stroke after one year, and diabetes without insulin.",
+    "pts": 25,
+    "why": "Correct. Another level option."
+   }
+  ]
+ },
+ {
+  "id": "p71",
+  "n": 71,
+  "max": 100,
+  "title": "Home From the Hospital",
+  "cat": "Underwriting",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Wanda, 74, non-smoker"
+   ],
+   [
+    "Recent history",
+    "Three nights in the hospital for pneumonia, discharged five weeks ago. Fully recovered"
+   ],
+   [
+    "Other health",
+    "High blood pressure, controlled on one medication"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Wanda mentions the hospital stay as if it barely counts: \"It was just pneumonia. I am fine now.\"",
+  "prompt": "Work out how you would handle it. Choose what to ask, which carrier fits, and what to tell her.",
+  "groups": [
+   {
+    "key": "ask",
+    "label": "What to ask first",
+    "pick": 2,
+    "hint": "Pick the two questions that decide which carriers are open to her.",
+    "options": [
+     {
+      "t": "Whether she liked her doctor.",
+      "pts": 0,
+      "why": "Friendly, but not underwriting."
+     },
+     {
+      "t": "The exact admission and discharge dates.",
+      "pts": 20,
+      "why": "Several carriers look back exactly 12 months, and some count nights or days."
+     },
+     {
+      "t": "The reason for the stay, and whether she is fully recovered or still being treated.",
+      "pts": 20,
+      "why": "A finished stay is treated very differently from a current one."
+     },
+     {
+      "t": "Whether she would rather leave it off the application.",
+      "pts": -15,
+      "why": "Suggesting she leave it off invites misrepresentation."
+     },
+     {
+      "t": "Which hospital she was in.",
+      "pts": 5,
+      "why": "Can help with records, but it does not change which carriers fit."
+     },
+     {
+      "t": "Nothing. One short stay does not matter.",
+      "pts": -10,
+      "why": "It matters a lot at some carriers."
+     }
+    ]
+   },
+   {
+    "key": "fit",
+    "label": "Which carrier fits",
+    "pick": 1,
+    "hint": "Pick the choice that matches our guide.",
+    "options": [
+     {
+      "t": "Transamerica FE Express.",
+      "pts": 5,
+      "why": "FE Express declines two or more nights in the hospital within 12 months."
+     },
+     {
+      "t": "Guaranteed issue, to be safe.",
+      "pts": 10,
+      "why": "Unnecessary. She would take a waiting period she does not need."
+     },
+     {
+      "t": "Mutual of Omaha Living Promise.",
+      "pts": 5,
+      "why": "Living Promise declines a hospital stay within the last 12 months."
+     },
+     {
+      "t": "A carrier that does not penalize a finished short stay, such as Americo (declines only a current stay) or LBL (declines only more than 5 days in the last year).",
+      "pts": 30,
+      "why": "Correct. Three nights, finished five weeks ago, fits both."
+     }
+    ]
+   },
+   {
+    "key": "tell",
+    "label": "What to tell her",
+    "pick": 1,
+    "hint": "Pick the explanation that is honest and keeps her trust.",
+    "options": [
+     {
+      "t": "\"The stay will not matter anywhere.\"",
+      "pts": 5,
+      "why": "False. It would matter at several carriers."
+     },
+     {
+      "t": "\"Come back in a year and we will try then.\"",
+      "pts": 10,
+      "why": "Leaves her uncovered when good options exist now."
+     },
+     {
+      "t": "Say nothing and submit.",
+      "pts": 0,
+      "why": "She deserves to know why you chose that carrier."
+     },
+     {
+      "t": "\"Some companies look back 12 months at hospital stays, so I will match you with one that fits. Every answer still needs to be exact.\"",
+      "pts": 30,
+      "why": "Honest, reassuring, and it keeps the application accurate."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "p72",
+  "n": 72,
+  "max": 100,
+  "title": "Help With Bathing",
+  "cat": "Underwriting",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Josephine, 81"
+   ],
+   [
+    "Health",
+    "Arthritis and heart trouble. Her daughter helps her bathe and dress every day"
+   ],
+   [
+    "Wants",
+    "Enough to cover a simple funeral"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Her daughter mentions the daily help while making coffee. Josephine waves it off: \"That is just family helping out.\"",
+  "prompt": "What does this mean for underwriting per our guide?",
+  "options": [
+   {
+    "t": "Americo will accept her, since arthritis and a stable heart condition are both acceptable and the help at home is only from family.",
+    "pts": 10,
+    "why": "Americo declines when someone needs help with activities of daily living."
+   },
+   {
+    "t": "Only mention it if the application specifically asks about wheelchairs or nursing homes, since family helping out is not a medical condition.",
+    "pts": 0,
+    "why": "Help with bathing and dressing is an activities of daily living question. Hiding it can void the policy."
+   },
+   {
+    "t": "Needing help with daily living is a decline at nearly every carrier on our guide, but Royal Neighbors lists it under guaranteed issue. That is the honest path, with its waiting period explained.",
+    "pts": 100,
+    "why": "Correct. You found the real path and set honest expectations, instead of a decline or a bad claim later."
+   },
+   {
+    "t": "Foresters Plan Right at the Preferred level, since the daily help comes from her daughter rather than a nurse or home health aide, and Foresters only asks about paid care and nursing facilities.",
+    "pts": 10,
+    "why": "Foresters declines when someone needs help with activities of daily living."
+   }
+  ]
+ },
+ {
+  "id": "p73",
+  "n": 73,
+  "max": 100,
+  "title": "Running the Health Interview",
+  "cat": "Underwriting",
+  "format": "order",
+  "file": [
+   [
+    "Goal",
+    "Place the client with the right carrier and plan on the first try, with an application that holds up at claim time"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "A clean health interview avoids surprise declines, wrong plan tiers and claims that get denied later. The order you do it in matters.",
+  "prompt": "Put these steps in the order you would use them.",
+  "steps": [
+   {
+    "id": "s4",
+    "t": "Check the conditions and medications against the underwriting guide and each carrier's drug list",
+    "pos": 4,
+    "why": "This is where you find which carriers accept, grade or decline."
+   },
+   {
+    "id": "s3",
+    "t": "Ask about each diagnosis, hospital stay and surgery, with dates",
+    "pos": 3,
+    "why": "Timing drives most underwriting rules: within 1, 2 or 4 years."
+   },
+   {
+    "id": "s2",
+    "t": "Go through every medication, bottle in hand, with the dose and what each one is for",
+    "pos": 2,
+    "why": "Medications reveal conditions clients forget to mention."
+   },
+   {
+    "id": "s1",
+    "t": "Explain why you ask health questions, and that honest answers are what make the claim pay",
+    "pos": 1,
+    "why": "Clients answer more completely when they know why it matters."
+   },
+   {
+    "id": "s6",
+    "t": "Complete the application's health questions exactly as the client answered them",
+    "pos": 6,
+    "why": "Accurate answers protect the claim."
+   },
+   {
+    "id": "s5",
+    "t": "Choose the carrier and plan tier that fit, and explain why to the client",
+    "pos": 5,
+    "why": "The client should understand why they are getting level or graded coverage."
+   }
+  ]
+ },
+ {
+  "id": "p74",
+  "n": 74,
+  "max": 100,
+  "title": "What Is the Gabapentin For?",
+  "cat": "Underwriting",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Leonard, 68"
+   ],
+   [
+    "Medications",
+    "Metformin, lisinopril, gabapentin"
+   ],
+   [
+    "What he said",
+    "\"The gabapentin is for my feet. They tingle.\""
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Leonard reads his bottles off one at a time. He did not mention nerve problems when you asked about his health.",
+  "prompt": "What does the gabapentin tell you per our guide?",
+  "options": [
+   {
+    "t": "Skip it on the application, since he did not mention any nerve problems when you asked about his health conditions.",
+    "pts": 0,
+    "why": "The medication shows a condition he did not list. It has to be accounted for."
+   },
+   {
+    "t": "Note it as being for seizures, since Foresters gives gabapentin for seizures its Preferred Death Benefit, which gets him the best rate, and he never actually mentioned neuropathy by name.",
+    "pts": 15,
+    "why": "He told you it is for his feet. Assuming a better reason is not honest underwriting."
+   },
+   {
+    "t": "Gabapentin is a common pain medication many seniors take for aches, so it does not change anything as long as he lists it.",
+    "pts": 10,
+    "why": "At several carriers, why he takes it changes the outcome."
+   },
+   {
+    "t": "With metformin, it likely means diabetic nerve pain. Mutual of Omaha declines gabapentin with diabetes and Foresters grades neuropathy, while Transamerica Immediate Solution accepts it.",
+    "pts": 100,
+    "why": "Correct. Asking what each medication is for turned a routine bottle into the key underwriting fact."
+   }
+  ]
+ },
+ {
+  "id": "p75",
+  "n": 75,
+  "max": 100,
+  "title": "Edibles, Not Cigarettes",
+  "cat": "Underwriting",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Pam, 58"
+   ],
+   [
+    "Lifestyle",
+    "Marijuana edibles a few nights a week, legal in her state. No tobacco"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Pam asks, a little embarrassed, \"Does the marijuana make me a smoker?\"",
+  "prompt": "What rate class should you expect per our guide?",
+  "options": [
+   {
+    "t": "Tobacco rates at every carrier, since insurance companies treat any marijuana use the same way they treat cigarettes.",
+    "pts": 20,
+    "why": "Not per our guide, and it would overcharge her."
+   },
+   {
+    "t": "Non-tobacco rates. Mutual of Omaha accepts marijuana at non-smoker rates, and Foresters gives non-tobacco Preferred when it is legal in her state (vaping is tobacco rates there).",
+    "pts": 100,
+    "why": "Correct. The details, legal in her state and edibles rather than vaping, get her the better rate."
+   },
+   {
+    "t": "She does not need to mention it, since edibles are not smoking, the tobacco question only asks about cigarettes and cigars, and marijuana is fully legal in the state where she lives now.",
+    "pts": 0,
+    "why": "If the application asks, it must be answered honestly."
+   },
+   {
+    "t": "She will be declined at most carriers, since regular marijuana use counts as drug use on the health questions.",
+    "pts": 0,
+    "why": "Wrong. Marijuana use is accepted at the carriers that list it."
+   }
+  ]
+ },
+ {
+  "id": "p76",
+  "n": 76,
+  "max": 100,
+  "title": "Outside the Build Chart",
+  "cat": "Underwriting",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Denise, 64"
+   ],
+   [
+    "Build",
+    "5'4\", 265 lbs"
+   ],
+   [
+    "Health",
+    "Otherwise healthy. High blood pressure, controlled"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Denise is healthy apart from her weight, and she is self-conscious about it.",
+  "prompt": "What is the smart underwriting move per our guide?",
+  "options": [
+   {
+    "t": "Check her height and weight against each carrier's build chart first. If she falls outside most of them, Royal Neighbors and CVS do not use a build chart on our guide.",
+    "pts": 100,
+    "why": "Correct. Build rules out a healthy client more often than agents expect, and these two carriers skip the chart."
+   },
+   {
+    "t": "Go straight to guaranteed issue so she does not have to discuss her weight at all, since she is clearly self-conscious about it and the plan still covers a simple funeral.",
+    "pts": 20,
+    "why": "Kind in intent, but it gives a healthy client a waiting period she may not need."
+   },
+   {
+    "t": "Weight only matters for term insurance, so it will not affect a final expense plan for someone who is otherwise healthy.",
+    "pts": 10,
+    "why": "Most final expense carriers on our guide use a build chart."
+   },
+   {
+    "t": "Round her weight down a little to fit the chart, since a few pounds either way is within normal scale error anyway.",
+    "pts": 0,
+    "why": "Misrepresentation. It can void the policy."
+   }
+  ]
+ },
+ {
+  "id": "p77",
+  "n": 77,
+  "max": 100,
+  "title": "A-Fib and a Blood Thinner",
+  "cat": "Underwriting",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Harriet, 71, non-smoker"
+   ],
+   [
+    "Health",
+    "A-fib diagnosed 3 years ago. Takes a blood thinner every day"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Harriet is proud that her A-fib has been stable for years and expects to qualify anywhere.",
+  "prompt": "Which statement is accurate per our guide?",
+  "options": [
+   {
+    "t": "Mutual of Omaha Living Promise with a full benefit from day one, since her A-fib was diagnosed more than 2 years ago, has been stable ever since, and Living Promise accepts A-fib over 2 years.",
+    "pts": 25,
+    "why": "Living Promise accepts A-fib over 2 years, but declines blood thinners."
+   },
+   {
+    "t": "Have her ask her doctor about stopping the blood thinner before she applies, so she can qualify with more carriers.",
+    "pts": 0,
+    "why": "Never steer medical decisions for underwriting. It is unsafe and unethical."
+   },
+   {
+    "t": "Mutual of Omaha Living Promise would decline her for the blood thinner, but Americo, Royal Neighbors and CVS accept A-fib, and AIG SIWL lists A-fib on a daily blood thinner as level.",
+    "pts": 100,
+    "why": "Correct. The medication, not just the diagnosis, decides the carrier."
+   },
+   {
+    "t": "A-fib is a heart rhythm condition, so she should expect graded coverage with a waiting period at every carrier on our guide.",
+    "pts": 10,
+    "why": "Not per our guide. Several carriers accept her."
+   }
+  ]
+ },
+ {
+  "id": "p78",
+  "n": 78,
+  "max": 100,
+  "title": "Dialysis Three Days a Week",
+  "cat": "Underwriting",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Curtis, 69"
+   ],
+   [
+    "Health",
+    "Kidney dialysis for the past 2 years"
+   ],
+   [
+    "Wants",
+    "Something so his wife is not left with the funeral bill"
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Curtis has been turned down twice and says, \"Nobody takes dialysis patients.\"",
+  "prompt": "Which response is accurate per our guide?",
+  "options": [
+   {
+    "t": "He is right. Dialysis is a decline at every carrier on our guide, so the kindest thing is to be honest with him, not waste his time, and suggest he set money aside in savings instead.",
+    "pts": 15,
+    "why": "Not per our guide. There are two paths to check."
+   },
+   {
+    "t": "Mutual of Omaha Living Promise with a graded benefit, since his dialysis started more than a year ago.",
+    "pts": 10,
+    "why": "Living Promise declines dialysis."
+   },
+   {
+    "t": "Americo will accept him, since it accepts most kidney conditions, including chronic kidney disease.",
+    "pts": 0,
+    "why": "Americo declines dialysis."
+   },
+   {
+    "t": "Most carriers on our guide decline dialysis, but Transamerica FE Express accepts it after 12 months (Select on our guide), and Royal Neighbors has guaranteed issue.",
+    "pts": 100,
+    "why": "Correct. Knowing the exceptions can get coverage for someone who has already been turned down."
+   }
+  ]
+ },
+ {
+  "id": "p79",
+  "n": 79,
+  "max": 100,
+  "title": "Why Do You Need My Pill Bottles?",
+  "cat": "Underwriting",
+  "format": "text",
+  "minWords": 15,
+  "file": [
+   [
+    "Client",
+    "Beverly, 73"
+   ],
+   [
+    "What she said",
+    "\"Why do you need to see all my pill bottles? That feels a little personal.\""
+   ],
+   [
+    "Reference",
+    "NASB Master Underwriting guide"
+   ]
+  ],
+  "story": "Beverly is friendly but guarded. She hands you one bottle and keeps the rest in the bag.",
+  "prompt": "Write what you would say, in 2 to 5 sentences. Explain why the medications matter, in a way that earns her trust.",
+  "rubric": [
+   {
+    "label": "Acknowledges her feeling",
+    "keys": [
+     "understand",
+     "fair",
+     "personal",
+     "makes sense",
+     "good question",
+     "i get it"
+    ],
+    "pts": 20,
+    "tip": "Respect the concern before you explain."
+   },
+   {
+    "label": "Explains it helps find the right company or plan",
+    "keys": [
+     "right company",
+     "right carrier",
+     "right plan",
+     "best plan",
+     "best price",
+     "which company",
+     "match",
+     "qualify",
+     "best rate"
+    ],
+    "pts": 20,
+    "tip": "Show her how it helps her, not just the paperwork."
+   },
+   {
+    "label": "Explains that accurate answers protect the claim",
+    "keys": [
+     "claim",
+     "pay",
+     "protect",
+     "accurate",
+     "exact",
+     "honest",
+     "correct"
+    ],
+    "pts": 20,
+    "tip": "This is the most important reason, for her family."
+   },
+   {
+    "label": "Reassures her about privacy",
+    "keys": [
+     "private",
+     "confidential",
+     "only used",
+     "only for",
+     "stays between",
+     "nobody else"
+    ],
+    "pts": 20,
+    "tip": "People share more when they know where it goes."
+   },
+   {
+    "label": "Invites her to continue",
+    "keys": [
+     "?",
+     "would you",
+     "can we",
+     "shall we",
+     "is that okay",
+     "does that"
+    ],
+    "pts": 20,
+    "tip": "End with a question that brings her back in."
+   }
+  ],
+  "sample": "That is a fair question, and I understand it feels personal. Your medications help me match you with the right company, so you get the best plan and price you qualify for. They also make sure your answers are exact, which is what protects the claim for your family. It stays private and is only used for your application. Would it be okay if we went through them together?"
  }
 ]

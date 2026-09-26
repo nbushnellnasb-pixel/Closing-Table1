@@ -17,7 +17,7 @@
   html,body{height:100%}
   body{
     margin:0;background:radial-gradient(1400px 900px at 0% -20%,#15233d 0%,var(--bg) 60%);color:var(--ink);
-    font-family:var(--body);display:flex;flex-direction:column;min-height:100vh;padding:clamp(14px,2vw,28px);
+    font-family:var(--body);font-variant-numeric:lining-nums;display:flex;flex-direction:column;min-height:100vh;padding:clamp(14px,2vw,28px);
     overflow:hidden;
   }
   h1,h2,h3{margin:0}
@@ -42,7 +42,7 @@
   .who{min-width:0}
   .who b{display:block;font-size:clamp(14px,1.3vw,19px);font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .who span{display:block;color:var(--muted);font-size:clamp(10.5px,.9vw,13px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .metric{text-align:right;font-variant-numeric:tabular-nums}
+  .metric{text-align:right;font-variant-numeric:lining-nums tabular-nums}
   .metric b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(18px,2vw,30px);line-height:1}
   .metric span{color:var(--muted);font-size:clamp(9.5px,.8vw,12px);text-transform:uppercase;letter-spacing:.06em}
   .bar{grid-column:1/-1;height:5px;background:var(--line);border-radius:1px;overflow:hidden;margin-top:2px}
