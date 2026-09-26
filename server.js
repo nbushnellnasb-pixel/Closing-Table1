@@ -18,7 +18,9 @@ const PORT = +process.env.PORT || 3000;
 const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, 'data');
 const DB_FILE = path.join(DATA_DIR, 'db.json');
 const COOKIE = 'ct';
-const SESSION_DAYS = 30;
+const SESSION_DAYS = 365; /* the game doubles as an ongoing training library, so sessions stay signed in long-term */
+/* the puzzles pulled into the live Paragon Game Night event; everything else is the always-on training library */
+const GAME_NIGHT_IDS = new Set(['p01', 'p02', 'p03', 'p05', 'p11', 'p19', 'p25', 'p27']);
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 
 fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -205,7 +207,7 @@ function board() {
   });
   return {
     teams: db.teams.map(t => ({ id: t.id, name: t.name, leader: t.leader, order: t.order })),
-    puzzles: PUZZLES.map(p => ({ id: p.id, n: p.n, title: p.title, cat: p.cat, format: p.format, max: maxOf(p), open: db.puzzleState[p.id].open })),
+    puzzles: PUZZLES.map(p => ({ id: p.id, n: p.n, title: p.title, cat: p.cat, format: p.format, max: maxOf(p), open: db.puzzleState[p.id].open, gameNight: GAME_NIGHT_IDS.has(p.id) })),
     agents: Object.values(db.agents).map(a => Object.assign({ id: a.id, name: a.name, teamId: a.teamId, points: 0, done: 0, last: 0, per: {} }, per[a.id] || {}))
   };
 }
@@ -240,8 +242,12 @@ route('POST', '/api/login', async (req, res) => {
 });
 
 /* team code + name: no individually issued code needed. Joining a second time under
-   the same name on the same team signs back into the same agent, so a refreshed page
-   or a different device does not start a new score. */
+   the same name on the same team signs back into the same agent, so a refreshed page,
+   a different device, or coming back weeks later to add more score all resume the same
+   agent. A PIN keeps that resume safe: once an agent has one, only the matching PIN can
+   sign back in under that name, so a teammate typing the same name can't take over
+   someone else's progress. Agents created before this feature have no PIN yet; the first
+   time one is offered for that name, it is adopted rather than required retroactively. */
 route('POST', '/api/join', async (req, res) => {
   const ip = clientIp(req);
   if (tooMany(ip)) return send(res, 429, { error: 'Too many attempts. Wait a few minutes and try again.' });
@@ -251,13 +257,21 @@ route('POST', '/api/join', async (req, res) => {
   if (!team) { noteFail(ip); return send(res, 401, { error: 'That team code was not found. Check it with your host.' }); }
   const name = String(b.name || '').trim().slice(0, 60);
   if (!name) { noteFail(ip); return send(res, 400, { error: 'Enter your name.' }); }
-  noteOk(ip);
+  const pin = String(b.pin || '').replace(/\D/g, '').slice(0, 6);
   let agent = Object.values(db.agents).find(a => a.teamId === team.id && a.name.toLowerCase() === name.toLowerCase());
-  if (!agent) {
+  if (agent) {
+    if (agent.pin) {
+      if (!pin || !safeEq(pin, agent.pin)) { noteFail(ip); return send(res, 401, { error: 'That name already has a PIN set on this team. Enter the matching PIN, or join under a slightly different name.' }); }
+    } else if (pin) {
+      agent.pin = pin; save();
+    }
+  } else {
+    if (pin.length < 4) { noteFail(ip); return send(res, 400, { error: 'Choose a 4 to 6 digit PIN so this score stays yours when you come back.' }); }
     const id = 'a' + crypto.randomBytes(5).toString('hex');
-    agent = db.agents[id] = { id, name, teamId: team.id, code: newCode() };
+    agent = db.agents[id] = { id, name, teamId: team.id, code: newCode(), pin };
     save();
   }
+  noteOk(ip);
   const token = setCookie(req, res, { t: 'a', id: agent.id });
   send(res, 200, { agent: me(agent), token });
 });
@@ -427,7 +441,7 @@ const server = http.createServer(async (req, res) => {
     /* Only these two files are ever served as static pages. Everything else in this folder
        (puzzles.json, server.js, and so on) is deliberately not reachable by URL, so the
        repo can be a single flat folder with no subfolders required. */
-    const STATIC = { '/': ['index.html', '.html'], '/index.html': ['index.html', '.html'], '/embed.js': ['embed.js', '.js'] };
+    const STATIC = { '/': ['index.html', '.html'], '/index.html': ['index.html', '.html'], '/embed.js': ['embed.js', '.js'], '/tv.html': ['tv.html', '.html'] };
     const hit = STATIC[pathname];
     if (!hit) return send(res, 404, { error: 'Not found.' });
     fs.readFile(path.join(__dirname, hit[0]), (err, data) => {

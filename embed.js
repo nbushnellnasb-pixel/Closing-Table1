@@ -16,18 +16,18 @@ var TOKEN_KEY = 'closing-table-token-v1', token = null;
 try { token = localStorage.getItem(TOKEN_KEY); } catch(e){}
 function setToken(t){ token = t || null; try { if(t){ localStorage.setItem(TOKEN_KEY, t); } else { localStorage.removeItem(TOKEN_KEY); } } catch(e){} }
 function authHeaders(h){ h = h || {}; if(token){ h['Authorization'] = 'Bearer ' + token; } return h; }
- 
+
 var $ = function(s){ return root.querySelector(s); };
 var esc = function(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); };
 var FMT = {choice:'Multiple choice', multi:'Select all that apply', order:'Put in order', text:'Written answer', angle:'Build the angle'};
- 
+
 var S = {
   board:null, etag:null, me:null, admin:false, view:'board', mode:'teams', openTeam:null, q:'', showAll:false,
   openId:null, cur:null, drafts:{}, notice:null, submitting:false, loadErr:null, loginMode:'team',
   boardScope:'all', pool:null,
   host:{agents:null, teams:null, added:null, addedTeam:null, msg:'', confirm:null, q:''}
 };
- 
+
 function api(method, url, body){
   return fetch(API + url, {method:method, headers:authHeaders(body ? {'Content-Type':'application/json'} : {}), body:body ? JSON.stringify(body) : undefined})
     .then(function(r){
@@ -41,7 +41,7 @@ function words(s){ return String(s).trim().split(/\s+/).filter(Boolean).length; 
 function teamOf(id){ return S.board && S.board.teams.find(function(t){ return t.id === id; }); }
 function teamColor(t){ var o=(t&&t.order)||1; return o<=8 ? 'var(--t'+o+')' : 'var(--tmore)'; }
 function fmtN(n){ return Math.round(n).toLocaleString(); }
- 
+
 /* ---------- pools: game night, bonus, and category pools ---------- */
 var CAT_LABEL = {
   'Objections':'Objection Control', 'Process':'Proper Process', 'Building the case':'Building The Case',
@@ -78,7 +78,7 @@ function bonusTileHTML(gn, row){
     '<span class="bnote">' + bonus.items.length + ' more if you want to keep going. Bonus points count toward your all-time score, not the Game Night standings.</span>' +
     (bDone ? '<span class="chips"><span class="chip done">' + bDone + ' done</span></span>' : '') + '</button>';
 }
- 
+
 /* ---------- scoreboard maths ---------- */
 function scopedRow(a, idSet){
   if(!idSet){ return {id:a.id, name:a.name, teamId:a.teamId, points:a.points, done:a.done, per:a.per, last:a.last}; }
@@ -109,7 +109,7 @@ function stats(scope){
   ag.forEach(function(r, i){ r.rank = (i > 0 && ag[i-1].points === r.points) ? ag[i-1].rank : i + 1; });
   return {open:open, maxPer:maxPer, teams:teams, sorted:sorted, agents:ag, scopedPuzzles:scopedPuzzles};
 }
- 
+
 /* ---------- header / views ---------- */
 function renderHeader(){
   var tabs = [['board','Leaderboard'],['play','Play']];
@@ -138,7 +138,7 @@ function renderBanner(){
   b.innerHTML = S.loadErr ? '<p class="notice err" role="alert">' + esc(S.loadErr) + '</p>' : '';
   b.style.marginBottom = S.loadErr ? '20px' : '0';
 }
- 
+
 /* ---------- leaderboard ---------- */
 function renderBoard(){
   var el = $('#v-board');
@@ -156,7 +156,7 @@ function renderBoard(){
   else { headline = top.map(function(r){ return esc(r.t.name); }).join(' and ') + ' tied at ' + fmtN(top[0].avg); }
   var star = st.agents[0], starLine = star && star.points > 0
     ? '<p class="hint" style="margin-top:8px">Top agent: <b>' + esc(star.name) + '</b> (' + esc((teamOf(star.teamId) || {}).name || '') + ') with ' + fmtN(star.points) + ' points</p>' : '';
- 
+
   var h = '';
   if(hasGameNight){
     h += '<div class="seg" role="tablist" aria-label="Leaderboard scope"><button type="button" role="tab" aria-selected="' + (S.boardScope !== 'gamenight') + '" data-act="boardscope" data-s="all">All-time</button>' +
@@ -166,13 +166,13 @@ function renderBoard(){
     '<dl class="pulse"><div><dd>' + playing + ' of ' + b.agents.length + '</dd><dt>Agents playing</dt></div>' +
     '<div><dd>' + st.open.length + ' of ' + st.scopedPuzzles.length + '</dd><dt>Puzzles open</dt></div>' +
     '<div><dd>' + answersIn.toLocaleString() + '</dd><dt>Answers in</dt></div></dl></div>';
- 
+
   h += '<div class="board2col">' +
     '<div><h2 class="colhead">Team standings</h2>' + teamsHTML(st) + '</div>' +
     '<div><h2 class="colhead">Top agents</h2>' + topAgentsHTML(st, 8) +
       (st.agents.length > 8 ? '<p style="margin-top:10px"><button type="button" class="link" data-act="jumpagents">See every agent &amp; search &rarr;</button></p>' : '') +
     '</div></div>';
- 
+
   h += '<h2 class="sec">Puzzle by puzzle</h2><p class="hint">Each cell is the average score of the agents on that team who have answered, with how many have answered.</p>';
   h += '<div class="mwrap"><table class="matrix"><thead><tr><th class="pl" scope="col">Puzzle</th>' + b.teams.map(function(t){
     return '<th scope="col"><span class="sw" style="background:' + teamColor(t) + '"></span>' + esc(t.name) + '</th>';
@@ -188,11 +188,11 @@ function renderBoard(){
   });
   h += '</tbody><tfoot><tr><th scope="row" class="pl">Average per agent</th>' + st.teams.slice().sort(function(x, y){ return x.t.order - y.t.order; }).map(function(r){ return '<td>' + fmtN(r.avg) + '</td>'; }).join('') + '</tr></tfoot></table></div>';
   h += '<div class="scale"><span>0</span><i></i><span>100 points</span></div>';
- 
+
   h += '<h2 class="sec" id="ct-allagents">Every agent' + (S.boardScope === 'gamenight' ? ' &middot; Game Night' : '') + '</h2>' + agentsHTML(st);
   el.innerHTML = h;
 }
- 
+
 function teamsHTML(st){
   var h = '<ol class="standings">' + st.sorted.map(function(r){
     var pct = Math.min(100, r.avg / st.maxPer * 100), open = S.openTeam === r.t.id;
@@ -212,7 +212,7 @@ function teamsHTML(st){
   h += '<p class="legend-note">Teams are ranked by average points per agent, counting every agent on the roster, so teams of different sizes compare fairly and every agent who plays helps. Select a team to see its agents. The bar shows the average against the ' + fmtN(st.maxPer) + ' points available per agent in open puzzles.</p>';
   return h;
 }
- 
+
 function topAgentsHTML(st, limit){
   var list = st.agents.slice(0, limit || 8);
   if(!list.length){ return '<p class="hint" style="padding:16px 20px">No agents yet.</p>'; }
@@ -244,7 +244,7 @@ function agentRowsHTML(st){
 function agentsHTML(st){
   return '<div class="searchrow"><label for="q" class="sr">Search agents</label><input type="text" id="q" placeholder="Search by agent or team" value="' + esc(S.q) + '" autocomplete="off"></div><div id="alist">' + agentRowsHTML(st) + '</div>';
 }
- 
+
 /* ---------- play ---------- */
 function renderPlay(){
   var el = $('#v-play');
@@ -318,7 +318,7 @@ function renderPlay(){
   }
   el.innerHTML = h;
 }
- 
+
 function fileHTML(p){
   if(!p.file || !p.file.length){ return ''; }
   return '<dl class="file">' + p.file.map(function(f){ return '<div><dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd></div>'; }).join('') + '</dl>';
@@ -339,7 +339,7 @@ function canSubmit(p, d){
 function answerOf(p, d){
   return p.format === 'choice' ? d.sel : p.format === 'multi' ? d.sel : p.format === 'angle' ? d.g : p.format === 'order' ? d.order : d.text;
 }
- 
+
 function openPuzzle(id){
   S.openId = id; S.cur = null; S.notice = null; renderPlay(); mount.scrollIntoView({block:'start'});
   api('GET', '/api/puzzles/' + encodeURIComponent(id)).then(function(r){ if(S.openId === id){ S.cur = r; renderPuzzle(); } })
@@ -358,7 +358,7 @@ function renderPuzzle(){
   h += res ? resultHTML(p, res) : formHTML(p);
   el.innerHTML = h;
 }
- 
+
 function formHTML(p){
   var d = draftFor(p), h = '';
   if(p.format === 'choice'){
@@ -394,7 +394,7 @@ function formHTML(p){
   h += '<div class="submit"><button type="button" class="btn" id="sub" data-act="submit"' + (canSubmit(p, d) && !S.submitting ? '' : ' disabled') + '>' + (S.submitting ? 'Saving...' : 'Lock in answer') + '</button><span class="hint">Answers lock when you submit.</span></div>';
   return h;
 }
- 
+
 function tag(pts, neutral){ return '<span class="tag ' + (neutral ? '' : pts > 0 ? 'p' : pts < 0 ? 'n' : '') + '">' + (pts > 0 && !neutral ? '+' : '') + pts + ' pts</span>'; }
 function rubricHits(p, text){
   var low = String(text).toLowerCase();
@@ -459,7 +459,7 @@ function resultHTML(p, res){
     '<button type="button" class="btn ghost" data-act="back">' + (curPool ? 'Back to ' : '') + backLabel() + '</button><button type="button" class="btn ghost" data-act="view" data-v="board">See the leaderboard</button></div>';
   return h;
 }
- 
+
 function submit(){
   if(S.submitting || !S.cur || S.cur.result){ return; }
   var p = S.cur.puzzle, d = draftFor(p); if(!canSubmit(p, d)){ return; }
@@ -472,7 +472,7 @@ function submit(){
     S.notice = e.message; renderPuzzle();
   });
 }
- 
+
 /* ---------- host ---------- */
 function hostLoad(){
   return Promise.all([
@@ -497,10 +497,10 @@ function renderHost(){
   b.puzzles.forEach(function(p){ if(cats.indexOf(p.cat) === -1){ cats.push(p.cat); } });
   var h = '';
   if(S.host.msg){ h += '<p class="notice" role="status">' + esc(S.host.msg) + '</p>'; }
- 
+
   h += '<div class="card"><h2>Big-screen display</h2><p class="hint">A large, auto-updating standings screen for a projector or TV in the room. Nobody needs to sign in to view it.</p>' +
     '<div><a class="btn ghost" href="' + esc((API || '') + '/tv.html') + '" target="_blank" rel="noopener">Open big-screen display</a></div></div>';
- 
+
   /* agents first: it is the main job */
   h += '<div class="card"><h2>Add agents</h2><p class="hint">Type one agent per line. Add a comma and a team name to put a line on a different team, for example <b>Maria Lopez, Orange Team</b>. Each agent gets a personal code to sign in with.</p>' +
     '<div class="hostrow"><div><label for="nt">Default team</label><select id="nt">' + b.teams.map(function(t){ return '<option value="' + esc(t.id) + '">' + esc(t.name) + '</option>'; }).join('') + '</select></div></div>' +
@@ -515,7 +515,7 @@ function renderHost(){
     if(ad.problems.length){ h += '<p class="notice err" style="margin-top:8px">Not added: ' + ad.problems.map(esc).join('; ') + '</p>'; }
   }
   h += '</div>';
- 
+
   var q = S.host.q.trim().toLowerCase();
   var list = S.host.agents.slice().sort(function(x, y){ return (teamOf(x.teamId) || {order:9}).order - (teamOf(y.teamId) || {order:9}).order || x.name.localeCompare(y.name); })
     .filter(function(a){ return !q || a.name.toLowerCase().indexOf(q) !== -1 || a.code.toLowerCase().indexOf(q) !== -1; });
@@ -532,14 +532,14 @@ function renderHost(){
         (confR ? '<button type="button" class="btn small" data-act="clr2" data-id="' + esc(a.id) + '">Clear their scores?</button>' : '<button type="button" class="btn ghost small" data-act="clr1" data-id="' + esc(a.id) + '">Clear scores</button>') + ' ' +
         (conf ? '<button type="button" class="btn small" data-act="del2" data-id="' + esc(a.id) + '">Remove for good?</button>' : '<button type="button" class="btn ghost small" data-act="del1" data-id="' + esc(a.id) + '">Remove</button>') + '</td></tr>';
     }).join('') : '<tr><td colspan="4">No agents yet. Add some above.</td></tr>') + '</tbody></table></div></div>';
- 
+
   h += '<div class="card"><h2>Puzzle release</h2><p class="hint">Every agent gets the same puzzles. Open puzzles can be played now. Open or close a whole skill at once, or one puzzle at a time.</p><div class="catbar">' +
     '<button type="button" class="btn ghost small" data-act="cat" data-cat="*">All puzzles (' + b.puzzles.filter(function(p){ return p.open; }).length + '/' + b.puzzles.length + ' open)</button>' +
     cats.map(function(c){ var ps = b.puzzles.filter(function(p){ return p.cat === c; }); return '<button type="button" class="btn ghost small" data-act="cat" data-cat="' + esc(c) + '">' + esc(c) + ' (' + ps.filter(function(p){ return p.open; }).length + '/' + ps.length + ')</button>'; }).join('') + '</div><div>' +
     b.puzzles.map(function(p){
       return '<label class="switch"><input type="checkbox" data-act="toggle-open" data-id="' + esc(p.id) + '"' + (p.open ? ' checked' : '') + '><span><b>Puzzle ' + p.n + '</b> &middot; ' + esc(p.title) + ' <span class="hint">(' + esc(p.cat) + ', ' + FMT[p.format] + ')</span></span></label>';
     }).join('') + '</div></div>';
- 
+
   var hteams = (S.host.teams || b.teams).slice().sort(function(x, y){ return x.order - y.order; });
   h += '<div class="card"><h2>Teams (' + hteams.length + (hteams.length > 8 ? ' &middot; only the first 8 get their own color' : '') + ')</h2>' +
     '<p class="hint">Each team has its own join code. Agents can enter it with their name to join, without needing a personal code from you first (see Sign in on the Play tab).</p>' +
@@ -562,7 +562,7 @@ function renderHost(){
       '<div></div><button type="button" class="btn" data-act="addteam">Add team</button></div>' +
     (S.host.addedTeam ? '<p class="notice" style="margin-top:8px">Added ' + esc(S.host.addedTeam.name) + '. Team code: <b class="codecell">' + esc(S.host.addedTeam.joinCode) + '</b></p>' : '') +
   '</div>';
- 
+
   var n = b.agents.reduce(function(a, x){ return a + x.done; }, 0);
   h += '<div class="card"><h2>Scores</h2><p class="hint">' + n + ' answers are recorded. Clearing scores lets every agent replay every puzzle.</p><div>' +
     (S.host.confirm === 'reset' ? '<button type="button" class="btn" data-act="reset2">Yes, delete ' + n + ' answers</button> <button type="button" class="btn ghost" data-act="cancel">Cancel</button>' : '<button type="button" class="btn ghost" data-act="reset1"' + (n ? '' : ' disabled') + '>Clear all scores</button>') + '</div></div>';
@@ -577,7 +577,7 @@ function hostCat(cat){
   var target = !ps.every(function(p){ return p.open; });
   api('POST', '/api/admin/puzzles/open', {cat:cat, open:target}).then(function(){ return hostDone(''); }).catch(function(e){ S.host.msg = e.message; renderHost(); });
 }
- 
+
 /* ---------- events ---------- */
 root.addEventListener('click', function(e){
   var b = e.target.closest('[data-act]'); if(!b || b.disabled || b.tagName === 'SELECT' || b.tagName === 'INPUT'){ return; }
@@ -693,7 +693,7 @@ root.addEventListener('submit', function(e){
       .catch(function(x){ er2.textContent = x.message; });
   }
 });
- 
+
 /* ---------- data ---------- */
 function fetchBoard(force){
   return fetch(API + '/api/state', {headers:(!force && S.etag) ? {'If-None-Match':S.etag} : {}}).then(function(r){
@@ -717,4 +717,3 @@ function start(){
 }
 start();
 })();
- 

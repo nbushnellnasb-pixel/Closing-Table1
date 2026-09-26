@@ -672,6 +672,11 @@
       "why": "Honest disclosure of the tradeoff. It builds trust and avoids a claim-time surprise."
      },
      {
+      "t": "We work with a range of carriers, and some of them accept conditions like diabetes and COPD every day. That is exactly why it matters to work with an agent who knows how to underwrite the case and shop it across enough companies to get him qualified for the best plan available at his age.",
+      "pts": 18,
+      "why": "Reframes being declined once as a single company's answer, not the industry's, and positions you as the underwriting expert who finds the fit."
+     },
+     {
       "t": "The price is based on age, so applying at 57 costs less than waiting.",
       "pts": 10,
       "why": "True, but secondary."
@@ -3117,5 +3122,1678 @@
    }
   ],
   "id": "p26"
+ },
+ {
+  "id": "p27",
+  "n": 27,
+  "max": 100,
+  "title": "The First Knock",
+  "cat": "Door Knocking",
+  "format": "multi",
+  "file": [
+   [
+    "Setting",
+    "Suburban neighborhood, referred lead list plus cold doors"
+   ],
+   [
+    "Time",
+    "Saturday, 10 a.m."
+   ],
+   [
+    "Goal",
+    "A warm first impression that earns 60 more seconds"
+   ]
+  ],
+  "story": "You are about to knock on a door you have never visited. The first ten seconds decide whether they open it wider or close it.",
+  "prompt": "Select every practice that earns a good first impression. Practices that pressure, block, or mislead cost points.",
+  "options": [
+   {
+    "t": "Stand slightly to the side of the door, not blocking the peephole or the stoop.",
+    "pts": 20,
+    "why": "Reduces how threatening the approach feels, before you've said a word."
+   },
+   {
+    "t": "Smile, make eye contact, and say your name and company before anything else.",
+    "pts": 20,
+    "why": "A clear, honest opener builds trust in the first few seconds."
+   },
+   {
+    "t": "State the reason for the visit in one short sentence before asking for their time.",
+    "pts": 20,
+    "why": "Respects their time and avoids the feeling of being ambushed."
+   },
+   {
+    "t": "Hold your ID or a flyer where they can see it as the door opens.",
+    "pts": 20,
+    "why": "Visible identification lowers suspicion immediately."
+   },
+   {
+    "t": "Ask a genuine, low-pressure question that invites a yes or no, like whether they have a moment.",
+    "pts": 20,
+    "why": "Gives them control over the interaction instead of assuming it."
+   },
+   {
+    "t": "Step inside if they hesitate at the door, since it is easier to talk that way.",
+    "pts": -20,
+    "why": "Pressuring your way past a hesitation damages trust immediately and can be inappropriate."
+   },
+   {
+    "t": "Say you are \"just doing a survey\" to get them talking, then pivot to the pitch.",
+    "pts": -20,
+    "why": "A misleading opener. Honesty from the first sentence matters more than a clever hook."
+   },
+   {
+    "t": "Keep talking past the point where they say they are not interested.",
+    "pts": -15,
+    "why": "Disrespects a clear no and burns the door for good."
+   }
+  ]
+ },
+ {
+  "id": "p28",
+  "n": 28,
+  "max": 100,
+  "title": "Not Interested",
+  "cat": "Door Knocking",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Man in his 60s, opens the door briefly"
+   ],
+   [
+    "Response",
+    "\"Not interested,\" starts easing the door shut"
+   ],
+   [
+    "Context",
+    "First knock, no prior relationship"
+   ]
+  ],
+  "story": "He says \"not interested\" almost before you finish your name, and starts easing the door shut.",
+  "prompt": "What do you say in the two or three seconds you have left?",
+  "options": [
+   {
+    "t": "\"Wait, you haven't even heard what I'm offering yet!\"",
+    "pts": -10,
+    "why": "Pushes past a clear no, which usually feels like pressure rather than persistence."
+   },
+   {
+    "t": "\"Everyone says that at first, just give me two minutes.\"",
+    "pts": 10,
+    "why": "A step better than arguing, but it still resists the no instead of respecting it."
+   },
+   {
+    "t": "\"Totally understand — I'll leave a card in case that changes. Take care.\"",
+    "pts": 100,
+    "why": "Respects the no immediately, leaves a low-pressure way back in, and protects the relationship for a future visit or referral."
+   },
+   {
+    "t": "Say \"okay\" and walk away without a word.",
+    "pts": 30,
+    "why": "Respects the no, but leaves nothing behind for later."
+   }
+  ]
+ },
+ {
+  "id": "p29",
+  "n": 29,
+  "max": 100,
+  "title": "Working the Block",
+  "cat": "Door Knocking",
+  "format": "order",
+  "file": [
+   [
+    "Assignment",
+    "A list of 20 addresses for a Saturday route"
+   ],
+   [
+    "Team",
+    "Working alone, reporting to a team leader that evening"
+   ]
+  ],
+  "story": "Good door-knocking days follow the same shape, whether the first ten doors go well or not.",
+  "prompt": "Put these five parts of a knocking session in the order you would run them.",
+  "steps": [
+   {
+    "id": "s1",
+    "t": "Review the route and whatever you know about each address before the first knock",
+    "pos": 1,
+    "why": "Preparing ahead avoids wasted time and awkward blank starts."
+   },
+   {
+    "id": "s2",
+    "t": "Knock, introduce yourself, and state your reason for the visit",
+    "pos": 2,
+    "why": "The actual contact — the reason for the whole route."
+   },
+   {
+    "id": "s3",
+    "t": "Log the outcome of every door, answered or not, right after you leave it",
+    "pos": 3,
+    "why": "Memory fades fast across twenty doors; a log is what makes follow-up possible."
+   },
+   {
+    "id": "s4",
+    "t": "Ask any interested prospect for a good time to follow up, or for someone else nearby worth visiting",
+    "pos": 4,
+    "why": "Turns one good knock into the next lead."
+   },
+   {
+    "id": "s5",
+    "t": "Debrief with your team leader that evening on what worked and what did not",
+    "pos": 5,
+    "why": "Closes the loop and improves the next route."
+   }
+  ]
+ },
+ {
+  "id": "p30",
+  "n": 30,
+  "max": 100,
+  "title": "No Soliciting Sign",
+  "cat": "Door Knocking",
+  "format": "choice",
+  "file": [
+   [
+    "House",
+    "Posted \"No Soliciting\" sign by the door"
+   ],
+   [
+    "List",
+    "This address mailed back a card asking for information"
+   ]
+  ],
+  "story": "The house has a no-soliciting sign, but it is also on your list because the resident mailed back a card asking for information.",
+  "prompt": "What do you do?",
+  "options": [
+   {
+    "t": "Knock anyway — the mailer response means they want to talk.",
+    "pts": -10,
+    "why": "A posted sign generally means no door visits, even from someone who responded to a mailer through a different channel."
+   },
+   {
+    "t": "Skip the knock and reach out by phone or mail instead, since they invited contact but the sign asks you not to come to the door.",
+    "pts": 100,
+    "why": "Respects the posted sign while still honoring the interest they expressed through a channel they did not restrict."
+   },
+   {
+    "t": "Knock, reasoning that you were invited by the mailer, so it is not really soliciting.",
+    "pts": -10,
+    "why": "Rationalizing around a clearly posted rule."
+   },
+   {
+    "t": "Skip the address entirely and remove it from every list.",
+    "pts": 40,
+    "why": "Safe, but a warm mailer response is a real lead going to waste when another respectful contact method is easy."
+   }
+  ]
+ },
+ {
+  "id": "p31",
+  "n": 31,
+  "max": 100,
+  "title": "The Skeptical Neighbor",
+  "cat": "Door Knocking",
+  "format": "text",
+  "minWords": 12,
+  "file": [
+   [
+    "Prospect",
+    "Woman, early 60s, arms crossed"
+   ],
+   [
+    "Question",
+    "\"Is this some kind of scam?\""
+   ],
+   [
+    "Context",
+    "She recently heard news about a scam targeting seniors"
+   ]
+  ],
+  "story": "You have barely introduced yourself when she asks, flatly, if this is a scam.",
+  "prompt": "Write what you would say next, in 2 to 4 sentences.",
+  "rubric": [
+   {
+    "label": "Takes the concern seriously, not defensively",
+    "keys": [
+     "understand",
+     "hear",
+     "fair",
+     "good question",
+     "makes sense",
+     "careful",
+     "smart to ask"
+    ],
+    "pts": 20,
+    "tip": "Meet the question with respect, not defensiveness — she has a real reason to ask."
+   },
+   {
+    "label": "Offers a concrete way to verify you",
+    "keys": [
+     "license",
+     "id",
+     "card",
+     "company",
+     "look up",
+     "verify",
+     "website",
+     "check"
+    ],
+    "pts": 20,
+    "tip": "Give her something she can actually check, not just your word."
+   },
+   {
+    "label": "States your name and company plainly",
+    "keys": [
+     "my name",
+     "i'm with",
+     "i work for",
+     "agency",
+     "company"
+    ],
+    "pts": 20,
+    "tip": "Plain, upfront identification is the opposite of how a scam usually opens."
+   },
+   {
+    "label": "Gives her an easy out",
+    "keys": [
+     "no pressure",
+     "up to you",
+     "your choice",
+     "only if",
+     "happy to leave",
+     "take your time"
+    ],
+    "pts": 20,
+    "tip": "Show her the door is easy to close if she wants — pressure would confirm her suspicion."
+   },
+   {
+    "label": "Invites a small next step rather than a big ask",
+    "keys": [
+     "quick",
+     "couple minutes",
+     "just a few",
+     "brief",
+     "one question",
+     "short"
+    ],
+    "pts": 20,
+    "tip": "Ask for something small first; a big ask right after 'is this a scam' rarely lands."
+   }
+  ],
+  "sample": "That's a completely fair question, especially with what's been in the news. My name is on this card and I'm with Paragon — you're welcome to look up the company or ask for my license number before we talk further. I'm not asking for any money or account information today, just a couple of minutes to see if this is even something you'd want. If not, no pressure at all, and I'll leave you my card."
+ },
+ {
+  "id": "p32",
+  "n": 32,
+  "max": 100,
+  "title": "Setting the Appointment by Phone",
+  "cat": "Process",
+  "format": "order",
+  "file": [
+   [
+    "Situation",
+    "Calling a lead who requested information by mail"
+   ],
+   [
+    "Goal",
+    "Book a specific day and time for an in-home visit"
+   ]
+  ],
+  "story": "A good appointment-setting call follows a simple shape, whether the lead is warm or lukewarm.",
+  "prompt": "Put these five parts of the call in order.",
+  "steps": [
+   {
+    "id": "s1",
+    "t": "Introduce yourself and confirm you're speaking with the person who requested information",
+    "pos": 1,
+    "why": "Confirms you have the right person before anything else."
+   },
+   {
+    "id": "s2",
+    "t": "Remind them why they're hearing from you, tied to what they asked for",
+    "pos": 2,
+    "why": "Reduces the 'who is this' reaction and grounds the call."
+   },
+   {
+    "id": "s3",
+    "t": "Ask a couple of quick qualifying questions, like who else is involved in the decision",
+    "pos": 3,
+    "why": "Makes sure the right people will actually be at the table."
+   },
+   {
+    "id": "s4",
+    "t": "Offer two specific times and let them choose one",
+    "pos": 4,
+    "why": "Two concrete options move faster to a decision than an open-ended 'when works for you.'"
+   },
+   {
+    "id": "s5",
+    "t": "Confirm the address, what to have ready, and repeat the day and time before hanging up",
+    "pos": 5,
+    "why": "Cuts down on no-shows and confusion on the day of."
+   }
+  ]
+ },
+ {
+  "id": "p33",
+  "n": 33,
+  "max": 100,
+  "title": "The No-Show",
+  "cat": "Process",
+  "format": "text",
+  "minWords": 12,
+  "file": [
+   [
+    "Appointment",
+    "Scheduled 2 p.m. today"
+   ],
+   [
+    "Result",
+    "No one answered the door; no call ahead"
+   ],
+   [
+    "History",
+    "First missed appointment with this lead"
+   ]
+  ],
+  "story": "You drove out for a 2 p.m. appointment and nobody answered. You're back in the car, phone in hand.",
+  "prompt": "Write the voicemail or text you would leave, in 2 to 4 sentences.",
+  "rubric": [
+   {
+    "label": "Stays friendly, not accusatory",
+    "keys": [
+     "no worries",
+     "totally fine",
+     "hope",
+     "understand",
+     "hope everything"
+    ],
+    "pts": 20,
+    "tip": "A missed appointment isn't a confrontation — keep the tone light."
+   },
+   {
+    "label": "States plainly that you stopped by",
+    "keys": [
+     "stopped by",
+     "came by",
+     "was at your",
+     "just left"
+    ],
+    "pts": 20,
+    "tip": "Simple, factual, no guilt attached."
+   },
+   {
+    "label": "Leaves the door open rather than writing them off",
+    "keys": [
+     "happy to",
+     "would love to",
+     "let's find",
+     "reschedule",
+     "another time"
+    ],
+    "pts": 20,
+    "tip": "One missed appointment is not the end of the lead."
+   },
+   {
+    "label": "Gives an easy way to reconnect",
+    "keys": [
+     "call me",
+     "text me",
+     "reach me",
+     "my number",
+     "give me a call"
+    ],
+    "pts": 20,
+    "tip": "Make the next step as easy as possible for them."
+   },
+   {
+    "label": "Suggests a specific next step rather than an open-ended one",
+    "keys": [
+     "how about",
+     "does tomorrow",
+     "what about",
+     "this week",
+     "let me know a time"
+    ],
+    "pts": 20,
+    "tip": "A concrete suggestion is easier to say yes to than 'whenever.'"
+   }
+  ],
+  "sample": "Hi, it's Sam from Paragon — I stopped by around 2 for our appointment but must have missed you, no worries at all. I hope everything's okay. I'd love to find another time this week if you're still interested — just call or text whenever works and we'll get something on the books."
+ },
+ {
+  "id": "p34",
+  "n": 34,
+  "max": 100,
+  "title": "Staying Compliant at the Table",
+  "cat": "Process",
+  "format": "multi",
+  "file": [
+   [
+    "Setting",
+    "In-home appointment, presenting a final expense plan"
+   ],
+   [
+    "State rule",
+    "Written consent required before recording any conversation"
+   ]
+  ],
+  "story": "You're at the kitchen table with a couple, ready to present. A few habits separate a clean, professional appointment from one that invites a complaint later.",
+  "prompt": "Select every practice that belongs in a compliant, professional appointment.",
+  "options": [
+   {
+    "t": "Get clear consent before recording any part of the conversation, if you record at all.",
+    "pts": 25,
+    "why": "Required in many states, and simply respectful regardless."
+   },
+   {
+    "t": "Leave a copy of the application and any illustration with the client, not just a verbal summary.",
+    "pts": 25,
+    "why": "Gives them a real record of exactly what they agreed to."
+   },
+   {
+    "t": "Describe the benefit using only the terms that appear in the actual policy, not rounder or more generous language.",
+    "pts": 25,
+    "why": "Prevents a mismatch between what was said and what was sold."
+   },
+   {
+    "t": "Confirm the client understands the free-look period before they sign.",
+    "pts": 25,
+    "why": "They're entitled to know they can cancel without penalty in that window."
+   },
+   {
+    "t": "Tell them the rate is guaranteed never to change, even if the policy doesn't say that.",
+    "pts": -25,
+    "why": "Misrepresents the product, whatever the intention."
+   },
+   {
+    "t": "Rush past the health questions if they seem uncomfortable, and fill in your best guess.",
+    "pts": -25,
+    "why": "Inaccurate answers can void the policy later and hurt the client badly."
+   },
+   {
+    "t": "Skip the free-look explanation since most people never use it anyway.",
+    "pts": -20,
+    "why": "Rarely used is not the same as not required — it's still a disclosure they're owed."
+   }
+  ]
+ },
+ {
+  "id": "p35",
+  "n": 35,
+  "max": 100,
+  "title": "Reading the Room",
+  "cat": "Process",
+  "format": "choice",
+  "file": [
+   [
+    "Moment",
+    "Midway through presenting numbers"
+   ],
+   [
+    "Signal",
+    "Wife goes quiet and starts looking at her phone; husband keeps nodding"
+   ]
+  ],
+  "story": "You're midway through your presentation. The husband keeps nodding along, but his wife has gone quiet and is now looking at her phone.",
+  "prompt": "What's the best next move?",
+  "options": [
+   {
+    "t": "Keep presenting to the husband since he's clearly engaged.",
+    "pts": -10,
+    "why": "Ignoring a disengaged decision-maker risks losing the sale at the finish line."
+   },
+   {
+    "t": "Pause and gently bring her back in, like asking what questions are on her mind so far.",
+    "pts": 100,
+    "why": "Re-engages the quieter decision-maker before momentum is lost, without calling her out."
+   },
+   {
+    "t": "Ask if now is a bad time and offer to reschedule entirely.",
+    "pts": 30,
+    "why": "A safe fallback, but often unnecessary if a small check-in would re-engage her instead."
+   },
+   {
+    "t": "Speed up to get to the close before she checks out completely.",
+    "pts": -15,
+    "why": "Rushing past a disengaged spouse usually backfires right at signature time."
+   }
+  ]
+ },
+ {
+  "id": "p36",
+  "n": 36,
+  "max": 100,
+  "title": "The Guarded Prospect",
+  "cat": "Discovery",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Woman, 68, answers questions with one word"
+   ],
+   [
+    "Ten minutes in",
+    "Still hasn't shared anything personal"
+   ]
+  ],
+  "story": "Ten minutes into the visit, she's polite but closed off — short answers, no elaboration.",
+  "prompt": "Which question is most likely to open her up?",
+  "options": [
+   {
+    "t": "\"What is it you're worried might happen if something happened to you?\"",
+    "pts": -5,
+    "why": "Fear-first framing, before rapport is earned, tends to close a guarded person further."
+   },
+   {
+    "t": "\"Tell me about your family — who's around, and who do you lean on?\"",
+    "pts": 100,
+    "why": "An easy, low-pressure topic most people open up about, and it surfaces who actually matters to the plan."
+   },
+   {
+    "t": "\"What's your budget for something like this?\"",
+    "pts": -15,
+    "why": "Budget-first, before any need is established, and unlikely to loosen up someone already guarded."
+   },
+   {
+    "t": "\"Do you already have life insurance?\"",
+    "pts": 30,
+    "why": "A fair fact-finding question, but closed-ended and less likely to open her up than a warmer topic."
+   }
+  ]
+ },
+ {
+  "id": "p37",
+  "n": 37,
+  "max": 100,
+  "title": "Beneficiary Intentions",
+  "cat": "Discovery",
+  "format": "multi",
+  "file": [
+   [
+    "Clients",
+    "Retired couple, two children, one estranged"
+   ],
+   [
+    "Stage",
+    "Discussing who the policy would be for"
+   ]
+  ],
+  "story": "They've agreed they want coverage. Now you're figuring out who it's really for, and what they want it to do.",
+  "prompt": "Select every question worth asking about beneficiaries and intent.",
+  "options": [
+   {
+    "t": "Who would you want to receive this, and are they able to handle the money responsibly?",
+    "pts": 25,
+    "why": "Gets at both intent and practicality in one question."
+   },
+   {
+    "t": "Is there anyone you'd specifically want to leave out, and is there anything I should know about how we set that up?",
+    "pts": 25,
+    "why": "Surfaces a sensitive but important detail directly and respectfully."
+   },
+   {
+    "t": "Would you want this to go to one person to divide, or split by percentage between people?",
+    "pts": 25,
+    "why": "A concrete structural question that affects how the policy is written."
+   },
+   {
+    "t": "Is there a charity or cause that matters enough to you to include?",
+    "pts": 25,
+    "why": "Opens a real option many clients don't realize they have."
+   },
+   {
+    "t": "Wouldn't it just be easier to leave it all to whichever kid calls you the most?",
+    "pts": -20,
+    "why": "Flippant, and not a genuine discovery question."
+   },
+   {
+    "t": "How much money do your kids make?",
+    "pts": -15,
+    "why": "Irrelevant and intrusive — it's not about their intent for the money."
+   }
+  ]
+ },
+ {
+  "id": "p38",
+  "n": 38,
+  "max": 100,
+  "title": "Health and Budget Together",
+  "cat": "Discovery",
+  "format": "order",
+  "file": [
+   [
+    "Stage",
+    "First fifteen minutes of a new appointment"
+   ]
+  ],
+  "story": "A good discovery flow builds trust before it asks for numbers.",
+  "prompt": "Put these five discovery topics in the order you would raise them.",
+  "steps": [
+   {
+    "id": "s1",
+    "t": "Build rapport and confirm what they're hoping to get out of the visit",
+    "pos": 1,
+    "why": "Sets the stage and lowers guard before anything sensitive comes up."
+   },
+   {
+    "id": "s2",
+    "t": "Ask about their wishes for arrangements and who would handle things",
+    "pos": 2,
+    "why": "Opens the real topic gently, before any numbers are on the table."
+   },
+   {
+    "id": "s3",
+    "t": "Find out what coverage or savings already exists",
+    "pos": 3,
+    "why": "You need the current picture before you can find the actual gap."
+   },
+   {
+    "id": "s4",
+    "t": "Ask the health questions that affect what they qualify for",
+    "pos": 4,
+    "why": "Needed before anything can be accurately priced."
+   },
+   {
+    "id": "s5",
+    "t": "Ask about monthly budget, now that the need and the options are clear",
+    "pos": 5,
+    "why": "Budget lands better once they understand what it's actually buying."
+   }
+  ]
+ },
+ {
+  "id": "p39",
+  "n": 39,
+  "max": 100,
+  "title": "What They're Not Saying",
+  "cat": "Discovery",
+  "format": "text",
+  "minWords": 12,
+  "file": [
+   [
+    "Client",
+    "Man, 66, says money is \"tight but fine\""
+   ],
+   [
+    "Signal",
+    "Hesitates, then changes the subject when asked about savings"
+   ]
+  ],
+  "story": "He says money is \"tight but fine\" and quickly moves on when you ask about savings. Something in how he said it made you want to follow up, gently.",
+  "prompt": "Write what you would say next, in 2 to 4 sentences.",
+  "rubric": [
+   {
+    "label": "Notices the hesitation without calling it out bluntly",
+    "keys": [
+     "noticed",
+     "seemed",
+     "sense",
+     "sounds like",
+     "picking up"
+    ],
+    "pts": 20,
+    "tip": "Name what you noticed gently, not as an accusation."
+   },
+   {
+    "label": "Normalizes the topic so it feels safe",
+    "keys": [
+     "a lot of folks",
+     "common",
+     "normal",
+     "many people",
+     "totally normal"
+    ],
+    "pts": 20,
+    "tip": "Money questions feel less exposing when framed as universal."
+   },
+   {
+    "label": "Reassures there's no judgment",
+    "keys": [
+     "no judgment",
+     "not here to",
+     "just want to understand",
+     "not trying to pry"
+    ],
+    "pts": 20,
+    "tip": "Say plainly that you're not evaluating him."
+   },
+   {
+    "label": "Keeps the question open, not a number demand",
+    "keys": [
+     "how",
+     "what's",
+     "tell me",
+     "walk me through",
+     "help me understand"
+    ],
+    "pts": 20,
+    "tip": "Ask about the shape of it, not a hard figure."
+   },
+   {
+    "label": "Ties it back to finding the right fit, not qualifying him for a sale",
+    "keys": [
+     "right fit",
+     "what works",
+     "fits your",
+     "make sense for you",
+     "comfortable"
+    ],
+    "pts": 20,
+    "tip": "Frame the question as being in service of him, not your quota."
+   }
+  ],
+  "sample": "I noticed that one shifted a little fast — no judgment at all, a lot of folks feel the same way about money questions. I'm not trying to pin down an exact number, just trying to understand what feels comfortable so whatever we land on actually fits. Can you tell me a bit more about what 'tight' looks like month to month?"
+ },
+ {
+  "id": "p40",
+  "n": 40,
+  "max": 100,
+  "title": "Graded vs Level",
+  "cat": "Product knowledge",
+  "format": "multi",
+  "file": [
+   [
+    "Topic",
+    "Explaining benefit types to a new client"
+   ],
+   [
+    "Client health",
+    "Some health conditions; might not qualify for full day-one coverage"
+   ]
+  ],
+  "story": "A client asks you to explain the difference between the two plans on the table before deciding.",
+  "prompt": "Select every statement that is true about graded vs. level benefit plans.",
+  "options": [
+   {
+    "t": "A level benefit plan pays the full face amount from day one, assuming the application is approved.",
+    "pts": 25,
+    "why": "Correctly describes a level benefit plan."
+   },
+   {
+    "t": "A graded benefit plan typically pays a reduced amount (often a return of premium plus interest) if death occurs from non-accidental causes in the first two to three years.",
+    "pts": 25,
+    "why": "Correctly describes the standard graded structure."
+   },
+   {
+    "t": "Graded benefit plans exist so people who might not qualify for a level plan due to health can still get coverage.",
+    "pts": 25,
+    "why": "Correctly states the purpose of the graded option."
+   },
+   {
+    "t": "After the graded period ends, the policy pays the full face amount for any covered cause of death, the same as a level plan.",
+    "pts": 25,
+    "why": "Correctly describes what happens once the graded period is over."
+   },
+   {
+    "t": "A graded benefit plan always costs less than a level plan for the same face amount.",
+    "pts": -20,
+    "why": "Not reliably true — it's a health-based tradeoff, not simply a discount."
+   },
+   {
+    "t": "Accidental death is excluded entirely during the graded period, with no benefit at all.",
+    "pts": -15,
+    "why": "Usually incorrect — accidental death is typically still paid in full even during the graded period."
+   }
+  ]
+ },
+ {
+  "id": "p41",
+  "n": 41,
+  "max": 100,
+  "title": "Riders That Matter",
+  "cat": "Product knowledge",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Woman, 59, drives for a rideshare service most weekends"
+   ],
+   [
+    "Base plan",
+    "$15,000 whole life, level benefit"
+   ]
+  ],
+  "story": "She wants to know if there's anything that would pay more if something happened to her while driving for work.",
+  "prompt": "Which addition best fits what she's asking for?",
+  "options": [
+   {
+    "t": "An accidental death benefit rider, which pays an additional amount if death results from an accident.",
+    "pts": 100,
+    "why": "Directly matches her stated concern about work-related driving risk."
+   },
+   {
+    "t": "A return of premium rider, which refunds premiums paid if she outlives the policy term.",
+    "pts": 10,
+    "why": "Doesn't address her stated concern about accidental death at all."
+   },
+   {
+    "t": "Raising the base face amount instead of adding a rider.",
+    "pts": 30,
+    "why": "Would help generally, but doesn't specifically target the accidental scenario she described, and likely costs more for the same protection there."
+   },
+   {
+    "t": "A waiver of premium rider, which waives payments if she becomes disabled.",
+    "pts": 15,
+    "why": "A useful rider in general, but not what she actually asked about."
+   }
+  ]
+ },
+ {
+  "id": "p42",
+  "n": 42,
+  "max": 100,
+  "title": "Underwriting Class",
+  "cat": "Product knowledge",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Man, 64"
+   ],
+   [
+    "Health answers",
+    "Type 2 diabetes, diet-controlled, no complications. No heart, cancer, or stroke history. No tobacco."
+   ],
+   [
+    "Options on the table",
+    "Level benefit standard class, level benefit modified class, graded benefit"
+   ]
+  ],
+  "story": "He answers the health questions clearly: diet-controlled diabetes with no complications, and nothing else.",
+  "prompt": "Based only on what's known so far, which class does he most likely fit, pending formal underwriting?",
+  "options": [
+   {
+    "t": "Graded benefit, since diabetes appears on the health questions at all.",
+    "pts": 15,
+    "why": "Jumps to the most restrictive option without weighing severity — well-controlled diabetes with no complications often still qualifies for a level plan."
+   },
+   {
+    "t": "Level benefit, likely at a standard or modified rate depending on the carrier's specific guidelines for diet-controlled diabetes.",
+    "pts": 100,
+    "why": "Matches the typical underwriting pattern, where well-managed, uncomplicated diabetes often still qualifies for day-one coverage, possibly at a different rate class."
+   },
+   {
+    "t": "Level benefit at the best possible rate, no different from someone with no health conditions.",
+    "pts": 30,
+    "why": "Optimistic — diabetes usually affects rate class even when well-controlled."
+   },
+   {
+    "t": "It's impossible to say anything without running the full application.",
+    "pts": 20,
+    "why": "The final word always comes from underwriting, but agents are expected to set honest expectations based on typical patterns."
+   }
+  ]
+ },
+ {
+  "id": "p43",
+  "n": 43,
+  "max": 100,
+  "title": "Explain It Simply",
+  "cat": "Product knowledge",
+  "format": "text",
+  "minWords": 15,
+  "file": [
+   [
+    "Client",
+    "Retired teacher, 67, comparing two quotes"
+   ],
+   [
+    "Confusion",
+    "Doesn't understand why one quote asks health questions and the other doesn't"
+   ]
+  ],
+  "story": "She has two quotes in front of her and asks, \"Why does this one ask about my health and the other one doesn't?\"",
+  "prompt": "Explain the difference in plain terms, in 2 to 5 sentences.",
+  "rubric": [
+   {
+    "label": "Names both plan types in plain language",
+    "keys": [
+     "simplified",
+     "guaranteed",
+     "health questions",
+     "no health questions",
+     "without questions"
+    ],
+    "pts": 20,
+    "tip": "Name the two paths clearly before explaining the tradeoff."
+   },
+   {
+    "label": "Explains the tradeoff (easier approval vs. cost or waiting period)",
+    "keys": [
+     "tradeoff",
+     "in exchange",
+     "because",
+     "reason",
+     "instead"
+    ],
+    "pts": 20,
+    "tip": "Every 'easier' option trades something — say what."
+   },
+   {
+    "label": "Mentions the graded or waiting period on the no-questions option",
+    "keys": [
+     "waiting period",
+     "graded",
+     "first two years",
+     "first few years",
+     "reduced"
+    ],
+    "pts": 20,
+    "tip": "This is the detail clients are most often surprised by later if it's skipped."
+   },
+   {
+    "label": "Avoids jargon, or defines it immediately if used",
+    "keys": [
+     "means",
+     "in other words",
+     "simply put",
+     "that means"
+    ],
+    "pts": 20,
+    "tip": "Translate any insurance term the moment you use it."
+   },
+   {
+    "label": "Connects it back to helping her choose, not just reciting facts",
+    "keys": [
+     "for you",
+     "which one fits",
+     "best for your",
+     "given your health",
+     "in your case"
+    ],
+    "pts": 20,
+    "tip": "End by applying it to her, not just the categories in general."
+   }
+  ],
+  "sample": "Simply put, one plan asks a few health questions and, if you qualify, pays the full amount starting day one. The other skips the health questions entirely, which makes it easier to get approved, but in exchange it usually only pays a partial benefit if something happens in the first two or three years. Since your health sounds strong, the one with questions is likely the better fit and probably costs less for more coverage — let's go through the questions together and see."
+ },
+ {
+  "id": "p44",
+  "n": 44,
+  "max": 100,
+  "title": "The Assumptive Close",
+  "cat": "Closing",
+  "format": "order",
+  "file": [
+   [
+    "Moment",
+    "Client has agreed coverage makes sense, hasn't said yes to a specific plan yet"
+   ]
+  ],
+  "story": "They've nodded along through the whole presentation and agreed they need something. Now it's time to move to paper.",
+  "prompt": "Put these five moves in the order you would make them.",
+  "steps": [
+   {
+    "id": "s1",
+    "t": "Summarize the plan they responded to best, in their own words",
+    "pos": 1,
+    "why": "Confirms you both agree on exactly what's being bought."
+   },
+   {
+    "id": "s2",
+    "t": "State the next step as already happening, like 'let's get your application started'",
+    "pos": 2,
+    "why": "Assumes the yes rather than re-asking for permission."
+   },
+   {
+    "id": "s3",
+    "t": "Hand them the pen or device and begin the first field together",
+    "pos": 3,
+    "why": "Momentum matters once the assumption has been made."
+   },
+   {
+    "id": "s4",
+    "t": "Address any last hesitation as it comes up, calmly and specifically",
+    "pos": 4,
+    "why": "A late objection is normal and doesn't mean starting over."
+   },
+   {
+    "id": "s5",
+    "t": "Confirm next steps after signing, like when the policy will arrive",
+    "pos": 5,
+    "why": "Closes the loop and reduces any buyer's remorse."
+   }
+  ]
+ },
+ {
+  "id": "p45",
+  "n": 45,
+  "max": 100,
+  "title": "Closing With Both Spouses",
+  "cat": "Closing",
+  "format": "multi",
+  "file": [
+   [
+    "Clients",
+    "Married couple, both present"
+   ],
+   [
+    "Signal",
+    "Husband ready to sign, wife hasn't said much"
+   ]
+  ],
+  "story": "He's ready to go. She's been quieter through the whole visit and hasn't clearly said yes or no.",
+  "prompt": "Select every practice that respects both decision-makers at the close.",
+  "options": [
+   {
+    "t": "Ask her directly, by name, how she's feeling about it before moving to paperwork.",
+    "pts": 25,
+    "why": "Gives the quieter decision-maker a real, direct opening."
+   },
+   {
+    "t": "Make sure both names are said and both are looking at the same numbers before asking for the decision.",
+    "pts": 25,
+    "why": "Keeps both of them equally informed at the moment of decision."
+   },
+   {
+    "t": "Address any concern she raises as seriously as his enthusiasm.",
+    "pts": 25,
+    "why": "Treats both perspectives as equally valid."
+   },
+   {
+    "t": "Confirm both of them, not just him, understand what happens next.",
+    "pts": 25,
+    "why": "Closes the loop for both decision-makers, not just the more vocal one."
+   },
+   {
+    "t": "Move forward with the application since one spouse already said yes.",
+    "pts": -25,
+    "why": "Risks a decision that doesn't hold, or a spouse who feels steamrolled."
+   },
+   {
+    "t": "Direct all your eye contact and questions to him since he's the one talking.",
+    "pts": -20,
+    "why": "Sidelines the quieter decision-maker at the exact moment she matters most."
+   }
+  ]
+ },
+ {
+  "id": "p46",
+  "n": 46,
+  "max": 100,
+  "title": "The Callback Close",
+  "cat": "Closing",
+  "format": "choice",
+  "file": [
+   [
+    "Last visit",
+    "She said \"let me think about it\" and asked for a callback in a week"
+   ],
+   [
+    "This call",
+    "One week later, scheduled callback"
+   ]
+  ],
+  "story": "A week ago she asked for time to think. You're calling back exactly when you said you would.",
+  "prompt": "How do you open the callback?",
+  "options": [
+   {
+    "t": "\"Hi, it's back from last week — have you had a chance to think it over? What questions came up?\"",
+    "pts": 100,
+    "why": "Follows through as promised, opens with a real question rather than a pitch, and invites whatever is actually on her mind."
+   },
+   {
+    "t": "\"Hi, just calling to see if you're ready to sign now.\"",
+    "pts": -10,
+    "why": "Skips past whatever she was actually thinking about and pushes straight to close."
+   },
+   {
+    "t": "\"Hi, I wanted to let you know the rates are going up soon, so now's the time.\"",
+    "pts": -15,
+    "why": "Manufactured urgency instead of following up on her actual concern."
+   },
+   {
+    "t": "\"Hi, just checking in — no pressure, call me whenever.\"",
+    "pts": 20,
+    "why": "Respectful, but passive — she asked for a specific callback and a real conversation, not just a soft touch."
+   }
+  ]
+ },
+ {
+  "id": "p47",
+  "n": 47,
+  "max": 100,
+  "title": "Building to Yes",
+  "cat": "Closing",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Diane, 61, single, no children"
+   ],
+   [
+    "Concern",
+    "Doesn't want to be a burden on her sister, her only close family"
+   ],
+   [
+    "Sticking point",
+    "Says she'll \"probably get around to it eventually\""
+   ]
+  ],
+  "story": "Diane has been engaged through the whole visit and agrees the numbers make sense. When you ask if she's ready to move forward, she says, \"I'll probably get around to it eventually.\"",
+  "prompt": "Build your close. Choose the strongest logical reasons, the strongest emotional reasons, and the best response to her hesitation.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts that make the strongest case on paper.",
+    "options": [
+     {
+      "t": "\"Eventually\" has no guaranteed date, and health or price can change before then.",
+      "pts": 20,
+      "why": "Names the real risk in waiting, without pressure."
+     },
+     {
+      "t": "She already agrees the plan fits — the only thing left to decide is timing, not whether.",
+      "pts": 20,
+      "why": "Names exactly where she stands, precisely."
+     },
+     {
+      "t": "Most people who say 'eventually' mean 'never.'",
+      "pts": -15,
+      "why": "Presumptuous and vaguely insulting."
+     },
+     {
+      "t": "The industry could raise rates next year.",
+      "pts": 10,
+      "why": "True in general, but not tied to her specific situation."
+     },
+     {
+      "t": "She should compare three more quotes before deciding.",
+      "pts": -10,
+      "why": "Undermines your own recommendation and stalls rather than closes."
+     },
+     {
+      "t": "Her sister is getting older too, so timing matters for both of them.",
+      "pts": 12,
+      "why": "Relevant secondary point, true but not the sharpest of the set."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reasons",
+    "pick": 2,
+    "hint": "Pick the two that connect to what she actually said she wants.",
+    "options": [
+     {
+      "t": "Getting this settled now means her sister never has to wonder or worry later.",
+      "pts": 20,
+      "why": "Ties directly to the person she cares about."
+     },
+     {
+      "t": "She said she doesn't want to be a burden — this plan is the difference between that fear and the reality.",
+      "pts": 20,
+      "why": "Reflects her own words back to her."
+     },
+     {
+      "t": "Bring up that her late plans would disappoint someone if she waits.",
+      "pts": -15,
+      "why": "A guilt tactic with no basis in anything she said."
+     },
+     {
+      "t": "Point out how alone she must feel now.",
+      "pts": -10,
+      "why": "Not tied to the plan, and dwells on something she didn't raise."
+     },
+     {
+      "t": "She'll feel relieved once it's handled.",
+      "pts": 12,
+      "why": "True but generic, secondary to the two specific ones."
+     },
+     {
+      "t": "Remind her this is exactly the situation she's worried about, still fresh in her mind.",
+      "pts": 10,
+      "why": "Reasonable, but less sharp than the top two and risks feeling repetitive."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "She says: \"I'll probably get around to it eventually.\"",
+    "options": [
+     {
+      "t": "\"Of course, no rush — call me whenever you're ready.\"",
+      "pts": 0,
+      "why": "Fully yields to the stall."
+     },
+     {
+      "t": "\"You said this fits and protects your sister — the only thing 'eventually' changes is whether that's true today or later. Why not make it true today?\"",
+      "pts": 20,
+      "why": "Reflects her own words back and asks a direct, respectful question."
+     },
+     {
+      "t": "\"If you don't do it now, you might not qualify later.\"",
+      "pts": -10,
+      "why": "Fear-based pressure not tied to anything she's actually said."
+     },
+     {
+      "t": "\"Okay, I'll follow up in a month.\"",
+      "pts": 5,
+      "why": "Passive — doesn't attempt to address the stall right now at all."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "p48",
+  "n": 48,
+  "max": 100,
+  "title": "What You Must Disclose",
+  "cat": "Compliance",
+  "format": "choice",
+  "file": [
+   [
+    "Moment",
+    "Presenting a final expense policy"
+   ],
+   [
+    "Question",
+    "Client asks, \"Is there anything I should know before I sign?\""
+   ]
+  ],
+  "story": "Right before signing, she asks if there's anything she should know.",
+  "prompt": "What's the most complete, honest answer?",
+  "options": [
+   {
+    "t": "\"Just that you're covered, that's really all that matters.\"",
+    "pts": -15,
+    "why": "Brushes past a direct question that deserves a real answer."
+   },
+   {
+    "t": "\"Yes — the free-look period, when premiums are due, anything excluded, and who to call with questions.\"",
+    "pts": 100,
+    "why": "Covers the key things a client is entitled to know before signing, honestly and completely."
+   },
+   {
+    "t": "\"Nothing you need to worry about, I've got it handled.\"",
+    "pts": -20,
+    "why": "Dismisses a legitimate question and withholds information she's entitled to."
+   },
+   {
+    "t": "\"The free-look period, mainly.\"",
+    "pts": 40,
+    "why": "Correct but incomplete — a few other things are worth naming too."
+   }
+  ]
+ },
+ {
+  "id": "p49",
+  "n": 49,
+  "max": 100,
+  "title": "The Replacement Notice",
+  "cat": "Compliance",
+  "format": "order",
+  "file": [
+   [
+    "Situation",
+    "Client is replacing an existing policy with a new one"
+   ],
+   [
+    "Requirement",
+    "State replacement rules apply"
+   ]
+  ],
+  "story": "She's decided to replace her old policy with the new one you've presented. Replacing a policy comes with extra steps most sales don't need.",
+  "prompt": "Put these five replacement steps in the order they belong.",
+  "steps": [
+   {
+    "id": "s1",
+    "t": "Confirm she understands this is a replacement, not an addition, and why",
+    "pos": 1,
+    "why": "She should clearly understand what's happening before anything else."
+   },
+   {
+    "id": "s2",
+    "t": "Complete the required replacement notice or comparison form",
+    "pos": 2,
+    "why": "The documented step that must happen before the old policy is touched."
+   },
+   {
+    "id": "s3",
+    "t": "Submit the new application along with the replacement paperwork",
+    "pos": 3,
+    "why": "The new coverage process, done properly and in the right order."
+   },
+   {
+    "id": "s4",
+    "t": "Wait for the new policy to be approved and in force before the old one is cancelled",
+    "pos": 4,
+    "why": "Prevents a gap where she would have no coverage at all."
+   },
+   {
+    "id": "s5",
+    "t": "Confirm with her that the old policy is cancelled and she has the new policy in hand",
+    "pos": 5,
+    "why": "Closes the loop so nothing is left in a gray area."
+   }
+  ]
+ },
+ {
+  "id": "p50",
+  "n": 50,
+  "max": 100,
+  "title": "Red Flags",
+  "cat": "Compliance",
+  "format": "multi",
+  "file": [
+   [
+    "Client",
+    "Woman, 82, living alone"
+   ],
+   [
+    "Context",
+    "A recent acquaintance has been present at the last two appointments and does most of the talking"
+   ]
+  ],
+  "story": "The same acquaintance has been at her last two appointments, answering questions before she can, and pushing for a larger policy than she originally asked for.",
+  "prompt": "Select every sign here worth pausing on and raising with your team leader or compliance contact.",
+  "options": [
+   {
+    "t": "Someone outside her immediate family is directing the conversation and answering for her.",
+    "pts": 25,
+    "why": "A real pattern worth noting, regardless of the acquaintance's intentions."
+   },
+   {
+    "t": "The push is for a larger policy than she originally said she wanted.",
+    "pts": 25,
+    "why": "A shift in scope that didn't come from the client herself."
+   },
+   {
+    "t": "She seems to defer to this person rather than answering in her own words.",
+    "pts": 25,
+    "why": "A sign her own voice may not be driving the decision."
+   },
+   {
+    "t": "The beneficiary designation is being suggested by the acquaintance, not by her.",
+    "pts": 25,
+    "why": "Directly affects who benefits, and should come from the client."
+   },
+   {
+    "t": "She is 82 years old.",
+    "pts": -15,
+    "why": "Age alone is not a red flag — the behavior around her is what matters."
+   },
+   {
+    "t": "She lives alone.",
+    "pts": -10,
+    "why": "Also not itself a red flag; it's context, not a warning sign on its own."
+   }
+  ]
+ },
+ {
+  "id": "p51",
+  "n": 51,
+  "max": 100,
+  "title": "The Widow's Sister",
+  "cat": "Building the case",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Pauline, 70, recently widowed"
+   ],
+   [
+    "Family",
+    "One sister, also older, lives two states away"
+   ],
+   [
+    "Finances",
+    "Modest pension, no funeral savings"
+   ],
+   [
+    "Recent event",
+    "Just paid for her husband's funeral on a credit card, still paying it off"
+   ]
+  ],
+  "story": "Pauline mentions, almost in passing, that she put her husband's funeral on a credit card and is still paying it down eight months later. She says, \"I don't want to be a bill for anyone.\"",
+  "prompt": "Build your angle: pick the strongest logical reasons, emotional reasons, and best response to her likely hesitation.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts from her situation that make the strongest case on paper.",
+    "options": [
+     {
+      "t": "She just lived through exactly the problem this plan solves, in her own recent experience.",
+      "pts": 20,
+      "why": "Directly ties the recommendation to something she personally just went through."
+     },
+     {
+      "t": "Paying off a funeral on a credit card adds interest on top of the original cost — a plan avoids that entirely for whoever handles hers.",
+      "pts": 20,
+      "why": "A concrete financial fact tied to her exact situation."
+     },
+     {
+      "t": "Her sister is older too and lives far away, so she can't easily be the one to handle logistics.",
+      "pts": 10,
+      "why": "Relevant secondary point, true but not the sharpest of the set."
+     },
+     {
+      "t": "She should have planned this years ago.",
+      "pts": -15,
+      "why": "Unhelpful hindsight, not persuasive in the moment."
+     },
+     {
+      "t": "Final costs are rising every year industry-wide.",
+      "pts": 10,
+      "why": "True in general, but not specific to her situation."
+     },
+     {
+      "t": "She has no children, so no one else will step up.",
+      "pts": -10,
+      "why": "Presumptuous, and not something she has said."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reasons",
+    "pick": 2,
+    "hint": "Pick the two that connect to what she actually said.",
+    "options": [
+     {
+      "t": "She said she doesn't want to be a bill for anyone — this plan is the difference between that fear and the reality.",
+      "pts": 20,
+      "why": "Reflects her own words directly back to her."
+     },
+     {
+      "t": "Her sister, not a stranger, would be the one figuring this out — this spares the person she loves most from the same experience she just had.",
+      "pts": 20,
+      "why": "Names exactly who benefits and why it matters to her."
+     },
+     {
+      "t": "Bring up that her late husband would be disappointed she hasn't handled this yet.",
+      "pts": -15,
+      "why": "A guilt tactic that invokes her late spouse."
+     },
+     {
+      "t": "Point out how alone she must feel now.",
+      "pts": -10,
+      "why": "Not tied to the plan, and dwells on grief unnecessarily."
+     },
+     {
+      "t": "She'll feel relieved once it's handled.",
+      "pts": 12,
+      "why": "True but generic, secondary to the two specific ones."
+     },
+     {
+      "t": "Remind her this is exactly what just happened to her, still fresh.",
+      "pts": 10,
+      "why": "Reasonable, but risks feeling repetitive after the logical group already used this angle."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "She hesitates: \"I need to think about the cost, money's tight right now after everything.\"",
+    "options": [
+     {
+      "t": "\"Of course — take all the time you need.\"",
+      "pts": 0,
+      "why": "Fully yields to the stall."
+     },
+     {
+      "t": "\"I hear that, and it's exactly why a small monthly plan makes more sense than another bill all at once, like what just happened. What amount would feel manageable?\"",
+      "pts": 20,
+      "why": "Acknowledges the real constraint and reframes toward a workable number rather than a yes or no."
+     },
+     {
+      "t": "\"This is cheaper than what you just went through, so it's really a no-brainer.\"",
+      "pts": -10,
+      "why": "Dismissive framing of a real budget concern."
+     },
+     {
+      "t": "\"I can come back next month once things settle.\"",
+      "pts": 5,
+      "why": "Passive — doesn't attempt to solve the actual concern raised."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "p52",
+  "n": 52,
+  "max": 100,
+  "title": "The Caregiver's Neighbor",
+  "cat": "Building the case",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Harold, 79, widower"
+   ],
+   [
+    "Support",
+    "A longtime neighbor, Dot, checks on him daily and drives him to appointments"
+   ],
+   [
+    "Family",
+    "One son, lives across the country, rarely visits"
+   ],
+   [
+    "Wish",
+    "Wants to leave something for Dot, but is unsure if that's \"allowed\""
+   ]
+  ],
+  "story": "Harold says, quietly, \"Dot's done more for me the last two years than my own son. I'd like to leave her something, but I don't know if you can even do that.\"",
+  "prompt": "Build your angle: pick the strongest logical reasons, emotional reasons, and best response to his hesitation.",
+  "groups": [
+   {
+    "key": "logical",
+    "label": "Logical reasons",
+    "pick": 2,
+    "hint": "Pick the two facts that make the strongest case on paper.",
+    "options": [
+     {
+      "t": "A beneficiary can be anyone he names — it doesn't have to be a blood relative.",
+      "pts": 20,
+      "why": "Directly answers the question he actually asked."
+     },
+     {
+      "t": "Naming Dot directly avoids the delay and cost of probate that leaving it in a will might create.",
+      "pts": 20,
+      "why": "A concrete practical advantage of a named beneficiary over a will."
+     },
+     {
+      "t": "His son, being far away, may not be positioned to handle arrangements quickly anyway.",
+      "pts": 10,
+      "why": "Relevant secondary point, true but less central than the top two."
+     },
+     {
+      "t": "He should leave everything to his son regardless, since that's traditional.",
+      "pts": -15,
+      "why": "Overrides his stated wish without any real basis."
+     },
+     {
+      "t": "A life insurance payout goes directly to the named beneficiary, outside the estate process.",
+      "pts": 15,
+      "why": "True and relevant, close behind the top two but more technical than personally persuasive."
+     },
+     {
+      "t": "Dot is younger and more likely to outlive him than his son is to visit.",
+      "pts": -10,
+      "why": "An odd, irrelevant line of reasoning."
+     }
+    ]
+   },
+   {
+    "key": "emotional",
+    "label": "Emotional reasons",
+    "pick": 2,
+    "hint": "Pick the two that connect to what he actually said.",
+    "options": [
+     {
+      "t": "He can honor, in a concrete way, the person who has actually shown up for him.",
+      "pts": 20,
+      "why": "Directly reflects his own stated reasoning."
+     },
+     {
+      "t": "This removes any doubt about whether it's 'allowed' — it's entirely his choice to make.",
+      "pts": 20,
+      "why": "Addresses his exact hesitation."
+     },
+     {
+      "t": "Point out his son should feel guilty for not visiting.",
+      "pts": -15,
+      "why": "Invites guilt and conflict that isn't his concern."
+     },
+     {
+      "t": "Dot deserves it more than his son does.",
+      "pts": -10,
+      "why": "Not his words, and puts you in the middle of a comparison he didn't ask for."
+     },
+     {
+      "t": "He'll feel lighter knowing it's settled and reflects what he actually wants.",
+      "pts": 12,
+      "why": "True but generic."
+     },
+     {
+      "t": "This is his last chance to make it right.",
+      "pts": -10,
+      "why": "Unnecessarily dramatic and pressuring."
+     }
+    ]
+   },
+   {
+    "key": "objection",
+    "label": "Likely objection",
+    "pick": 1,
+    "hint": "He hesitates: \"I just don't want it to seem strange to people.\"",
+    "options": [
+     {
+      "t": "\"It's your decision to make, and it's a common one — plenty of people name someone who's shown up for them, not just family.\"",
+      "pts": 20,
+      "why": "Normalizes his choice and affirms it's his to make, without pressure."
+     },
+     {
+      "t": "\"Don't worry about what people think.\"",
+      "pts": 5,
+      "why": "Dismissive, and doesn't really address his specific worry."
+     },
+     {
+      "t": "\"You're right, maybe stick with your son to keep it simple.\"",
+      "pts": -15,
+      "why": "Talks him out of his own stated wish."
+     },
+     {
+      "t": "\"I can't really weigh in on that, it's between you and your family.\"",
+      "pts": 0,
+      "why": "Unhelpfully neutral, avoiding support on a legitimate concern he raised with you directly."
+     }
+    ]
+   }
+  ]
  }
 ]
