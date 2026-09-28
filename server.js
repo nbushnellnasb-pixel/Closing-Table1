@@ -256,7 +256,7 @@ route('POST', '/api/login', async (req, res) => {
   const b = await readBody(req);
   const code = normCode(b.code);
   /* a team code typed on the personal-code tab: point them to the right tab instead of failing */
-  if (code && db.teams.some(t => t.joinCode === code)) return send(res, 400, { error: 'That is a team code. Use "Join with team code" and add your name and a PIN.', useTeamCode: true });
+  if (code && db.teams.some(t => t.joinCode === code)) return send(res, 400, { error: 'That is a team code. Use it on the main sign-in form with your name and PIN.', useTeamCode: true });
   const agent = code && Object.values(db.agents).find(a => a.code === code);
   if (!agent) { noteFail(ip); return send(res, 401, { error: 'That code was not found. Check it with your team leader.' }); }
   noteOk(ip);
@@ -285,8 +285,8 @@ route('POST', '/api/join', async (req, res) => {
   if (agent) {
     if (agent.pin) {
       const pinKey = 'pin|' + team.id + '|' + name.toLowerCase();
-      if (tooMany(pinKey, 8)) return send(res, 429, { error: 'Too many wrong PINs for that name. Wait 10 minutes, or ask your host to reset it.' });
-      if (!pin || !safeEq(pin, agent.pin)) { noteFail(ip); noteFail(pinKey); return send(res, 401, { error: 'That name already has a PIN set on this team. Enter the matching PIN, or join under a slightly different name.' }); }
+      if (tooMany(pinKey, 8)) return send(res, 429, { error: 'Too many wrong PINs for that name. Wait 10 minutes, or tap "Forgot your PIN?" below.' });
+      if (!pin || !safeEq(pin, agent.pin)) { noteFail(ip); noteFail(pinKey); return send(res, 401, { error: 'That name already has a PIN on this team. Enter the matching PIN, or tap "Forgot your PIN?" below.' }); }
     } else if (pin) {
       agent.pin = pin; save();
     }
