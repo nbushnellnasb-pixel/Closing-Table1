@@ -16,7 +16,26 @@ const path = require('path');
 const crypto = require('crypto');
 
 const PORT = +process.env.PORT || 3000;
-const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, 'data');
+const DATA_DIR = process.env.DATA_DIR || path.join(global.__ccBundledDir || __dirname, 'data');
+
+/* ---------- app version and self-updates ----------
+   The host can install an update file from the Host panel. Its files are saved in DATA_DIR/app and
+   are used instead of the files in this folder while their build number is higher than APP_BUILD.
+   A newer version pushed to GitHub (higher APP_BUILD) automatically takes over again. */
+const APP_BUILD = 7;
+const OVR_DIR = path.join(DATA_DIR, 'app');
+const BUNDLE_DIR = global.__ccBundledDir || __dirname;
+const BUNDLED_BUILD = global.__ccBundledBuild || APP_BUILD;
+function overrideMeta() { try { return JSON.parse(fs.readFileSync(path.join(OVR_DIR, 'build.json'), 'utf8')); } catch (e) { return null; } }
+const overrideOn = () => { const m = overrideMeta(); return process.env.NO_OVERRIDE !== '1' && !!m && m.build > BUNDLED_BUILD; };
+if (overrideOn() && __filename !== path.join(OVR_DIR, 'server.js') && fs.existsSync(path.join(OVR_DIR, 'server.js'))) {
+  global.__ccBundledDir = __dirname; global.__ccBundledBuild = APP_BUILD;
+  console.log('Running installed update, build ' + overrideMeta().build);
+  require(path.join(OVR_DIR, 'server.js'));
+  return;
+}
+const fileFor = name => (overrideOn() && fs.existsSync(path.join(OVR_DIR, name))) ? path.join(OVR_DIR, name) : path.join(BUNDLE_DIR, name);
+const runningBuild = () => overrideOn() ? overrideMeta().build : APP_BUILD;
 const DB_FILE = path.join(DATA_DIR, 'db.json');
 const COOKIE = 'ct';
 const SESSION_DAYS = 365; /* the game doubles as an ongoing training library, so sessions stay signed in long-term */
@@ -50,7 +69,7 @@ const adminPassword = () => process.env.ADMIN_PASSWORD || db.adminPassword;
 /* puzzles come from puzzles.json; only the open/closed flag is stored */
 let PUZZLES = [];
 function loadPuzzles() {
-  PUZZLES = JSON.parse(fs.readFileSync(path.join(__dirname, 'puzzles.json'), 'utf8'));
+  PUZZLES = JSON.parse(fs.readFileSync(fileFor('puzzles.json'), 'utf8'));
   PUZZLES.forEach(p => { if (!(p.id in db.puzzleState)) db.puzzleState[p.id] = { open: true }; });
 }
 loadPuzzles();
@@ -58,8 +77,13 @@ const puzzleById = id => PUZZLES.find(p => p.id === id);
 
 /* new agent path: content comes from training.json (not served as a file); progress lives in db.training */
 let TRAINING = { tracks: [], stations: [] };
-try { TRAINING = JSON.parse(fs.readFileSync(path.join(__dirname, 'training.json'), 'utf8')); } catch (e) { console.log('No training.json found; the New Agent Path is empty.'); }
+function loadTraining() {
+  try { TRAINING = JSON.parse(fs.readFileSync(fileFor('training.json'), 'utf8')); } catch (e) { console.log('No training.json found; the New Agent Path is empty.'); }
+}
+loadTraining();
 if (!db.training) db.training = {};
+if (!db.leaders) db.leaders = {};
+if (!db.challenge) db.challenge = null;
 const stationById = id => TRAINING.stations.find(s => s.id === id);
 
 let saveTimer = null;
@@ -238,12 +262,14 @@ function board() {
     s.points += r.points; s.done++; s.last = Math.max(s.last, r.at || 0); s.per[r.puzzleId] = r.points;
   });
   return {
+    challenge: db.challenge ? { title: db.challenge.title, note: db.challenge.note || '' } : null,
     teams: db.teams.map(t => ({ id: t.id, name: t.name, leader: t.leader, order: t.order })),
     puzzles: PUZZLES.map(p => {
       const o = { id: p.id, n: p.n, title: p.title, cat: p.cat, format: p.format, max: maxOf(p), open: db.puzzleState[p.id].open, gameNight: GAME_NIGHT_IDS.has(p.id) };
       if (p.series) { o.series = p.series; o.seriesTitle = p.seriesTitle; o.part = p.part; o.parts = p.parts; }
       if (p.section) o.section = p.section;
       if (p.event) o.event = p.event;
+      if (db.challenge && db.challenge.ids.indexOf(p.id) !== -1) o.challenge = true;
       return o;
     }),
     agents: Object.values(db.agents).map(a => Object.assign({ id: a.id, name: a.name, teamId: a.teamId, points: 0, done: 0, last: 0, per: {} }, per[a.id] || {}))
@@ -257,7 +283,10 @@ const route = (method, pattern, fn) => { (api[method] = api[method] || []).push(
 const agentOf = req => { const s = session(req); return s && s.t === 'a' && db.agents[s.id] ? db.agents[s.id] : null; };
 const isAdmin = req => { const s = session(req); return !!(s && s.t === 'admin'); };
 /* team leaders get a read-only view of the skills report. Hosts can see it too. */
-const isLeader = req => { const s = session(req); return !!(s && (s.t === 'leader' || s.t === 'admin')); };
+const isLeader = req => { const s = session(req); return !!(s && (s.t === 'admin' || (s.t === 'leader' && (!s.lid || db.leaders[s.lid])))); };
+/* a named team leader (personal code) or null for the shared leader password / host */
+const leaderOf = req => { const s = session(req); return s && s.t === 'leader' && s.lid ? db.leaders[s.lid] || null : null; };
+const signerName = req => { const L = leaderOf(req); return isAdmin(req) ? 'Host' : L ? L.name : 'Team leader'; };
 const leaderPassword = () => process.env.LEADER_PASSWORD || db.leaderPassword || '';
 const me = a => ({ id: a.id, name: a.name, teamId: a.teamId });
 
@@ -313,7 +342,7 @@ route('POST', '/api/join', async (req, res) => {
   } else {
     if (pin.length < 4) { return send(res, 400, { error: 'Choose a 4 to 6 digit PIN so this score stays yours when you come back.' }); }
     const id = 'a' + crypto.randomBytes(5).toString('hex');
-    agent = db.agents[id] = { id, name, teamId: team.id, code: newCode(), pin };
+    agent = db.agents[id] = { id, name, teamId: team.id, code: newCode(), pin, start: Date.now() };
     save();
   }
   noteOk(ip);
@@ -324,7 +353,8 @@ route('POST', '/api/logout', (req, res) => { setCookie(req, res, null); send(res
 route('GET', '/api/me', (req, res) => {
   const a = agentOf(req);
   const s = session(req);
-  send(res, 200, { agent: a ? me(a) : null, admin: isAdmin(req), leader: !!(s && s.t === 'leader'), leaderAccess: !!leaderPassword() });
+  const L = leaderOf(req);
+  send(res, 200, { agent: a ? me(a) : null, admin: isAdmin(req), leader: isLeader(req) && !isAdmin(req), leaderInfo: L ? { name: L.name, teamIds: L.teamIds } : null, leaderAccess: !!leaderPassword() || Object.keys(db.leaders).length > 0, build: runningBuild() });
 });
 
 /* ---------- new agent path ---------- */
@@ -339,9 +369,34 @@ function trainingFor(agentId) {
   TRAINING.stations.forEach(st => { prog[st.id] = stationProgress(agentId, st); });
   return prog;
 }
+/* when the agent's training clock started: set by a leader, else the day they joined, else their first answer */
+function startOf(a) {
+  if (a.start) return a.start;
+  let first = 0;
+  Object.values(db.results).forEach(r => { if (r.agentId === a.id && r.at && (!first || r.at < first)) first = r.at; });
+  return first || null;
+}
+function lastActive(a) {
+  let last = 0;
+  const row = db.training[a.id] || {};
+  Object.values(row).forEach(r => { Object.values(r.t || {}).forEach(v => { if (typeof v === 'number' && v > last) last = v; }); });
+  Object.values(db.results).forEach(r => { if (r.agentId === a.id && r.at > last) last = r.at; });
+  return last || null;
+}
 route('GET', '/api/training', (req, res) => {
   const a = agentOf(req);
-  send(res, 200, { tracks: TRAINING.tracks, stations: TRAINING.stations, progress: a ? trainingFor(a.id) : null });
+  send(res, 200, { tracks: TRAINING.tracks, stations: TRAINING.stations, progress: a ? trainingFor(a.id) : null, start: a ? startOf(a) : null });
+});
+const canCoach = (req, agent) => { if (isAdmin(req)) return true; const L = leaderOf(req); return isLeader(req) && (!L || L.teamIds.indexOf(agent.teamId) !== -1); };
+route('POST', '/api/training/agent/:id/start', async (req, res, p) => {
+  if (!isLeader(req)) return send(res, 401, { error: 'Leader or host sign-in required.' });
+  const a = db.agents[p.id]; if (!a) return send(res, 404, { error: 'No such agent.' });
+  if (!canCoach(req, a)) return send(res, 403, { error: 'You can only update agents on your own team.' });
+  const b = await readBody(req);
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(b.date || ''));
+  if (!m) return send(res, 400, { error: 'Pick a start date.' });
+  a.start = Date.UTC(+m[1], +m[2] - 1, +m[3], 12);
+  save(); send(res, 200, { start: a.start });
 });
 route('POST', '/api/training/:id/task', async (req, res, p) => {
   const a = agentOf(req); if (!a) return send(res, 401, { error: 'Sign in first.' });
@@ -359,16 +414,18 @@ route('POST', '/api/training/:id/signoff', async (req, res, p) => {
   const st = stationById(p.id); if (!st) return send(res, 404, { error: 'No such training step.' });
   const b = await readBody(req);
   if (!db.agents[b.agentId]) return send(res, 404, { error: 'No such agent.' });
+  if (!canCoach(req, db.agents[b.agentId])) return send(res, 403, { error: 'You can only sign off agents on your own team.' });
   if ((st.signoff || []).indexOf(b.key) === -1) return send(res, 400, { error: 'Bad sign-off.' });
   const row = trainingRow(b.agentId); const r = row[st.id] = row[st.id] || {};
   r.so = r.so || {};
-  if (b.on) r.so[b.key] = { at: Date.now(), by: isAdmin(req) ? 'Host' : 'Team leader' }; else delete r.so[b.key];
+  if (b.on) r.so[b.key] = { at: Date.now(), by: signerName(req) }; else delete r.so[b.key];
   save(); send(res, 200, { progress: stationProgress(b.agentId, st) });
 });
 route('GET', '/api/training/overview', (req, res) => {
   if (!isLeader(req)) return send(res, 401, { error: 'Leader or host sign-in required.' });
-  const agents = Object.values(db.agents).map(a => ({ id: a.id, name: a.name, teamId: a.teamId, progress: trainingFor(a.id) }));
-  send(res, 200, { tracks: TRAINING.tracks, stations: TRAINING.stations.map(s => ({ id: s.id, track: s.track, n: s.n, title: s.title, tasks: (s.tasks || []).length, signoff: s.signoff || [] })), agents, teams: db.teams.map(t => ({ id: t.id, name: t.name })) });
+  const agents = Object.values(db.agents).map(a => ({ id: a.id, name: a.name, teamId: a.teamId, start: startOf(a), lastActive: lastActive(a), progress: trainingFor(a.id) }));
+  const L = leaderOf(req);
+  send(res, 200, { tracks: TRAINING.tracks, stations: TRAINING.stations.map(s => ({ id: s.id, track: s.track, n: s.n, title: s.title, due: s.due || null, tasks: (s.tasks || []).length, signoff: s.signoff || [] })), agents, teams: db.teams.map(t => ({ id: t.id, name: t.name })), myTeams: L ? L.teamIds : null, me: L ? L.name : isAdmin(req) ? 'Host' : 'Team leader' });
 });
 
 route('GET', '/api/puzzles/:id', (req, res, p) => {
@@ -510,11 +567,62 @@ route('POST', '/api/leader/login', async (req, res) => {
   const ip = clientIp(req);
   if (tooMany(ip)) return send(res, 429, { error: 'Too many attempts. Wait a few minutes and try again.' });
   const b = await readBody(req);
-  if (!leaderPassword()) return send(res, 403, { error: 'Team leader access is not turned on yet. Ask your host to set a leader password.' });
-  if (!safeEq(String(b.password || ''), leaderPassword())) { noteFail(ip); return send(res, 401, { error: 'That password is not right.' }); }
+  const entered = String(b.password || '').trim();
+  const code = entered.toUpperCase().replace(/[^A-Z0-9]/g, '');
+  const L = code && Object.values(db.leaders).find(x => x.code === code);
+  if (L) { noteOk(ip); return send(res, 200, { ok: true, token: setCookie(req, res, { t: 'leader', lid: L.id }), name: L.name }); }
+  if (!leaderPassword()) { noteFail(ip); return send(res, Object.keys(db.leaders).length ? 401 : 403, { error: Object.keys(db.leaders).length ? 'That leader code is not right.' : 'Team leader access is not turned on yet. Ask your host for your leader code.' }); }
+  if (!safeEq(entered, leaderPassword())) { noteFail(ip); return send(res, 401, { error: 'That code or password is not right.' }); }
   noteOk(ip);
   const token = setCookie(req, res, { t: 'leader' });
   send(res, 200, { ok: true, token });
+});
+const newLeaderCode = () => randomCode(new Set(Object.values(db.leaders).map(l => l.code).concat(Object.values(db.agents).map(a => a.code))));
+const leaderRow = l => ({ id: l.id, name: l.name, teamIds: l.teamIds, code: l.code });
+/* monthly challenge: a host-picked set of puzzles with its own featured card and leaderboard */
+admin('GET', '/api/admin/challenge', (req, res) => send(res, 200, { challenge: db.challenge }));
+admin('POST', '/api/admin/challenge', async (req, res) => {
+  const b = await readBody(req);
+  if (b.clear) { db.challenge = null; save(); return send(res, 200, { challenge: null }); }
+  const title = String(b.title || '').trim().slice(0, 60);
+  const ids = (Array.isArray(b.ids) ? b.ids : []).map(String).filter((id, i, arr) => puzzleById(id) && arr.indexOf(id) === i).slice(0, 20);
+  if (!title) return send(res, 400, { error: 'Give the challenge a name, like "October Challenge".' });
+  if (ids.length < 3) return send(res, 400, { error: 'Pick at least 3 puzzles for the challenge.' });
+  db.challenge = { title, note: String(b.note || '').trim().slice(0, 200), ids, at: Date.now() };
+  save(); send(res, 200, { challenge: db.challenge });
+});
+admin('GET', '/api/admin/leaders', (req, res) => send(res, 200, { leaders: Object.values(db.leaders).map(leaderRow) }));
+admin('POST', '/api/admin/leaders', async (req, res) => {
+  const b = await readBody(req);
+  if (b.fromTeams) {
+    /* one login per team, named after each team's leader */
+    let made = 0;
+    db.teams.forEach(t => {
+      if (Object.values(db.leaders).some(l => l.teamIds.indexOf(t.id) !== -1)) return;
+      const id = 'L' + crypto.randomBytes(4).toString('hex');
+      db.leaders[id] = { id, name: (t.leader || t.name + ' leader').slice(0, 60), teamIds: [t.id], code: newLeaderCode() }; made++;
+    });
+    save(); return send(res, 200, { made, leaders: Object.values(db.leaders).map(leaderRow) });
+  }
+  const name = String(b.name || '').trim().slice(0, 60);
+  const teamIds = (Array.isArray(b.teamIds) ? b.teamIds : [b.teamId]).filter(id => db.teams.some(t => t.id === id));
+  if (!name) return send(res, 400, { error: 'Enter the leader\'s name.' });
+  if (!teamIds.length) return send(res, 400, { error: 'Pick the leader\'s team.' });
+  const id = 'L' + crypto.randomBytes(4).toString('hex');
+  db.leaders[id] = { id, name, teamIds, code: newLeaderCode() };
+  save(); send(res, 200, { leader: leaderRow(db.leaders[id]) });
+});
+admin('PATCH', '/api/admin/leaders/:id', async (req, res, p) => {
+  const L = db.leaders[p.id]; if (!L) return send(res, 404, { error: 'No such leader.' });
+  const b = await readBody(req);
+  if (b.name) L.name = String(b.name).trim().slice(0, 60) || L.name;
+  if (b.teamId && db.teams.some(t => t.id === b.teamId)) L.teamIds = [b.teamId];
+  if (b.newCode) L.code = newLeaderCode();
+  save(); send(res, 200, { leader: leaderRow(L) });
+});
+admin('DELETE', '/api/admin/leaders/:id', (req, res, p) => {
+  if (!db.leaders[p.id]) return send(res, 404, { error: 'No such leader.' });
+  delete db.leaders[p.id]; save(); send(res, 200, { ok: true });
 });
 admin('GET', '/api/admin/leader-access', (req, res) => send(res, 200, { enabled: !!leaderPassword(), fromEnv: !!process.env.LEADER_PASSWORD }));
 admin('POST', '/api/admin/leader-access', async (req, res) => {
@@ -594,7 +702,7 @@ admin('GET', '/api/admin/answers.csv', (req, res) => {
 const BACKUP_DIR = path.join(DATA_DIR, 'backups');
 const KEEP_BACKUPS = 30;
 fs.mkdirSync(BACKUP_DIR, { recursive: true });
-const backupData = () => ({ app: 'closing-table', version: 1, exportedAt: new Date().toISOString(), teams: db.teams, agents: db.agents, results: db.results, puzzleState: db.puzzleState, training: db.training || {} });
+const backupData = () => ({ app: 'closing-table', version: 1, exportedAt: new Date().toISOString(), teams: db.teams, agents: db.agents, results: db.results, puzzleState: db.puzzleState, training: db.training || {}, leaders: db.leaders || {}, challenge: db.challenge || null });
 function snapshot(reason) {
   try {
     const name = 'backup-' + new Date().toISOString().replace(/[:T]/g, '-').slice(0, 16) + (reason ? '-' + reason : '') + '.json';
@@ -610,7 +718,7 @@ function dailySnapshot() {
   if (!has && Object.keys(db.results).length + Object.keys(db.agents).length > 0) snapshot('daily');
 }
 dailySnapshot();
-setInterval(dailySnapshot, 60 * 60 * 1000);
+const snapTimer = setInterval(dailySnapshot, 60 * 60 * 1000);
 function listBackups() {
   return fs.readdirSync(BACKUP_DIR).filter(f => /^backup-.*\.json$/.test(f)).sort().reverse().map(f => {
     const st = fs.statSync(path.join(BACKUP_DIR, f));
@@ -633,6 +741,8 @@ function restoreFrom(data) {
   snapshot('before-restore');
   db.teams = data.teams; db.agents = data.agents || {}; db.results = data.results || {};
   if (data.training && typeof data.training === 'object') db.training = data.training;
+  if (data.leaders && typeof data.leaders === 'object') db.leaders = data.leaders;
+  if (data.challenge !== undefined) db.challenge = data.challenge;
   db.puzzleState = Object.assign({}, db.puzzleState, data.puzzleState || {});
   PUZZLES.forEach(p => { if (!db.puzzleState[p.id]) db.puzzleState[p.id] = { open: true }; });
   db.teams.forEach(t => { if (!t.joinCode) t.joinCode = newTeamCode(); });
@@ -651,7 +761,72 @@ admin('POST', '/api/admin/restore', async (req, res) => {
 });
 
 /* ---------- server ---------- */
-const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.ico': 'image/x-icon' };
+const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.ico': 'image/x-icon', '.webmanifest': 'application/manifest+json' };
+
+/* ---------- installing an update from the Host panel ---------- */
+const UPDATE_FILES = { 'server.js': 'text', 'embed.js': 'text', 'puzzles.json': 'json', 'training.json': 'json', 'tv.html': 'text', 'index.html': 'text', 'manifest.webmanifest': 'json', 'icon-192.png': 'b64', 'icon-512.png': 'b64' };
+function restartServer() {
+  /* hand over to a fresh process running the new files. The first process stays as a small parent
+     that keeps one worker running; a worker asks the parent for a fresh worker instead of nesting. */
+  saveNow();
+  clearInterval(snapTimer); if (saveTimer) { clearTimeout(saveTimer); saveTimer = null; }
+  server.close();
+  if (process.send) { process.send('cc-restart'); setTimeout(() => process.exit(0), 300); return; }
+  let child = null, pending = false;
+  const spawnWorker = () => {
+    child = require('child_process').spawn(process.execPath, [process.argv[1]], { stdio: ['inherit', 'inherit', 'inherit', 'ipc'], env: process.env });
+    child.on('message', m => { if (m === 'cc-restart') pending = true; });
+    child.on('exit', code => { if (pending) { pending = false; spawnWorker(); } else process.exit(code || 0); });
+  };
+  ['SIGTERM', 'SIGINT'].forEach(sig => { process.removeAllListeners(sig); process.on(sig, () => { if (child) child.kill(sig); else process.exit(0); }); });
+  setTimeout(spawnWorker, 300);
+}
+admin('GET', '/api/admin/update', (req, res) => {
+  const m = overrideMeta();
+  send(res, 200, { running: runningBuild(), bundled: BUNDLED_BUILD, installed: m && overrideOn() ? { build: m.build, at: m.at, notes: m.notes || '' } : null });
+});
+admin('POST', '/api/admin/update', async (req, res) => {
+  const b = await readBody(req, 20 * 1024 * 1024);
+  if (!safeEq(String(b.password || ''), adminPassword())) return send(res, 401, { error: 'Enter the host password to install an update.' });
+  const u = b.bundle;
+  if (!u || u.app !== 'closers-compete-update' || !Number.isInteger(u.build) || typeof u.files !== 'object') return send(res, 400, { error: 'That file is not a Closers Compete update.' });
+  if (u.build <= runningBuild()) return send(res, 400, { error: 'This site is already on build ' + runningBuild() + '. That update is build ' + u.build + '.' });
+  const staged = {};
+  for (const name of Object.keys(u.files)) {
+    const kind = UPDATE_FILES[name]; if (!kind) return send(res, 400, { error: 'Unexpected file in update: ' + name });
+    const f = u.files[name]; if (!f || typeof f.data !== 'string') return send(res, 400, { error: 'Missing data for ' + name });
+    const buf = kind === 'b64' ? Buffer.from(f.data, 'base64') : Buffer.from(f.data, 'utf8');
+    if (crypto.createHash('sha256').update(buf).digest('hex') !== f.sha256) return send(res, 400, { error: name + ' is damaged (checksum does not match). Download the update again.' });
+    if (kind === 'json') { try { JSON.parse(f.data); } catch (e) { return send(res, 400, { error: name + ' is not valid.' }); } }
+    if (name.endsWith('.js')) { try { new (require('vm').Script)('(function (exports, require, module, __filename, __dirname) {' + f.data + '\n})', { filename: name }); } catch (e) { return send(res, 400, { error: name + ' has an error and was not installed: ' + e.message }); } }
+    staged[name] = buf;
+  }
+  if (!staged['server.js'] || !/APP_BUILD = \d+/.test(staged['server.js'].toString('utf8'))) return send(res, 400, { error: 'That update is missing its server file.' });
+  snapshot('before-update');
+  const tmp = OVR_DIR + '.new-' + Date.now();
+  fs.mkdirSync(tmp, { recursive: true });
+  /* files the update does not include carry over from what is running now */
+  Object.keys(UPDATE_FILES).forEach(name => {
+    if (staged[name]) fs.writeFileSync(path.join(tmp, name), staged[name]);
+    else if (fs.existsSync(fileFor(name))) fs.copyFileSync(fileFor(name), path.join(tmp, name));
+  });
+  fs.writeFileSync(path.join(tmp, 'build.json'), JSON.stringify({ build: u.build, at: Date.now(), notes: String(u.notes || '').slice(0, 2000) }));
+  if (fs.existsSync(OVR_DIR)) fs.renameSync(OVR_DIR, OVR_DIR + '.old-' + Date.now());
+  fs.renameSync(tmp, OVR_DIR);
+  send(res, 200, { ok: true, build: u.build, restarting: true });
+  console.log('Installed update build ' + u.build + '; restarting.');
+  restartServer();
+});
+admin('POST', '/api/admin/update/undo', async (req, res) => {
+  const b = await readBody(req);
+  if (!safeEq(String(b.password || ''), adminPassword())) return send(res, 401, { error: 'Enter the host password to undo the update.' });
+  if (!overrideOn()) return send(res, 400, { error: 'No installed update to undo.' });
+  fs.renameSync(OVR_DIR, OVR_DIR + '.undone-' + Date.now());
+  send(res, 200, { ok: true, build: BUNDLED_BUILD, restarting: true });
+  console.log('Update undone; going back to build ' + BUNDLED_BUILD + '.');
+  restartServer();
+});
+route('GET', '/api/version', (req, res) => send(res, 200, { build: runningBuild() }));
 const server = http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, 'http://x');
@@ -679,13 +854,14 @@ const server = http.createServer(async (req, res) => {
     }
     if (req.method !== 'GET' && req.method !== 'HEAD') return send(res, 405, { error: 'Method not allowed.' });
     if (pathname === '/favicon.ico') { res.writeHead(204); return res.end(); }
-    /* Only these two files are ever served as static pages. Everything else in this folder
+    /* Only the files listed here are ever served. Everything else in this folder
        (puzzles.json, server.js, and so on) is deliberately not reachable by URL, so the
        repo can be a single flat folder with no subfolders required. */
-    const STATIC = { '/': ['index.html', '.html'], '/index.html': ['index.html', '.html'], '/embed.js': ['embed.js', '.js'], '/tv.html': ['tv.html', '.html'] };
+    const STATIC = { '/': ['index.html', '.html'], '/index.html': ['index.html', '.html'], '/embed.js': ['embed.js', '.js'], '/tv.html': ['tv.html', '.html'],
+      '/manifest.webmanifest': ['manifest.webmanifest', '.webmanifest'], '/icon-192.png': ['icon-192.png', '.png'], '/icon-512.png': ['icon-512.png', '.png'], '/apple-touch-icon.png': ['icon-192.png', '.png'] };
     const hit = STATIC[pathname];
     if (!hit) return send(res, 404, { error: 'Not found.' });
-    fs.readFile(path.join(__dirname, hit[0]), (err, data) => {
+    fs.readFile(fileFor(hit[0]), (err, data) => {
       if (err) return send(res, 404, { error: 'Not found.' });
       res.writeHead(200, { 'Content-Type': MIME[hit[1]], 'Cache-Control': 'no-cache' });
       res.end(data);
