@@ -64,6 +64,7 @@
     <div class="seg" id="scopeSeg" role="tablist" aria-label="Leaderboard scope">
       <button type="button" role="tab" data-s="all" aria-pressed="true">All-time</button>
       <button type="button" role="tab" data-s="gamenight" aria-pressed="false">Paragon Game Night</button>
+      <button type="button" role="tab" data-s="showdown" aria-pressed="false">UW Showdown</button>
     </div>
     <div class="headline"><h1 id="headline">Loading&hellip;</h1><p id="sub"></p></div>
   </div>
@@ -101,6 +102,7 @@
   function stats(b, sc){
     var gnIds = null;
     if(sc === 'gamenight'){ gnIds = new Set(b.puzzles.filter(function(p){ return p.gameNight; }).map(function(p){ return p.id; })); }
+    if(sc === 'showdown'){ gnIds = new Set(b.puzzles.filter(function(p){ return p.event === 'showdown'; }).map(function(p){ return p.id; })); }
     var puzzles = gnIds ? b.puzzles.filter(function(p){ return gnIds.has(p.id); }) : b.puzzles;
     var open = puzzles.filter(function(p){ return p.open; });
     var maxPer = Math.max(1, open.reduce(function(a, p){ return a + p.max; }, 0));
@@ -115,7 +117,7 @@
     sorted.forEach(function(r, i){ r.rank = (i > 0 && Math.abs(sorted[i - 1].avg - r.avg) < 1e-9) ? sorted[i - 1].rank : i + 1; });
     var ag = agents.slice().sort(function(a, c){ return c.points - a.points || (a.last || 1e15) - (c.last || 1e15) || a.name.localeCompare(c.name); });
     ag.forEach(function(r, i){ r.rank = (i > 0 && ag[i - 1].points === r.points) ? ag[i - 1].rank : i + 1; });
-    return {maxPer:maxPer, sorted:sorted, agents:ag, hasGameNight: b.puzzles.some(function(p){ return p.gameNight; })};
+    return {maxPer:maxPer, sorted:sorted, agents:ag, hasGameNight: b.puzzles.some(function(p){ return p.gameNight || p.event === 'showdown'; })};
   }
 
   function render(b){
@@ -126,7 +128,7 @@
     var teamOf = function(id){ return b.teams.find(function(t){ return t.id === id; }); };
     var headline = document.getElementById('headline'), sub = document.getElementById('sub');
     var top = st.sorted.filter(function(r){ return r.rank === 1; });
-    var scopeLabel = scope === 'gamenight' ? ' (Game Night)' : '';
+    var scopeLabel = scope === 'gamenight' ? ' (Game Night)' : scope === 'showdown' ? ' (UW Showdown)' : '';
     if(!b.teams.length){ headline.textContent = 'Not set up yet'; sub.textContent = ''; }
     else if(!top.length || top[0].avg === 0){ headline.textContent = 'No scores yet'; sub.textContent = 'Waiting for the first answers to come in'; }
     else if(top.length === 1){ headline.textContent = top[0].t.name + ' leads' + scopeLabel; sub.textContent = fmtN(top[0].avg) + ' points per agent'; }
