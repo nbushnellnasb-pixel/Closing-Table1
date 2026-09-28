@@ -1,0 +1,911 @@
+{
+ "tracks": [
+  {
+   "key": "start",
+   "title": "Getting Started",
+   "sub": "Your first 3 weeks: set up, contracted and ready for the field."
+  },
+  {
+   "key": "steps",
+   "title": "The 10 Step Sales Process",
+   "sub": "Learn each step in order. Your leader signs off when you have watched it and done it."
+  },
+  {
+   "key": "tools",
+   "title": "Tools & Resources",
+   "sub": "Tracker, quoter, carrier forms and more."
+  }
+ ],
+ "stations": [
+  {
+   "track": "start",
+   "n": 1,
+   "id": "on1",
+   "title": "Get set up",
+   "when": "Day 1",
+   "goal": "Get connected to the team, the training hub and the live trainings.",
+   "blocks": [
+    {
+     "p": "Your first day is about getting plugged in. Everything you need lives in the SIG Agent Hub, so save it where you can find it fast."
+    },
+    {
+     "list": [
+      "Save the Training Hub link to your phone and bookmarks.",
+      "Join the group chats and accept your Discord invite.",
+      "Save the live Zoom training schedule: Tuesdays and Wednesdays, 8 to 9 PM Eastern. The Zoom link is on the New Agent Checklist."
+     ]
+    }
+   ],
+   "links": [
+    {
+     "t": "SIG Agent Hub",
+     "url": "https://agenthub.structuredintegritygroup.com/welcome--getting-started"
+    },
+    {
+     "t": "New Agent Checklist (Zoom link and schedule)",
+     "url": "https://agenthub.structuredintegritygroup.com/new-agent-checklist"
+    }
+   ],
+   "tasks": [
+    "Saved the Training Hub link to my phone",
+    "Joined the group chats and accepted the Discord invite",
+    "Saved the Tuesday and Wednesday Zoom trainings to my calendar"
+   ],
+   "signoff": [
+    "done"
+   ]
+  },
+  {
+   "track": "start",
+   "n": 2,
+   "id": "on2",
+   "title": "Sign the Accountability Agreement",
+   "when": "Day 1",
+   "goal": "Know exactly what is expected of you, and agree to it.",
+   "blocks": [
+    {
+     "p": "Go over the production standards and activity expectations with your leader, ask any questions, then sign and return the agreement."
+    },
+    {
+     "h": "The standards",
+     "list": [
+      "Production: $3,000 in weekly Annualized Premium (AP).",
+      "Activity: at least 15 door knocks a day and 12 in-person presentations a week.",
+      "Training: attendance is required, with no more than 2 absences a month.",
+      "Grace period: production is not held against you for your first 30 days."
+     ]
+    },
+    {
+     "h": "How you are measured",
+     "list": [
+      "Days 1 to 30: focus on activity.",
+      "Days 31 to 60: evaluated on applications.",
+      "After 60 days: full production standards."
+     ]
+    }
+   ],
+   "links": [
+    {
+     "t": "Open & sign the Agreement (PDF)",
+     "url": "https://assets.cdn.filesafe.space/tM2DczeHdqpv4Kc20QHT/media/6a99e22fa1f3f48f4bc1a4da.pdf"
+    }
+   ],
+   "tasks": [
+    "Reviewed the standards with my leader",
+    "Asked my questions",
+    "Signed and returned the Agreement"
+   ],
+   "signoff": [
+    "done"
+   ]
+  },
+  {
+   "track": "start",
+   "n": 3,
+   "id": "on3",
+   "title": "Get contracted",
+   "when": "As soon as possible",
+   "goal": "Get your E&O and NASB contract done so you can write business.",
+   "blocks": [
+    {
+     "list": [
+      "Get E&O insurance. Plan A is the recommended plan. E&O is required (Corebridge requires it).",
+      "Complete your NASB contract.",
+      "Questions about contracting go to Katie."
+     ]
+    }
+   ],
+   "links": [
+    {
+     "t": "New Agent Checklist",
+     "url": "https://agenthub.structuredintegritygroup.com/new-agent-checklist"
+    }
+   ],
+   "tasks": [
+    "Bought E&O insurance (Plan A)",
+    "Submitted my NASB contract"
+   ],
+   "signoff": [
+    "done"
+   ]
+  },
+  {
+   "track": "start",
+   "n": 4,
+   "id": "on4",
+   "title": "Set up your carrier portals",
+   "when": "As you get contracted",
+   "goal": "Be able to log in to every carrier before you need to.",
+   "blocks": [
+    {
+     "p": "As each carrier approves your contract, set up your portal login, bookmark it and save your credentials somewhere safe."
+    },
+    {
+     "list": [
+      "Aetna / CVS",
+      "American Amicable / Occidental",
+      "Liberty Bankers Life",
+      "Royal Neighbors",
+      "Transamerica",
+      "Mutual of Omaha",
+      "Foresters",
+      "AIG / Corebridge"
+     ]
+    },
+    {
+     "tip": "Each carrier has its own page in the Carrier Hub with the portal link, agent support number and forms."
+    }
+   ],
+   "links": [
+    {
+     "t": "Carrier Hub",
+     "url": "https://agenthub.structuredintegritygroup.com/education-sheet"
+    }
+   ],
+   "tasks": [
+    "Set up and bookmarked every portal I am contracted with",
+    "Saved my logins somewhere safe"
+   ],
+   "signoff": [
+    "done"
+   ]
+  },
+  {
+   "track": "start",
+   "n": 5,
+   "id": "on5",
+   "title": "Record your door knock",
+   "when": "Within 4 days",
+   "goal": "Know the door knock cold, and prove it with a recording.",
+   "blocks": [
+    {
+     "p": "Learn the door knock script (Step 1 of the 10 Steps), practice until it sounds natural, then record yourself and post it in the group chat."
+    },
+    {
+     "tip": "Use Step 1 below for the script and practice puzzles."
+    }
+   ],
+   "links": [
+    {
+     "t": "New Agent Checklist",
+     "url": "https://agenthub.structuredintegritygroup.com/new-agent-checklist"
+    }
+   ],
+   "practice": [
+    "p27",
+    "p28"
+   ],
+   "tasks": [
+    "Practiced the door knock until it felt natural",
+    "Recorded my voice memo",
+    "Posted it in the group chat"
+   ],
+   "signoff": [
+    "done"
+   ]
+  },
+  {
+   "track": "start",
+   "n": 6,
+   "id": "on6",
+   "title": "Start virtual training",
+   "when": "Once your NASB contract is submitted",
+   "goal": "Build the habits that make agents successful.",
+   "blocks": [
+    {
+     "list": [
+      "Start the new agent training course (link coming soon).",
+      "Keep attending the Tuesday and Wednesday live Zoom trainings.",
+      "Schedule at least 2 one-on-one training sessions a week with your leader."
+     ]
+    }
+   ],
+   "links": [
+    {
+     "t": "New Agent Checklist",
+     "url": "https://agenthub.structuredintegritygroup.com/new-agent-checklist"
+    }
+   ],
+   "tasks": [
+    "Attending the Tuesday and Wednesday Zoom trainings",
+    "Scheduled 2 one-on-ones a week with my leader"
+   ],
+   "signoff": [
+    "done"
+   ]
+  },
+  {
+   "track": "start",
+   "n": 7,
+   "id": "on7",
+   "title": "Set up the Integrity Lead Center",
+   "when": "Around week 3",
+   "goal": "Get your lead account approved so you can buy leads.",
+   "blocks": [
+    {
+     "h": "Account setup",
+     "list": [
+      "Go to integrity.com, click LOGIN, then Sign Up.",
+      "Enter your NPN, name, email, phone and a password.",
+      "Verify your email from the link. It expires in 72 hours.",
+      "Log in and go to Profile, then Lead Marketplace.",
+      "Select the North American Senior Benefits organization.",
+      "Email yourself the 30% discount code right away.",
+      "Wait for corporate approval before you order any leads."
+     ]
+    },
+    {
+     "h": "Campaign types",
+     "list": [
+      "Realtime Campaign: \"Data\" type with NASB exclusive leads, 5 to 100 a week.",
+      "Buy Per Lead: dental, memorial, check and Champ leads.",
+      "Marketplace: inventory and overflow leads. \"Automate and Save\" takes 15% off with a 4-week minimum."
+     ]
+    },
+    {
+     "tip": "Talk through your first lead order with your leader. Your Builder Program check-ins review your lead order each week."
+    }
+   ],
+   "links": [
+    {
+     "t": "Integrity (sign up)",
+     "url": "https://integrity.com"
+    },
+    {
+     "t": "New Agent Checklist",
+     "url": "https://agenthub.structuredintegritygroup.com/new-agent-checklist"
+    },
+    {
+     "t": "Lead Maps",
+     "url": "https://agenthub.structuredintegritygroup.com/lead-maps"
+    }
+   ],
+   "tasks": [
+    "Registered and verified my email",
+    "Selected North American Senior Benefits",
+    "Emailed myself the 30% discount code",
+    "Approved by corporate",
+    "Set up my first campaign with my leader"
+   ],
+   "signoff": [
+    "done"
+   ]
+  },
+  {
+   "track": "start",
+   "n": 8,
+   "id": "on8",
+   "title": "Get ready for Field Day",
+   "when": "By week 3",
+   "goal": "Show up to your first field day fully equipped.",
+   "blocks": [
+    {
+     "list": [
+      "Confirm with your leader whether you will use an iPad or a laptop.",
+      "Get your business cards and leave-behinds.",
+      "Lock in your field training date. It should be no later than 3 weeks from your start."
+     ]
+    }
+   ],
+   "links": [
+    {
+     "t": "Marketing Tools",
+     "url": "https://agenthub.structuredintegritygroup.com/marketing-materials"
+    }
+   ],
+   "tasks": [
+    "Confirmed iPad or laptop",
+    "Have business cards and leave-behinds",
+    "Field training date is on the calendar"
+   ],
+   "signoff": [
+    "done"
+   ]
+  },
+  {
+   "track": "steps",
+   "id": "s1",
+   "n": 1,
+   "title": "Door knock",
+   "goal": "Get from the door to the kitchen table in under a minute.",
+   "blocks": [
+    {
+     "h": "The framework: Announce, Assign, Assume",
+     "list": [
+      "Announce: your name and your credentials.",
+      "Assign: the reason you are there (the card they mailed back).",
+      "Assume: it only takes 5 to 10 minutes, and you are coming in."
+     ]
+    },
+    {
+     "h": "The script",
+     "script": "Hey (client name), my name is (your name). I'm a local benefit coordinator, licensed by the state of (state). Reason for my stop is because of this card that you would have gotten in the mail, filled out, and sent back. Once we get it, they send me out to go over the information with you. Should only take 5, maybe 10 minutes. Let me turn my car off and grab my stuff, I'll be right in."
+    },
+    {
+     "h": "Common objections",
+     "list": [
+      "\"What is this about?\" Reference the final expense programs, and remind them it only takes 5 to 10 minutes.",
+      "\"I already have this taken care of.\" Offer to check it for upgrades, discounts, paid-up options and cash back they may be entitled to."
+     ]
+    }
+   ],
+   "practice": [
+    "p27",
+    "p28",
+    "p30",
+    "p31",
+    "p80"
+   ],
+   "tasks": [
+    "Can say the script word for word",
+    "Practiced both objections out loud",
+    "Finished the practice puzzles"
+   ],
+   "signoff": [
+    "observed",
+    "performed"
+   ]
+  },
+  {
+   "track": "steps",
+   "id": "s2",
+   "n": 2,
+   "title": "Rapport build",
+   "goal": "Earn trust in the first few minutes inside, so the rest of the sit goes smoothly.",
+   "blocks": [
+    {
+     "h": "The 3 C's",
+     "list": [
+      "Connection, using FORT: Family, Occupation, Recreation, Topics.",
+      "Commonality: find common ground.",
+      "Clues: notice the pictures and decorations in the home and ask about them."
+     ]
+    },
+    {
+     "tip": "People share what matters to them when they feel heard. Listen for the people they want to protect and any past experiences with insurance. You will use both later."
+    }
+   ],
+   "practice": [
+    "p53",
+    "p55",
+    "p36",
+    "p188"
+   ],
+   "tasks": [
+    "Can name the 3 C's and FORT without looking",
+    "Finished the practice puzzles"
+   ],
+   "signoff": [
+    "observed",
+    "performed"
+   ]
+  },
+  {
+   "track": "steps",
+   "id": "s3",
+   "n": 3,
+   "title": "In-home script",
+   "draft": true,
+   "goal": "Set the agenda at the table so the client knows what happens and who decides.",
+   "blocks": [
+    {
+     "p": "Once you are seated, take control of the appointment in a friendly way. Tell them who you are, what you will cover, how long it takes, and that at the end they decide what is right for them."
+    },
+    {
+     "list": [
+      "Sit where you can see both spouses, and invite everyone who makes decisions to the table.",
+      "Refer back to the card they mailed in.",
+      "Set the agenda: a few questions, some education, look at options, then they decide.",
+      "Get permission to ask personal questions about health and budget."
+     ]
+    },
+    {
+     "tip": "Your leader will give you the SIG in-home script word for word. Learn it the same way you learned the door knock."
+    }
+   ],
+   "practice": [
+    "p02",
+    "p57",
+    "p56",
+    "p35"
+   ],
+   "tasks": [
+    "Learned the in-home script from my leader",
+    "Finished the practice puzzles"
+   ],
+   "signoff": [
+    "observed",
+    "performed"
+   ]
+  },
+  {
+   "track": "steps",
+   "id": "s4",
+   "n": 4,
+   "title": "Education",
+   "draft": true,
+   "goal": "Help them understand their options before you talk about any price.",
+   "blocks": [
+    {
+     "p": "Education builds the need in their own mind. Explain how final expense coverage works in plain words, so they can make a smart choice."
+    },
+    {
+     "list": [
+      "What final costs look like, and who pays them if nothing is in place.",
+      "The difference between term, whole life and guaranteed issue coverage.",
+      "Level benefit vs. graded or guaranteed issue with a waiting period.",
+      "Living benefits and riders that come with many of our plans."
+     ]
+    },
+    {
+     "tip": "Keep it simple and ask questions as you go. A client who understands the options does not need to be sold."
+    }
+   ],
+   "links": [
+    {
+     "t": "Living Benefits & Riders Overview",
+     "url": "https://agenthub.structuredintegritygroup.com/living-ben--riders"
+    },
+    {
+     "t": "Carrier Hub",
+     "url": "https://agenthub.structuredintegritygroup.com/education-sheet"
+    }
+   ],
+   "practice": [
+    "p05",
+    "p40",
+    "p43",
+    "p41"
+   ],
+   "tasks": [
+    "Can explain term vs. whole life vs. guaranteed issue simply",
+    "Reviewed the Living Benefits & Riders overview",
+    "Finished the practice puzzles"
+   ],
+   "signoff": [
+    "observed",
+    "performed"
+   ]
+  },
+  {
+   "track": "steps",
+   "id": "s5",
+   "n": 5,
+   "title": "Health questions",
+   "goal": "Get complete, honest health answers so you place them with the right carrier.",
+   "blocks": [
+    {
+     "list": [
+      "Use the Health Questions sheet and ask every question, every time.",
+      "Get the medication list and ask what each medication is for.",
+      "Get dates: diagnosis, last treatment, hospital stays.",
+      "The client answers their own health questions. Never fill in or round an answer."
+     ]
+    },
+    {
+     "tip": "Every carrier decision turns on dates and details. The Underwriting Showdown and the flash-card puzzles train exactly this."
+    }
+   ],
+   "links": [
+    {
+     "t": "Health Questions (full sheet)",
+     "url": "https://agenthub.structuredintegritygroup.com/health-questions"
+    },
+    {
+     "t": "Health Questions (cardstock)",
+     "url": "https://agenthub.structuredintegritygroup.com/health-sheet-cardstock"
+    },
+    {
+     "t": "Underwriting guide",
+     "url": "https://docs.google.com/spreadsheets/d/1hyMiy5SrxSt0zeXd7XQSzVIQLSe9m-NzOsqNzZv-7IY/edit?gid=0#gid=0"
+    }
+   ],
+   "practice": [
+    "p73",
+    "p79",
+    "p74",
+    "p151"
+   ],
+   "tasks": [
+    "Know every question on the Health Questions sheet",
+    "Finished the practice puzzles"
+   ],
+   "signoff": [
+    "observed",
+    "performed"
+   ]
+  },
+  {
+   "track": "steps",
+   "id": "s6",
+   "n": 6,
+   "title": "Coverage review",
+   "goal": "Review what they already have, honestly, and document it.",
+   "blocks": [
+    {
+     "p": "Use the Coverage Review Sheet for any existing policy. It is a complimentary review, not a recommendation to replace existing coverage."
+    },
+    {
+     "list": [
+      "Basics: carrier, policy number, effective date, draft date.",
+      "Term: face amount, premium, term length, and how the premium climbs at renewal.",
+      "Whole life: day 1, graded or guaranteed issue; loans; cash value; riders; non-forfeiture options.",
+      "Universal life: loans, cash value, and whether the cost of insurance is rising."
+     ]
+    },
+    {
+     "tip": "Only replace a policy when it clearly helps the client, and always complete the replacement paperwork."
+    }
+   ],
+   "links": [
+    {
+     "t": "Coverage Review Sheet",
+     "url": "https://agenthub.structuredintegritygroup.com/coverage-review-sheet"
+    }
+   ],
+   "practice": [
+    "p19",
+    "p20",
+    "p23",
+    "p191"
+   ],
+   "tasks": [
+    "Filled out a practice Coverage Review Sheet",
+    "Finished the practice puzzles"
+   ],
+   "signoff": [
+    "observed",
+    "performed"
+   ]
+  },
+  {
+   "track": "steps",
+   "id": "s7",
+   "n": 7,
+   "title": "In & Up call",
+   "draft": true,
+   "goal": "Run the case by your leader before you present options.",
+   "blocks": [
+    {
+     "p": "Your leader will teach this step live, including who you call, when in the appointment, and what you say."
+    },
+    {
+     "list": [
+      "Have the Health Questions sheet and the In & Up sheet filled out.",
+      "Know the medications, dates and budget before the call.",
+      "Upload the Health Sheet / In & Up Sheet with the sale in the SIG Sale Tracker."
+     ]
+    }
+   ],
+   "practice": [
+    "p151",
+    "p150",
+    "p149"
+   ],
+   "tasks": [
+    "Watched my leader run an In & Up call",
+    "Know what to have ready before the call"
+   ],
+   "signoff": [
+    "observed",
+    "performed"
+   ]
+  },
+  {
+   "track": "steps",
+   "id": "s8",
+   "n": 8,
+   "title": "Pricing (cremation vs. burial)",
+   "draft": true,
+   "goal": "Size the plan to what they actually want, at a price they can keep.",
+   "blocks": [
+    {
+     "list": [
+      "Ask which they would prefer: cremation or a traditional burial.",
+      "Use the costs your leader teaches for your area to show what each choice really costs.",
+      "Present the plan that covers their choice, using the SIG Quoter for the best carrier.",
+      "If the budget is tight, show a smaller option rather than a plan they cannot keep."
+     ]
+    }
+   ],
+   "links": [
+    {
+     "t": "SIG Quoter",
+     "url": "https://agenthub.structuredintegritygroup.com/sig-quoter"
+    }
+   ],
+   "practice": [
+    "p04",
+    "p15",
+    "p11",
+    "p190"
+   ],
+   "tasks": [
+    "Can explain cremation vs. burial costs",
+    "Quoted a practice client in the SIG Quoter",
+    "Finished the practice puzzles"
+   ],
+   "signoff": [
+    "observed",
+    "performed"
+   ]
+  },
+  {
+   "track": "steps",
+   "id": "s9",
+   "n": 9,
+   "title": "Application",
+   "draft": true,
+   "goal": "Submit a clean, honest application that gets approved and stays in force.",
+   "blocks": [
+    {
+     "list": [
+      "Read every health question to the client and record their exact answer.",
+      "Set the draft date to line up with when their money comes in.",
+      "Confirm the bank information and the beneficiary.",
+      "Complete any replacement forms when a policy is being replaced.",
+      "Submit through the carrier portal or insuranceapplication.com."
+     ]
+    }
+   ],
+   "links": [
+    {
+     "t": "Carrier Hub (applications and forms)",
+     "url": "https://agenthub.structuredintegritygroup.com/education-sheet"
+    }
+   ],
+   "practice": [
+    "p24",
+    "p48",
+    "p68",
+    "p192"
+   ],
+   "tasks": [
+    "Walked through a practice application with my leader",
+    "Finished the practice puzzles"
+   ],
+   "signoff": [
+    "observed",
+    "performed"
+   ]
+  },
+  {
+   "track": "steps",
+   "id": "s10",
+   "n": 10,
+   "title": "Button up",
+   "draft": true,
+   "goal": "Leave them confident in their decision, so the policy sticks.",
+   "blocks": [
+    {
+     "list": [
+      "Recap what they bought, what it pays, and who it protects.",
+      "Confirm the draft date and when the policy will arrive.",
+      "Tell them what to do if another agent calls about their coverage.",
+      "Leave your business card and leave-behind.",
+      "Ask for referrals.",
+      "Log the sale in the SIG Sale Tracker the same day."
+     ]
+    }
+   ],
+   "practice": [
+    "p93",
+    "p94",
+    "p95",
+    "p96"
+   ],
+   "tasks": [
+    "Can run a button up from memory",
+    "Finished the practice puzzles"
+   ],
+   "signoff": [
+    "observed",
+    "performed"
+   ]
+  },
+  {
+   "track": "tools",
+   "n": 1,
+   "id": "t1",
+   "title": "Log every sale",
+   "goal": "Every sale goes in the tracker the same day.",
+   "blocks": [
+    {
+     "p": "Log each sale in the SIG Sale Tracker form. You will need:"
+    },
+    {
+     "list": [
+      "Client name, date of birth, email, phone and street address.",
+      "Carrier and rating (for example, Level Standard).",
+      "Annual premium as a number only, with no $ sign.",
+      "Draft date and policy number.",
+      "Lead type, plus any notes.",
+      "Upload the Health Sheet / In & Up Sheet."
+     ]
+    },
+    {
+     "tip": "Your monthly numbers live in the Business Tracker on the Agent Hub. Sign in with your personal access code."
+    }
+   ],
+   "links": [
+    {
+     "t": "SIG Sale Tracker form",
+     "url": "https://docs.google.com/forms/d/1TQdwyyWMIA_2bVJGEEr-Kk45pg0uihzFUyzX5nuYMRg/viewform"
+    },
+    {
+     "t": "Business Tracker",
+     "url": "https://agenthub.structuredintegritygroup.com/sig-monthly-trackers"
+    }
+   ],
+   "practice": [
+    "p104",
+    "p105",
+    "p106"
+   ],
+   "tasks": [
+    "Know every field in the SIG Sale Tracker",
+    "Signed in to the Business Tracker"
+   ],
+   "signoff": [
+    "done"
+   ]
+  },
+  {
+   "track": "tools",
+   "n": 2,
+   "id": "t2",
+   "title": "Quote with the SIG Quoter",
+   "goal": "Find the best carrier and price in a couple of minutes.",
+   "blocks": [
+    {
+     "list": [
+      "Enter age (last birthday), gender, tobacco use, face amount and payment mode.",
+      "Add every health condition that applies. The quoter removes carriers that would decline and flags the ones that would likely be graded.",
+      "Results are ranked from cheapest to most expensive."
+     ]
+    },
+    {
+     "tip": "The quoter is an estimate from each carrier's rate tables. Always confirm with the carrier's official quoting tool before you give a client a number."
+    }
+   ],
+   "links": [
+    {
+     "t": "SIG Quoter",
+     "url": "https://agenthub.structuredintegritygroup.com/sig-quoter"
+    }
+   ],
+   "tasks": [
+    "Ran 3 practice quotes in the SIG Quoter",
+    "Confirmed one quote in a carrier's own quoting tool"
+   ],
+   "signoff": [
+    "done"
+   ]
+  },
+  {
+   "track": "tools",
+   "n": 3,
+   "id": "t3",
+   "title": "Find carrier forms and phone numbers",
+   "goal": "Handle client service requests without having to ask.",
+   "blocks": [
+    {
+     "p": "Each carrier has a page in the Carrier Hub with the agent support number, new business fax, portal link, agent guide, application and service forms."
+    },
+    {
+     "h": "Service forms you will use",
+     "list": [
+      "Beneficiary change",
+      "EFT / bank draft change",
+      "Policy cancellation / free look",
+      "Address or name change",
+      "Replacement notice"
+     ]
+    }
+   ],
+   "links": [
+    {
+     "t": "Carrier Hub",
+     "url": "https://agenthub.structuredintegritygroup.com/education-sheet"
+    },
+    {
+     "t": "Carrier Numbers & Mailing Addresses",
+     "url": "https://agenthub.structuredintegritygroup.com/carrier-numbers--mailing"
+    }
+   ],
+   "tasks": [
+    "Found the policy change forms for 2 carriers",
+    "Saved the agent support numbers"
+   ],
+   "signoff": [
+    "done"
+   ]
+  },
+  {
+   "track": "tools",
+   "n": 4,
+   "id": "t4",
+   "title": "Sales tools",
+   "goal": "Know what to bring to every appointment.",
+   "blocks": [
+    {
+     "list": [
+      "Health Questions: full sheet and cardstock version.",
+      "Coverage Review Sheet.",
+      "Carrier Living Benefits & Riders overview.",
+      "Carrier numbers and mailing addresses.",
+      "Marketing tools and leave-behinds."
+     ]
+    }
+   ],
+   "links": [
+    {
+     "t": "Sales Tools",
+     "url": "https://agenthub.structuredintegritygroup.com/sales-tools"
+    },
+    {
+     "t": "Marketing Tools",
+     "url": "https://agenthub.structuredintegritygroup.com/marketing-materials"
+    }
+   ],
+   "tasks": [
+    "Printed or saved the Health Questions cardstock",
+    "Printed or saved the Coverage Review Sheet"
+   ],
+   "signoff": [
+    "done"
+   ]
+  },
+  {
+   "track": "tools",
+   "n": 5,
+   "id": "t5",
+   "title": "Underwriting",
+   "goal": "Know which carrier takes which condition.",
+   "blocks": [
+    {
+     "p": "The underwriting guide is the source of truth for which health conditions each carrier accepts. Learn it by playing the Underwriting Showdown."
+    }
+   ],
+   "links": [
+    {
+     "t": "Underwriting guide",
+     "url": "https://docs.google.com/spreadsheets/d/1hyMiy5SrxSt0zeXd7XQSzVIQLSe9m-NzOsqNzZv-7IY/edit?gid=0#gid=0"
+    }
+   ],
+   "practice": [
+    "p162",
+    "p163",
+    "p164",
+    "p165"
+   ],
+   "tasks": [
+    "Bookmarked the underwriting guide",
+    "Played Round 1 of the Underwriting Showdown"
+   ],
+   "signoff": [
+    "done"
+   ]
+  }
+ ]
+}
