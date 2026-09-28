@@ -56,6 +56,7 @@
   .seg button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--gold)}
   .seg.show{display:flex}
   @media (max-width:900px){.cols{grid-template-columns:1fr;overflow-y:auto}body{overflow:auto}.top{flex-wrap:wrap}}
+  #scopeSeg button[hidden]{display:none}
 </style>
 </head>
 <body>
@@ -65,6 +66,7 @@
       <button type="button" role="tab" data-s="all" aria-pressed="true">All-time</button>
       <button type="button" role="tab" data-s="gamenight" aria-pressed="false">Paragon Game Night</button>
       <button type="button" role="tab" data-s="showdown" aria-pressed="false">UW Showdown</button>
+      <button type="button" role="tab" data-s="challenge" aria-pressed="false" id="chBtn" hidden>Challenge</button>
     </div>
     <div class="headline"><h1 id="headline">Loading&hellip;</h1><p id="sub"></p></div>
   </div>
@@ -102,6 +104,7 @@
   function stats(b, sc){
     var gnIds = null;
     if(sc === 'gamenight'){ gnIds = new Set(b.puzzles.filter(function(p){ return p.gameNight; }).map(function(p){ return p.id; })); }
+    if(sc === 'challenge'){ gnIds = new Set(b.puzzles.filter(function(p){ return p.challenge; }).map(function(p){ return p.id; })); }
     if(sc === 'showdown'){ gnIds = new Set(b.puzzles.filter(function(p){ return p.event === 'showdown'; }).map(function(p){ return p.id; })); }
     var puzzles = gnIds ? b.puzzles.filter(function(p){ return gnIds.has(p.id); }) : b.puzzles;
     var open = puzzles.filter(function(p){ return p.open; });
@@ -128,7 +131,10 @@
     var teamOf = function(id){ return b.teams.find(function(t){ return t.id === id; }); };
     var headline = document.getElementById('headline'), sub = document.getElementById('sub');
     var top = st.sorted.filter(function(r){ return r.rank === 1; });
-    var scopeLabel = scope === 'gamenight' ? ' (Game Night)' : scope === 'showdown' ? ' (UW Showdown)' : '';
+    var chBtn = document.getElementById('chBtn');
+    if(chBtn){ chBtn.hidden = !b.challenge; if(b.challenge){ chBtn.textContent = b.challenge.title; } }
+    if(scope === 'challenge' && !b.challenge){ scope = 'all'; }
+    var scopeLabel = scope === 'gamenight' ? ' (Game Night)' : scope === 'showdown' ? ' (UW Showdown)' : scope === 'challenge' && b.challenge ? ' (' + b.challenge.title + ')' : '';
     if(!b.teams.length){ headline.textContent = 'Not set up yet'; sub.textContent = ''; }
     else if(!top.length || top[0].avg === 0){ headline.textContent = 'No scores yet'; sub.textContent = 'Waiting for the first answers to come in'; }
     else if(top.length === 1){ headline.textContent = top[0].t.name + ' leads' + scopeLabel; sub.textContent = fmtN(top[0].avg) + ' points per agent'; }
