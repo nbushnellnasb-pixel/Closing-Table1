@@ -154,6 +154,11 @@ function publicPuzzle(p) {
   else if (p.format === 'order') o.steps = p.steps.map(s => ({ id: s.id, t: s.t }));
   else if (p.format === 'text') o.minWords = p.minWords || 12;
   else if (p.format === 'angle') o.groups = p.groups.map(g => ({ key: g.key, label: g.label, pick: g.pick, hint: g.hint, options: g.options.map(x => ({ t: x.t })) }));
+  else if (p.format === 'interview') {
+    o.speaker = p.speaker || 'Client'; o.askLimit = p.askLimit;
+    o.questions = p.questions.map(x => ({ t: x.t, a: x.a }));
+    o.final = { label: p.final.label, pick: p.final.pick, options: p.final.options.map(x => ({ t: x.t })) };
+  }
   return o;
 }
 const words = s => String(s).trim().split(/\s+/).filter(Boolean).length;
@@ -188,6 +193,14 @@ function scoreAnswer(p, a) {
     let ok = 0;
     a.forEach((id, i) => { const s = p.steps.find(x => x.id === id); if (s.pos === i + 1) ok++; });
     return { answer: a.slice(), points: Math.round(ok / p.steps.length * max) };
+  }
+  if (p.format === 'interview') {
+    if (!a || typeof a !== 'object') return null;
+    const ask = a.ask, pick = a.pick;
+    if (!uniqInts(ask, p.questions.length) || !ask.length || ask.length > p.askLimit) return null;
+    if (!uniqInts(pick, p.final.options.length) || pick.length !== p.final.pick) return null;
+    const pts = ask.reduce((s, i) => s + p.questions[i].pts, 0) + pick.reduce((s, i) => s + p.final.options[i].pts, 0);
+    return { answer: { ask: ask.slice(), pick: pick.slice().sort((x, y) => x - y) }, points: Math.max(0, Math.min(max, pts)) };
   }
   if (p.format === 'text') {
     if (typeof a !== 'string') return null;
@@ -224,6 +237,7 @@ function board() {
       const o = { id: p.id, n: p.n, title: p.title, cat: p.cat, format: p.format, max: maxOf(p), open: db.puzzleState[p.id].open, gameNight: GAME_NIGHT_IDS.has(p.id) };
       if (p.series) { o.series = p.series; o.seriesTitle = p.seriesTitle; o.part = p.part; o.parts = p.parts; }
       if (p.section) o.section = p.section;
+      if (p.event) o.event = p.event;
       return o;
     }),
     agents: Object.values(db.agents).map(a => Object.assign({ id: a.id, name: a.name, teamId: a.teamId, points: 0, done: 0, last: 0, per: {} }, per[a.id] || {}))
@@ -415,7 +429,8 @@ admin('DELETE', '/api/admin/teams/:id', (req, res, p) => {
 });
 admin('POST', '/api/admin/puzzles/open', async (req, res) => {
   const b = await readBody(req);
-  PUZZLES.forEach(p => { if (b.cat === '*' || p.cat === b.cat) db.puzzleState[p.id].open = !!b.open; });
+  const ev = typeof b.cat === 'string' && b.cat.indexOf('event:') === 0 ? b.cat.slice(6) : null;
+  PUZZLES.forEach(p => { if (b.cat === '*' || (ev ? p.event === ev : p.cat === b.cat)) db.puzzleState[p.id].open = !!b.open; });
   save(); send(res, 200, { ok: true });
 });
 admin('PATCH', '/api/admin/puzzles/:id', async (req, res, p) => {
