@@ -56,6 +56,12 @@ function loadPuzzles() {
 loadPuzzles();
 const puzzleById = id => PUZZLES.find(p => p.id === id);
 
+/* new agent path: content comes from training.json (not served as a file); progress lives in db.training */
+let TRAINING = { tracks: [], stations: [] };
+try { TRAINING = JSON.parse(fs.readFileSync(path.join(__dirname, 'training.json'), 'utf8')); } catch (e) { console.log('No training.json found; the New Agent Path is empty.'); }
+if (!db.training) db.training = {};
+const stationById = id => TRAINING.stations.find(s => s.id === id);
+
 let saveTimer = null;
 function save() {
   if (saveTimer) return;
@@ -321,6 +327,50 @@ route('GET', '/api/me', (req, res) => {
   send(res, 200, { agent: a ? me(a) : null, admin: isAdmin(req), leader: !!(s && s.t === 'leader'), leaderAccess: !!leaderPassword() });
 });
 
+/* ---------- new agent path ---------- */
+const trainingRow = agentId => (db.training[agentId] = db.training[agentId] || {});
+function stationProgress(agentId, st) {
+  const r = (db.training[agentId] || {})[st.id] || {};
+  const tasks = (st.tasks || []).map((_, i) => !!(r.t && r.t[i]));
+  return { tasks, so: r.so || {} };
+}
+function trainingFor(agentId) {
+  const prog = {};
+  TRAINING.stations.forEach(st => { prog[st.id] = stationProgress(agentId, st); });
+  return prog;
+}
+route('GET', '/api/training', (req, res) => {
+  const a = agentOf(req);
+  send(res, 200, { tracks: TRAINING.tracks, stations: TRAINING.stations, progress: a ? trainingFor(a.id) : null });
+});
+route('POST', '/api/training/:id/task', async (req, res, p) => {
+  const a = agentOf(req); if (!a) return send(res, 401, { error: 'Sign in first.' });
+  const st = stationById(p.id); if (!st) return send(res, 404, { error: 'No such training step.' });
+  const b = await readBody(req);
+  const i = b.i;
+  if (!Number.isInteger(i) || i < 0 || i >= (st.tasks || []).length) return send(res, 400, { error: 'Bad task.' });
+  const row = trainingRow(a.id); const r = row[st.id] = row[st.id] || {};
+  r.t = r.t || {}; if (b.done) r.t[i] = Date.now(); else delete r.t[i];
+  save(); send(res, 200, { progress: stationProgress(a.id, st) });
+});
+/* leaders and hosts sign off on what they have seen an agent do */
+route('POST', '/api/training/:id/signoff', async (req, res, p) => {
+  if (!isLeader(req)) return send(res, 401, { error: 'Leader or host sign-in required.' });
+  const st = stationById(p.id); if (!st) return send(res, 404, { error: 'No such training step.' });
+  const b = await readBody(req);
+  if (!db.agents[b.agentId]) return send(res, 404, { error: 'No such agent.' });
+  if ((st.signoff || []).indexOf(b.key) === -1) return send(res, 400, { error: 'Bad sign-off.' });
+  const row = trainingRow(b.agentId); const r = row[st.id] = row[st.id] || {};
+  r.so = r.so || {};
+  if (b.on) r.so[b.key] = { at: Date.now(), by: isAdmin(req) ? 'Host' : 'Team leader' }; else delete r.so[b.key];
+  save(); send(res, 200, { progress: stationProgress(b.agentId, st) });
+});
+route('GET', '/api/training/overview', (req, res) => {
+  if (!isLeader(req)) return send(res, 401, { error: 'Leader or host sign-in required.' });
+  const agents = Object.values(db.agents).map(a => ({ id: a.id, name: a.name, teamId: a.teamId, progress: trainingFor(a.id) }));
+  send(res, 200, { tracks: TRAINING.tracks, stations: TRAINING.stations.map(s => ({ id: s.id, track: s.track, n: s.n, title: s.title, tasks: (s.tasks || []).length, signoff: s.signoff || [] })), agents, teams: db.teams.map(t => ({ id: t.id, name: t.name })) });
+});
+
 route('GET', '/api/puzzles/:id', (req, res, p) => {
   const a = agentOf(req); if (!a) return send(res, 401, { error: 'Sign in first.' });
   const pz = puzzleById(p.id); if (!pz) return send(res, 404, { error: 'No such puzzle.' });
@@ -401,6 +451,7 @@ admin('DELETE', '/api/admin/agents/:id', (req, res, p) => {
   if (!db.agents[p.id]) return send(res, 404, { error: 'No such agent.' });
   snapshot('before-remove');
   delete db.agents[p.id];
+  if (db.training) delete db.training[p.id];
   Object.keys(db.results).forEach(k => { if (db.results[k].agentId === p.id) delete db.results[k]; });
   save(); send(res, 200, { ok: true });
 });
@@ -543,7 +594,7 @@ admin('GET', '/api/admin/answers.csv', (req, res) => {
 const BACKUP_DIR = path.join(DATA_DIR, 'backups');
 const KEEP_BACKUPS = 30;
 fs.mkdirSync(BACKUP_DIR, { recursive: true });
-const backupData = () => ({ app: 'closing-table', version: 1, exportedAt: new Date().toISOString(), teams: db.teams, agents: db.agents, results: db.results, puzzleState: db.puzzleState });
+const backupData = () => ({ app: 'closing-table', version: 1, exportedAt: new Date().toISOString(), teams: db.teams, agents: db.agents, results: db.results, puzzleState: db.puzzleState, training: db.training || {} });
 function snapshot(reason) {
   try {
     const name = 'backup-' + new Date().toISOString().replace(/[:T]/g, '-').slice(0, 16) + (reason ? '-' + reason : '') + '.json';
@@ -581,6 +632,7 @@ function restoreFrom(data) {
   if (!data || data.app !== 'closing-table' || !Array.isArray(data.teams) || !data.teams.length || typeof data.agents !== 'object' || typeof data.results !== 'object') return 'That file is not a Closers Compete backup.';
   snapshot('before-restore');
   db.teams = data.teams; db.agents = data.agents || {}; db.results = data.results || {};
+  if (data.training && typeof data.training === 'object') db.training = data.training;
   db.puzzleState = Object.assign({}, db.puzzleState, data.puzzleState || {});
   PUZZLES.forEach(p => { if (!db.puzzleState[p.id]) db.puzzleState[p.id] = { open: true }; });
   db.teams.forEach(t => { if (!t.joinCode) t.joinCode = newTeamCode(); });
