@@ -11606,5 +11606,2381 @@
     "why": "False. Three carriers are on both cards."
    }
   ]
+ },
+ {
+  "id": "p162",
+  "n": 162,
+  "max": 100,
+  "title": "Four Months Out",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 1: Rapid Fire",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Heart attack 4 months ago"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "He wants to know if anyone will write him today.",
+  "prompt": "Rapid fire: pick the best answer. Which carrier is on the card?",
+  "options": [
+   {
+    "t": "Mutual of Omaha, if no nitro",
+    "pts": 10,
+    "why": "That rule is on the 24 to 36 month card."
+   },
+   {
+    "t": "Transamerica FE",
+    "pts": 100,
+    "why": "Correct. It is the only carrier on the first-year heart attack card."
+   },
+   {
+    "t": "Aetna at Standard",
+    "pts": 15,
+    "why": "Aetna joins at 12 months."
+   }
+  ]
+ },
+ {
+  "id": "p163",
+  "n": 163,
+  "max": 100,
+  "title": "Stroke, Three Years Back",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 1: Rapid Fire",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "One stroke, 40 months ago"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "She has been paying for a guaranteed issue plan ever since.",
+  "prompt": "Rapid fire: pick the best answer. What does the card say now?",
+  "options": [
+   {
+    "t": "Only Transamerica FE writes a past stroke",
+    "pts": 5,
+    "why": "That is the first-year card."
+   },
+   {
+    "t": "Aetna or Foresters, but only at Standard",
+    "pts": 20,
+    "why": "That is the 12 to 24 month card."
+   },
+   {
+    "t": "Everyone on our cards, at level",
+    "pts": 100,
+    "why": "Correct. After 36 months the stroke card opens to everyone."
+   }
+  ]
+ },
+ {
+  "id": "p164",
+  "n": 164,
+  "max": 100,
+  "title": "Still Smoking",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 1: Rapid Fire",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "COPD, smokes daily"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "You are checking which carriers fall off because of the tobacco.",
+  "prompt": "Rapid fire: pick the best answer. Which carrier drops off the COPD list once tobacco is involved?",
+  "options": [
+   {
+    "t": "Royal Neighbors",
+    "pts": 100,
+    "why": "Correct. Royal Neighbors is on the non-tobacco COPD card only."
+   },
+   {
+    "t": "Transamerica FE",
+    "pts": 5,
+    "why": "It is on both COPD cards."
+   },
+   {
+    "t": "Foresters at Standard",
+    "pts": 5,
+    "why": "Foresters is Standard on both COPD cards."
+   }
+  ]
+ },
+ {
+  "id": "p165",
+  "n": 165,
+  "max": 100,
+  "title": "Two Kinds of Cancer",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 1: Rapid Fire",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Two different cancers, both over 48 months ago"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "He has been treated twice, years apart, and is clear today.",
+  "prompt": "Rapid fire: pick the best answer. Who is on the two-cancer card?",
+  "options": [
+   {
+    "t": "Mutual of Omaha",
+    "pts": 100,
+    "why": "Correct. It is the only carrier on that card."
+   },
+   {
+    "t": "Transamerica FE",
+    "pts": 5,
+    "why": "Not on the two-cancer card."
+   },
+   {
+    "t": "Aetna at Preferred, since both are past 48 months",
+    "pts": 15,
+    "why": "Aetna is not on the two-cancer card."
+   }
+  ]
+ },
+ {
+  "id": "p166",
+  "n": 166,
+  "max": 100,
+  "title": "Dementia",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 1: Rapid Fire",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Diagnosed with dementia last year"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Her son says, \"Other than that, she is healthy.\"",
+  "prompt": "Rapid fire: pick the best answer. Where does she go?",
+  "options": [
+   {
+    "t": "Transamerica FE, since it takes nearly everyone",
+    "pts": 10,
+    "why": "Not for dementia. It is auto guaranteed issue."
+   },
+   {
+    "t": "Aetna Preferred, since nothing else is wrong",
+    "pts": 0,
+    "why": "Dementia is on the auto guaranteed issue list."
+   },
+   {
+    "t": "Guaranteed issue. Dementia is on the auto list",
+    "pts": 100,
+    "why": "Correct. Explain the waiting period plainly."
+   }
+  ]
+ },
+ {
+  "id": "p167",
+  "n": 167,
+  "max": 100,
+  "title": "Kidneys, Quiet for Three Years",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 1: Rapid Fire",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Kidney disease stage 2, no treatment in 3 years"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "He only sees the kidney doctor for yearly bloodwork.",
+  "prompt": "Rapid fire: pick the best answer. What is his best class on the card?",
+  "options": [
+   {
+    "t": "Aetna at Preferred",
+    "pts": 100,
+    "why": "Correct. No treatment in two years opens Aetna Preferred."
+   },
+   {
+    "t": "Foresters at Preferred",
+    "pts": 10,
+    "why": "Foresters is Standard on the kidney card."
+   },
+   {
+    "t": "Transamerica FE only, since that is the one kidney carrier",
+    "pts": 15,
+    "why": "He has a better class available."
+   }
+  ]
+ },
+ {
+  "id": "p168",
+  "n": 168,
+  "max": 100,
+  "title": "The Nitro Note",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 1: Rapid Fire",
+  "format": "choice",
+  "file": [
+   [
+    "Card",
+    "Heart attack 24 to 36 months ago"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "One carrier on this card comes with a note about nitroglycerin.",
+  "prompt": "Rapid fire: pick the best answer. Which one?",
+  "options": [
+   {
+    "t": "Corebridge SIWL, with a blood thinner",
+    "pts": 10,
+    "why": "Corebridge has no nitro note on this card. The blood thinner note belongs to other cards."
+   },
+   {
+    "t": "Mutual of Omaha",
+    "pts": 100,
+    "why": "Correct. No nitro in the last 12 months."
+   },
+   {
+    "t": "Royal Neighbors",
+    "pts": 10,
+    "why": "Royal Neighbors has no nitro note on this card."
+   }
+  ]
+ },
+ {
+  "id": "p169",
+  "n": 169,
+  "max": 100,
+  "title": "Diagnosed at 40, Pills Only",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 1: Rapid Fire",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Diabetes diagnosed at 40, metformin, no insulin"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Two carriers on the under-45 card only work because she has stayed off insulin.",
+  "prompt": "Rapid fire: pick the best answer. Which two?",
+  "options": [
+   {
+    "t": "Corebridge SIWL and American Amicable",
+    "pts": 100,
+    "why": "Correct. Both are listed with no insulin."
+   },
+   {
+    "t": "Mutual of Omaha and Royal Neighbors",
+    "pts": 5,
+    "why": "Mutual of Omaha is not on the under-45 card."
+   },
+   {
+    "t": "Aetna and Foresters, both at Preferred",
+    "pts": 10,
+    "why": "Both are Preferred with or without insulin on this card."
+   }
+  ]
+ },
+ {
+  "id": "p170",
+  "n": 170,
+  "max": 100,
+  "title": "Heart Failure",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 1: Rapid Fire",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Congestive heart failure"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "He has been turned down twice this year.",
+  "prompt": "Rapid fire: pick the best answer. Who is on the heart failure card?",
+  "options": [
+   {
+    "t": "Nobody. It is auto guaranteed issue",
+    "pts": 10,
+    "why": "Heart failure is not on the auto list."
+   },
+   {
+    "t": "Transamerica FE",
+    "pts": 100,
+    "why": "Correct. It is the carrier listed."
+   },
+   {
+    "t": "Royal Neighbors, since it takes A-fib",
+    "pts": 5,
+    "why": "Taking A-fib does not mean taking heart failure."
+   }
+  ]
+ },
+ {
+  "id": "p171",
+  "n": 171,
+  "max": 100,
+  "title": "Lupus, Five Years Off Meds",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 1: Rapid Fire",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Lupus, no treatment in 5 years"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "She asks whether Mutual of Omaha is an option yet.",
+  "prompt": "Rapid fire: pick the best answer. Is it?",
+  "options": [
+   {
+    "t": "Not until she is fully in remission",
+    "pts": 5,
+    "why": "The card is about treatment, not remission."
+   },
+   {
+    "t": "No. Mutual of Omaha does not write lupus at any stage",
+    "pts": 5,
+    "why": "It does, with no treatment in 48 months."
+   },
+   {
+    "t": "Yes. She is past the 48 months without treatment",
+    "pts": 100,
+    "why": "Correct. Mutual of Omaha needs no treatment in 48 months."
+   }
+  ]
+ },
+ {
+  "id": "p172",
+  "n": 172,
+  "max": 100,
+  "title": "The Heart Attack Ladder",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 2: Case Files",
+  "format": "order",
+  "file": [
+   [
+    "Client",
+    "Sam, 66, non-smoker"
+   ],
+   [
+    "Health",
+    "Heart attack 5 months ago. No nitro since"
+   ],
+   [
+    "Question",
+    "\"What opens up for me, and when?\""
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Sam is organized and wants the whole timeline laid out before he decides.",
+  "prompt": "Put the milestones in order, from today to the latest.",
+  "steps": [
+   {
+    "id": "l4",
+    "t": "At 36 months: every carrier on our cards is open",
+    "pos": 4,
+    "why": "The 36 month card says everyone."
+   },
+   {
+    "id": "l3",
+    "t": "At 24 months: Aetna and Foresters move to Preferred, and Royal Neighbors, American Amicable, Corebridge SIWL and Mutual of Omaha join",
+    "pos": 3,
+    "why": "The 24 to 36 month card. Mutual of Omaha needs no nitro in 12 months, which he meets."
+   },
+   {
+    "id": "l2",
+    "t": "At 12 months: Foresters and Aetna join at Standard",
+    "pos": 2,
+    "why": "The 12 to 24 month card."
+   },
+   {
+    "id": "l1",
+    "t": "Today: Transamerica FE is the one carrier on his card",
+    "pos": 1,
+    "why": "The first-year card lists only Transamerica FE."
+   }
+  ]
+ },
+ {
+  "id": "p173",
+  "n": 173,
+  "max": 100,
+  "title": "Cards With a Treatment Clock",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 2: Case Files",
+  "format": "multi",
+  "file": [
+   [
+    "Situation",
+    "Studying before a day of appointments"
+   ],
+   [
+    "Question",
+    "On which cards does time since treatment change the carrier list?"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Some conditions get better offers the longer a client goes without treatment. You want to know which ones.",
+  "prompt": "Select every card where time since treatment adds a carrier or a better class.",
+  "options": [
+   {
+    "t": "Congestive heart failure",
+    "pts": -20,
+    "why": "One carrier, no time note."
+   },
+   {
+    "t": "Lupus with no treatment",
+    "pts": 25,
+    "why": "Correct. Mutual of Omaha needs 48 months."
+   },
+   {
+    "t": "Kidney disease, stages 1 to 3",
+    "pts": 25,
+    "why": "Correct. Aetna Preferred needs no treatment in two years."
+   },
+   {
+    "t": "COPD with tobacco",
+    "pts": -20,
+    "why": "Tobacco status matters here, not a treatment clock."
+   },
+   {
+    "t": "Parkinson's disease",
+    "pts": -20,
+    "why": "The same three carriers, no time note."
+   },
+   {
+    "t": "Cancer after treatment",
+    "pts": 25,
+    "why": "Correct. The list grows at 24, 36 and 48 months."
+   },
+   {
+    "t": "MS with no treatment",
+    "pts": 25,
+    "why": "Correct. Aetna needs 24 months, Mutual of Omaha over 4 years."
+   }
+  ]
+ },
+ {
+  "id": "p174",
+  "n": 174,
+  "max": 100,
+  "title": "MS: On or Off Treatment",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 2: Case Files",
+  "format": "multi",
+  "file": [
+   [
+    "Client A",
+    "MS, on an infusion every six months"
+   ],
+   [
+    "Client B",
+    "MS, no treatment in 30 months"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Two clients with MS on the same afternoon. Their cards are different.",
+  "prompt": "Select every statement that is accurate per our cards.",
+  "options": [
+   {
+    "t": "Mutual of Omaha is open to Client B now, since she is off treatment.",
+    "pts": -20,
+    "why": "It needs over 4 years."
+   },
+   {
+    "t": "American Amicable is open to Client B but not Client A.",
+    "pts": 25,
+    "why": "Correct. It is on the no-treatment card only."
+   },
+   {
+    "t": "Client A can get Foresters Preferred even while on treatment.",
+    "pts": 25,
+    "why": "Correct."
+   },
+   {
+    "t": "Both clients are limited to Standard everywhere.",
+    "pts": -20,
+    "why": "False. Foresters is Preferred for both."
+   },
+   {
+    "t": "Client A is Standard with Aetna, and Client B is Preferred with Aetna.",
+    "pts": 25,
+    "why": "Correct. Aetna Preferred needs no treatment in 24 months, which B meets."
+   },
+   {
+    "t": "Mutual of Omaha is not open to Client B yet. It needs over 4 years without treatment.",
+    "pts": 25,
+    "why": "Correct. B is at 30 months."
+   }
+  ]
+ },
+ {
+  "id": "p175",
+  "n": 175,
+  "max": 100,
+  "title": "From Pills to Insulin",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 2: Case Files",
+  "format": "choice",
+  "file": [
+   [
+    "Client",
+    "Ruth, 64, non-smoker"
+   ],
+   [
+    "Health",
+    "Diabetes diagnosed at 55. Was on pills. Her doctor started insulin last month. No neuropathy"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "You quoted Ruth last year on the pills-only card. Now she is on insulin.",
+  "prompt": "How does her card change?",
+  "options": [
+   {
+    "t": "Corebridge SIWL drops off, but Mutual of Omaha, Royal Neighbors, Transamerica FE, and Aetna and Foresters at Preferred are on her new card.",
+    "pts": 100,
+    "why": "Correct. That is the over-45, insulin, no complications card."
+   },
+   {
+    "t": "Nothing changes. Diabetes is diabetes, whether she takes pills or insulin.",
+    "pts": 0,
+    "why": "Insulin moves her to a different card."
+   },
+   {
+    "t": "Corebridge SIWL is still her best choice.",
+    "pts": 10,
+    "why": "Corebridge is on the no-insulin card only."
+   },
+   {
+    "t": "She now needs guaranteed issue, because once a client over 45 starts insulin, it rules out every level plan on our flash cards, no matter her age or health.",
+    "pts": 0,
+    "why": "False. Five carriers are on the insulin card."
+   }
+  ]
+ },
+ {
+  "id": "p176",
+  "n": 176,
+  "max": 100,
+  "title": "One Carrier, Many Clients",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 2: Case Files",
+  "format": "multi",
+  "file": [
+   [
+    "Carrier",
+    "Royal Neighbors"
+   ],
+   [
+    "Question",
+    "Which of this week's clients is Royal Neighbors on the card for?"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "You like Royal Neighbors for a few of your clients and want to know exactly where it fits.",
+  "prompt": "Select every client where Royal Neighbors is on the card.",
+  "options": [
+   {
+    "t": "MS, on treatment",
+    "pts": 25,
+    "why": "Correct."
+   },
+   {
+    "t": "COPD, non-tobacco",
+    "pts": 25,
+    "why": "Correct."
+   },
+   {
+    "t": "Parkinson's disease",
+    "pts": -20,
+    "why": "Royal is not on the Parkinson's card."
+   },
+   {
+    "t": "Stent placed 15 months ago",
+    "pts": 25,
+    "why": "Correct. Royal is on the 12 to 24 month stent card."
+   },
+   {
+    "t": "Heart attack 15 months ago",
+    "pts": -20,
+    "why": "Royal Neighbors joins the heart attack card at 24 months."
+   },
+   {
+    "t": "A-fib, no pacemaker",
+    "pts": 25,
+    "why": "Correct."
+   },
+   {
+    "t": "COPD, still smoking",
+    "pts": -20,
+    "why": "Royal is on the non-tobacco COPD card only."
+   }
+  ]
+ },
+ {
+  "id": "p177",
+  "n": 177,
+  "max": 100,
+  "title": "Rate Class Check",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 2: Case Files",
+  "format": "angle",
+  "file": [
+   [
+    "Skill",
+    "Knowing Preferred from Standard at a glance"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Knowing the class before you quote saves you from walking back a price at the table.",
+  "prompt": "Pick the right answers in each group.",
+  "groups": [
+   {
+    "key": "aetna",
+    "label": "Aetna is Preferred for...",
+    "pick": 2,
+    "hint": "Pick the two where Aetna is Preferred.",
+    "options": [
+     {
+      "t": "Lupus with no treatment",
+      "pts": 20,
+      "why": "Correct."
+     },
+     {
+      "t": "A heart attack 12 to 24 months ago",
+      "pts": 0,
+      "why": "Aetna is Standard there."
+     },
+     {
+      "t": "COPD, non-tobacco",
+      "pts": 0,
+      "why": "Aetna is Standard on both COPD cards."
+     },
+     {
+      "t": "Parkinson's disease",
+      "pts": 0,
+      "why": "Aetna is Standard on the Parkinson's card."
+     },
+     {
+      "t": "A heart attack 24 to 36 months ago",
+      "pts": 20,
+      "why": "Correct."
+     }
+    ]
+   },
+   {
+    "key": "foresters",
+    "label": "Foresters is Standard for...",
+    "pick": 2,
+    "hint": "Pick the two where Foresters is Standard.",
+    "options": [
+     {
+      "t": "Cancer 36 months after treatment",
+      "pts": 0,
+      "why": "Foresters is Preferred on that card."
+     },
+     {
+      "t": "Kidney disease, stages 1 to 3",
+      "pts": 20,
+      "why": "Correct."
+     },
+     {
+      "t": "A-fib, no pacemaker",
+      "pts": 0,
+      "why": "Foresters is Preferred on the A-fib card."
+     },
+     {
+      "t": "MS, on treatment",
+      "pts": 0,
+      "why": "Foresters is Preferred for MS."
+     },
+     {
+      "t": "A stroke 12 to 24 months ago",
+      "pts": 20,
+      "why": "Correct."
+     }
+    ]
+   },
+   {
+    "key": "only",
+    "label": "Transamerica FE is the only carrier for...",
+    "pick": 1,
+    "hint": "Pick the one card with a single carrier.",
+    "options": [
+     {
+      "t": "Cancer 24 months after treatment",
+      "pts": 0,
+      "why": "Transamerica FE is not on that card at all."
+     },
+     {
+      "t": "COPD with tobacco",
+      "pts": 0,
+      "why": "Aetna and Foresters are on that card too."
+     },
+     {
+      "t": "Lupus with treatment",
+      "pts": 0,
+      "why": "Aetna and Foresters are on that card too."
+     },
+     {
+      "t": "A stent placed in the last 12 months",
+      "pts": 20,
+      "why": "Correct."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "p178",
+  "n": 178,
+  "max": 100,
+  "title": "\"Why Only Standard?\"",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 2: Case Files",
+  "format": "text",
+  "minWords": 25,
+  "file": [
+   [
+    "Client",
+    "Doug, 69"
+   ],
+   [
+    "Health",
+    "Heart attack 16 months ago"
+   ],
+   [
+    "Your recommendation",
+    "Aetna at Standard"
+   ],
+   [
+    "Question",
+    "\"My buddy got Preferred. Why am I only Standard?\""
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Doug is not upset, just curious. He wants a straight answer.",
+  "prompt": "Write what you would say in 3 to 5 sentences.",
+  "rubric": [
+   {
+    "label": "Acknowledges the question",
+    "keys": [
+     "fair question",
+     "great question",
+     "good question",
+     "understand",
+     "makes sense",
+     "appreciate"
+    ],
+    "pts": 15,
+    "tip": "Respect the question before you answer it."
+   },
+   {
+    "label": "Explains that timing drives the class",
+    "keys": [
+     "months",
+     "how long ago",
+     "recent",
+     "since your heart attack",
+     "timing",
+     "time since"
+    ],
+    "pts": 25,
+    "tip": "Classes change with time since the heart attack."
+   },
+   {
+    "label": "Gives the next milestone",
+    "keys": [
+     "24 months",
+     "two years",
+     "2 years",
+     "eight months",
+     "8 months"
+    ],
+    "pts": 25,
+    "tip": "At 24 months, Aetna and Foresters move to Preferred."
+   },
+   {
+    "label": "Offers to review later",
+    "keys": [
+     "review",
+     "revisit",
+     "look again",
+     "check back",
+     "reach out",
+     "call you"
+    ],
+    "pts": 20,
+    "tip": "Show him you will come back when it improves."
+   },
+   {
+    "label": "Stays honest",
+    "keys": [
+     "honest",
+     "accurate",
+     "truth",
+     "correct",
+     "straight"
+    ],
+    "pts": 15,
+    "tip": "Accurate answers protect the claim."
+   }
+  ],
+  "sample": "That is a fair question, and I appreciate you asking it. The class depends on how long ago the heart attack was, and yours was 16 months ago. At 24 months, which is eight months from now, Aetna and Foresters both move you to Preferred. I will review your plan then and reach out, and I will always keep your answers honest and accurate so the claim is safe."
+ },
+ {
+  "id": "p179",
+  "n": 179,
+  "max": 100,
+  "title": "Fewest Doors to Most: Cancer",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 2: Case Files",
+  "format": "order",
+  "file": [
+   [
+    "Situation",
+    "Four cancer clients this month"
+   ],
+   [
+    "Goal",
+    "Rank them by how many carriers are on their card"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "You want to plan your calls, starting with the toughest placement.",
+  "prompt": "Order from the fewest carriers on the card (top) to the most (bottom).",
+  "steps": [
+   {
+    "id": "k2",
+    "t": "Cancer, 26 months after treatment",
+    "pos": 2,
+    "why": "Two: Aetna Preferred, and Corebridge SIWL depending on the type."
+   },
+   {
+    "id": "k3",
+    "t": "Cancer, 38 months after treatment",
+    "pos": 3,
+    "why": "Four: Foresters, Aetna, American Amicable, Corebridge SIWL."
+   },
+   {
+    "id": "k1",
+    "t": "Two different cancers, both over 48 months ago",
+    "pos": 1,
+    "why": "One carrier: Mutual of Omaha."
+   },
+   {
+    "id": "k4",
+    "t": "Cancer, 50 months after treatment",
+    "pos": 4,
+    "why": "Six: add Mutual of Omaha and Transamerica FE."
+   }
+  ]
+ },
+ {
+  "id": "p180",
+  "n": 180,
+  "max": 100,
+  "title": "Cancer and COPD",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 3: Final Table",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Marlene, 67"
+   ],
+   [
+    "Health",
+    "Colon cancer, treatment ended 40 months ago. COPD. Quit smoking 2 years ago. Uses an inhaler"
+   ],
+   [
+    "Budget",
+    "About $70 a month"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Marlene has two cards to satisfy. Only carriers on both can write her.",
+  "prompt": "Build your approach.",
+  "groups": [
+   {
+    "key": "ask",
+    "label": "Lock these down first",
+    "pick": 2,
+    "hint": "Pick the two answers that decide her cards.",
+    "options": [
+     {
+      "t": "Whether she would like to round her quit date back",
+      "pts": 0,
+      "why": "That is misrepresentation."
+     },
+     {
+      "t": "Which company she has seen on TV",
+      "pts": 0,
+      "why": "Does not change her cards."
+     },
+     {
+      "t": "How many grandchildren she has",
+      "pts": 3,
+      "why": "Good rapport, but not an underwriting question."
+     },
+     {
+      "t": "Her quit date, and whether she uses any nicotine now",
+      "pts": 15,
+      "why": "Tobacco status decides which COPD card applies."
+     },
+     {
+      "t": "The exact date treatment ended, and the type of cancer",
+      "pts": 15,
+      "why": "The date sets her cancer card, and the type matters to Corebridge."
+     }
+    ]
+   },
+   {
+    "key": "where",
+    "label": "Carriers on both of her cards",
+    "pick": 2,
+    "hint": "Her cancer card (36 months) and her COPD non-tobacco card.",
+    "options": [
+     {
+      "t": "Transamerica FE",
+      "pts": 0,
+      "why": "Not on the cancer card until 48 months."
+     },
+     {
+      "t": "American Amicable",
+      "pts": 0,
+      "why": "On the cancer card, not the COPD card."
+     },
+     {
+      "t": "Aetna, at Standard",
+      "pts": 20,
+      "why": "Correct. Preferred on the cancer card, Standard on the COPD card."
+     },
+     {
+      "t": "Foresters, at Standard",
+      "pts": 20,
+      "why": "Correct. Same pattern as Aetna."
+     },
+     {
+      "t": "Royal Neighbors",
+      "pts": 0,
+      "why": "On the COPD card, not the 36 month cancer card."
+     }
+    ]
+   },
+   {
+    "key": "next",
+    "label": "What to tell her about timing",
+    "pick": 1,
+    "hint": "What changes, and when?",
+    "options": [
+     {
+      "t": "Nothing will change, so this is her only chance.",
+      "pts": 0,
+      "why": "False, and it is pressure."
+     },
+     {
+      "t": "She should wait until 48 months before applying anywhere.",
+      "pts": 5,
+      "why": "She has options today. Waiting leaves her uncovered."
+     },
+     {
+      "t": "At 48 months, Mutual of Omaha opens up for her.",
+      "pts": 5,
+      "why": "It joins the cancer card, but it is not on the COPD card."
+     },
+     {
+      "t": "At 48 months after treatment, Transamerica FE joins her cancer card, and it is already on her COPD card.",
+      "pts": 30,
+      "why": "Correct. That adds a carrier on both cards in eight months."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "p181",
+  "n": 181,
+  "max": 100,
+  "title": "Heart, Rhythm and Sugar",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 3: Final Table",
+  "format": "multi",
+  "file": [
+   [
+    "Client",
+    "Leon, 70, non-smoker"
+   ],
+   [
+    "Health",
+    "Heart attack 30 months ago, no nitro since. A-fib on a blood thinner, no pacemaker. Diabetes since 58, insulin, no complications"
+   ],
+   [
+    "Wants",
+    "$15,000"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Three conditions, three cards. You need the carriers that show up on all of them.",
+  "prompt": "Select every statement that is accurate per our cards.",
+  "options": [
+   {
+    "t": "Aetna and Foresters are Preferred on all three of his cards.",
+    "pts": 30,
+    "why": "Correct. Preferred on the 24 to 36 month heart attack card, the A-fib card and the insulin card."
+   },
+   {
+    "t": "Mutual of Omaha fits, since he has had no nitro in a year.",
+    "pts": -20,
+    "why": "It is not on the A-fib card."
+   },
+   {
+    "t": "American Amicable and Corebridge SIWL drop out because of the insulin.",
+    "pts": 20,
+    "why": "Correct. Neither is on the insulin card."
+   },
+   {
+    "t": "Corebridge SIWL fits, since his A-fib is treated with a blood thinner.",
+    "pts": -20,
+    "why": "It is on the A-fib card, but not the insulin card."
+   },
+   {
+    "t": "Royal Neighbors and Transamerica FE are on all three cards.",
+    "pts": 25,
+    "why": "Correct."
+   },
+   {
+    "t": "Three conditions means guaranteed issue.",
+    "pts": -25,
+    "why": "False. Four carriers are on all three cards."
+   },
+   {
+    "t": "Mutual of Omaha drops out because it is not on the A-fib card.",
+    "pts": 25,
+    "why": "Correct. Clearing the nitro rule is not enough."
+   }
+  ]
+ },
+ {
+  "id": "p182",
+  "n": 182,
+  "max": 100,
+  "title": "Stroke at 20 Months, Diagnosed at 43",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 3: Final Table",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Victor, 58, non-smoker"
+   ],
+   [
+    "Health",
+    "Stroke 20 months ago, recovered. Type 2 diabetes diagnosed at age 43, pills only"
+   ],
+   [
+    "Wants",
+    "$20,000"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Victor is young for final expense and wants the best class he can get.",
+  "prompt": "Build your recommendation.",
+  "groups": [
+   {
+    "key": "where",
+    "label": "Carriers on both of his cards",
+    "pick": 2,
+    "hint": "His stroke card (12 to 24 months) and his diabetes card (diagnosed under 45).",
+    "options": [
+     {
+      "t": "Foresters, at Standard",
+      "pts": 20,
+      "why": "Correct."
+     },
+     {
+      "t": "Corebridge SIWL",
+      "pts": 0,
+      "why": "On his diabetes card, not his stroke card."
+     },
+     {
+      "t": "Aetna, at Preferred",
+      "pts": 8,
+      "why": "His diabetes card allows it, but the stroke card holds it to Standard."
+     },
+     {
+      "t": "Royal Neighbors",
+      "pts": 0,
+      "why": "On his diabetes card, not his stroke card."
+     },
+     {
+      "t": "Aetna, at Standard",
+      "pts": 20,
+      "why": "Correct. The stroke card holds Aetna to Standard for now."
+     }
+    ]
+   },
+   {
+    "key": "ask",
+    "label": "The detail that decides his diabetes card",
+    "pick": 1,
+    "hint": "One fact chose the card.",
+    "options": [
+     {
+      "t": "Whether he likes the carrier's name",
+      "pts": 0,
+      "why": "Not an underwriting fact."
+     },
+     {
+      "t": "His age when he was diagnosed",
+      "pts": 30,
+      "why": "Correct. Diagnosed at 43 puts him on the under-45 card, even at 58."
+     },
+     {
+      "t": "His age today",
+      "pts": 5,
+      "why": "The diabetes cards go by age at diagnosis."
+     },
+     {
+      "t": "His favorite doctor",
+      "pts": 0,
+      "why": "Not an underwriting fact."
+     }
+    ]
+   },
+   {
+    "key": "next",
+    "label": "The next milestone",
+    "pick": 1,
+    "hint": "When does the stroke stop limiting him?",
+    "options": [
+     {
+      "t": "Never. A stroke limits him for life.",
+      "pts": 0,
+      "why": "False."
+     },
+     {
+      "t": "At 36 months after the stroke, the stroke card opens to everyone, and Aetna and Foresters Preferred from his diabetes card come into play.",
+      "pts": 30,
+      "why": "Correct. That is 16 months away."
+     },
+     {
+      "t": "Once his A1C drops, everything opens.",
+      "pts": 0,
+      "why": "Our cards do not use A1C."
+     },
+     {
+      "t": "At 24 months, the stroke card opens to everyone.",
+      "pts": 5,
+      "why": "Everyone opens at 36 months, not 24."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "p183",
+  "n": 183,
+  "max": 100,
+  "title": "Two Clocks at the Kitchen Table",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 3: Final Table",
+  "format": "text",
+  "minWords": 30,
+  "file": [
+   [
+    "Client",
+    "Janet, 64"
+   ],
+   [
+    "Health",
+    "Heart attack 20 months ago. MS, no treatment in 3 years"
+   ],
+   [
+    "Your recommendation",
+    "Aetna or Foresters at Standard today"
+   ],
+   [
+    "Question",
+    "\"When does this get better?\""
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Janet is sharp and likes to plan. She wants to know the next date that matters.",
+  "prompt": "Write what you would say in 3 to 5 sentences. Name the milestone and what it changes.",
+  "rubric": [
+   {
+    "label": "Acknowledges her",
+    "keys": [
+     "great question",
+     "good question",
+     "fair question",
+     "understand",
+     "appreciate",
+     "makes sense"
+    ],
+    "pts": 15,
+    "tip": "Start by recognizing the question."
+   },
+   {
+    "label": "Names the heart attack as the limit",
+    "keys": [
+     "heart attack",
+     "heart"
+    ],
+    "pts": 20,
+    "tip": "Her MS card already allows Preferred. The heart attack is what holds her to Standard."
+   },
+   {
+    "label": "Gives the 24 month milestone",
+    "keys": [
+     "24 months",
+     "two years",
+     "2 years",
+     "four months",
+     "4 months"
+    ],
+    "pts": 25,
+    "tip": "At 24 months, the heart attack card moves Aetna and Foresters to Preferred."
+   },
+   {
+    "label": "Says what changes",
+    "keys": [
+     "preferred",
+     "better rate",
+     "better class",
+     "lower",
+     "more companies",
+     "more carriers"
+    ],
+    "pts": 25,
+    "tip": "Tell her what she gains."
+   },
+   {
+    "label": "Offers a next step",
+    "keys": [
+     "review",
+     "reach out",
+     "call you",
+     "set a reminder",
+     "look again",
+     "revisit"
+    ],
+    "pts": 15,
+    "tip": "Commit to coming back."
+   }
+  ],
+  "sample": "That is a great question, and I appreciate you planning ahead. Your MS already qualifies you for Preferred, so the heart attack is what keeps you at Standard today. At 24 months, which is four months from now, Aetna and Foresters both move you to Preferred, which means a better rate. I will set a reminder, review your plan then, and reach out to you."
+ },
+ {
+  "id": "p184",
+  "n": 184,
+  "max": 100,
+  "title": "The Couple",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 3: Final Table",
+  "format": "multi",
+  "file": [
+   [
+    "Husband",
+    "Gary, 68. Heart attack 14 months ago"
+   ],
+   [
+    "Wife",
+    "Linda, 66. COPD, still smokes"
+   ],
+   [
+    "Wants",
+    "$10,000 each"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Both want coverage today and would like to be with the same company if they can.",
+  "prompt": "Select every statement that is accurate per our cards.",
+  "options": [
+   {
+    "t": "Linda can answer \"no\" to tobacco if she plans to quit.",
+    "pts": -30,
+    "why": "Misrepresentation."
+   },
+   {
+    "t": "Transamerica FE, Aetna Standard and Foresters Standard are on both of their cards, so they can be with the same company.",
+    "pts": 40,
+    "why": "Correct."
+   },
+   {
+    "t": "Royal Neighbors can write them both.",
+    "pts": -20,
+    "why": "Royal is on neither card: not the 12 to 24 month heart attack card, and not the COPD tobacco card."
+   },
+   {
+    "t": "Because Linda smokes, Gary has to be rated as a smoker too.",
+    "pts": -20,
+    "why": "Each person is rated on their own habits."
+   },
+   {
+    "t": "At 24 months after his heart attack, Gary moves to Preferred with Aetna and Foresters.",
+    "pts": 30,
+    "why": "Correct."
+   },
+   {
+    "t": "Each spouse answers their own health and tobacco questions.",
+    "pts": 30,
+    "why": "Correct. One spouse cannot answer for the other."
+   }
+  ]
+ },
+ {
+  "id": "p185",
+  "n": 185,
+  "max": 100,
+  "title": "The Full Workup",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 3: Final Table",
+  "format": "angle",
+  "file": [
+   [
+    "Client",
+    "Bernard, 72, non-smoker"
+   ],
+   [
+    "Health",
+    "Parkinson's, diagnosed 2 years ago. Kidney disease stage 3, treated 1 year ago. A-fib on a blood thinner, no pacemaker"
+   ],
+   [
+    "Daily life",
+    "Lives alone, drives, does his own shopping"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Three conditions, three cards, and one carrier that almost fits. Work it all the way through.",
+  "prompt": "Build your approach.",
+  "groups": [
+   {
+    "key": "where",
+    "label": "Carriers on all three cards",
+    "pick": 2,
+    "hint": "Parkinson's, kidney disease (treated within two years), and A-fib.",
+    "options": [
+     {
+      "t": "Corebridge SIWL",
+      "pts": 0,
+      "why": "Only on the A-fib card."
+     },
+     {
+      "t": "Aetna, at Standard",
+      "pts": 5,
+      "why": "On the Parkinson's and A-fib cards, but it needs no kidney treatment in two years."
+     },
+     {
+      "t": "Foresters, at Standard",
+      "pts": 20,
+      "why": "Correct. Standard on the Parkinson's and kidney cards."
+     },
+     {
+      "t": "Royal Neighbors",
+      "pts": 0,
+      "why": "Only on the A-fib card."
+     },
+     {
+      "t": "Transamerica FE",
+      "pts": 20,
+      "why": "Correct. On all three cards."
+     }
+    ]
+   },
+   {
+    "key": "future",
+    "label": "What would add a carrier",
+    "pick": 1,
+    "hint": "Which change would open another door?",
+    "options": [
+     {
+      "t": "Stopping his blood thinner.",
+      "pts": 0,
+      "why": "Never suggest changing medical care to qualify."
+     },
+     {
+      "t": "A year from now, with no more kidney treatment, Aetna joins, at Standard because of the Parkinson's.",
+      "pts": 30,
+      "why": "Correct. Two years without treatment brings Aetna back."
+     },
+     {
+      "t": "His Parkinson's improving.",
+      "pts": 0,
+      "why": "The Parkinson's card has no time note."
+     },
+     {
+      "t": "Nothing. Three conditions is the limit.",
+      "pts": 0,
+      "why": "False."
+     }
+    ]
+   },
+   {
+    "key": "check",
+    "label": "Check before you submit",
+    "pick": 1,
+    "hint": "One question could change everything.",
+    "options": [
+     {
+      "t": "Confirm he likes the monthly price.",
+      "pts": 5,
+      "why": "Important, but not the underwriting check."
+     },
+     {
+      "t": "Ask which pharmacy he uses.",
+      "pts": 3,
+      "why": "Not the key check here."
+     },
+     {
+      "t": "Ask if he would rather skip the kidney question.",
+      "pts": 0,
+      "why": "Misrepresentation."
+     },
+     {
+      "t": "Confirm he needs no help with daily activities like bathing or dressing. Needing help is auto guaranteed issue.",
+      "pts": 30,
+      "why": "Correct. With Parkinson's, always confirm ADLs."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "p186",
+  "n": 186,
+  "max": 100,
+  "title": "What Is the Water Pill For?",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 3: Final Table",
+  "format": "interview",
+  "speaker": "Walt",
+  "file": [
+   [
+    "Client",
+    "Walt, 72, non-smoker"
+   ],
+   [
+    "He says",
+    "\"I'm healthy. Just a couple of pills.\""
+   ],
+   [
+    "Wants",
+    "$10,000"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Walt is friendly and in a hurry. He waves off the health questions, but his pill organizer is on the counter.",
+  "prompt": "You can ask Walt 4 questions. Pick the ones that uncover what you need, then choose where to apply.",
+  "askLimit": 4,
+  "questions": [
+   {
+    "t": "What medications do you take, and what is each one for?",
+    "a": "Metformin for sugar, and a water pill.",
+    "pts": 15,
+    "why": "The medication list is where hidden conditions show up."
+   },
+   {
+    "t": "Can we keep this simple and skip the heart stuff?",
+    "a": "Fine by me if it gets me a better price.",
+    "pts": -15,
+    "why": "Leaving out a condition is misrepresentation."
+   },
+   {
+    "t": "How are the grandkids?",
+    "a": "Wonderful. Three of them, all in soccer.",
+    "pts": 2,
+    "why": "Nice rapport, but it uses up a question."
+   },
+   {
+    "t": "What did your doctor say the water pill is for?",
+    "a": "My heart doctor says my heart is weak and fluid builds up in my legs.",
+    "pts": 15,
+    "why": "That describes congestive heart failure, which changes everything."
+   },
+   {
+    "t": "Which company have you seen on TV?",
+    "a": "The one with the funny commercials.",
+    "pts": 0,
+    "why": "Rapport at best. It does not help place him."
+   },
+   {
+    "t": "Do you want to pay monthly or yearly?",
+    "a": "Monthly is easier.",
+    "pts": 3,
+    "why": "Useful later, but not while you still do not know his health."
+   },
+   {
+    "t": "Any hospital stays in the last couple of years?",
+    "a": "No, nothing like that.",
+    "pts": 10,
+    "why": "Good to rule out, and it helps with other cards."
+   },
+   {
+    "t": "How old were you when you were diagnosed with diabetes, and do you take insulin?",
+    "a": "I was 61. No insulin, just the pills.",
+    "pts": 10,
+    "why": "Age at diagnosis and insulin pick the diabetes card."
+   }
+  ],
+  "final": {
+   "label": "Where do you apply?",
+   "pick": 1,
+   "options": [
+    {
+     "t": "Aetna at Preferred, for diabetes diagnosed before age 45.",
+     "pts": 5,
+     "why": "He was diagnosed at 61, and heart failure rules Aetna out."
+    },
+    {
+     "t": "Royal Neighbors, since his diabetes was diagnosed after 45, he takes no insulin and has no hospital stays.",
+     "pts": 10,
+     "why": "That fits his diabetes, but his heart failure rules Royal out. The water pill question is what uncovers it."
+    },
+    {
+     "t": "Mutual of Omaha, for insulin-treated diabetes with no complications.",
+     "pts": 5,
+     "why": "He takes no insulin, and heart failure rules it out anyway."
+    },
+    {
+     "t": "Transamerica FE. It is the only carrier on the card for what his pills treat.",
+     "pts": 50,
+     "why": "Correct. The water pill is for congestive heart failure, and Transamerica FE is the only carrier on that card."
+    }
+   ]
+  }
+ },
+ {
+  "id": "p187",
+  "n": 187,
+  "max": 100,
+  "title": "The Nitro Clue",
+  "cat": "Underwriting",
+  "event": "showdown",
+  "section": "Round 3: Final Table",
+  "format": "interview",
+  "speaker": "Evelyn",
+  "file": [
+   [
+    "Client",
+    "Evelyn, 69, non-smoker"
+   ],
+   [
+    "She says",
+    "\"I had a heart attack a while back, but I'm fine now.\""
+   ],
+   [
+    "Wants",
+    "The best rate she can get"
+   ],
+   [
+    "Reference",
+    "NASB underwriting flash cards"
+   ]
+  ],
+  "story": "Evelyn keeps a tidy folder of her medical papers. She is happy to answer anything, but she will not volunteer details.",
+  "prompt": "You can ask Evelyn 4 questions. Find out what decides her card, then choose the best placement.",
+  "askLimit": 4,
+  "questions": [
+   {
+    "t": "What was the exact month and year of the heart attack?",
+    "a": "March, two years ago. So about 29 months.",
+    "pts": 15,
+    "why": "The date decides her card: 24 to 36 months."
+   },
+   {
+    "t": "Any other heart conditions or daily heart medications?",
+    "a": "A-fib. I take Eliquis every day. No pacemaker.",
+    "pts": 15,
+    "why": "A second card to satisfy, and the blood thinner matters for Corebridge."
+   },
+   {
+    "t": "Do you want the cheapest plan or the best plan?",
+    "a": "The best one I can afford.",
+    "pts": 3,
+    "why": "Fine, but it does not tell you where she qualifies."
+   },
+   {
+    "t": "Is your heart doing better now?",
+    "a": "Much better, thank you.",
+    "pts": 0,
+    "why": "Too vague to place her."
+   },
+   {
+    "t": "Where do you keep your medical papers?",
+    "a": "In this folder right here.",
+    "pts": 2,
+    "why": "Handy, but not the question to spend."
+   },
+   {
+    "t": "Do you keep any heart medication for chest pain, and when did you last use it?",
+    "a": "Nitroglycerin. I used one last winter, about 5 months ago.",
+    "pts": 15,
+    "why": "Nitro in the last 12 months takes Mutual of Omaha off her card."
+   },
+   {
+    "t": "Could we say you have not used the nitro, just to keep it simple?",
+    "a": "If you think that is okay...",
+    "pts": -15,
+    "why": "Misrepresentation. It can void the policy."
+   },
+   {
+    "t": "Have you used tobacco in the last few years?",
+    "a": "I quit ten years ago.",
+    "pts": 5,
+    "why": "Worth confirming, and it is clean."
+   }
+  ],
+  "final": {
+   "label": "Best placement",
+   "pick": 1,
+   "options": [
+    {
+     "t": "Aetna or Foresters at Standard.",
+     "pts": 15,
+     "why": "That is the 12 to 24 month card. At 29 months she qualifies for Preferred."
+    },
+    {
+     "t": "Transamerica FE only, to be safe with a heart history.",
+     "pts": 10,
+     "why": "She qualifies for Preferred with better carriers."
+    },
+    {
+     "t": "Aetna or Foresters at Preferred.",
+     "pts": 50,
+     "why": "Correct. At 29 months both are Preferred on her heart attack card and on her A-fib card. Mutual of Omaha is out because of the nitro 5 months ago."
+    },
+    {
+     "t": "Mutual of Omaha, with its full benefit from day one.",
+     "pts": 5,
+     "why": "The nitro 5 months ago rules it out, and it is not on the A-fib card."
+    }
+   ]
+  }
+ },
+ {
+  "id": "p188",
+  "n": 188,
+  "max": 100,
+  "title": "The Quiet Widow",
+  "cat": "Client Interviews",
+  "format": "interview",
+  "speaker": "Dorothy",
+  "file": [
+   [
+    "Client",
+    "Dorothy, 74, widowed two years ago"
+   ],
+   [
+    "Lead",
+    "Mailed back a reply card"
+   ],
+   [
+    "Home",
+    "Lives alone, owns her home"
+   ],
+   [
+    "Health",
+    "Blood pressure pills only"
+   ]
+  ],
+  "story": "Dorothy offers you coffee and sits down. She is polite but quiet, and she is not going to tell you why she sent the card unless you ask.",
+  "prompt": "You can ask Dorothy 4 questions. Find her reason, her people, her budget, and what she already has. Then build your recommendation.",
+  "askLimit": 4,
+  "questions": [
+   {
+    "t": "What made you send the card back?",
+    "a": "When Harold passed, the funeral was $11,000 and it came out of our savings. I don't want my daughter going through that.",
+    "pts": 15,
+    "why": "Her reason and a real number to size the plan to."
+   },
+   {
+    "t": "Are you ready to get this done today?",
+    "a": "Well, I don't know. I just met you.",
+    "pts": -10,
+    "why": "Pressure before you know anything costs trust."
+   },
+   {
+    "t": "Do you know how much funerals cost these days?",
+    "a": "More than I would like, I am sure.",
+    "pts": 0,
+    "why": "Lecturing her, when her own story is a better number."
+   },
+   {
+    "t": "Do you have any life insurance now?",
+    "a": "Just a little $5,000 policy from the bank, years ago.",
+    "pts": 10,
+    "why": "Existing coverage changes how much she needs."
+   },
+   {
+    "t": "Who would handle things if something happened to you?",
+    "a": "My daughter Karen. She is a single mom with two kids, and money is tight for her.",
+    "pts": 15,
+    "why": "Now you know who she is protecting, and why it matters."
+   },
+   {
+    "t": "Did Harold have life insurance?",
+    "a": "No. That is why it came out of savings.",
+    "pts": 5,
+    "why": "Useful, but her first answer already told you most of this."
+   },
+   {
+    "t": "After your bills each month, what is comfortable to set aside?",
+    "a": "About $80, sometimes a bit less.",
+    "pts": 10,
+    "why": "The budget keeps the plan affordable, so it stays in force."
+   },
+   {
+    "t": "What do you like to do with the grandkids?",
+    "a": "We bake cookies on Sundays.",
+    "pts": 4,
+    "why": "Warm rapport, but it uses a question."
+   }
+  ],
+  "final": {
+   "label": "Your recommendation",
+   "pick": 1,
+   "options": [
+    {
+     "t": "A plan that, with her $5,000 bank policy, covers about $11,000, kept under about $80 a month, framed around sparing Karen what she went through.",
+     "pts": 50,
+     "why": "Uses everything she told you: the number, the person, the budget and what she already has."
+    },
+    {
+     "t": "A $25,000 plan at about $140 a month, framed around leaving something toward her grandchildren's schooling, with the difference explained as a small daily cost.",
+     "pts": 5,
+     "why": "Wrong goal and over her budget. Her reason was the funeral bill, and her budget is about $80."
+    },
+    {
+     "t": "A $15,000 plan that replaces her old work policy, framed around honoring Harold's final wishes.",
+     "pts": 5,
+     "why": "She has a bank policy, not a work policy, and replacing it is not needed."
+    },
+    {
+     "t": "The smallest plan available, framed around how little it costs per day.",
+     "pts": 15,
+     "why": "Too small for the $11,000 she told you about, and no reason attached."
+    }
+   ]
+  }
+ },
+ {
+  "id": "p189",
+  "n": 189,
+  "max": 100,
+  "title": "The Skeptical Husband",
+  "cat": "Client Interviews",
+  "format": "interview",
+  "speaker": "Frank",
+  "file": [
+   [
+    "Clients",
+    "Frank, 71, and June, 68"
+   ],
+   [
+    "Lead",
+    "June mailed back the card"
+   ],
+   [
+    "At the door",
+    "Frank: \"If this is one of those scams, you can leave now.\""
+   ]
+  ],
+  "story": "June invites you in. Frank sits with his arms folded and answers for both of them.",
+  "prompt": "You can ask 4 questions. Find out where the distrust comes from and what would make Frank comfortable. Then choose your approach.",
+  "askLimit": 4,
+  "questions": [
+   {
+    "t": "What would you need to see to feel comfortable?",
+    "a": "Everything in writing, and time to read it myself.",
+    "pts": 15,
+    "why": "He just told you how to earn the sale."
+   },
+   {
+    "t": "Do you know how much money you are losing without coverage?",
+    "a": "Nice try.",
+    "pts": -5,
+    "why": "A pitch disguised as a question."
+   },
+   {
+    "t": "Frank, it sounds like you have had a bad experience with insurance. What happened?",
+    "a": "An agent sold my mother a policy, and it lapsed without anyone telling us. It paid nothing.",
+    "pts": 15,
+    "why": "The real objection, in his own words."
+   },
+   {
+    "t": "How long have you lived here?",
+    "a": "Forty years.",
+    "pts": 4,
+    "why": "Rapport, but Frank is not ready for small talk."
+   },
+   {
+    "t": "Who handles the bills in the house?",
+    "a": "I do. I pay everything from our checking account.",
+    "pts": 10,
+    "why": "Tells you how the premium gets paid and who to show it to."
+   },
+   {
+    "t": "Do you watch the insurance commercials on TV?",
+    "a": "Those are the scams I'm talking about.",
+    "pts": 0,
+    "why": "Uses a question and adds nothing."
+   },
+   {
+    "t": "June, what would happen if Frank passed first?",
+    "a": "I would probably have to sell the house to pay for everything.",
+    "pts": 10,
+    "why": "The emotional reason, from the person it protects."
+   },
+   {
+    "t": "Why don't you trust me?",
+    "a": "Because I don't know you.",
+    "pts": -10,
+    "why": "Defensive. It makes his point for him."
+   }
+  ],
+  "final": {
+   "label": "Your approach",
+   "pick": 1,
+   "options": [
+    {
+     "t": "Address his bad experience with a pushy agent, keep the visit short, and let June decide, since she sent the card.",
+     "pts": 10,
+     "why": "His experience was a policy that lapsed, and Frank handles the money."
+    },
+    {
+     "t": "Address what happened to his mother, show how the policy stays in force (bank draft, level premium, missed-payment notice), leave the paperwork for him to read, and tie it to June keeping the house.",
+     "pts": 50,
+     "why": "Answers his real objection, meets his condition, and connects to her reason."
+    },
+    {
+     "t": "Address his worry that the premium will rise over the years, show him the price guarantee in writing, leave a copy for him to look over, and ask for a decision tonight so they can lock in today's rate.",
+     "pts": 5,
+     "why": "Rising premiums was not his worry, and pressure confirms his fear."
+    },
+    {
+     "t": "Offer a discount if they sign tonight, and tie it to the kids not paying for the funerals.",
+     "pts": 0,
+     "why": "Pressure confirms his fear, and June told you her real reason."
+    }
+   ]
+  }
+ },
+ {
+  "id": "p190",
+  "n": 190,
+  "max": 100,
+  "title": "Price First",
+  "cat": "Client Interviews",
+  "format": "interview",
+  "speaker": "Carol",
+  "file": [
+   [
+    "Client",
+    "Carol, 68"
+   ],
+   [
+    "Opening line",
+    "\"Just tell me how much it is.\""
+   ],
+   [
+    "Health",
+    "Blood pressure pills only"
+   ]
+  ],
+  "story": "Carol is direct and a little impatient. She wants a number before anything else.",
+  "prompt": "You can ask Carol 4 questions before you quote. Pick the ones that make the number mean something, then choose your recommendation.",
+  "askLimit": 4,
+  "questions": [
+   {
+    "t": "How is your health overall?",
+    "a": "Fine. Just blood pressure.",
+    "pts": 3,
+    "why": "Already in the file."
+   },
+   {
+    "t": "What monthly amount would feel comfortable?",
+    "a": "No more than $60.",
+    "pts": 10,
+    "why": "The number you have to fit."
+   },
+   {
+    "t": "Do you have any life insurance now?",
+    "a": "A term policy through my old job. It ends when I turn 70.",
+    "pts": 15,
+    "why": "Her coverage disappears in two years, and she may not know what that means."
+   },
+   {
+    "t": "Would you like the cheapest plan available?",
+    "a": "Sure.",
+    "pts": 0,
+    "why": "Anchors on cheap before you know her need."
+   },
+   {
+    "t": "Who would you want this money to go to?",
+    "a": "My son, Dennis.",
+    "pts": 10,
+    "why": "Names the person she is protecting."
+   },
+   {
+    "t": "What got you thinking about this now?",
+    "a": "My neighbor passed and the family put the funeral on credit cards.",
+    "pts": 15,
+    "why": "Her reason, in her own words."
+   },
+   {
+    "t": "Don't you want to hear about the benefits first?",
+    "a": "No, I want the price.",
+    "pts": -5,
+    "why": "Arguing with her request."
+   },
+   {
+    "t": "Is your husband still living?",
+    "a": "No, he passed years ago.",
+    "pts": 2,
+    "why": "Personal, and it does not change the plan."
+   }
+  ],
+  "final": {
+   "label": "Your recommendation",
+   "pick": 1,
+   "options": [
+    {
+     "t": "Quote the lowest-priced plan and let her decide, since price is what she asked about.",
+     "pts": 15,
+     "why": "She gets a number, but not a reason to act."
+    },
+    {
+     "t": "Quote a plan around $100, since funerals keep getting more expensive, and frame it around her grandchildren.",
+     "pts": 5,
+     "why": "Over her $60 budget and not her reason."
+    },
+    {
+     "t": "Show her the work policy covers her for life, and quote a small add-on under $60 so her daughter has a little extra for the funeral and any bills left on her cards.",
+     "pts": 5,
+     "why": "Her work policy ends at 70, and her son is Dennis."
+    },
+    {
+     "t": "Show her the work term policy ends at 70, and quote whole life she keeps for life, under $60, so Dennis is not left with credit card bills.",
+     "pts": 50,
+     "why": "Gives her the price she asked for, with the reason it matters."
+    }
+   ]
+  }
+ },
+ {
+  "id": "p191",
+  "n": 191,
+  "max": 100,
+  "title": "Should I Switch?",
+  "cat": "Client Interviews",
+  "format": "interview",
+  "speaker": "Betty",
+  "file": [
+   [
+    "Client",
+    "Betty, 73"
+   ],
+   [
+    "Question",
+    "\"A man called and said I'm overpaying. Should I switch to you?\""
+   ],
+   [
+    "Existing policy",
+    "Final expense policy with another company"
+   ]
+  ],
+  "story": "Betty has her current policy papers on the table. She trusts you more than the caller, but she wants to save money.",
+  "prompt": "You can ask Betty 4 questions. Find out what she has and what has changed. Then give your recommendation.",
+  "askLimit": 4,
+  "questions": [
+   {
+    "t": "When did you buy your current policy, and does it have a waiting period?",
+    "a": "Three years ago. It had a two-year waiting period, so it pays in full now.",
+    "pts": 15,
+    "why": "She is past the waiting period. A new policy could start one over."
+   },
+   {
+    "t": "Do you like your current agent?",
+    "a": "I never hear from him.",
+    "pts": 3,
+    "why": "A service gap, not a reason to replace."
+   },
+   {
+    "t": "Do you want me to cancel it for you today?",
+    "a": "I suppose, if you think so...",
+    "pts": -15,
+    "why": "Never cancel coverage before new coverage is in force, and never push a replacement."
+   },
+   {
+    "t": "Why did the caller say you were overpaying?",
+    "a": "He said he could get me the same thing for $70.",
+    "pts": 10,
+    "why": "Shows you the pitch she is weighing."
+   },
+   {
+    "t": "How many policies do you have?",
+    "a": "Just this one.",
+    "pts": 5,
+    "why": "Helpful to confirm."
+   },
+   {
+    "t": "Has your health changed since you bought it?",
+    "a": "Yes. I had a stent put in last year.",
+    "pts": 15,
+    "why": "A stent 12 to 24 months ago makes new underwriting harder than when she bought her policy."
+   },
+   {
+    "t": "What does it cost, and how much does it pay?",
+    "a": "$95 a month for $8,000.",
+    "pts": 10,
+    "why": "The facts behind the caller's claim."
+   },
+   {
+    "t": "Would you like a cheaper plan?",
+    "a": "Who wouldn't?",
+    "pts": 0,
+    "why": "Leads her toward replacement."
+   }
+  ],
+  "final": {
+   "label": "Your recommendation",
+   "pick": 1,
+   "options": [
+    {
+     "t": "Replace both of her policies with one, so she only has one bill.",
+     "pts": 5,
+     "why": "She has only one policy, and replacing it hurts her."
+    },
+    {
+     "t": "Keep her current policy. It is past its waiting period, and her new stent could make a replacement cost more or restart a waiting period. Add a small second policy if she wants more.",
+     "pts": 50,
+     "why": "Puts her interest first and follows replacement best practice."
+    },
+    {
+     "t": "Cancel it and apply for guaranteed issue to be safe.",
+     "pts": 0,
+     "why": "Throws away full coverage for a new waiting period."
+    },
+    {
+     "t": "Replace it with the $70 plan. Her health has not changed since she bought it, and she is still inside her waiting period anyway, so she loses nothing and saves $25 every single month from now on.",
+     "pts": 0,
+     "why": "She had a stent last year, and she is past her waiting period. She would lose a lot."
+    }
+   ]
+  }
+ },
+ {
+  "id": "p192",
+  "n": 192,
+  "max": 100,
+  "title": "Who Gets the Money?",
+  "cat": "Client Interviews",
+  "format": "interview",
+  "speaker": "Rosa",
+  "file": [
+   [
+    "Client",
+    "Rosa, 70, divorced"
+   ],
+   [
+    "Plan",
+    "Buying a $10,000 policy with you today"
+   ],
+   [
+    "Existing policy",
+    "A small policy from years ago"
+   ]
+  ],
+  "story": "The application is almost done. You reach the beneficiary section.",
+  "prompt": "You can ask Rosa 4 questions. Find out who should be protected and what could go wrong. Then choose how to set it up.",
+  "askLimit": 4,
+  "questions": [
+   {
+    "t": "Who do you want to handle your arrangements?",
+    "a": "My son Mike. He lives ten minutes away.",
+    "pts": 15,
+    "why": "The right person for a final expense benefit."
+   },
+   {
+    "t": "Would you like to name your granddaughter as the beneficiary?",
+    "a": "Could I?",
+    "pts": -5,
+    "why": "Leads her toward a setup that creates problems."
+   },
+   {
+    "t": "How long have you been divorced?",
+    "a": "Twelve years.",
+    "pts": 2,
+    "why": "Personal, and not needed."
+   },
+   {
+    "t": "Do you have a will?",
+    "a": "No, I keep meaning to.",
+    "pts": 5,
+    "why": "Relevant, but the beneficiary designation matters more here."
+   },
+   {
+    "t": "Who is listed as beneficiary on the policy you already have?",
+    "a": "Oh... my ex-husband. I never changed it.",
+    "pts": 15,
+    "why": "The old policy would pay her ex-husband."
+   },
+   {
+    "t": "Does Mike know about your plans?",
+    "a": "Not yet. I did not want to worry him.",
+    "pts": 10,
+    "why": "A family that knows is a family that files the claim."
+   },
+   {
+    "t": "Is there anyone you would like to leave something to who is under 18?",
+    "a": "My granddaughter Sofia. She is ten.",
+    "pts": 10,
+    "why": "Minors cannot usually receive the money directly."
+   },
+   {
+    "t": "Should we just leave it the same as your old policy?",
+    "a": "I guess, if that is easier.",
+    "pts": -15,
+    "why": "That would pay her ex-husband."
+   }
+  ],
+  "final": {
+   "label": "How you set it up",
+   "pick": 1,
+   "options": [
+    {
+     "t": "Name Mike on the new policy and leave the old one alone.",
+     "pts": 20,
+     "why": "Good start, but the old policy still pays her ex-husband."
+    },
+    {
+     "t": "Name Sofia directly so the money goes straight to her granddaughter.",
+     "pts": 0,
+     "why": "A 10-year-old usually cannot receive the benefit directly, which can tie it up."
+    },
+    {
+     "t": "Name Mike, help her update the old policy's beneficiary with the other company, explain Sofia cannot receive money directly as a minor, and suggest she tell Mike.",
+     "pts": 50,
+     "why": "Covers every issue she revealed."
+    },
+    {
+     "t": "Name her daughter Maria on the new policy, leave the old policy alone since it already names Maria, and add Sofia as a second beneficiary so her granddaughter gets a share too.",
+     "pts": 5,
+     "why": "Her son is Mike, and the old policy names her ex-husband."
+    }
+   ]
+  }
+ },
+ {
+  "id": "p193",
+  "n": 193,
+  "max": 100,
+  "title": "The Daughter Who Called",
+  "cat": "Client Interviews",
+  "format": "interview",
+  "speaker": "Lisa",
+  "file": [
+   [
+    "Caller",
+    "Lisa, 45, daughter"
+   ],
+   [
+    "Her request",
+    "\"I want to buy a policy on my mom so I'm not stuck with the funeral.\""
+   ],
+   [
+    "Mom",
+    "Helen, 78, lives with Lisa"
+   ]
+  ],
+  "story": "Lisa met you at the door. Helen is watching TV in the next room.",
+  "prompt": "You can ask Lisa 4 questions. Find out what you need to do this the right way. Then choose your next step.",
+  "askLimit": 4,
+  "questions": [
+   {
+    "t": "Do you have siblings?",
+    "a": "A brother out of state.",
+    "pts": 2,
+    "why": "Not needed yet."
+   },
+   {
+    "t": "How much can you afford?",
+    "a": "Maybe $80 a month.",
+    "pts": 5,
+    "why": "Useful, but not first."
+   },
+   {
+    "t": "Does your mom need help with bathing, dressing or getting around?",
+    "a": "No, she is very independent.",
+    "pts": 10,
+    "why": "Rules out auto guaranteed issue, so level plans may be open."
+   },
+   {
+    "t": "Who would be paying the premium each month?",
+    "a": "Me. Mom is on a fixed income.",
+    "pts": 10,
+    "why": "Fine, as long as everyone agrees."
+   },
+   {
+    "t": "Is your mom in good health?",
+    "a": "Pretty good for her age.",
+    "pts": 3,
+    "why": "Too vague to be useful."
+   },
+   {
+    "t": "Does your mom know you are looking into this?",
+    "a": "Not really. I figured I would handle it.",
+    "pts": 15,
+    "why": "The insured has to know about and agree to the policy."
+   },
+   {
+    "t": "Can you just sign her name so we do not bother her?",
+    "a": "If that is easier...",
+    "pts": -20,
+    "why": "Forgery. Never."
+   },
+   {
+    "t": "Is your mom able to talk with us and sign for herself?",
+    "a": "Yes, she is sharp. She just does not like talking about money.",
+    "pts": 15,
+    "why": "She can take part, so she should."
+   }
+  ],
+  "final": {
+   "label": "Your next step",
+   "pick": 1,
+   "options": [
+    {
+     "t": "Invite Helen to join, explain the plan to both of them, have Helen answer her own health questions and sign as the insured, with Lisa paying.",
+     "pts": 50,
+     "why": "The right way: the insured knows, agrees, answers and signs."
+    },
+    {
+     "t": "Write it with Lisa answering the health questions, since she knows her mom's health.",
+     "pts": 0,
+     "why": "Helen has to answer for herself."
+    },
+    {
+     "t": "Since Helen needs help with bathing and dressing, go straight to a guaranteed issue plan and have Lisa sign the application for her mother to save her the stress.",
+     "pts": 0,
+     "why": "Helen is independent, and Lisa cannot sign for her."
+    },
+    {
+     "t": "Tell Lisa to come back when Helen is in a better mood.",
+     "pts": 10,
+     "why": "Helen is right there and able to take part now."
+    }
+   ]
+  }
  }
 ]
