@@ -1,6 +1,6 @@
 'use strict';
 /*
- * Closing Table: final expense sales league.
+ * Closers Compete: final expense sales league.
  * Zero-dependency Node server (Node 18 or newer). Data is stored in one JSON file.
  *
  * Environment variables:
@@ -124,7 +124,10 @@ function setCookie(req, res, payload) {
 const clientIp = req => ((req.headers['x-forwarded-for'] || '').split(',')[0].trim()) || req.socket.remoteAddress || 'unknown';
 
 const fails = new Map();
-function tooMany(ip) { const f = fails.get(ip); return f && f.until > Date.now() && f.n >= 10; }
+/* Agents often share one Wi-Fi (a whole room on game night), so the per-address limit for agent
+   sign-in is generous; PIN guessing is limited separately per team and name. */
+const AGENT_IP_LIMIT = 60;
+function tooMany(key, limit) { const f = fails.get(key); return f && f.until > Date.now() && f.n >= (limit || 10); }
 function noteFail(ip) { const f = fails.get(ip); if (!f || f.until < Date.now()) fails.set(ip, { n: 1, until: Date.now() + 10 * 60 * 1000 }); else f.n++; }
 function noteOk(ip) { fails.delete(ip); }
 
@@ -220,6 +223,7 @@ function board() {
     puzzles: PUZZLES.map(p => {
       const o = { id: p.id, n: p.n, title: p.title, cat: p.cat, format: p.format, max: maxOf(p), open: db.puzzleState[p.id].open, gameNight: GAME_NIGHT_IDS.has(p.id) };
       if (p.series) { o.series = p.series; o.seriesTitle = p.seriesTitle; o.part = p.part; o.parts = p.parts; }
+      if (p.section) o.section = p.section;
       return o;
     }),
     agents: Object.values(db.agents).map(a => Object.assign({ id: a.id, name: a.name, teamId: a.teamId, points: 0, done: 0, last: 0, per: {} }, per[a.id] || {}))
@@ -248,9 +252,11 @@ const normCode = s => String(s || '').trim().toUpperCase().replace(/[\s-]/g, '')
 
 route('POST', '/api/login', async (req, res) => {
   const ip = clientIp(req);
-  if (tooMany(ip)) return send(res, 429, { error: 'Too many attempts. Wait a few minutes and try again.' });
+  if (tooMany(ip, AGENT_IP_LIMIT)) return send(res, 429, { error: 'Too many attempts. Wait a few minutes and try again.' });
   const b = await readBody(req);
   const code = normCode(b.code);
+  /* a team code typed on the personal-code tab: point them to the right tab instead of failing */
+  if (code && db.teams.some(t => t.joinCode === code)) return send(res, 400, { error: 'That is a team code. Use "Join with team code" and add your name and a PIN.', useTeamCode: true });
   const agent = code && Object.values(db.agents).find(a => a.code === code);
   if (!agent) { noteFail(ip); return send(res, 401, { error: 'That code was not found. Check it with your team leader.' }); }
   noteOk(ip);
@@ -267,23 +273,25 @@ route('POST', '/api/login', async (req, res) => {
    time one is offered for that name, it is adopted rather than required retroactively. */
 route('POST', '/api/join', async (req, res) => {
   const ip = clientIp(req);
-  if (tooMany(ip)) return send(res, 429, { error: 'Too many attempts. Wait a few minutes and try again.' });
+  if (tooMany(ip, AGENT_IP_LIMIT)) return send(res, 429, { error: 'Too many attempts. Wait a few minutes and try again.' });
   const b = await readBody(req);
   const code = normCode(b.teamCode);
   const team = code && db.teams.find(t => t.joinCode === code);
   if (!team) { noteFail(ip); return send(res, 401, { error: 'That team code was not found. Check it with your host.' }); }
   const name = String(b.name || '').trim().slice(0, 60);
-  if (!name) { noteFail(ip); return send(res, 400, { error: 'Enter your name.' }); }
+  if (!name) return send(res, 400, { error: 'Enter your name.' });
   const pin = String(b.pin || '').replace(/\D/g, '').slice(0, 6);
   let agent = Object.values(db.agents).find(a => a.teamId === team.id && a.name.toLowerCase() === name.toLowerCase());
   if (agent) {
     if (agent.pin) {
-      if (!pin || !safeEq(pin, agent.pin)) { noteFail(ip); return send(res, 401, { error: 'That name already has a PIN set on this team. Enter the matching PIN, or join under a slightly different name.' }); }
+      const pinKey = 'pin|' + team.id + '|' + name.toLowerCase();
+      if (tooMany(pinKey, 8)) return send(res, 429, { error: 'Too many wrong PINs for that name. Wait 10 minutes, or ask your host to reset it.' });
+      if (!pin || !safeEq(pin, agent.pin)) { noteFail(ip); noteFail(pinKey); return send(res, 401, { error: 'That name already has a PIN set on this team. Enter the matching PIN, or join under a slightly different name.' }); }
     } else if (pin) {
       agent.pin = pin; save();
     }
   } else {
-    if (pin.length < 4) { noteFail(ip); return send(res, 400, { error: 'Choose a 4 to 6 digit PIN so this score stays yours when you come back.' }); }
+    if (pin.length < 4) { return send(res, 400, { error: 'Choose a 4 to 6 digit PIN so this score stays yours when you come back.' }); }
     const id = 'a' + crypto.randomBytes(5).toString('hex');
     agent = db.agents[id] = { id, name, teamId: team.id, code: newCode(), pin };
     save();
@@ -428,7 +436,7 @@ admin('GET', '/api/admin/export.csv', (req, res) => {
   const q = v => '"' + String(v).replace(/"/g, '""') + '"';
   const rows = [['Agent', 'Team', 'Total points', 'Puzzles done'].concat(b.puzzles.map(p => 'P' + p.n + ' ' + p.title))];
   b.agents.sort((x, y) => y.points - x.points).forEach(a => rows.push([a.name, teamName(a.teamId), a.points, a.done].concat(b.puzzles.map(p => a.per[p.id] === undefined ? '' : a.per[p.id]))));
-  send(res, 200, rows.map(r => r.map(q).join(',')).join('\n'), { 'Content-Type': 'text/csv; charset=utf-8', 'Content-Disposition': 'attachment; filename="closing-table-scores.csv"' });
+  send(res, 200, rows.map(r => r.map(q).join(',')).join('\n'), { 'Content-Type': 'text/csv; charset=utf-8', 'Content-Disposition': 'attachment; filename="closers-compete-scores.csv"' });
 });
 
 /* ---------- team leader access ---------- */
@@ -504,7 +512,7 @@ route('GET', '/api/report.csv', (req, res) => {
   r.agents.sort((x, y) => teamName(x.teamId).localeCompare(teamName(y.teamId)) || x.name.localeCompare(y.name)).forEach(a => rows.push(
     [a.name, teamName(a.teamId), a.done, a.overall, a.strengths.map(catName).join('; '), a.weaknesses.map(catName).join('; '), catName(a.weaknesses[0] || a.untried[0] || ''), a.untried.map(catName).join('; ')]
       .concat(r.categories.map(c => a.byCat[c.cat] ? a.byCat[c.cat].pct : ''), r.categories.map(c => a.byCat[c.cat] ? a.byCat[c.cat].done : 0))));
-  csvOut(res, rows, 'closing-table-skills-report-' + stamp() + '.csv');
+  csvOut(res, rows, 'closers-compete-skills-report-' + stamp() + '.csv');
 });
 admin('GET', '/api/admin/answers.csv', (req, res) => {
   const teamName = id => (db.teams.find(t => t.id === id) || {}).name || '';
@@ -513,7 +521,7 @@ admin('GET', '/api/admin/answers.csv', (req, res) => {
     const a = db.agents[r.agentId], p = puzzleById(r.puzzleId); if (!a || !p) return;
     rows.push([r.at ? new Date(r.at).toISOString().replace('T', ' ').slice(0, 16) : '', a.name, teamName(a.teamId), p.n, p.title, p.cat, p.format, r.points, r.max, GAME_NIGHT_IDS.has(p.id) ? 'yes' : '']);
   });
-  csvOut(res, rows, 'closing-table-all-answers-' + stamp() + '.csv');
+  csvOut(res, rows, 'closers-compete-all-answers-' + stamp() + '.csv');
 });
 
 /* ---------- backups: automatic snapshots on the data disk, plus download and restore ---------- */
@@ -546,16 +554,16 @@ function listBackups() {
 admin('GET', '/api/admin/backups', (req, res) => send(res, 200, { backups: listBackups() }));
 admin('POST', '/api/admin/backups', (req, res) => { const name = snapshot('manual'); if (!name) return send(res, 500, { error: 'The backup could not be saved.' }); send(res, 200, { name, backups: listBackups() }); });
 admin('GET', '/api/admin/backup.json', (req, res) => send(res, 200, JSON.stringify(backupData()),
-  { 'Content-Disposition': 'attachment; filename="closing-table-backup-' + stamp() + '.json"' }));
+  { 'Content-Disposition': 'attachment; filename="closers-compete-backup-' + stamp() + '.json"' }));
 admin('GET', '/api/admin/backups/:name', (req, res, p) => {
   if (!/^backup-[\w-]+\.json$/.test(p.name)) return send(res, 400, { error: 'Bad name.' });
   fs.readFile(path.join(BACKUP_DIR, p.name), 'utf8', (err, data) => {
     if (err) return send(res, 404, { error: 'That backup was not found.' });
-    send(res, 200, data, { 'Content-Disposition': 'attachment; filename="closing-table-' + p.name + '"' });
+    send(res, 200, data, { 'Content-Disposition': 'attachment; filename="closers-compete-' + p.name + '"' });
   });
 });
 function restoreFrom(data) {
-  if (!data || data.app !== 'closing-table' || !Array.isArray(data.teams) || !data.teams.length || typeof data.agents !== 'object' || typeof data.results !== 'object') return 'That file is not a Closing Table backup.';
+  if (!data || data.app !== 'closing-table' || !Array.isArray(data.teams) || !data.teams.length || typeof data.agents !== 'object' || typeof data.results !== 'object') return 'That file is not a Closers Compete backup.';
   snapshot('before-restore');
   db.teams = data.teams; db.agents = data.agents || {}; db.results = data.results || {};
   db.puzzleState = Object.assign({}, db.puzzleState, data.puzzleState || {});
@@ -621,4 +629,4 @@ const server = http.createServer(async (req, res) => {
     if (!res.headersSent) send(res, 500, { error: 'Something went wrong. Try again.' });
   }
 });
-server.listen(PORT, () => console.log('Closing Table running on port ' + PORT + ' (data in ' + DATA_DIR + ')'));
+server.listen(PORT, () => console.log('Closers Compete running on port ' + PORT + ' (data in ' + DATA_DIR + ')'));
