@@ -14,6 +14,11 @@
    "key": "tools",
    "title": "Tools & Resources",
    "sub": "Tracker, quoter, carrier forms and more."
+  },
+  {
+   "key": "miles",
+   "title": "Builder Milestones",
+   "sub": "Your checkpoints. Your leader marks each one when you reach it."
   }
  ],
  "stations": [
@@ -21,6 +26,7 @@
    "track": "start",
    "n": 1,
    "id": "on1",
+   "due": 1,
    "title": "Get set up",
    "when": "Day 1",
    "goal": "Get connected to the team, the training hub and the live trainings.",
@@ -59,6 +65,7 @@
    "track": "start",
    "n": 2,
    "id": "on2",
+   "due": 1,
    "title": "Sign the Accountability Agreement",
    "when": "Day 1",
    "goal": "Know exactly what is expected of you, and agree to it.",
@@ -103,6 +110,7 @@
    "track": "start",
    "n": 3,
    "id": "on3",
+   "due": 7,
    "title": "Get contracted",
    "when": "As soon as possible",
    "goal": "Get your E&O and NASB contract done so you can write business.",
@@ -133,6 +141,7 @@
    "track": "start",
    "n": 4,
    "id": "on4",
+   "due": 14,
    "title": "Set up your carrier portals",
    "when": "As you get contracted",
    "goal": "Be able to log in to every carrier before you need to.",
@@ -174,6 +183,7 @@
    "track": "start",
    "n": 5,
    "id": "on5",
+   "due": 4,
    "title": "Record your door knock",
    "when": "Within 4 days",
    "goal": "Know the door knock cold, and prove it with a recording.",
@@ -208,6 +218,7 @@
    "track": "start",
    "n": 6,
    "id": "on6",
+   "due": 10,
    "title": "Start virtual training",
    "when": "Once your NASB contract is submitted",
    "goal": "Build the habits that make agents successful.",
@@ -238,6 +249,7 @@
    "track": "start",
    "n": 7,
    "id": "on7",
+   "due": 21,
    "title": "Set up the Integrity Lead Center",
    "when": "Around week 3",
    "goal": "Get your lead account approved so you can buy leads.",
@@ -295,6 +307,7 @@
    "track": "start",
    "n": 8,
    "id": "on8",
+   "due": 21,
    "title": "Get ready for Field Day",
    "when": "By week 3",
    "goal": "Show up to your first field day fully equipped.",
@@ -325,6 +338,7 @@
   {
    "track": "steps",
    "id": "s1",
+   "due": 4,
    "n": 1,
    "title": "Door knock",
    "goal": "Get from the door to the kitchen table in under a minute.",
@@ -905,6 +919,108 @@
    ],
    "signoff": [
     "done"
+   ]
+  },
+  {
+   "track": "miles",
+   "n": 1,
+   "id": "m1",
+   "title": "Checkpoint 1: Win a door knock",
+   "due": 7,
+   "goal": "Get in the door on your own.",
+   "blocks": [
+    {
+     "p": "Your first Builder checkpoint. Your leader marks it once you have won a door knock on your own."
+    }
+   ],
+   "tasks": [],
+   "signoff": [
+    "achieved"
+   ]
+  },
+  {
+   "track": "miles",
+   "n": 2,
+   "id": "m2",
+   "title": "Checkpoint 1: Run a full presentation",
+   "due": 7,
+   "goal": "Take a client from the door knock to the application.",
+   "blocks": [
+    {
+     "p": "Your leader marks this once you have run a full presentation, all 10 steps, with them watching."
+    }
+   ],
+   "tasks": [],
+   "signoff": [
+    "achieved"
+   ]
+  },
+  {
+   "track": "miles",
+   "n": 3,
+   "id": "m3",
+   "title": "Checkpoint 1: First solo sale",
+   "due": 14,
+   "goal": "Write your first sale on your own.",
+   "blocks": [
+    {
+     "p": "Your leader marks this once you have written a sale on your own. Log it in the SIG Sale Tracker the same day."
+    }
+   ],
+   "tasks": [],
+   "signoff": [
+    "achieved"
+   ]
+  },
+  {
+   "track": "miles",
+   "n": 4,
+   "id": "m4",
+   "title": "Checkpoint 2: $5,000 in AP",
+   "due": 28,
+   "goal": "Reach $5,000 in annualized premium.",
+   "blocks": [
+    {
+     "p": "Your second Builder checkpoint. Your leader marks it when your tracker shows $5,000 in AP."
+    }
+   ],
+   "tasks": [],
+   "signoff": [
+    "achieved"
+   ]
+  },
+  {
+   "track": "miles",
+   "n": 5,
+   "id": "m5",
+   "title": "Checkpoint 2: $10,000 in AP",
+   "due": 28,
+   "goal": "Reach $10,000 in annualized premium.",
+   "blocks": [
+    {
+     "p": "Your leader marks this when your tracker shows $10,000 in AP."
+    }
+   ],
+   "tasks": [],
+   "signoff": [
+    "achieved"
+   ]
+  },
+  {
+   "track": "miles",
+   "n": 6,
+   "id": "m6",
+   "title": "Checkpoint 3: Agent evaluation",
+   "due": 56,
+   "goal": "Your 8-week review with your leader.",
+   "blocks": [
+    {
+     "p": "Around week 8, you and your leader review your progress, what is working, and what to improve next."
+    }
+   ],
+   "tasks": [],
+   "signoff": [
+    "achieved"
    ]
   }
  ]
