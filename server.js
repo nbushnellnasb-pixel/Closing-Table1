@@ -628,4 +628,20 @@ const server = http.createServer(async (req, res) => {
     if (req.method !== 'GET' && req.method !== 'HEAD') return send(res, 405, { error: 'Method not allowed.' });
     if (pathname === '/favicon.ico') { res.writeHead(204); return res.end(); }
     /* Only these two files are ever served as static pages. Everything else in this folder
-       (puzzles.j
+       (puzzles.json, server.js, and so on) is deliberately not reachable by URL, so the
+       repo can be a single flat folder with no subfolders required. */
+    const STATIC = { '/': ['index.html', '.html'], '/index.html': ['index.html', '.html'], '/embed.js': ['embed.js', '.js'], '/tv.html': ['tv.html', '.html'] };
+    const hit = STATIC[pathname];
+    if (!hit) return send(res, 404, { error: 'Not found.' });
+    fs.readFile(path.join(__dirname, hit[0]), (err, data) => {
+      if (err) return send(res, 404, { error: 'Not found.' });
+      res.writeHead(200, { 'Content-Type': MIME[hit[1]], 'Cache-Control': 'no-cache' });
+      res.end(data);
+    });
+  } catch (e) {
+    if (e && e.message === 'bad json') return send(res, 400, { error: 'That request was not understood.' });
+    console.error(e);
+    if (!res.headersSent) send(res, 500, { error: 'Something went wrong. Try again.' });
+  }
+});
+server.listen(PORT, () => console.log('Closers Compete running on port ' + PORT + ' (data in ' + DATA_DIR + ')'));
